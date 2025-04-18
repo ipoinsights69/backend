@@ -38,6 +38,7 @@
     "puppeteer": "23.5.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-real-browser": "^1.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "redis": "^4.6.13",

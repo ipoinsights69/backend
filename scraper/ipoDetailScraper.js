@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
 const cheerio = require('cheerio'); // Add cheerio for easier HTML parsing
 const { generateMetaJson } = require('./generateMetaJson');
+const { launchBrowser } = require('../utils/browserHelper');
 
 /**
  * Cleans text by removing excessive whitespace and optionally HTML tags.
@@ -119,6 +119,7 @@ const sanitizeKey = (key, ipoName = '') => {
  */
 async function fetchStructuredData(url, updateMeta = true) {
   let browser;
+  let page;
   console.log(`Fetching structured data from: ${url}`);
   const processedTables = new Set(); // Track tables processed by specific logic
   
@@ -147,23 +148,16 @@ async function fetchStructuredData(url, updateMeta = true) {
   };
 
   try {
-    browser = await puppeteer.launch({
-      headless: 'new',
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-blink-features=AutomationControlled',
-        '--disable-dev-shm-usage'
-      ]
+    // Use the new browser helper
+    const browserLaunchResult = await launchBrowser(url, {
+        timeout: 90000, // Pass existing timeout
+        args: [
+          // Add any specific args needed ONLY for this scraper, if any.
+          // DEFAULT_ARGS are included in the helper already.
+        ]
     });
-    
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36');
-    await page.setViewport({ width: 1920, height: 1080 });
-    
-    // Navigate to the page and wait for content to load
-    await page.goto(url, { waitUntil: 'networkidle0', timeout: 90000 });
-    console.log(`Page loaded: ${url}`);
+    browser = browserLaunchResult.browser;
+    page = browserLaunchResult.page;
 
     // Extract IPO name and logo directly - will be used in multiple places
     const ipoName = await page.$eval('h1.ipo-title', el => el.textContent.trim()).catch(() => null);
@@ -1155,29 +1149,30 @@ async function fetchStructuredData(url, updateMeta = true) {
     // Update meta.json if requested
     if (updateMeta) {
       try {
-        generateMetaJson();
+        const ipoId = result.ipo_id || result.basicDetails?.isin; // Get an ID for the meta file
+        if (ipoId) {
+          await generateMetaJson(result, ipoId);
+        } else {
+          console.warn('Could not determine IPO ID to update meta.json');
+        }
       } catch (metaError) {
-        console.error("Error updating meta.json:", metaError);
+        console.error('Error updating meta.json:', metaError);
       }
     }
     
     return result;
 
   } catch (error) {
-    console.error(`Error during scraping process for ${url}:`, error);
-    return {
-      _error: true,
-      _source_url: url,
-      _scraped_at: new Date().toISOString(),
-      message: `Failed to scrape ${url}: ${error.message || String(error)}`
-    };
+    console.error(`Error fetching structured data from ${url}: ${error.message}`);
+    console.error(error.stack); // Log stack trace for detailed debugging
+    return { _error: true, message: error.message, url }; // Return error object
   } finally {
     if (browser) {
       try {
-        await browser.close();
-        console.log("Browser closed.");
+          await browser.close();
+          console.log(`Browser closed for ${url}`);
       } catch (closeError) {
-        console.error("Error closing browser:", closeError.message);
+          console.error(`Error closing browser for ${url}: ${closeError.message}`);
       }
     }
   }
