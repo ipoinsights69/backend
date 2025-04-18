@@ -183,16 +183,86 @@ async function scrapeIposByYearRange(startYear, endYear, saveToMongo = false) {
   }
 }
 
+// Parse command line arguments in a more robust way
+function parseArgs(args) {
+  const options = {
+    year: new Date().getFullYear(),
+    startYear: null,
+    endYear: null,
+    threads: MAX_CONCURRENT_REQUESTS,
+    saveToMongo: false,
+    overwrite: false
+  };
+  
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    
+    if (arg === '--year' && i + 1 < args.length) {
+      const year = parseInt(args[++i], 10);
+      if (!isNaN(year)) {
+        options.year = year;
+        // Set start and end year to the same value if not explicitly set
+        if (options.startYear === null) options.startYear = year;
+        if (options.endYear === null) options.endYear = year;
+      }
+    }
+    else if (arg === '--start-year' && i + 1 < args.length) {
+      const year = parseInt(args[++i], 10);
+      if (!isNaN(year)) options.startYear = year;
+    }
+    else if (arg === '--end-year' && i + 1 < args.length) {
+      const year = parseInt(args[++i], 10);
+      if (!isNaN(year)) options.endYear = year;
+    }
+    else if (arg === '--threads' && i + 1 < args.length) {
+      const threads = parseInt(args[++i], 10);
+      if (!isNaN(threads) && threads > 0) {
+        options.threads = threads;
+        process.env.MAX_CONCURRENT_REQUESTS = threads.toString();
+      }
+    }
+    else if (arg === '--mongo' || arg === '--save-to-mongo') {
+      options.saveToMongo = true;
+    }
+    else if (arg === '--overwrite') {
+      options.overwrite = true;
+    }
+    // Legacy positional argument support (deprecated)
+    else if (i === 0 && !arg.startsWith('--')) {
+      const year = parseInt(arg, 10);
+      if (!isNaN(year)) {
+        options.year = year;
+        options.startYear = year;
+        options.endYear = year;
+        console.warn('WARNING: Using positional arguments is deprecated. Please use --year, --start-year, and --end-year instead.');
+      }
+    }
+  }
+  
+  // If start-year or end-year was not explicitly set, use the year value
+  if (options.startYear === null) options.startYear = options.year;
+  if (options.endYear === null) options.endYear = options.year;
+  
+  return options;
+}
+
 // Handle direct execution
 if (require.main === module) {
   // Get command line arguments
   const args = process.argv.slice(2);
-  const startYear = parseInt(args[0] || new Date().getFullYear(), 10);
-  const endYear = parseInt(args[1] || startYear, 10);
-  const saveToMongo = args[2] === 'true' || args[2] === '--mongo';
+  const options = parseArgs(args);
+  
+  console.log(`Starting IPO scraping with options:`, {
+    year: options.year,
+    startYear: options.startYear,
+    endYear: options.endYear,
+    threads: options.threads,
+    saveToMongo: options.saveToMongo,
+    overwrite: options.overwrite
+  });
 
   // Start the scraping process
-  scrapeIposByYearRange(startYear, endYear, saveToMongo)
+  scrapeIposByYearRange(options.startYear, options.endYear, options.saveToMongo)
     .then(() => {
       console.log('Scraping process completed.');
       process.exit(0);
