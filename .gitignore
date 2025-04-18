@@ -1,5 +1,49 @@
+# Dependencies
 node_modules
+package-lock.json
+yarn.lock
+
+# Build outputs
+.next
+out
+build
+dist
+
+# Data files
 data/
 meta.json
-.DS_Store .next
-.next
+config/cron-config.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+job-*.log
+cron.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Chrome user data from Puppeteer
+chrome-user-data/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+tmp/
+temp/
+.cache/

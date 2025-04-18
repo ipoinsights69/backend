@@ -5,6 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "start-with-cron": "node index.js server",
+    "cron-only": "node index.js cron-start",
+    "cron:status": "node scripts/cronManager.js status",
+    "cron:run-now": "node scripts/cronManager.js run-now daily-ipo-update",
+    "cron:test": "node scripts/cronManager.js test daily-ipo-update",
     "scrape": "node scripts/scrapeIpos.js",
     "dev": "nodemon server.js",
     "upload-mongo": "node scripts/uploadToMongo.js",

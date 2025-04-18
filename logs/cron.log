@@ -1,0 +1,14 @@
+[2025-04-18T18:45:50.565Z] [INFO] [daily-ipo-update] Starting scrape and upload for year 2025 with smart updates
+[2025-04-18T18:45:50.566Z] [INFO] [daily-ipo-update] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-18T18:46:34.601Z] [INFO] Updated existing cron job: daily-ipo-update
+[2025-04-18T18:46:34.602Z] [INFO] Cron configuration saved successfully
+[2025-04-18T18:46:34.603Z] [INFO] Cron configuration saved successfully
+[2025-04-18T18:46:34.603Z] [INFO] Enabled cron job: daily-ipo-update
+[2025-04-18T18:46:34.603Z] [INFO] Starting cron system...
+[2025-04-18T18:46:34.604Z] [INFO] All cron jobs stopped
+[2025-04-18T18:46:34.604Z] [INFO] Setting up cron job: daily-ipo-update with schedule: 30 20 * * *
+[2025-04-18T18:46:34.620Z] [INFO] Cron job started: daily-ipo-update
+[2025-04-18T18:46:34.621Z] [INFO] Next execution time for daily-ipo-update: 2025-04-19T18:46:34.621Z
+[2025-04-18T18:46:34.621Z] [INFO] Started 1 cron jobs
+[2025-04-18T18:46:34.622Z] [INFO] Cron job daily-ipo-update schedule: 30 20 * * *
+[2025-04-18T18:46:34.622Z] [INFO] Cron job daily-ipo-update next execution: 2025-04-19T18:46:34.622Z

@@ -8,6 +8,53 @@ require('dotenv').config();
 // Base directory for cron configuration
 const CONFIG_DIR = process.env.CONFIG_DIR || path.join(__dirname, '..', 'config');
 const CRON_CONFIG_FILE = path.join(CONFIG_DIR, 'cron-config.json');
+const CRON_LOG_DIR = process.env.CRON_LOG_DIR || path.join(__dirname, '..', 'logs');
+
+/**
+ * Ensure log directory exists
+ */
+async function ensureLogDir() {
+  try {
+    await fs.access(CRON_LOG_DIR);
+  } catch (error) {
+    await fs.mkdir(CRON_LOG_DIR, { recursive: true });
+    console.log(`Created log directory: ${CRON_LOG_DIR}`);
+  }
+}
+
+/**
+ * Log a message to console and file
+ * @param {string} message - Message to log
+ * @param {string} [level='INFO'] - Log level
+ * @param {string} [jobId=null] - Job ID for context
+ */
+async function logMessage(message, level = 'INFO', jobId = null) {
+  const timestamp = new Date().toISOString();
+  const logPrefix = jobId ? `[${timestamp}] [${level}] [${jobId}]` : `[${timestamp}] [${level}]`;
+  const fullMessage = `${logPrefix} ${message}`;
+  
+  // Log to console
+  if (level === 'ERROR') {
+    console.error(fullMessage);
+  } else {
+    console.log(fullMessage);
+  }
+  
+  // Log to file
+  try {
+    await ensureLogDir();
+    const logFile = path.join(CRON_LOG_DIR, 'cron.log');
+    await fs.appendFile(logFile, fullMessage + '\n');
+    
+    // Also log to job-specific file if jobId is provided
+    if (jobId) {
+      const jobLogFile = path.join(CRON_LOG_DIR, `job-${jobId}.log`);
+      await fs.appendFile(jobLogFile, fullMessage + '\n');
+    }
+  } catch (error) {
+    console.error(`Failed to write to log file: ${error.message}`);
+  }
+}
 
 /**
  * Loads cron configuration from file
@@ -54,7 +101,7 @@ async function loadCronConfig() {
  */
 async function saveCronConfig(config) {
   await fs.writeFile(CRON_CONFIG_FILE, JSON.stringify(config, null, 2));
-  console.log('Cron configuration saved successfully');
+  await logMessage('Cron configuration saved successfully');
 }
 
 /**
@@ -67,18 +114,17 @@ async function scrapeAndUploadForYear(year, options = {}) {
     concurrency = 2,
     saveToMongo = true,
     overwrite = false,
-    logFile = null
+    logFile = null,
+    jobId = 'manual-job'
   } = options;
   
-  const timestamp = new Date().toISOString();
-  
-  console.log(`[${timestamp}] Starting scrape and upload for year ${year} with smart updates`);
+  await logMessage(`Starting scrape and upload for year ${year} with smart updates`, 'INFO', jobId);
   
   // Optional logging to file
   if (logFile) {
     const logDir = path.dirname(logFile);
     await fs.mkdir(logDir, { recursive: true });
-    await fs.appendFile(logFile, `\n[${timestamp}] Starting scrape and upload for year ${year} with smart updates\n`);
+    await fs.appendFile(logFile, `\n[${new Date().toISOString()}] Starting scrape and upload for year ${year} with smart updates\n`);
   }
   
   try {
@@ -86,23 +132,23 @@ async function scrapeAndUploadForYear(year, options = {}) {
     process.env.MAX_CONCURRENT_REQUESTS = concurrency.toString();
     
     // Scrape IPO data
-    console.log(`[${timestamp}] Scraping IPO data for year ${year} with concurrency ${concurrency}`);
+    await logMessage(`Scraping IPO data for year ${year} with concurrency ${concurrency}`, 'INFO', jobId);
     await scrapeIposByYearRange(year, year, saveToMongo);
     
     // If we're not directly saving to MongoDB during scrape, do it separately
     if (!saveToMongo) {
-      console.log(`[${timestamp}] Uploading scraped data to MongoDB with selective updates`);
+      await logMessage(`Uploading scraped data to MongoDB with selective updates`, 'INFO', jobId);
       await uploadIpoData(year, year, { overwrite });
     }
     
-    console.log(`[${timestamp}] Completed scrape and upload for year ${year}`);
+    await logMessage(`Completed scrape and upload for year ${year}`, 'INFO', jobId);
     if (logFile) {
-      await fs.appendFile(logFile, `[${timestamp}] Completed scrape and upload for year ${year}\n`);
+      await fs.appendFile(logFile, `[${new Date().toISOString()}] Completed scrape and upload for year ${year}\n`);
     }
   } catch (error) {
-    console.error(`[${timestamp}] Error during scrape and upload:`, error);
+    await logMessage(`Error during scrape and upload: ${error.message}`, 'ERROR', jobId);
     if (logFile) {
-      await fs.appendFile(logFile, `[${timestamp}] ERROR: ${error.message}\n`);
+      await fs.appendFile(logFile, `[${new Date().toISOString()}] ERROR: ${error.message}\n`);
     }
   }
 }
@@ -119,8 +165,10 @@ async function addCronJob(jobConfig) {
   
   if (existingIndex >= 0) {
     config.jobs[existingIndex] = { ...config.jobs[existingIndex], ...jobConfig };
+    await logMessage(`Updated existing cron job: ${jobConfig.id}`);
   } else {
     config.jobs.push(jobConfig);
+    await logMessage(`Added new cron job: ${jobConfig.id}`);
   }
   
   await saveCronConfig(config);
@@ -135,6 +183,7 @@ async function removeCronJob(jobId) {
   const config = await loadCronConfig();
   config.jobs = config.jobs.filter(job => job.id !== jobId);
   await saveCronConfig(config);
+  await logMessage(`Removed cron job: ${jobId}`);
   return config;
 }
 
@@ -150,6 +199,9 @@ async function toggleCronJob(jobId, enabled) {
   if (job) {
     job.enabled = enabled;
     await saveCronConfig(config);
+    await logMessage(`${enabled ? 'Enabled' : 'Disabled'} cron job: ${jobId}`);
+  } else {
+    await logMessage(`Job not found: ${jobId}`, 'ERROR');
   }
   
   return config;
@@ -170,66 +222,157 @@ const activeCronJobs = new Map();
  * Start all enabled cron jobs
  */
 async function startCronJobs() {
+  await logMessage('Starting cron system...');
   const config = await loadCronConfig();
   
   // Stop any existing jobs
   stopCronJobs();
   
   // Start enabled jobs
-  config.jobs.forEach(job => {
+  for (const job of config.jobs) {
     if (job.enabled) {
-      console.log(`Starting cron job: ${job.id}`);
+      await logMessage(`Setting up cron job: ${job.id} with schedule: ${job.schedule}`);
       
-      const task = cron.schedule(job.schedule, async () => {
-        console.log(`Executing cron job: ${job.id}`);
-        
-        switch (job.task) {
-          case 'scrape-and-upload':
-            await scrapeAndUploadForYear(
-              job.options.year || new Date().getFullYear(),
-              {
-                concurrency: job.options.concurrency || 2,
-                saveToMongo: job.options.saveToMongo !== false,
-                overwrite: job.options.overwrite === true,
-                logFile: job.options.logFile || path.join(__dirname, '..', 'logs', `cron-${job.id}.log`)
-              }
-            );
-            break;
-            
-          case 'upload-only':
-            await uploadIpoData(
-              job.options.year || new Date().getFullYear(),
-              job.options.year || new Date().getFullYear(),
-              {
-                overwrite: job.options.overwrite === true,
-                batchSize: job.options.batchSize || 10
-              }
-            );
-            break;
-            
-          default:
-            console.error(`Unknown task type: ${job.task}`);
+      try {
+        // Validate cron schedule
+        if (!cron.validate(job.schedule)) {
+          await logMessage(`Invalid cron schedule for job ${job.id}: ${job.schedule}`, 'ERROR');
+          continue;
         }
-      });
-      
-      activeCronJobs.set(job.id, task);
+        
+        const task = cron.schedule(job.schedule, async () => {
+          const startTime = new Date();
+          await logMessage(`Executing cron job: ${job.id} at ${startTime.toISOString()}`, 'INFO', job.id);
+          
+          switch (job.task) {
+            case 'scrape-and-upload':
+              await scrapeAndUploadForYear(
+                job.options.year || new Date().getFullYear(),
+                {
+                  concurrency: job.options.concurrency || 2,
+                  saveToMongo: job.options.saveToMongo !== false,
+                  overwrite: job.options.overwrite === true,
+                  logFile: job.options.logFile || path.join(CRON_LOG_DIR, `cron-${job.id}.log`),
+                  jobId: job.id
+                }
+              );
+              break;
+              
+            case 'upload-only':
+              await logMessage(`Running upload-only task for year ${job.options.year || new Date().getFullYear()}`, 'INFO', job.id);
+              await uploadIpoData(
+                job.options.year || new Date().getFullYear(),
+                job.options.year || new Date().getFullYear(),
+                {
+                  overwrite: job.options.overwrite === true,
+                  batchSize: job.options.batchSize || 10
+                }
+              );
+              await logMessage(`Upload-only task completed`, 'INFO', job.id);
+              break;
+              
+            default:
+              await logMessage(`Unknown task type: ${job.task}`, 'ERROR', job.id);
+          }
+          
+          const endTime = new Date();
+          const executionTime = (endTime - startTime) / 1000;
+          await logMessage(`Cron job ${job.id} completed in ${executionTime.toFixed(2)} seconds`, 'INFO', job.id);
+        }, {
+          scheduled: true,
+          timezone: process.env.CRON_TIMEZONE || 'UTC'
+        });
+        
+        task.start();
+        activeCronJobs.set(job.id, task);
+        await logMessage(`Cron job started: ${job.id}`);
+        
+        // For verification, calculate and log next execution time
+        const nextDate = getNextExecutionTime(job.schedule);
+        await logMessage(`Next execution time for ${job.id}: ${nextDate.toISOString()}`);
+      } catch (error) {
+        await logMessage(`Error starting cron job ${job.id}: ${error.message}`, 'ERROR');
+      }
     }
-  });
+  }
   
-  console.log(`Started ${activeCronJobs.size} cron jobs`);
+  await logMessage(`Started ${activeCronJobs.size} cron jobs`);
+  
+  // Return information about active jobs for verification
+  return {
+    activeJobs: Array.from(activeCronJobs.keys()),
+    count: activeCronJobs.size
+  };
+}
+
+/**
+ * Calculate the next execution time for a cron schedule
+ * @param {string} cronExpression - Cron expression
+ * @returns {Date} - Next execution date
+ */
+function getNextExecutionTime(cronExpression) {
+  try {
+    // Use node-cron's internal parser
+    const task = cron.schedule(cronExpression, () => {});
+    const nextDate = new Date(task.nextDate().valueOf());
+    task.stop();
+    return nextDate;
+  } catch (error) {
+    console.error(`Error calculating next execution time: ${error.message}`);
+    return new Date(Date.now() + 86400000); // Return tomorrow as fallback
+  }
 }
 
 /**
  * Stop all running cron jobs
  */
-function stopCronJobs() {
-  activeCronJobs.forEach((task, id) => {
-    console.log(`Stopping cron job: ${id}`);
+async function stopCronJobs() {
+  for (const [id, task] of activeCronJobs.entries()) {
+    await logMessage(`Stopping cron job: ${id}`);
     task.stop();
-  });
+  }
   
   activeCronJobs.clear();
-  console.log('All cron jobs stopped');
+  await logMessage('All cron jobs stopped');
+}
+
+// Test the cron job system and report status
+async function testCronJob(jobId) {
+  const config = await loadCronConfig();
+  const job = config.jobs.find(j => j.id === jobId);
+  
+  if (!job) {
+    await logMessage(`Job '${jobId}' not found for testing`, 'ERROR');
+    return { success: false, error: 'Job not found' };
+  }
+  
+  try {
+    // Validate the cron schedule
+    if (!cron.validate(job.schedule)) {
+      await logMessage(`Invalid cron schedule: ${job.schedule}`, 'ERROR');
+      return { success: false, error: 'Invalid cron schedule' };
+    }
+    
+    // Calculate next execution time
+    const nextExecutionTime = getNextExecutionTime(job.schedule);
+    
+    // Log job details
+    await logMessage(`Cron job ${jobId} schedule: ${job.schedule}`, 'INFO');
+    await logMessage(`Cron job ${jobId} next execution: ${nextExecutionTime.toISOString()}`, 'INFO');
+    
+    return {
+      success: true,
+      jobId: jobId,
+      enabled: job.enabled,
+      schedule: job.schedule,
+      task: job.task,
+      nextExecution: nextExecutionTime.toISOString(),
+      options: job.options
+    };
+  } catch (error) {
+    await logMessage(`Error testing cron job ${jobId}: ${error.message}`, 'ERROR');
+    return { success: false, error: error.message };
+  }
 }
 
 // Handle command line arguments for direct execution
@@ -241,14 +384,15 @@ if (require.main === module) {
     try {
       switch (command) {
         case 'start':
-          await startCronJobs();
-          console.log('Cron jobs started. Press Ctrl+C to exit.');
+          const result = await startCronJobs();
+          console.log('Cron jobs started:', result);
+          console.log('Cron system is now running. Press Ctrl+C to exit.');
           // Keep process running
           process.stdin.resume();
           break;
           
         case 'stop':
-          stopCronJobs();
+          await stopCronJobs();
           process.exit(0);
           break;
           
@@ -342,13 +486,16 @@ if (require.main === module) {
             process.exit(1);
           }
           
+          console.log(`Executing job '${args[1]}' immediately...`);
+          
           if (job.task === 'scrape-and-upload') {
             await scrapeAndUploadForYear(
               job.options.year || new Date().getFullYear(),
               {
                 concurrency: job.options.concurrency || 2,
                 saveToMongo: job.options.saveToMongo !== false,
-                overwrite: job.options.overwrite === true
+                overwrite: job.options.overwrite === true,
+                jobId: job.id
               }
             );
           } else if (job.task === 'upload-only') {
@@ -366,6 +513,37 @@ if (require.main === module) {
           process.exit(0);
           break;
           
+        case 'test':
+          if (args.length < 2) {
+            console.error('Usage: node cronManager.js test JOB_ID');
+            process.exit(1);
+          }
+          
+          const testResult = await testCronJob(args[1]);
+          console.log('Cron job test result:', JSON.stringify(testResult, null, 2));
+          process.exit(0);
+          break;
+          
+        case 'status':
+          const statusConfig = await loadCronConfig();
+          console.log('\nCron Jobs Configuration Status:');
+          console.table(statusConfig.jobs.map(job => ({
+            ID: job.id,
+            Enabled: job.enabled ? '✅' : '❌',
+            Schedule: job.schedule,
+            Task: job.task,
+            Year: job.options.year || new Date().getFullYear(),
+            NextRun: job.enabled ? getNextExecutionTime(job.schedule).toLocaleString() : 'Disabled'
+          })));
+          
+          console.log('\nActive Cron Jobs:', activeCronJobs.size);
+          if (activeCronJobs.size > 0) {
+            console.log('Active Job IDs:', Array.from(activeCronJobs.keys()).join(', '));
+          }
+          
+          process.exit(0);
+          break;
+          
         default:
           console.error('Available commands:');
           console.error('  start - Start all enabled cron jobs');
@@ -376,6 +554,8 @@ if (require.main === module) {
           console.error('  enable JOB_ID - Enable a cron job');
           console.error('  disable JOB_ID - Disable a cron job');
           console.error('  run-now JOB_ID - Run a cron job immediately');
+          console.error('  test JOB_ID - Test a cron job configuration');
+          console.error('  status - Show current cron job status');
           process.exit(1);
       }
     } catch (error) {
@@ -392,5 +572,8 @@ module.exports = {
   listCronJobs,
   addCronJob,
   removeCronJob,
-  toggleCronJob
+  toggleCronJob,
+  testCronJob,
+  getNextExecutionTime,
+  logMessage
 }; 
