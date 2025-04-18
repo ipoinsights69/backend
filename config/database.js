@@ -45,6 +45,19 @@ async function connectToDatabase() {
     // Connect to the database
     await mongoose.connect(MONGODB_URI, options);
     isConnected = true;
+    
+    // Verify indexes after connection
+    try {
+      // We need to require the model here to avoid circular dependencies
+      const IpoModel = require('../models/IpoModel');
+      if (typeof IpoModel.verifyIndexes === 'function') {
+        await IpoModel.verifyIndexes();
+      }
+    } catch (indexError) {
+      console.error('Error verifying MongoDB indexes:', indexError);
+      // Continue despite index verification errors
+    }
+    
     return mongoose.connection;
   } catch (error) {
     console.error('MongoDB connection error:', error);

@@ -1,7 +1,7 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 const path = require('path');
 const axios = require('axios');
+const { launchBrowser } = require('../utils/browserHelper');
 
 /**
  * Extracts URL from an HTML anchor tag
@@ -48,61 +48,32 @@ function getBrowserLikeHeaders() {
  */
 async function fetchIpoListings(year) {
   let browser;
+  let page;
   const MAX_RETRIES = 3;
   const INITIAL_TIMEOUT = 60000; // 60 seconds
-  
+  const REFERRER_URL = 'https://www.chittorgarh.com/ipo/mainboard-ipo-in-india/';
+  const apiUrl = `https://webnodejs.chittorgarh.com/cloud/report/data-read/82/1/3/${year}/2024-25/0/0`;
+
   try {
-    const apiUrl = `https://webnodejs.chittorgarh.com/cloud/report/data-read/82/1/3/${year}/2024-25/0/0`;
-    console.log(`Fetching IPO listings from API: ${apiUrl}`);
-    
-    // Launch browser
-    browser = await puppeteer.launch({
-      headless: 'new', // Use new headless mode
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-web-security',
-        '--disable-features=IsolateOrigins,site-per-process',
-        '--disable-dev-shm-usage',
-        '--disable-blink-features=AutomationControlled' // Try to hide automation
-      ]
+    console.log(`Attempting to launch browser for API: ${apiUrl}`);
+    const browserLaunchResult = await launchBrowser(REFERRER_URL, {
+        timeout: INITIAL_TIMEOUT,
+        args: [
+            '--disable-web-security',
+            '--disable-features=IsolateOrigins,site-per-process',
+        ]
     });
-    
-    const page = await browser.newPage();
-    
-    // Set realistic user agent
-    await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36');
-    
-    // Set viewport
-    await page.setViewport({ width: 1920, height: 1080 });
-    
-    // Set request interception
-    await page.setRequestInterception(true);
-    
-    // Track API responses
+    browser = browserLaunchResult.browser;
+    page = browserLaunchResult.page;
+
     let apiResponse = null;
-    
-    // Handle requests
-    page.on('request', request => {
-      // Add headers to all requests
-      const headers = {
-        ...request.headers(),
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Referer': 'https://www.chittorgarh.com/',
-      };
-      
-      // Continue the request with modified headers
-      request.continue({ headers });
-    });
-    
-    // Handle responses
     page.on('response', async response => {
       const url = response.url();
       if (url.includes('webnodejs.chittorgarh.com/cloud/report/data-read')) {
         try {
-          const text = await response.text();
+          const buffer = await response.buffer(); 
+          const text = buffer.toString('utf-8');
+          
           if (text && text.includes('reportTableData')) {
             apiResponse = JSON.parse(text);
             console.log('Successfully intercepted API response');
@@ -112,65 +83,70 @@ async function fetchIpoListings(year) {
         }
       }
     });
-    
-    // First visit the referrer page
-    await page.goto('https://www.chittorgarh.com/ipo/mainboard-ipo-in-india/', {
-      waitUntil: 'networkidle2',
-      timeout: INITIAL_TIMEOUT
-    });
-    
-    // Wait before making the API request
+
     console.log('Waiting before API navigation...');
-    await new Promise(r => setTimeout(r, 5000)); // Use standard setTimeout
+    await new Promise(resolve => setTimeout(resolve, 5000));
     
-    // Now navigate to the API URL with retries
-    console.log('Navigating to API URL...');
+    console.log(`Navigating to API URL: ${apiUrl}`);
     let navigationSuccess = false;
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
-        await page.goto(apiUrl, {
-          waitUntil: 'networkidle0', // Wait for network to be idle
-          timeout: INITIAL_TIMEOUT * attempt // Increase timeout on each retry
+        const response = await page.goto(apiUrl, {
+          waitUntil: 'networkidle0',
+          timeout: INITIAL_TIMEOUT * attempt
         });
-        navigationSuccess = true;
-        console.log(`Successfully navigated to API URL on attempt ${attempt}`);
-        break; // Exit loop on success
+        
+        if (!response || !response.ok()) {
+            const status = response ? response.status() : 'unknown';
+            console.warn(`API navigation attempt ${attempt} resulted in status: ${status}`);
+            if (status === 403 || status === 404 || status >= 500) {
+                 throw new Error(`API returned non-OK status: ${status}`);
+            }
+        } else {
+            navigationSuccess = true;
+            console.log(`Successfully navigated to API URL on attempt ${attempt}`);
+            break;
+        }
       } catch (error) {
-        console.error(`Attempt ${attempt} failed: ${error.message}`);
+        console.error(`API navigation attempt ${attempt} failed: ${error.message}`);
         if (attempt === MAX_RETRIES) {
           throw new Error(`Failed to navigate to API URL after ${MAX_RETRIES} attempts: ${error.message}`);
         }
-        // Wait before retrying
-        await new Promise(r => setTimeout(r, 3000 * attempt)); // Use standard setTimeout
+        await new Promise(resolve => setTimeout(resolve, 3000 * attempt)); 
       }
     }
     
-    // If we couldn't get the response from the intercepted request, try to parse page content
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
     if (!apiResponse) {
       console.log('API response not intercepted, trying to extract from page content...');
       const pageContent = await page.content();
-      // Check if the page contains JSON
       if (pageContent.includes('"reportTableData"')) {
         try {
-          // Extract JSON from the page (it's often in a <pre> tag or directly in the body)
           const jsonContent = await page.evaluate(() => {
-            // Try different ways to find the JSON
             const preTag = document.querySelector('pre');
             if (preTag) return preTag.textContent;
             
-            // If not in pre tag, try to get it from the body
             return document.body.textContent;
           });
           
           if (jsonContent) {
-            // Find JSON by looking for opening and closing braces
             const jsonStart = jsonContent.indexOf('{');
             const jsonEnd = jsonContent.lastIndexOf('}') + 1;
             
             if (jsonStart >= 0 && jsonEnd > jsonStart) {
               const jsonStr = jsonContent.substring(jsonStart, jsonEnd);
-              apiResponse = JSON.parse(jsonStr);
-              console.log('Extracted API response from page content');
+              try {
+                  apiResponse = JSON.parse(jsonStr);
+                  console.log('Extracted API response from page content');
+              } catch (parseError) {
+                  console.error('Failed to parse JSON extracted from page content:', parseError.message);
+                  if (jsonContent.toLowerCase().includes('error') || jsonContent.toLowerCase().includes('forbidden')) {
+                      console.error('Page content seems to be an error page.');
+                  } else {
+                     console.error('Raw content:', jsonContent.substring(0, 500));
+                  }
+              }
             }
           }
         } catch (error) {
@@ -179,13 +155,10 @@ async function fetchIpoListings(year) {
       }
     }
     
-    // Process the API response
     if (apiResponse && apiResponse.reportTableData) {
       console.log(`Successfully extracted ${apiResponse.reportTableData.length} IPO listings from API`);
       
-      // Process each IPO entry
       const listings = apiResponse.reportTableData.map(entry => {
-        // Extract the URL and company name from the Company field
         const url = extractUrl(entry.Company);
         const companyName = extractCompanyName(entry.Company);
         
@@ -211,11 +184,16 @@ async function fetchIpoListings(year) {
     
   } catch (error) {
     console.error(`Error fetching IPO listings for year ${year}: ${error.message}`);
-    return []; // Return empty array on failure
+    console.error(error.stack);
+    return [];
   } finally {
     if (browser) {
-      await browser.close();
-      console.log('Browser closed');
+       try {
+          await browser.close();
+          console.log('Browser closed');
+       } catch (closeError) {
+           console.error(`Error closing browser: ${closeError.message}`);
+       }
     }
   }
 }
