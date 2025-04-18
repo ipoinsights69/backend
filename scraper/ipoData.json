@@ -1,0 +1,57 @@
+{
+  "basicDetails": {
+    "company_name": "",
+    "issue_size": "",
+    "face_value": "",
+    "issue_price": "",
+    "issue_type": "",
+    "market_lot": "",
+    "minimum_order_quantity": "",
+    "issue_opening_date": "",
+    "issue_closing_date": "",
+    "allotment_date": "",
+    "initiation_refund_date": "",
+    "credit_of_shares_date": "",
+    "listing_date": "",
+    "listing_at": "",
+    "listing_price": "",
+    "listing_gains": "",
+    "listing_gains_percentage": ""
+  },
+  "timeline": {
+    "issue_opening_date": "",
+    "issue_closing_date": "",
+    "allotment_date": "",
+    "initiation_refund_date": "",
+    "credit_of_shares_date": "",
+    "listing_date": ""
+  },
+  "lotSize": {
+    "market_lot": "",
+    "minimum_order_quantity": "",
+    "maximum_order_quantity": ""
+  },
+  "financials": [],
+  "promoterHolding": {},
+  "objectives": [],
+  "about": "",
+  "subscriptionStatus": {},
+  "contactDetails": {
+    "company_name": "",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "website": ""
+  },
+  "registrarDetails": {
+    "name": "",
+    "phone": "",
+    "email": "",
+    "website": ""
+  },
+  "leadManagers": [],
+  "listingDetails": {},
+  "faqs": [],
+  "_scraped_at": "",
+  "_source_url": ""
+} 

@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "id": "daily-current-year",
+      "schedule": "0 0 * * *",
+      "task": "scrape-and-upload",
+      "enabled": false,
+      "options": {
+        "year": 2025,
+        "concurrency": 2,
+        "saveToMongo": true,
+        "overwrite": false
+      }
+    },
+    {
+      "id": "daily-2025",
+      "schedule": "0 0 * * *",
+      "task": "scrape-and-upload",
+      "enabled": true,
+      "options": {
+        "year": 2025,
+        "concurrency": 3,
+        "saveToMongo": true,
+        "overwrite": false
+      }
+    }
+  ]
+}
