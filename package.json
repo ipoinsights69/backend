@@ -11,7 +11,7 @@
     "cron:run-now": "node scripts/cronManager.js run-now daily-ipo-update",
     "cron:test": "node scripts/cronManager.js test daily-ipo-update",
     "scrape": "node scripts/scrapeIpos.js",
-    "dev": "nodemon server.js",
+    "dev": "nodemon --legacy-watch server.js",
     "upload-mongo": "node scripts/uploadToMongo.js",
     "upload-year": "node scripts/uploadToMongo.js",
     "cron": "node scripts/cronManager.js",

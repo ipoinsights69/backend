@@ -97,6 +97,38 @@ const ipoSchema = new mongoose.Schema({
 // Index for efficient searches
 ipoSchema.index({ ipo_name: 'text', company_name: 'text' });
 
+// Verify text index exists on startup
+ipoSchema.statics.verifyIndexes = async function() {
+  try {
+    const indexes = await this.collection.getIndexes();
+    let hasTextIndex = false;
+    
+    console.log('Current MongoDB indexes:');
+    Object.keys(indexes).forEach(indexName => {
+      // Properly stringify the index key
+      const indexKey = JSON.stringify(indexes[indexName].key || {});
+      console.log(` - ${indexName}: ${indexKey}`);
+      
+      // Check if we have a text index on the desired fields
+      if (indexes[indexName].key && indexes[indexName].key._fts) {
+        hasTextIndex = true;
+        console.log(`   ✓ Text index found: ${indexName}`);
+      }
+    });
+    
+    if (hasTextIndex) {
+      console.log('Text index already exists. Search functionality should work correctly.');
+    } else {
+      console.log('Warning: No text index found. Search performance may be degraded.');
+    }
+    
+    return true;
+  } catch (error) {
+    console.error('Error checking MongoDB indexes:', error);
+    return false;
+  }
+};
+
 // Middleware to ensure proper ID fields before save
 ipoSchema.pre('save', function(next) {
   // Make sure ipo_id exists and is not null/undefined
