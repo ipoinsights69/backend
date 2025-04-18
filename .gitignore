@@ -1,4 +1,5 @@
 node_modules
 data/
 meta.json
-.DS_Store 
+.DS_Store .next
+.next
