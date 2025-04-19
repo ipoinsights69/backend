@@ -148,16 +148,49 @@ async function fetchStructuredData(url, updateMeta = true) {
   };
 
   try {
-    // Use the new browser helper
+    // Use the browser helper - ensuring we use a proxy
     const browserLaunchResult = await launchBrowser(url, {
         timeout: 90000, // Pass existing timeout
         args: [
-          // Add any specific args needed ONLY for this scraper, if any.
-          // DEFAULT_ARGS are included in the helper already.
+          '--disable-web-security',
+          '--disable-features=IsolateOrigins,site-per-process',
+          '--disable-site-isolation-trials',
         ]
     });
     browser = browserLaunchResult.browser;
     page = browserLaunchResult.page;
+    
+    // Add browser-like headers
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Connection': 'keep-alive',
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',
+      'Origin': 'https://www.chittorgarh.com',
+      'Sec-Fetch-Dest': 'document',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-Site': 'none',
+      'Sec-Fetch-User': '?1',
+      'DNT': '1'
+    });
+    
+    // Setup cookies for the domain
+    await page.setCookie({
+      name: 'visited',
+      value: 'true',
+      domain: 'chittorgarh.com',
+      path: '/',
+    }, {
+      name: 'sessionvisit',
+      value: Date.now().toString(),
+      domain: 'chittorgarh.com',
+      path: '/',
+    });
+
+    // Log the IP we're using (via the proxy) to ensure proxy connection
+    const proxyIP = browserLaunchResult.proxyIP;
+    console.log(`Connected via proxy IP: ${proxyIP} for scraping detail page`);
 
     // Extract IPO name and logo directly - will be used in multiple places
     const ipoName = await page.$eval('h1.ipo-title', el => el.textContent.trim()).catch(() => null);
