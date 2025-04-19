@@ -1,5 +1,4 @@
 const cheerio = require('cheerio'); // Add cheerio for easier HTML parsing
-const { generateMetaJson } = require('./generateMetaJson');
 const { launchBrowser } = require('../utils/browserHelper');
 
 /**
@@ -112,12 +111,11 @@ const sanitizeKey = (key, ipoName = '') => {
 };
 
 /**
- * Fetches and structures data from an IPO detail page, then updates the meta.json file.
+ * Fetches and structures data from an IPO detail page.
  * @param {string} url - The URL of the IPO page.
- * @param {boolean} updateMeta - Whether to update the meta.json file after scraping (default: true).
  * @returns {Promise<object>} - Structured IPO data or an error object.
  */
-async function fetchStructuredData(url, updateMeta = true) {
+async function fetchStructuredData(url) {
   let browser;
   let page;
   console.log(`Fetching structured data from: ${url}`);
@@ -1178,20 +1176,6 @@ async function fetchStructuredData(url, updateMeta = true) {
     };
 
     console.log("Scraping finished successfully.");
-    
-    // Update meta.json if requested
-    if (updateMeta) {
-      try {
-        const ipoId = result.ipo_id || result.basicDetails?.isin; // Get an ID for the meta file
-        if (ipoId) {
-          await generateMetaJson(result, ipoId);
-        } else {
-          console.warn('Could not determine IPO ID to update meta.json');
-        }
-      } catch (metaError) {
-        console.error('Error updating meta.json:', metaError);
-      }
-    }
     
     return result;
 

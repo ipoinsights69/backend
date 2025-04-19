@@ -2,9 +2,6 @@ const path = require('path');
 const { fetchIpoListings } = require('../scraper/ipoListingScraper');
 const { fetchStructuredData } = require('../scraper/ipoDetailScraper');
 const { saveToJson, sanitizeFilename, extractIpoId, ensureDirectoryExists } = require('../utils/helpers');
-const db = require('../config/database');
-const IpoModel = require('../models/IpoModel');
-const { smartUpdateIpo } = require('../utils/mongoUpdater');
 require('dotenv').config();
 
 // Base directory for data storage
@@ -18,13 +15,12 @@ const MAX_CONCURRENT_REQUESTS = parseInt(process.env.MAX_CONCURRENT_REQUESTS || 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 /**
- * Processes a single IPO, fetching details and saving to file and database
+ * Processes a single IPO, fetching details and saving to file
  * @param {Object} ipo - Basic IPO information with detail_url
  * @param {string} year - Year for organization
- * @param {boolean} saveToMongo - Whether to save to MongoDB
  * @returns {Promise<Object>} - Processed IPO data
  */
-async function processIpo(ipo, year, saveToMongo = false) {
+async function processIpo(ipo, year) {
   try {
     if (!ipo.detail_url) {
       console.warn(`Missing detail URL for IPO: ${ipo.company_name}`);
@@ -54,34 +50,6 @@ async function processIpo(ipo, year, saveToMongo = false) {
     await saveToJson(yearDir, fileName, ipoData);
     console.log(`Saved ${ipo.company_name} data to ${path.join(yearDir, fileName)}`);
 
-    // Save to MongoDB if enabled
-    if (saveToMongo) {
-      try {
-        // Extract IPO ID for database
-        const ipoId = extractIpoId(fullUrl) || `${year}_${companyName}`;
-        const enrichedData = { ...ipoData, ipo_id: ipoId };
-
-        // Use smart update instead of simple upsert
-        const existingIpo = await IpoModel.findOne({ ipo_id: ipoId });
-        
-        if (!existingIpo) {
-          // If it's a new IPO, use the regular upsert
-          const result = await IpoModel.upsertIpo(enrichedData);
-          console.log(`Created new IPO in database with ID: ${result.ipo_id}`);
-        } else {
-          // If it exists, use smart update to only update changed fields
-          const result = await smartUpdateIpo(enrichedData);
-          if (result.updated_at > existingIpo.updated_at) {
-            console.log(`Updated IPO ${ipoId} with selective changes`);
-          } else {
-            console.log(`No changes detected for IPO ${ipoId}`);
-          }
-        }
-      } catch (dbError) {
-        console.error(`Database error for ${ipo.company_name}:`, dbError.message);
-      }
-    }
-
     return ipoData;
   } catch (error) {
     console.error(`Error processing IPO ${ipo.company_name}:`, error);
@@ -93,9 +61,8 @@ async function processIpo(ipo, year, saveToMongo = false) {
  * Processes a batch of IPOs with concurrency control
  * @param {Array} ipos - Array of IPO listings
  * @param {string} year - Year for organization
- * @param {boolean} saveToMongo - Whether to save to MongoDB
  */
-async function processBatch(ipos, year, saveToMongo) {
+async function processBatch(ipos, year) {
   const results = [];
   
   // Filter out IPOs without valid detail URLs
@@ -112,7 +79,7 @@ async function processBatch(ipos, year, saveToMongo) {
     while (pendingIpos.length > 0 && activePromises.size < MAX_CONCURRENT_REQUESTS) {
       const ipo = pendingIpos.shift();
       const promise = (async () => {
-        const result = await processIpo(ipo, year, saveToMongo);
+        const result = await processIpo(ipo, year);
         if (result) results.push(result);
         activePromises.delete(promise);
         
@@ -136,19 +103,13 @@ async function processBatch(ipos, year, saveToMongo) {
  * Main function to scrape IPOs for a given year range
  * @param {number} startYear - Start year
  * @param {number} endYear - End year (inclusive)
- * @param {boolean} saveToMongo - Whether to save to MongoDB
  */
-async function scrapeIposByYearRange(startYear, endYear, saveToMongo = false) {
+async function scrapeIposByYearRange(startYear, endYear) {
   console.log(`Starting IPO scraping for years ${startYear}-${endYear}`);
   
   try {
     // Ensure data directory exists
     await ensureDirectoryExists(DATA_DIR);
-    
-    // Connect to database if needed
-    if (saveToMongo) {
-      await db.connectToDatabase();
-    }
     
     // Process each year
     for (let year = startYear; year <= endYear; year++) {
@@ -169,17 +130,14 @@ async function scrapeIposByYearRange(startYear, endYear, saveToMongo = false) {
       await saveToJson(listingsDir, '_listings.json', ipoListings);
       
       // Process all IPOs for this year
-      await processBatch(ipoListings, year.toString(), saveToMongo);
+      await processBatch(ipoListings, year.toString());
     }
     
     console.log('\nIPO scraping completed successfully!');
+    return true;
   } catch (error) {
     console.error('Error during IPO scraping:', error);
-  } finally {
-    // Disconnect from database if connected
-    if (saveToMongo) {
-      await db.disconnectFromDatabase();
-    }
+    return false;
   }
 }
 
@@ -190,7 +148,6 @@ function parseArgs(args) {
     startYear: null,
     endYear: null,
     threads: MAX_CONCURRENT_REQUESTS,
-    saveToMongo: false,
     overwrite: false
   };
   
@@ -221,9 +178,6 @@ function parseArgs(args) {
         process.env.MAX_CONCURRENT_REQUESTS = threads.toString();
       }
     }
-    else if (arg === '--mongo' || arg === '--save-to-mongo') {
-      options.saveToMongo = true;
-    }
     else if (arg === '--overwrite') {
       options.overwrite = true;
     }
@@ -248,21 +202,12 @@ function parseArgs(args) {
 
 // Handle direct execution
 if (require.main === module) {
-  // Get command line arguments
   const args = process.argv.slice(2);
   const options = parseArgs(args);
   
-  console.log(`Starting IPO scraping with options:`, {
-    year: options.year,
-    startYear: options.startYear,
-    endYear: options.endYear,
-    threads: options.threads,
-    saveToMongo: options.saveToMongo,
-    overwrite: options.overwrite
-  });
-
-  // Start the scraping process
-  scrapeIposByYearRange(options.startYear, options.endYear, options.saveToMongo)
+  console.log('Starting IPO scraper with options:', options);
+  
+  scrapeIposByYearRange(options.startYear, options.endYear)
     .then(() => {
       console.log('Scraping process completed.');
       process.exit(0);
@@ -273,9 +218,8 @@ if (require.main === module) {
     });
 }
 
-// Export functions for use in other files
 module.exports = {
   scrapeIposByYearRange,
   processIpo,
-  processBatch
+  parseArgs
 }; 

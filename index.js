@@ -1,5 +1,5 @@
 /**
- * IPO Scraper and API Server
+ * IPO Scraper
  * Main entry point
  */
 
@@ -8,7 +8,7 @@ require('dotenv').config();
 
 // Check command-line arguments
 const args = process.argv.slice(2);
-const command = args[0] || 'server';
+const command = args[0] || 'scrape-current';
 
 // Setup utility to start the cron system
 async function ensureCronSystem() {
@@ -25,26 +25,40 @@ async function ensureCronSystem() {
 
 // Process command
 switch (command) {
-  case 'server':
-    // Start API server
-    require('./server');
+  case 'scrape-current':
+    // Scrape current year IPO data
+    const currentYear = new Date().getFullYear();
+    
+    console.log(`Starting scraper for current year (${currentYear})`);
+    
+    // Execute scraper directly for current year
+    const { scrapeIposByYearRange } = require('./scripts/scrapeIpos');
+    
+    scrapeIposByYearRange(currentYear, currentYear)
+      .then((success) => {
+        console.log('Scraping process completed.');
+        process.exit(success ? 0 : 1);
+      })
+      .catch((error) => {
+        console.error('Fatal error:', error);
+        process.exit(1);
+      });
     break;
     
   case 'scrape':
     // Run scraper with arguments
     const startYear = parseInt(args[1] || new Date().getFullYear(), 10);
     const endYear = parseInt(args[2] || startYear, 10);
-    const saveToMongo = args[3] === 'true' || args[3] === '--mongo';
     
-    console.log(`Starting scraper for years ${startYear}-${endYear} with MongoDB: ${saveToMongo}`);
+    console.log(`Starting scraper for years ${startYear}-${endYear}`);
     
     // Execute scraper directly with specific arguments
-    const { scrapeIposByYearRange } = require('./scripts/scrapeIpos');
+    const { scrapeIposByYearRange: scrapeWithRange } = require('./scripts/scrapeIpos');
     
-    scrapeIposByYearRange(startYear, endYear, saveToMongo)
-      .then(() => {
+    scrapeWithRange(startYear, endYear)
+      .then((success) => {
         console.log('Scraping process completed.');
-        process.exit(0);
+        process.exit(success ? 0 : 1);
       })
       .catch((error) => {
         console.error('Fatal error:', error);
@@ -67,11 +81,40 @@ switch (command) {
       });
     break;
     
+  case 'setup-daily-cron':
+    // Setup daily cron job for scraping current year
+    const { addCronJob, toggleCronJob } = require('./scripts/cronManager');
+    
+    // Create a daily job at midnight
+    const dailyJob = {
+      id: 'daily-ipo-update',
+      schedule: '0 0 * * *', // Run at midnight (00:00) every day
+      task: 'scrape-current-year',
+      enabled: true,
+      options: {
+        year: new Date().getFullYear() // Current year
+      }
+    };
+    
+    addCronJob(dailyJob)
+      .then(() => toggleCronJob(dailyJob.id, true))
+      .then(() => {
+        console.log('Daily cron job set up successfully to run at midnight.');
+        console.log('Start the cron system with: node index.js cron-start');
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error('Failed to set up daily cron job:', error);
+        process.exit(1);
+      });
+    break;
+    
   default:
     console.error(`Unknown command: ${command}`);
     console.log('Available commands:');
-    console.log('  - server: Start the API server');
-    console.log('  - scrape [startYear] [endYear] [saveMongo]: Run the scraper');
-    console.log('  - cron-start: Start only the cron system');
+    console.log('  - scrape-current: Scrape IPOs for current year');
+    console.log('  - scrape [startYear] [endYear]: Scrape IPOs for specific year range');
+    console.log('  - cron-start: Start the cron system');
+    console.log('  - setup-daily-cron: Setup a daily midnight cron job for the current year');
     process.exit(1);
 } 
