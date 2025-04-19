@@ -36,7 +36,7 @@ Thumbs.db
 
 # Chrome user data from Puppeteer
 chrome-user-data/
-
+temp_user_data/
 # IDE specific files
 .idea/
 .vscode/
