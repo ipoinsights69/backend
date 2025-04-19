@@ -4,9 +4,10 @@ const IpoModel = require('../models/IpoModel');
 const { fetchIpoListings } = require('../scraper/ipoListingScraper');
 const { fetchStructuredData } = require('../scraper/ipoDetailScraper');
 const { extractIpoId } = require('../utils/helpers');
+const cacheMiddleware = require('../middleware/cacheMiddleware');
 
 // Get all IPOs with pagination
-router.get('/', async (req, res) => {
+router.get('/', cacheMiddleware, async (req, res) => {
   try {
     const page = parseInt(req.query.page || '1', 10);
     const limit = parseInt(req.query.limit || '10', 10);
@@ -34,7 +35,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get IPO by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', cacheMiddleware, async (req, res) => {
   try {
     const ipo = await IpoModel.findOne({ ipo_id: req.params.id });
     
@@ -50,7 +51,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Get IPOs by year
-router.get('/year/:year', async (req, res) => {
+router.get('/year/:year', cacheMiddleware, async (req, res) => {
   try {
     const year = parseInt(req.params.year, 10);
     const page = parseInt(req.query.page || '1', 10);
@@ -79,7 +80,7 @@ router.get('/year/:year', async (req, res) => {
 });
 
 // Search IPOs
-router.get('/search', async (req, res) => {
+router.get('/search', cacheMiddleware, async (req, res) => {
   try {
     const query = req.query.q;
     

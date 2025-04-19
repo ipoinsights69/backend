@@ -1,4 +1,5 @@
 import { serialize, deserialize } from 'v8';
+import etag from 'etag';
 
 // In-memory cache for development/small deployments
 const memoryCache = new Map();
@@ -147,11 +148,106 @@ export const clearCacheKey = async (key) => {
  * @returns {Function} - Cached API handler
  */
 export const withCache = (handler, ttl = 60) => async (req, res) => {
-  // Set cache control headers
   const cacheSeconds = parseInt(process.env.API_CACHE_TIME || String(ttl), 10);
-  res.setHeader('Cache-Control', `public, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds * 2}`);
   
-  return handler(req, res);
+  // Check if client provided an explicit cache key to use
+  const explicitCacheKey = req.headers['x-use-cache-key'];
+  
+  if (explicitCacheKey) {
+    console.log(`Attempting explicit cache lookup with key: ${explicitCacheKey}`);
+    const cachedResult = await getCachedData(explicitCacheKey, cacheSeconds);
+
+    if (cachedResult) {
+      const { body, etag: cachedEtag } = cachedResult;
+      res.setHeader('X-Cache-Key', explicitCacheKey); // Expose the key used
+      res.setHeader('Cache-Control', `public, max-age=${cacheSeconds}, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds * 2}`);
+      res.setHeader('ETag', cachedEtag);
+
+      if (req.headers['if-none-match'] === cachedEtag) {
+        console.log(`Explicit cache hit (304 Not Modified) for key: ${explicitCacheKey}`);
+        res.status(304).end();
+        return;
+      }
+
+      console.log(`Explicit cache hit (200 OK) for key: ${explicitCacheKey}`);
+      res.status(200).json(JSON.parse(body));
+      return;
+    } else {
+      // If explicit key was provided but not found, return 404
+      console.log(`Explicit cache key not found: ${explicitCacheKey}`);
+      res.status(404).json({ error: 'Specified cache key not found or expired' });
+      return;
+    }
+  }
+
+  // --- Normal Cache Logic (No explicit key provided) ---
+  const cacheKey = req.url; // Use request URL as the default cache key
+
+  // Check cache first
+  const cachedResult = await getCachedData(cacheKey, cacheSeconds);
+
+  if (cachedResult) {
+    const { body, etag: cachedEtag } = cachedResult;
+    res.setHeader('X-Cache-Key', cacheKey); // Expose the key used
+    res.setHeader('Cache-Control', `public, max-age=${cacheSeconds}, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds * 2}`);
+    res.setHeader('ETag', cachedEtag);
+
+    if (req.headers['if-none-match'] === cachedEtag) {
+      console.log(`Cache hit (304 Not Modified) for key: ${cacheKey}`);
+      res.status(304).end();
+      return;
+    }
+
+    console.log(`Cache hit (200 OK) for key: ${cacheKey}`);
+    res.status(200).json(JSON.parse(body));
+    return;
+  }
+
+  // Cache miss - prepare to cache the response from the handler
+  console.log(`Cache miss for key: ${cacheKey}`);
+  const originalJson = res.json;
+  const originalSend = res.send;
+  let responseBody = null;
+
+  res.json = (body) => {
+    responseBody = JSON.stringify(body);
+    originalJson.call(res, body);
+  };
+  res.send = (body) => {
+    if (typeof body === 'string' && body.startsWith('{') && body.endsWith('}')) {
+        responseBody = body;
+    }
+    originalSend.call(res, body);
+  };
+
+  await handler(req, res);
+
+  if (res.statusCode >= 200 && res.statusCode < 300 && responseBody) {
+    try {
+      const currentEtag = etag(responseBody);
+      const dataToCache = {
+        body: responseBody,
+        etag: currentEtag
+      };
+
+      await setCachedData(cacheKey, dataToCache, cacheSeconds);
+      console.log(`Cached response for key: ${cacheKey}`);
+
+      res.setHeader('X-Cache-Key', cacheKey); // Expose the key used
+      res.setHeader('Cache-Control', `public, max-age=${cacheSeconds}, s-maxage=${cacheSeconds}, stale-while-revalidate=${cacheSeconds * 2}`);
+      res.setHeader('ETag', currentEtag);
+
+    } catch (error) {
+      console.error(`Failed to cache response for key ${cacheKey}:`, error);
+    }
+  } else if (!res.writableEnded) {
+      console.warn(`Handler for ${cacheKey} ended with status ${res.statusCode} or did not send data. Not caching.`);
+      if (!res.headersSent) {
+          res.status(res.statusCode || 500).end();
+      } else if (!res.writableEnded) {
+          res.end();
+      }
+  }
 };
 
 /**

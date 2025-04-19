@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const IpoModel = require('../models/IpoModel');
 const { extractIpoId } = require('../utils/helpers');
+const cacheMiddleware = require('../middleware/cacheMiddleware');
 
 // Get all IPO IDs
-router.get('/ids', async (req, res) => {
+router.get('/ids', cacheMiddleware, async (req, res) => {
   try {
     const ipoIds = await IpoModel.find({})
       .select('ipo_id')
@@ -20,7 +21,7 @@ router.get('/ids', async (req, res) => {
 });
 
 // Get available sections for an IPO
-router.get('/:id/sections', async (req, res) => {
+router.get('/:id/sections', cacheMiddleware, async (req, res) => {
   try {
     const ipo = await IpoModel.findOne({ ipo_id: req.params.id });
     
@@ -55,7 +56,7 @@ router.get('/:id/sections', async (req, res) => {
 });
 
 // Get IPO with specific sections
-router.get('/:id', async (req, res) => {
+router.get('/:id', cacheMiddleware, async (req, res) => {
   try {
     const sections = req.query.sections ? req.query.sections.split(',') : null;
     let projection = {};
@@ -107,7 +108,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Filter IPOs by status
-router.get('/status/:status', async (req, res) => {
+router.get('/status/:status', cacheMiddleware, async (req, res) => {
   try {
     const validStatuses = ['upcoming', 'open', 'closed', 'listed', 'withdrawn'];
     const status = req.params.status.toLowerCase();
@@ -145,7 +146,7 @@ router.get('/status/:status', async (req, res) => {
 });
 
 // Get top performing IPOs
-router.get('/performance/best', async (req, res) => {
+router.get('/performance/best', cacheMiddleware, async (req, res) => {
   try {
     const limit = parseInt(req.query.limit || '10', 10);
     
@@ -168,7 +169,7 @@ router.get('/performance/best', async (req, res) => {
 });
 
 // Get worst performing IPOs
-router.get('/performance/worst', async (req, res) => {
+router.get('/performance/worst', cacheMiddleware, async (req, res) => {
   try {
     const limit = parseInt(req.query.limit || '10', 10);
     
