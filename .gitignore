@@ -37,6 +37,21 @@ Thumbs.db
 # Chrome user data from Puppeteer
 chrome-user-data/
 temp_user_data/
+**/Default/Cache/
+**/Default/Code Cache/
+**/Default/Session Storage/
+**/Default/Local Storage/
+**/Default/GPUCache/
+**/Default/Network Persistent State
+**/Default/Preferences
+**/Default/Cookies*
+**/Default/History*
+**/Default/Favicons*
+**/BrowserMetrics/
+**/GrShaderCache/
+**/ShaderCache/
+user_data/
+
 # IDE specific files
 .idea/
 .vscode/
