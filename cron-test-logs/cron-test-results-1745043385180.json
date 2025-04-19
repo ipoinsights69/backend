@@ -1,0 +1,28 @@
+{
+  "success": [
+    {
+      "url": "IPO Listing API",
+      "strategy": {
+        "headless": "new",
+        "useProxy": false
+      }
+    },
+    {
+      "url": "IPO Detail Page",
+      "strategy": {
+        "headless": false,
+        "useProxy": false
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "IPO Detail Page",
+      "strategy": {
+        "headless": "new",
+        "useProxy": false
+      },
+      "reason": "Expected content not found"
+    }
+  ]
+}

@@ -1,15 +1,16 @@
 {
   "jobs": [
     {
-      "id": "daily-ipo-update",
-      "schedule": "30 20 * * *",
+      "id": "daily-ipo-2025",
+      "schedule": "0 2 * * *",
       "task": "scrape-and-upload",
       "enabled": true,
       "options": {
         "year": 2025,
         "concurrency": 2,
         "saveToMongo": true,
-        "overwrite": false
+        "overwrite": false,
+        "headless": true
       }
     }
   ]

@@ -1,18 +1,69 @@
+/**
+ * Auto Listing Performance Calculator
+ * This script automatically calculates and updates both best and worst listing gains
+ * for all IPOs with trading data. Used both for batch updates and integrated with
+ * the scraper workflow.
+ */
 require('dotenv').config();
 const db = require('../config/database');
 const IpoModel = require('../models/IpoModel');
 
 /**
- * Update listing gains for all IPOs with listingDayTrading data
+ * Extract numeric price value from any exchange data
+ * @param {Object} exchangeData - Data object with exchange keys
+ * @returns {number} - Extracted numeric price or 0
  */
-async function updateListingGains() {
+function extractPrice(exchangeData) {
+  if (!exchangeData) return 0;
+
+  // Try each exchange in priority order
+  const exchanges = ['nse', 'bse', 'nse_sme', 'bse_sme'];
+  
+  for (const exchange of exchanges) {
+    if (exchangeData[exchange] && !isNaN(parseFloat(exchangeData[exchange]))) {
+      return parseFloat(exchangeData[exchange]);
+    }
+  }
+
+  // If no matches in priority list, try any available exchange
+  const anyExchange = Object.keys(exchangeData)[0];
+  if (anyExchange && !isNaN(parseFloat(exchangeData[anyExchange]))) {
+    return parseFloat(exchangeData[anyExchange]);
+  }
+
+  return 0;
+}
+
+/**
+ * Calculate listing gain percentage using the formula:
+ * Listing Gain (%) = ((Closing Price - Issue Price) / Issue Price) × 100
+ * 
+ * @param {number} closingPrice - Closing/last trade price
+ * @param {number} issuePrice - Issue price
+ * @returns {number|null} - Calculated gain percentage or null
+ */
+function calculateGainPercentage(closingPrice, issuePrice) {
+  if (!issuePrice || issuePrice <= 0 || !closingPrice || closingPrice <= 0) {
+    return null;
+  }
+  
+  const gainPercentage = ((closingPrice - issuePrice) / issuePrice) * 100;
+  return parseFloat(gainPercentage.toFixed(2));
+}
+
+/**
+ * Update both best and worst listing performance metrics for all IPOs
+ * @param {boolean} verbose - Whether to log detailed messages
+ * @returns {Object} - Statistics about the update operation
+ */
+async function updateListingPerformance(verbose = true) {
   try {
-    console.log('Connecting to MongoDB...');
+    if (verbose) console.log('Connecting to MongoDB...');
     await db.connectToDatabase();
     
     // Get all listed IPOs from database
     const ipos = await IpoModel.find({ status: 'listed' }).lean();
-    console.log(`Found ${ipos.length} listed IPOs in database`);
+    if (verbose) console.log(`Found ${ipos.length} listed IPOs in database`);
     
     let updated = 0;
     let skipped = 0;
@@ -23,63 +74,76 @@ async function updateListingGains() {
       try {
         // Skip IPOs without listingDayTrading data
         if (!ipo.listingDayTrading || !ipo.listingDayTrading.data) {
-          console.log(`No trading data for IPO: ${ipo.ipo_id}, skipping`);
+          if (verbose) console.log(`No trading data for IPO: ${ipo.ipo_id}, skipping`);
           skipped++;
           continue;
         }
         
         const data = ipo.listingDayTrading.data;
-        // Find first available exchange data
-        const exchange = Object.keys(data.final_issue_price || {})[0] || 
-                        Object.keys(data.last_trade || {})[0];
         
-        if (!exchange) {
-          console.log(`No exchange data for IPO: ${ipo.ipo_id}, skipping`);
-          skipped++;
-          continue;
-        }
+        // Extract prices from trading data using the specified format
+        let issuePrice = extractPrice(data.final_issue_price);
         
-        let issuePrice = 0;
-        let lastTradePrice = 0;
-        
-        // Get issue price
-        if (data.final_issue_price && data.final_issue_price[exchange]) {
-          issuePrice = parseFloat(data.final_issue_price[exchange]);
-        } else if (ipo.issue_price_numeric) {
+        // If issue price not found in trading data, try from IPO record
+        if (issuePrice <= 0 && ipo.issue_price_numeric) {
           issuePrice = ipo.issue_price_numeric;
-        } else if (ipo.issue_price) {
+        } else if (issuePrice <= 0 && ipo.issue_price) {
           const match = ipo.issue_price.match(/\d+(\.\d+)?/);
           if (match) {
             issuePrice = parseFloat(match[0]);
           }
         }
         
-        // Get last trade price
-        if (data.last_trade && data.last_trade[exchange]) {
-          lastTradePrice = parseFloat(data.last_trade[exchange]);
-        }
+        const lastTradePrice = extractPrice(data.last_trade);
+        const lowestPrice = extractPrice(data.low) || extractPrice(data.day_low);
         
-        // Calculate listing gains
-        if (issuePrice > 0 && lastTradePrice > 0) {
-          const listingGain = ((lastTradePrice - issuePrice) / issuePrice) * 100;
-          const listingGainsString = `${listingGain.toFixed(2)}%`;
-          const listingGainsNumeric = parseFloat(listingGain.toFixed(2));
+        // Calculate both listing gains metrics
+        if (issuePrice > 0) {
+          let update = { last_performance_update: new Date() };
+          let performanceCalculated = false;
           
-          // Update the IPO with the new listing gains
-          await IpoModel.findOneAndUpdate(
-            { ipo_id: ipo.ipo_id },
-            { 
-              $set: { 
-                listing_gains: listingGainsString,
-                listing_gains_numeric: listingGainsNumeric
-              }
+          // Calculate best listing gain (based on closing price)
+          const listingGain = calculateGainPercentage(lastTradePrice, issuePrice);
+          if (listingGain !== null) {
+            update.listing_gains = `${listingGain}%`;
+            update.listing_gains_numeric = listingGain;
+            performanceCalculated = true;
+            
+            if (verbose) {
+              console.log(`IPO: ${ipo.ipo_id} Best Listing Gain: ${listingGain}%`);
             }
-          );
+          }
           
-          console.log(`Updated IPO: ${ipo.ipo_id} with listing gains: ${listingGainsString}`);
-          updated++;
+          // Calculate worst listing gain (based on day's lowest price)
+          const worstListingGain = calculateGainPercentage(lowestPrice || lastTradePrice, issuePrice);
+          if (worstListingGain !== null) {
+            update.worst_listing_gains = `${worstListingGain}%`;
+            update.worst_listing_gains_numeric = worstListingGain;
+            performanceCalculated = true;
+            
+            if (verbose) {
+              console.log(`IPO: ${ipo.ipo_id} Worst Listing Gain: ${worstListingGain}%`);
+            }
+          }
+          
+          // Only update if we calculated at least one metric
+          if (performanceCalculated) {
+            // Update the IPO with the new performance metrics
+            await IpoModel.findOneAndUpdate(
+              { ipo_id: ipo.ipo_id },
+              { $set: update }
+            );
+            
+            if (verbose) {
+              console.log(`Updated IPO: ${ipo.ipo_id} performance metrics`);
+            }
+            updated++;
+          } else {
+            if (verbose) console.log(`No valid prices found for IPO: ${ipo.ipo_id}, skipping`);
+            skipped++;
+          }
         } else {
-          console.log(`Missing price data for IPO: ${ipo.ipo_id}, skipping`);
+          if (verbose) console.log(`Missing issue price for IPO: ${ipo.ipo_id}, skipping`);
           skipped++;
         }
       } catch (error) {
@@ -88,18 +152,40 @@ async function updateListingGains() {
       }
     }
     
-    console.log('\nUpdate complete!');
-    console.log(`Total IPOs: ${ipos.length}`);
-    console.log(`Updated: ${updated}`);
-    console.log(`Skipped: ${skipped}`);
-    console.log(`Errors: ${errors}`);
+    const stats = {
+      total: ipos.length,
+      updated,
+      skipped,
+      errors
+    };
+    
+    if (verbose) {
+      console.log('\nUpdate complete!');
+      console.log(`Total IPOs: ${stats.total}`);
+      console.log(`Updated: ${stats.updated}`);
+      console.log(`Skipped: ${stats.skipped}`);
+      console.log(`Errors: ${stats.errors}`);
+    }
+    
+    return stats;
   } catch (error) {
     console.error('Error during update process:', error);
+    return { error: error.message };
   } finally {
-    await db.disconnectFromDatabase();
-    process.exit(0);
+    if (process.env.AUTO_DISCONNECT !== 'false') {
+      await db.disconnectFromDatabase();
+    }
   }
 }
 
-// Run the update
-updateListingGains(); 
+// If run directly, execute the update
+if (require.main === module) {
+  updateListingPerformance().then(() => {
+    process.exit(0);
+  }).catch(err => {
+    console.error('Failed to update listing performance:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { updateListingPerformance, calculateGainPercentage, extractPrice }; 

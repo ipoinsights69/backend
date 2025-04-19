@@ -152,11 +152,11 @@ router.get('/performance/best', async (req, res) => {
     // Get IPOs with listing gains
     const ipos = await IpoModel.find({
       status: 'listed',
-      'listing_gains': { $exists: true, $ne: null }
+      'listing_gains_numeric': { $exists: true, $ne: null }
     })
     .sort({ 'listing_gains_numeric': -1 })  // Sort by listing gains in descending order
     .limit(limit)
-    .select('ipo_id ipo_name company_name year listing_date issue_price listing_gains');
+    .select('ipo_id ipo_name company_name year listing_date issue_price issue_size subscription listing_gains listing_gains_numeric');
     
     res.json({
       data: ipos
@@ -172,14 +172,14 @@ router.get('/performance/worst', async (req, res) => {
   try {
     const limit = parseInt(req.query.limit || '10', 10);
     
-    // Get IPOs with listing gains
+    // Get IPOs with worst listing gains (negative gains = losses)
     const ipos = await IpoModel.find({
       status: 'listed',
-      'listing_gains': { $exists: true, $ne: null }
+      'listing_gains_numeric': { $exists: true, $ne: null }
     })
     .sort({ 'listing_gains_numeric': 1 })  // Sort by listing gains in ascending order
     .limit(limit)
-    .select('ipo_id ipo_name company_name year listing_date issue_price listing_gains');
+    .select('ipo_id ipo_name company_name year listing_date issue_price issue_size subscription listing_gains listing_gains_numeric');
     
     res.json({
       data: ipos

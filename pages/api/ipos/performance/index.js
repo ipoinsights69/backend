@@ -33,19 +33,30 @@ const getPerformingIpos = async (req, res) => {
       filter.year = year;
     }
     
-    // Fetch IPOs - don't filter on listing_gains_numeric yet because we need to process data
+    // Fetch IPOs with all necessary fields for analysis
     const ipos = await IpoModel.find(filter)
-      .select('ipo_id ipo_name company_name year opening_date listing_date issue_price issue_price_numeric listing_gains listing_gains_numeric status logo_url listingDayTrading')
+      .select('ipo_id ipo_name company_name year opening_date listing_date issue_price issue_price_numeric listing_gains listing_gains_numeric worst_listing_gains worst_listing_gains_numeric status logo_url listingDayTrading issue_size subscription')
       .lean();
     
     // Process IPOs to calculate listing gains if missing
     const processedIpos = ipos.map(ipo => {
-      // If listing gains already exists, use it
-      if (ipo.listing_gains_numeric) {
-        return ipo;
+      // If we're checking for "best" performance and listing gains already exists, use it
+      if (type === 'best' && ipo.listing_gains_numeric) {
+        return {
+          ...ipo,
+          performance_value: ipo.listing_gains_numeric
+        };
       }
       
-      // Try to calculate listing gains from listingDayTrading data
+      // If we're checking for "worst" performance and worst listing gains exists, use it
+      if (type === 'worst' && ipo.worst_listing_gains_numeric) {
+        return {
+          ...ipo,
+          performance_value: ipo.worst_listing_gains_numeric
+        };
+      }
+      
+      // Try to calculate gains from listingDayTrading data
       if (ipo.listingDayTrading && ipo.listingDayTrading.data) {
         const data = ipo.listingDayTrading.data;
         // Find first available exchange data
@@ -55,6 +66,7 @@ const getPerformingIpos = async (req, res) => {
         if (exchange) {
           let issuePrice = 0;
           let lastTradePrice = 0;
+          let lowestPrice = 0;
           
           // Get issue price
           if (data.final_issue_price && data.final_issue_price[exchange]) {
@@ -73,33 +85,68 @@ const getPerformingIpos = async (req, res) => {
             lastTradePrice = parseFloat(data.last_trade[exchange]);
           }
           
-          // Calculate listing gains
-          if (issuePrice > 0 && lastTradePrice > 0) {
-            const listingGain = ((lastTradePrice - issuePrice) / issuePrice) * 100;
-            return {
-              ...ipo,
-              listing_gains: `${listingGain.toFixed(2)}%`,
-              listing_gains_numeric: parseFloat(listingGain.toFixed(2)),
-              calculated: true // Flag to indicate we calculated this
-            };
+          // Get lowest price of the day
+          if (data.day_low && data.day_low[exchange]) {
+            lowestPrice = parseFloat(data.day_low[exchange]);
+          } else {
+            // If day_low isn't available, use last_trade as fallback
+            lowestPrice = lastTradePrice;
+          }
+          
+          // Calculate listing gains and worst listing gains
+          if (issuePrice > 0) {
+            if (lastTradePrice > 0) {
+              const listingGain = ((lastTradePrice - issuePrice) / issuePrice) * 100;
+              const formattedGain = parseFloat(listingGain.toFixed(2));
+              
+              if (type === 'best') {
+                return {
+                  ...ipo,
+                  listing_gains: `${formattedGain}%`,
+                  listing_gains_numeric: formattedGain,
+                  performance_value: formattedGain,
+                  calculated: true
+                };
+              }
+            }
+            
+            if (lowestPrice > 0 && type === 'worst') {
+              const worstListingGain = ((lowestPrice - issuePrice) / issuePrice) * 100;
+              const formattedWorstGain = parseFloat(worstListingGain.toFixed(2));
+              
+              return {
+                ...ipo,
+                worst_listing_gains: `${formattedWorstGain}%`,
+                worst_listing_gains_numeric: formattedWorstGain,
+                performance_value: formattedWorstGain,
+                calculated: true
+              };
+            }
           }
         }
       }
       
-      return ipo;
+      // If we couldn't calculate anything, return the existing IPO
+      // but with a performance_value field set based on the requested type
+      return {
+        ...ipo,
+        performance_value: type === 'best' ? 
+          (ipo.listing_gains_numeric || null) :
+          (ipo.worst_listing_gains_numeric || null)
+      };
     });
     
-    // Filter out IPOs without listing gains data
-    const filteredIpos = processedIpos.filter(ipo => ipo.listing_gains_numeric !== null && ipo.listing_gains_numeric !== undefined);
+    // Filter out IPOs without performance data
+    const filteredIpos = processedIpos.filter(ipo => ipo.performance_value !== null && ipo.performance_value !== undefined);
     
     // Sort based on the type
     const sortDirection = type === 'best' ? -1 : 1;
-    const sortedIpos = filteredIpos.sort((a, b) => sortDirection * (a.listing_gains_numeric - b.listing_gains_numeric));
+    const sortedIpos = filteredIpos.sort((a, b) => sortDirection * (a.performance_value - b.performance_value));
     
     // Apply limit
     const limitedIpos = sortedIpos.slice(0, limit);
     
-    // Clean up data for response (remove unnecessary listingDayTrading data)
+    // Clean up data for response (remove unnecessary data)
     const cleanedIpos = limitedIpos.map(({ listingDayTrading, ...rest }) => rest);
     
     return res.status(200).json({

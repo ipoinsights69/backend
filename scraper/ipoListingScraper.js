@@ -24,6 +24,26 @@ function extractCompanyName(htmlTag) {
 }
 
 /**
+ * Parse date string from various formats
+ * @param {string} dateStr - Date string to parse
+ * @returns {string|null} - Formatted date string or null
+ */
+function parseDateString(dateStr) {
+  if (!dateStr || dateStr.toLowerCase().includes('na') || dateStr === '-') {
+    return null;
+  }
+  
+  try {
+    // Clean the date string
+    const cleaned = dateStr.trim().replace(/\s+/g, ' ');
+    return cleaned;
+  } catch (error) {
+    console.warn(`Failed to parse date: ${dateStr}`);
+    return null;
+  }
+}
+
+/**
  * Get headers that mimic a real browser to avoid 403 errors
  * @returns {Object} - Headers object
  */
@@ -34,7 +54,7 @@ function getBrowserLikeHeaders() {
     'Accept-Language': 'en-US,en;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Referer': 'https://www.chittorgarh.com/ipo/mainboard-ipo-in-india/',
+    'Referer': 'https://www.chittorgarh.com/ipo/infonative-solutions-ipo/2200/',
     'Cache-Control': 'no-cache',
     'Pragma': 'no-cache',
     'DNT': '1'
@@ -42,16 +62,30 @@ function getBrowserLikeHeaders() {
 }
 
 /**
- * Fetch IPO listings directly from the API using Puppeteer
- * @param {number|string} year - The year to fetch
+ * Fetch IPO listings for a specific year
+ * @param {number} year - Year to fetch IPO listings for
+ * @param {boolean} force - Force scrape even for future years
  * @returns {Promise<Array>} - Array of IPO listings
  */
-async function fetchIpoListings(year) {
+const fetchIpoListings = async (year, force = false) => {
+  // Validate year with option to force future years
+  const currentYear = new Date().getFullYear();
+  if (!year || year < 2000) {
+    throw new Error(`Invalid year: ${year}. Year must be 2000 or later`);
+  }
+  
+  // Check future years
+  if (year > currentYear + 1 && !force) {
+    throw new Error(`Year ${year} is too far in the future. Use force mode to override this check.`);
+  }
+
+  console.log(`Fetching IPO listings for year ${year}${force ? ' (force mode)' : ''}...`);
+
   let browser;
   let page;
   const MAX_RETRIES = 3;
   const INITIAL_TIMEOUT = 60000; // 60 seconds
-  const REFERRER_URL = 'https://www.chittorgarh.com/ipo/mainboard-ipo-in-india/';
+  const REFERRER_URL = 'https://www.chittorgarh.com/ipo/infonative-solutions-ipo/2200/';
   const apiUrl = `https://webnodejs.chittorgarh.com/cloud/report/data-read/82/1/3/${year}/2024-25/0/0`;
 
   try {
