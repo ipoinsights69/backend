@@ -117,3 +117,32 @@
 [2025-04-19T06:24:14.804Z] [INFO] Cron job started: daily-ipo-2025
 [2025-04-19T06:24:14.804Z] [INFO] Next execution time for daily-ipo-2025: 2025-04-20T06:24:14.804Z
 [2025-04-19T06:24:14.804Z] [INFO] Started 1 cron jobs
+[2025-04-19T07:43:45.171Z] [INFO] All cron jobs stopped
+[2025-04-19T07:43:45.178Z] [INFO] Added new cron job: daily-ipo-2025
+[2025-04-19T07:43:45.181Z] [INFO] Cron configuration saved successfully
+[2025-04-19T07:43:45.184Z] [INFO] Cron configuration saved successfully
+[2025-04-19T07:43:45.187Z] [INFO] Enabled cron job: daily-ipo-2025
+[2025-04-19T07:43:45.188Z] [INFO] Starting cron system...
+[2025-04-19T07:43:45.189Z] [INFO] All cron jobs stopped
+[2025-04-19T07:43:45.189Z] [INFO] Setting up cron job: daily-ipo-2025 with schedule: 0 2 * * *
+[2025-04-19T07:43:45.231Z] [INFO] Cron job started: daily-ipo-2025
+[2025-04-19T07:43:45.232Z] [INFO] Next execution time for daily-ipo-2025: 2025-04-20T07:43:45.232Z
+[2025-04-19T07:43:45.232Z] [INFO] Started 1 cron jobs
+[2025-04-19T07:54:14.027Z] [INFO] [manual-run-1745049254027] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T07:54:14.032Z] [INFO] [manual-run-1745049254027] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:00:20.485Z] [INFO] [manual-run-1745049620485] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:00:20.490Z] [INFO] [manual-run-1745049620485] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:00:25.605Z] [INFO] [manual-run-1745049620485] Completed scrape and upload for year 2025
+[2025-04-19T08:00:44.897Z] [INFO] [manual-run-1745049644897] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:00:44.898Z] [INFO] [manual-run-1745049644897] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:00:46.285Z] [INFO] [manual-run-1745049644897] Completed scrape and upload for year 2025
+[2025-04-19T08:01:15.626Z] [INFO] [manual-run-1745049675626] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:01:15.629Z] [INFO] [manual-run-1745049675626] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:01:17.791Z] [INFO] [manual-run-1745049675626] Completed scrape and upload for year 2025
+[2025-04-19T08:02:26.983Z] [INFO] [manual-run-1745049746983] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:02:26.986Z] [INFO] [manual-run-1745049746983] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:03:38.539Z] [INFO] [manual-run-1745049746983] Completed scrape and upload for year 2025
+[2025-04-19T08:05:14.299Z] [INFO] [manual-run-1745049914299] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:05:14.302Z] [INFO] [manual-run-1745049914299] Scraping IPO data for year 2025 with concurrency 2
+[2025-04-19T08:08:09.943Z] [INFO] [manual-run-1745050089943] Starting scrape and upload for year 2025 with smart updates
+[2025-04-19T08:08:09.946Z] [INFO] [manual-run-1745050089943] Scraping IPO data for year 2025 with concurrency 2

@@ -1,64 +1,53 @@
 /**
- * Browser Helper Module
- * Handles browser launching and management with fallbacks for various configurations
+ * Enhanced Browser Helper Module
+ * Advanced anti-detection with optional proxy and human-like behavior
  */
 
-// Try to load dependencies with error handling
-let puppeteer, StealthPlugin, connectRealBrowser;
+// Try to load the enhanced puppeteer setup
+let puppeteer;
+let puppeteerExtra;
+let StealthPlugin;
+let AnonymizeUAPlugin;
+let randomUserAgent;
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
 
 try {
-  // First try to import puppeteer from standard location
-  puppeteer = require('puppeteer-extra');
+  // Load puppeteer-extra and plugins
+  puppeteerExtra = require('puppeteer-extra');
   StealthPlugin = require('puppeteer-extra-plugin-stealth');
-  connectRealBrowser = require('puppeteer-real-browser').connect;
-
-  // Apply the stealth plugin with stronger settings
-  const stealth = StealthPlugin();
-  stealth.enabledEvasions.add('chrome.runtime');
-  stealth.enabledEvasions.add('iframe.contentWindow');
-  stealth.enabledEvasions.add('media.codecs');
-  stealth.enabledEvasions.add('navigator.languages');
-  stealth.enabledEvasions.add('navigator.permissions');
-  stealth.enabledEvasions.add('sourceurl');
-  puppeteer.use(stealth);
-} catch (error) {
-  console.warn(`Browser automation dependencies warning: ${error.message}`);
-  console.warn('Will attempt fallbacks if browser launch is requested');
+  AnonymizeUAPlugin = require('puppeteer-extra-plugin-anonymize-ua');
+  randomUserAgent = require('random-useragent');
   
-  // Set variables to null if imports fail
-  if (!puppeteer) puppeteer = null;
-  if (!StealthPlugin) StealthPlugin = null;
-  if (!connectRealBrowser) connectRealBrowser = null;
-}
-
-// Attempt to load regular puppeteer as fallback
-let regularPuppeteer;
-try {
-  regularPuppeteer = require('puppeteer');
+  // Regular puppeteer as fallback
+  puppeteer = require('puppeteer');
+  
+  // Apply plugins
+  puppeteerExtra.use(StealthPlugin());
+  
+  // Configure anonymize plugin with custom options
+  const anonymizePlugin = AnonymizeUAPlugin({
+    stripHeadless: true,
+    makeWindows: true,
+    customFn: (ua) => ua.replace('HeadlessChrome', 'Chrome')
+  });
+  puppeteerExtra.use(anonymizePlugin);
+  
+  console.log('✅ Puppeteer-extra with stealth and plugins loaded successfully');
 } catch (e) {
-  regularPuppeteer = null;
+  console.error('⚠️ Error loading puppeteer-extra:', e.message);
+  console.error('Falling back to regular puppeteer. Anti-detection capabilities will be limited.');
+  
+  try {
+    puppeteer = require('puppeteer');
+    console.log('✅ Regular puppeteer loaded as fallback');
+  } catch (fallbackError) {
+    console.error('❌ Critical error: Both puppeteer-extra and puppeteer failed to load:', fallbackError.message);
+    console.error('Please run: npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth puppeteer-extra-plugin-anonymize-ua random-useragent');
+    process.exit(1);
+  }
 }
-
-// Attempt to load puppeteer-core for real browser mode
-let puppeteerCore;
-try {
-  puppeteerCore = require('puppeteer-core');
-} catch (e) {
-  puppeteerCore = null;
-}
-
-const DEFAULT_ARGS = [
-  '--no-sandbox',
-  '--disable-setuid-sandbox',
-  '--disable-blink-features=AutomationControlled',
-  '--disable-features=IsolateOrigins,site-per-process',
-  '--disable-dev-shm-usage',
-  '--disable-web-security',
-  '--disable-infobars',
-  '--disable-notifications',
-  '--ignore-certificate-errors',
-  '--window-size=1920,1080',
-];
 
 // Array of realistic user agents to rotate through
 const USER_AGENTS = [
@@ -68,1085 +57,724 @@ const USER_AGENTS = [
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0',
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0',
-  'Mozilla/5.0 (iPad; CPU OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1'
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0',
 ];
 
-// Get a random user agent from the array
+// Get a random user agent - uses both hardcoded and library-based options
 const getRandomUserAgent = () => {
+  try {
+    // 50% chance to use the random-useragent library (more diverse but sometimes outdated)
+    if (randomUserAgent && Math.random() > 0.5) {
+      const ua = randomUserAgent.getRandom(ua => {
+        return ua.browserName === 'Chrome' && parseFloat(ua.browserVersion) >= 100;
+      });
+      if (ua) return ua;
+    }
+  } catch (e) {
+    console.warn('⚠️ random-useragent generation failed, using hardcoded list');
+  }
+  
+  // Fallback to hardcoded list
   return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
 };
 
-// Default proxy configuration (used as fallback)
-const DEFAULT_PROXY = {
-  server: 'geo.iproyal.com:12321',
-  username: 'T3SdWfWt2L3ZbveZ',
-  password: 'O3FRVz4QjAAvBgYw'
+// Get browser-like headers to avoid detection
+const getBrowserLikeHeaders = (referer) => {
+  return {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Referer': referer || 'https://www.google.com/',
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1'
+  };
 };
 
-// Add 2Captcha API key - uncomment and add your key to enable captcha solving
-const CAPTCHA_API_KEY = process.env.CAPTCHA_API_KEY || ''; // '1abc234def567890abcdef1234567890'
+// Pre-configured proxy settings
+const PROXY_SETTINGS = [
+  {
+    server: 'geo.iproyal.com:12321',
+    username: 'T3SdWfWt2L3ZbveZ',
+    password: 'O3FRVz4QjAAvBgYw'
+  }
+  // Add more proxy configurations if you have multiple
+  // Example:
+  // {
+  //   server: 'proxy2.example.com:8080',
+  //   username: 'user2',
+  //   password: 'pass2'
+  // }
+];
 
-// Try to load 2captcha-solver for handling captchas
-let TwoCaptchaSolver;
-try {
-  TwoCaptchaSolver = require('2captcha-ts');
-} catch (error) {
-  console.warn('2captcha-ts not available. Captcha solving will not work.');
-  TwoCaptchaSolver = null;
+// Get a random proxy from the available options
+const getRandomProxy = () => {
+  return PROXY_SETTINGS[Math.floor(Math.random() * PROXY_SETTINGS.length)];
+};
+
+// Track used IPs to avoid reuse in the same session
+const usedProxyIPs = new Set();
+
+/**
+ * Creates a unique temporary user data directory
+ * @returns {string} - Path to the unique user data directory
+ */
+function createTempUserDataDir() {
+  const baseTempDir = path.join(__dirname, '..', 'temp_user_data');
+  
+  // Create base temp directory if it doesn't exist
+  if (!fs.existsSync(baseTempDir)) {
+    fs.mkdirSync(baseTempDir, { recursive: true });
+  }
+  
+  // Generate a unique subfolder name using timestamp and random string
+  const uniqueId = `${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
+  const tempUserDataDir = path.join(baseTempDir, uniqueId);
+  
+  // Create the unique directory
+  fs.mkdirSync(tempUserDataDir, { recursive: true });
+  
+  console.log(`📁 Created temporary user data directory: ${tempUserDataDir}`);
+  return tempUserDataDir;
 }
 
 /**
- * Checks if the current page is blocked by Cloudflare.
- * @param {import('puppeteer').Page} page - The Puppeteer page instance.
- * @returns {Promise<boolean>} - True if Cloudflare block is detected, false otherwise.
+ * Clean up a temporary user data directory
+ * @param {string} dirPath - Path to the user data directory to clean up
  */
-async function isCloudflareBlocked(page) {
+function cleanupTempUserDataDir(dirPath) {
+  if (!dirPath || !dirPath.includes('temp_user_data')) {
+    console.warn('⚠️ Refusing to delete directory that does not appear to be a temp user data dir:', dirPath);
+    return;
+  }
+  
   try {
-    const title = await page.title();
-    const content = await page.content();
-
-    // Common Cloudflare challenge titles
-    if (title.includes('Just a moment...') || 
-        title.includes('Checking your browser') || 
-        title.includes('Attention Required') || 
-        title.includes('Access denied')) {
-      console.warn('Cloudflare challenge page detected by title.');
-      return true;
+    if (fs.existsSync(dirPath)) {
+      console.log(`🧹 Removing temporary user data directory: ${dirPath}`);
+      
+      // Simple file deletion - for production use, consider a more robust recursive deletion
+      // This is a simplified version that works for many cases but may not handle all edge cases
+      fs.rmSync(dirPath, { recursive: true, force: true });
     }
-
-    // Cloudflare specific selectors/text
-    if (content.includes('cf-challenge-running') || 
-        content.includes('cf-spinner') || 
-        content.includes('Verifying you are human') || 
-        content.includes('Ray ID') || 
-        content.includes('cf-error-code')) {
-       console.warn('Cloudflare challenge page detected by content.');
-       return true;
-    }
-
-    // Check for common Cloudflare and other anti-bot response status codes
-    const response = page.mainFrame().url() && await page.goto(page.mainFrame().url(), { waitUntil: 'domcontentloaded' }); 
-    if (response && [403, 503, 429, 520, 521, 522].includes(response.status())) {
-        console.warn(`Anti-bot protection detected by status code: ${response.status()}`);
-        return true;
-    }
-
   } catch (error) {
-    // Ignore errors during detection (e.g., page closed)
-    console.error('Error during Cloudflare detection:', error.message);
+    console.error(`⚠️ Error cleaning up user data directory ${dirPath}:`, error.message);
   }
-  return false;
 }
 
 /**
- * Adds random delays between actions to mimic human behavior
- * @param {number} min - Minimum delay in ms
- * @param {number} max - Maximum delay in ms
- * @returns {Promise<void>}
+ * Performs randomized, human-like scrolling on the page
+ * @param {import('puppeteer').Page} page - The page to scroll on
+ * @param {number} minScrolls - Minimum number of scroll actions
+ * @param {number} maxScrolls - Maximum number of scroll actions
  */
-async function randomDelay(min = 500, max = 3000) {
-  const delay = Math.floor(Math.random() * (max - min + 1)) + min;
-  return new Promise(resolve => setTimeout(resolve, delay));
-}
-
-/**
- * Launches a browser using regular puppeteer
- * @param {object} options - Launch options
- * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page, browserType: string}>}
- */
-async function launchRegularPuppeteer(options) {
-  const { 
-    headless = 'new', 
-    args = [], 
-    timeout = 90000, 
-    proxy = null 
-  } = options;
+async function performHumanLikeScrolling(page, minScrolls = 3, maxScrolls = 8) {
+  const scrolls = Math.floor(Math.random() * (maxScrolls - minScrolls + 1)) + minScrolls;
+  console.log(`🔄 Performing ${scrolls} human-like scrolls`);
   
-  if (!regularPuppeteer) {
-    throw new Error('Regular puppeteer is not available. Run: npm install puppeteer');
-  }
-  
-  // Ensure we correctly interpret headless mode
-  const headlessValue = headless === 'new' ? 'new' : 
-                        headless === true ? 'new' : 
-                        headless === false ? false : 'new';
-  
-  console.log(`Launching browser with regular puppeteer (headless: ${headlessValue === false ? 'false (non-headless)' : headlessValue})...`);
-  
-  const launchArgs = [...DEFAULT_ARGS, ...args];
-  
-  // Add proxy if specified
-  if (proxy) {
-    launchArgs.push(`--proxy-server=${proxy.server}`);
-    console.log(`Using proxy: ${proxy.server}`);
-  }
-  
-  // Ensure window size is set for non-headless mode
-  if (headlessValue === false) {
-    launchArgs.push('--window-size=1920,1080');
-    launchArgs.push('--start-maximized');
-  }
-  
-  const browser = await regularPuppeteer.launch({
-    headless: headlessValue, 
-    args: launchArgs,
-    ignoreHTTPSErrors: true,
-    defaultViewport: null // Use window viewport in non-headless mode
-  });
-  
-  const page = await browser.newPage();
-  
-  // Set proxy authentication if needed
-  if (proxy && proxy.username && proxy.password) {
-    await page.authenticate({
-      username: proxy.username,
-      password: proxy.password
-    });
-  }
-  
-  const userAgent = getRandomUserAgent();
-  console.log(`Using user agent: ${userAgent}`);
-  await page.setUserAgent(userAgent);
-  
-  // Only set viewport in headless mode, otherwise use window size
-  if (headlessValue !== false) {
-    await page.setViewport({ width: 1920, height: 1080 });
-  }
-  
-  // Set additional headers
-  await page.setExtraHTTPHeaders({
-    'Accept-Language': 'en-US,en;q=0.9',
-    'DNT': '1'
-  });
-  
-  // Mask WebDriver usage
-  await page.evaluateOnNewDocument(() => {
-    delete Object.getPrototypeOf(navigator).webdriver;
+  for (let i = 0; i < scrolls; i++) {
+    const scrollAmount = Math.floor(Math.random() * 800) + 100; // Random scroll between 100-900px
+    await page.evaluate((amount) => {
+      window.scrollBy({
+        top: amount,
+        behavior: 'smooth'
+      });
+    }, scrollAmount);
     
-    // Overwrite the plugins property to use a custom getter
-    Object.defineProperty(navigator, 'plugins', {
-      get: () => {
-        return [1, 2, 3, 4, 5].map(i => {
-          return {
-            name: `Plugin ${i}`,
-            description: `Description ${i}`,
-            filename: `plugin${i}.dll`
-          };
+    // Random pause between scrolls (300-1200ms)
+    await new Promise(r => setTimeout(r, Math.floor(Math.random() * 900) + 300));
+  }
+}
+
+/**
+ * Performs random mouse movements to appear more human-like
+ * @param {import('puppeteer').Page} page - The page to move mouse on
+ * @param {number} movements - Number of movements to make
+ */
+async function performRandomMouseMovements(page, movements = 5) {
+  console.log(`🖱️ Performing ${movements} random mouse movements`);
+  
+  for (let i = 0; i < movements; i++) {
+    const x = Math.floor(Math.random() * 800);
+    const y = Math.floor(Math.random() * 600);
+    
+    await page.mouse.move(x, y);
+    
+    // Random pause between movements (100-500ms)
+    await new Promise(r => setTimeout(r, Math.floor(Math.random() * 400) + 100));
+  }
+}
+
+/**
+ * Patches browser fingerprints to avoid detection
+ * @param {import('puppeteer').Page} page - The page to patch
+ */
+async function patchBrowserFingerprints(page) {
+  console.log('🔧 Patching browser fingerprints');
+  
+  await page.evaluateOnNewDocument(() => {
+    // Override navigator properties
+    const originalNavigator = window.navigator;
+    const navigatorProxy = new Proxy(originalNavigator, {
+      has: (target, key) => key in target,
+      get: (target, key) => {
+        switch (key) {
+          case 'webdriver':
+            return false;
+          case 'plugins':
+            // Create fake plugins array
+            return {
+              length: 3,
+              refresh: () => {},
+              item: (i) => { 
+                return {
+                  name: ['Chrome PDF Plugin', 'Chrome PDF Viewer', 'Native Client'][i],
+                  description: ['Portable Document Format', 'Chrome PDF Viewer', 'Native Client Executable'][i],
+                  filename: ['internal-pdf-viewer', 'mhjfbmdgcfjbbpaeojofohoefgiehjai', 'internal-nacl-plugin'][i],
+                  length: 1
+                };
+              },
+              namedItem: (name) => { return null; },
+              [Symbol.iterator]: function* () {
+                yield {name: 'Chrome PDF Plugin', description: 'Portable Document Format', filename: 'internal-pdf-viewer'};
+                yield {name: 'Chrome PDF Viewer', description: 'Chrome PDF Viewer', filename: 'mhjfbmdgcfjbbpaeojofohoefgiehjai'};
+                yield {name: 'Native Client', description: 'Native Client Executable', filename: 'internal-nacl-plugin'};
+              }
+            };
+          case 'languages':
+            return ['en-US', 'en', 'es'];
+          case 'mimeTypes':
+            return {
+              length: 2,
+              item: (i) => ({
+                type: ['application/pdf', 'application/x-google-chrome-pdf'][i],
+                description: ['Portable Document Format', 'Portable Document Format'][i],
+                suffixes: ['pdf', 'pdf'][i],
+              }),
+              [Symbol.iterator]: function* () {
+                yield {type: 'application/pdf', description: 'Portable Document Format', suffixes: 'pdf'};
+                yield {type: 'application/x-google-chrome-pdf', description: 'Portable Document Format', suffixes: 'pdf'};
+              }
+            };
+          case 'hardwareConcurrency':
+            return 8;
+          case 'deviceMemory':
+            return 8;
+          case 'platform':
+            return 'Win32';
+          default:
+            return target[key];
+        }
+      }
+    });
+    
+    // Override navigator
+    window.navigator = navigatorProxy;
+    
+    // Mock chrome browser environment
+    if (!window.chrome) {
+      window.chrome = {
+        runtime: {
+          connect: function() { return {}; },
+          sendMessage: function() { return {}; }
+        }
+      };
+    }
+    
+    // Override WebGL renderer
+    const getParameterProxy = WebGLRenderingContext.prototype.getParameter;
+    WebGLRenderingContext.prototype.getParameter = function(parameter) {
+      // UNMASKED_VENDOR_WEBGL
+      if (parameter === 37445) {
+        return 'Google Inc. (NVIDIA)';
+      }
+      // UNMASKED_RENDERER_WEBGL
+      if (parameter === 37446) {
+        return 'ANGLE (NVIDIA, NVIDIA GeForce GTX 1050 Direct3D11 vs_5_0 ps_5_0)';
+      }
+      return getParameterProxy.call(this, parameter);
+    };
+    
+    // Add modern browser features
+    window.Notification = window.Notification || function() {};
+    window.SharedWorker = window.SharedWorker || function() {};
+    
+    // Override document.createElement to handle iframe contentWindow access
+    const originalCreateElement = document.createElement;
+    document.createElement = function(...args) {
+      const element = originalCreateElement.apply(this, args);
+      if (args[0].toLowerCase() === 'iframe') {
+        const contentWindowProxy = new Proxy({}, {
+          get: function(target, key) {
+            // Simulate empty iframe
+            if (key === 'document') {
+              return { body: { appendChild: function() {} } };
+            }
+            return undefined;
+          }
+        });
+        
+        Object.defineProperty(element, 'contentWindow', {
+          get: function() { return contentWindowProxy; }
         });
       }
-    });
-
-    // Overwrite the languages property
-    Object.defineProperty(navigator, 'languages', {
-      get: () => ['en-US', 'en', 'es'],
-    });
+      return element;
+    };
+    
+    // Override permissions behavior
+    const originalQuery = Permissions.prototype.query;
+    Permissions.prototype.query = function(queryObj) {
+      return Promise.resolve({
+        state: 'granted',
+        addEventListener: function() {}
+      });
+    };
   });
   
-  return { browser, page, browserType: 'regular' };
+  console.log('✅ Browser fingerprints patched');
 }
 
 /**
- * Launches a browser using puppeteer-core with Chrome (real browser mode)
- * @param {object} options - Launch options
- * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page, browserType: string}>}
+ * Waits for JavaScript challenge to resolve
+ * @param {import('puppeteer').Page} page - The page to wait on
+ * @param {number} timeout - Maximum time to wait in ms
  */
-async function launchRealBrowser(options) {
-  const { 
-    headless = 'new', 
-    args = [], 
-    timeout = 90000, 
-    proxy = null 
-  } = options;
+async function waitForJsChallenge(page, timeout = 30000) {
+  console.log('⏳ Waiting for JavaScript challenges to resolve...');
   
-  if (!puppeteerCore && !connectRealBrowser) {
-    throw new Error('Neither puppeteer-core nor puppeteer-real-browser is available');
+  const challengeSelectors = [
+    // Cloudflare selectors
+    '#cf-spinner', '.cf-browser-verification', '#challenge-form', '#cf-please-wait',
+    // Imperva/Incapsula
+    '#incapsula-block', '.incapsula-block',
+    // DataDome
+    '#datadome-puzzle', '.datadome-challenge',
+    // Akamai
+    '#ak-spinner', '#akam-captcha'
+  ];
+  
+  const startTime = Date.now();
+  
+  // First wait for any challenge element to appear
+  try {
+    for (const selector of challengeSelectors) {
+      const element = await page.$(selector);
+      if (element) {
+        console.log(`🛡️ Detected JS challenge: ${selector}`);
+        break;
+      }
+    }
+  } catch (e) {
+    console.log('No challenge elements found initially, continuing...');
   }
   
-  // Ensure we correctly interpret headless mode
-  const headlessValue = headless === 'new' ? 'new' : 
-                        headless === true ? 'new' : 
-                        headless === false ? false : 'new';
-  
-  console.log(`Launching browser in real browser mode (headless: ${headlessValue === false ? 'false (non-headless)' : headlessValue})...`);
-  
-  // First try puppeteer-real-browser if available
-  if (connectRealBrowser) {
+  // Then wait for it to disappear (challenge resolved)
+  let resolved = false;
+  while (Date.now() - startTime < timeout) {
+    let challengeActive = false;
+    
     try {
-      const connectOptions = {
-        headless: headlessValue,
-        turnstile: true,
-        args: [...DEFAULT_ARGS, ...args],
-        connectOption: {
-          defaultViewport: headlessValue !== false ? { width: 1920, height: 1080 } : null,
-        },
-      };
-      
-      // Add window size for non-headless mode
-      if (headlessValue === false) {
-        connectOptions.args.push('--window-size=1920,1080');
-        connectOptions.args.push('--start-maximized');
+      for (const selector of challengeSelectors) {
+        const element = await page.$(selector);
+        if (element) {
+          challengeActive = true;
+          console.log(`⏳ Still waiting on JS challenge: ${selector}`);
+          await new Promise(r => setTimeout(r, 1000)); // Check again in 1 second
+          break;
+        }
       }
-      
-      // Add proxy if specified
-      if (proxy) {
-        connectOptions.args.push(`--proxy-server=${proxy.server}`);
-        connectOptions.proxyAuth = proxy.username && proxy.password ? 
-          { username: proxy.username, password: proxy.password } : undefined;
-        console.log(`Using proxy with real-browser: ${proxy.server}`);
-      }
-      
-      const result = await connectRealBrowser(connectOptions);
-      
-      return { 
-        browser: result.browser, 
-        page: result.page, 
-        browserType: 'real-browser'
-      };
-    } catch (error) {
-      console.error('Failed to launch with puppeteer-real-browser:', error.message);
-      // Fall through to try puppeteer-core
+    } catch (e) {
+      // If we can't check, assume no challenge (page might have navigated)
+      challengeActive = false;
+    }
+    
+    if (!challengeActive) {
+      resolved = true;
+      break;
     }
   }
   
-  // Fallback to puppeteer-core if available
-  if (puppeteerCore) {
-    try {
-      const launchArgs = [...DEFAULT_ARGS, ...args];
-      
-      // Add window size for non-headless mode
-      if (headlessValue === false) {
-        launchArgs.push('--window-size=1920,1080');
-        launchArgs.push('--start-maximized');
-      }
-      
-      // Add proxy if specified
-      if (proxy) {
-        launchArgs.push(`--proxy-server=${proxy.server}`);
-        console.log(`Using proxy with puppeteer-core: ${proxy.server}`);
-      }
-      
-      // Find Chrome executable path based on OS
-      const os = require('os');
-      const platform = os.platform();
-      let executablePath;
-      
-      if (platform === 'darwin') {
-        executablePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-      } else if (platform === 'win32') {
-        executablePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-        if (!require('fs').existsSync(executablePath)) {
-          executablePath = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe';
+  // Additional checks for successful page load
+  try {
+    await page.waitForFunction(() => {
+      return (
+        document.readyState === 'complete' && 
+        !document.title.includes('Attention Required') &&
+        !document.title.includes('DDOS') &&
+        !document.title.includes('DDoS') &&
+        !document.title.includes('Robot') &&
+        !document.title.includes('Captcha')
+      );
+    }, { timeout: 5000 });
+  } catch (e) {
+    console.warn('⚠️ Page may not be fully loaded or could still be showing protection:', e.message);
+  }
+  
+  const timeSpent = (Date.now() - startTime) / 1000;
+  if (resolved) {
+    console.log(`✅ Challenge resolved in ${timeSpent.toFixed(1)} seconds`);
+  } else {
+    console.warn(`⚠️ Challenge timeout after ${timeSpent.toFixed(1)} seconds`);
+  }
+  
+  return resolved;
+}
+
+/**
+ * Gets the current public IP address to verify proxy connection
+ * @param {import('puppeteer').Page} page - The Puppeteer page instance
+ * @returns {Promise<string>} - The public IP address
+ */
+async function getPublicIP(page) {
+  try {
+    // Use a mix of IP detection services to avoid blocks
+    const ipServices = [
+      'https://api.ipify.org/?format=json',
+      'https://ifconfig.me/all.json',
+      'https://ip.seeip.org/jsonip'
+    ];
+    
+    // Try each service in random order
+    const shuffledServices = [...ipServices].sort(() => Math.random() - 0.5);
+    
+    for (const service of shuffledServices) {
+      try {
+        console.log(`🔍 Checking IP using: ${service}`);
+        await page.goto(service, {
+          waitUntil: 'networkidle2',
+          timeout: 15000
+        });
+        
+        // Extract the IP based on the response format
+        const ip = await page.evaluate(() => {
+          try {
+            const content = document.body.textContent;
+            const json = JSON.parse(content);
+            return json.ip || json.IP || json.query;
+          } catch (e) {
+            // If not JSON, try to extract directly
+            const match = document.body.textContent.match(/\d+\.\d+\.\d+\.\d+/);
+            return match ? match[0] : 'Unable to parse IP';
+          }
+        });
+        
+        if (ip && /\d+\.\d+\.\d+\.\d+/.test(ip)) {
+          return ip;
         }
-      } else if (platform === 'linux') {
-        executablePath = '/usr/bin/google-chrome';
-      } else {
-        throw new Error(`Unsupported platform: ${platform}`);
+        
+        console.log(`⚠️ Invalid IP format from ${service}, trying next service...`);
+      } catch (serviceError) {
+        console.warn(`⚠️ Failed to get IP from ${service}:`, serviceError.message);
+        // Continue to next service
+      }
+    }
+    
+    throw new Error('All IP detection services failed');
+  } catch (error) {
+    console.error('❌ Error detecting public IP:', error.message);
+    return 'IP detection failed';
+  }
+}
+
+/**
+ * Creates an enhanced browser session using puppeteer-extra with stealth plugin
+ * Proxy usage is optional when using other anti-detection methods
+ * 
+ * @param {string} url - The URL to navigate to
+ * @param {object} options - Options for the session
+ * @param {boolean} options.useProxy - Whether to use a proxy (default: false)
+ * @param {object} options.proxy - Optional custom proxy configuration (used only if useProxy is true)
+ * @param {number} options.maxRetries - Maximum number of retry attempts (default: 3)
+ * @param {number} options.timeout - Page load timeout in ms (default: 30000)
+ * @param {boolean} options.humanBehavior - Whether to simulate human-like behavior (default: true)
+ * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page, proxyIP: string}>}
+ */
+async function launchBrowser(url, options = {}) {
+  // Decide whether to use a proxy based on options
+  const useProxy = options.useProxy === true;
+  const proxy = useProxy ? (options.proxy || getRandomProxy()) : null;
+  
+  const {
+    maxRetries = 3,
+    timeout = 30000,
+    humanBehavior = true
+  } = options;
+
+  let retryCount = 0;
+  let browser = null;
+  let page = null;
+  let success = false;
+  let proxyIP = null;
+  let tempUserDataDir = null;
+
+  console.log(`🚀 Creating enhanced browser session for ${url}`);
+  if (useProxy) {
+    console.log(`🔒 Using proxy server: ${proxy.server}`);
+  } else {
+    console.log(`🔓 Running without proxy (direct connection)`);
+  }
+  
+  while (retryCount < maxRetries && !success) {
+    try {
+      // Close previous browser instance if it exists
+      if (browser) {
+        await browser.close();
+        browser = null;
+        page = null;
       }
       
-      console.log(`Using Chrome executable: ${executablePath}`);
+      // Clean up previous temp directory if it exists
+      if (tempUserDataDir) {
+        cleanupTempUserDataDir(tempUserDataDir);
+        tempUserDataDir = null;
+      }
       
-      const browser = await puppeteerCore.launch({
-        headless: headlessValue,
-        executablePath: executablePath,
-        args: launchArgs,
-        ignoreHTTPSErrors: true,
-        defaultViewport: headlessValue !== false ? { width: 1920, height: 1080 } : null
-      });
+      // Create a new unique user data directory for this session
+      tempUserDataDir = createTempUserDataDir();
+
+      // Configure browser launch args
+      const launchArgs = [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--disable-gpu',
+        '--window-size=1920,1080',
+      ];
       
-      const page = await browser.newPage();
+      // Add proxy settings if proxy is being used
+      if (useProxy && proxy) {
+        launchArgs.push(`--proxy-server=${proxy.server}`);
+      }
+
+      // Add any custom args if provided
+      if (options.args && Array.isArray(options.args)) {
+        launchArgs.push(...options.args);
+      }
+
+      console.log(`🔄 Attempt ${retryCount + 1}/${maxRetries}`);
       
-      // Set proxy authentication if needed
-      if (proxy && proxy.username && proxy.password) {
+      // Choose user agent early to configure both puppeteer and manual settings consistently
+      const userAgent = getRandomUserAgent();
+      
+      // Launch browser with puppeteer-extra if available, fallback to regular puppeteer
+      if (puppeteerExtra) {
+        browser = await puppeteerExtra.launch({
+          headless: true,
+          args: launchArgs,
+          ignoreHTTPSErrors: true,
+          defaultViewport: { width: 1920, height: 1080 },
+          userDataDir: tempUserDataDir, // Use unique temp directory for each session
+        });
+      } else {
+        browser = await puppeteer.launch({
+          headless: true,
+          args: launchArgs,
+          ignoreHTTPSErrors: true,
+          defaultViewport: { width: 1920, height: 1080 },
+          userDataDir: tempUserDataDir, // Use unique temp directory for each session
+        });
+      }
+
+      // Create new page with enhanced fingerprint protection
+      page = await browser.newPage();
+      
+      // Set consistent user agent
+      await page.setUserAgent(userAgent);
+      
+      // Set proxy authentication if using proxy
+      if (useProxy && proxy && proxy.username && proxy.password) {
         await page.authenticate({
           username: proxy.username,
           password: proxy.password
         });
       }
       
-      const userAgent = getRandomUserAgent();
-      console.log(`Using user agent: ${userAgent}`);
-      await page.setUserAgent(userAgent);
+      // Apply custom patches to avoid fingerprinting
+      await patchBrowserFingerprints(page);
       
-      // Only set viewport in headless mode, otherwise use window size
-      if (headlessValue !== false) {
-        await page.setViewport({ width: 1920, height: 1080 });
-      }
+      // Set extra headers to look like a real browser
+      await page.setExtraHTTPHeaders(getBrowserLikeHeaders(url));
       
-      return { browser, page, browserType: 'puppeteer-core' };
-    } catch (error) {
-      console.error('Failed to launch with puppeteer-core:', error.message);
-      throw error;
-    }
-  }
-  
-  throw new Error('Unable to launch browser in real browser mode');
-}
-
-/**
- * Launches a browser using puppeteer-extra with stealth plugin
- * @param {object} options - Launch options
- * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page, browserType: string}>}
- */
-async function launchStealthBrowser(options) {
-  const { 
-    headless = 'new', 
-    args = [], 
-    timeout = 90000, 
-    proxy = null 
-  } = options;
-  
-  if (!puppeteer || !StealthPlugin) {
-    throw new Error('Puppeteer-extra or stealth plugin is not available');
-  }
-  
-  // Ensure we correctly interpret headless mode
-  const headlessValue = headless === 'new' ? 'new' : 
-                        headless === true ? 'new' : 
-                        headless === false ? false : 'new';
-  
-  console.log(`Launching browser with stealth plugin (headless: ${headlessValue === false ? 'false (non-headless)' : headlessValue})...`);
-  
-  const launchArgs = [...DEFAULT_ARGS, ...args];
-  
-  // Add window size for non-headless mode
-  if (headlessValue === false) {
-    launchArgs.push('--window-size=1920,1080');
-    launchArgs.push('--start-maximized');
-  }
-  
-  // Add proxy if specified
-  if (proxy) {
-    launchArgs.push(`--proxy-server=${proxy.server}`);
-    console.log(`Using proxy with stealth: ${proxy.server}`);
-  }
-  
-  const browser = await puppeteer.launch({
-    headless: headlessValue,
-    args: launchArgs,
-    ignoreHTTPSErrors: true,
-    defaultViewport: headlessValue !== false ? { width: 1920, height: 1080 } : null
-  });
-  
-  const page = await browser.newPage();
-  
-  // Set proxy authentication if needed
-  if (proxy && proxy.username && proxy.password) {
-    await page.authenticate({
-      username: proxy.username,
-      password: proxy.password
-    });
-  }
-  
-  const userAgent = getRandomUserAgent();
-  console.log(`Using user agent: ${userAgent}`);
-  await page.setUserAgent(userAgent);
-  
-  // Only set viewport in headless mode, otherwise use window size
-  if (headlessValue !== false) {
-    await page.setViewport({ width: 1920, height: 1080 });
-  }
-  
-  // Add a fake notification permission API
-  await page.evaluateOnNewDocument(() => {
-    const originalQuery = window.navigator.permissions.query;
-    window.navigator.permissions.query = (parameters) => (
-      parameters.name === 'notifications' 
-        ? Promise.resolve({state: Notification.permission}) 
-        : originalQuery(parameters)
-    );
-    
-    // Add some plugins
-    Object.defineProperty(navigator, 'plugins', {
-      get: () => Array(5).fill().map((_, i) => ({
-        name: `Plugin ${i}`,
-        description: `Plugin ${i} Description`,
-        filename: `plugin${i}.dll`
-      }))
-    });
-  });
-  
-  return { browser, page, browserType: 'stealth' };
-}
-
-/**
- * Sets up advanced request interception to modify headers and mimic real browser behavior.
- * @param {import('puppeteer').Page} page
- */
-async function setupRequestInterception(page) {
-    console.log('Setting up advanced request interception...');
-    try {
-        await page.setRequestInterception(true);
-        page.on('request', request => {
-            // Skip intercepting certain resource types for better performance
-            const resourceType = request.resourceType();
-            if (['image', 'stylesheet', 'font', 'media'].includes(resourceType)) {
-                request.continue();
-                return;
-            }
-            
-            // Get the original headers
-            const headers = {
-                ...request.headers(),
-                'User-Agent': getRandomUserAgent(),
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-                'Accept-Language': 'en-US,en;q=0.9',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Cache-Control': 'no-cache',
-                'Pragma': 'no-cache',
-                'Sec-Fetch-Dest': resourceType === 'document' ? 'document' : 'empty',
-                'Sec-Fetch-Mode': resourceType === 'document' ? 'navigate' : 'cors',
-                'Sec-Fetch-Site': 'same-origin',
-                'Sec-Fetch-User': resourceType === 'document' ? '?1' : undefined,
-                'DNT': '1',
-            };
-            
-            // Always include a proper referer when possible
-            const referer = request.headers().referer || page.url();
-            if (referer && referer !== 'about:blank') {
-                headers['Referer'] = referer;
-            }
-
-            request.continue({ headers });
+      // Set commonly expected cookies
+      await page.setCookie({
+        name: 'visited',
+        value: 'true',
+        domain: new URL(url).hostname,
+        path: '/',
+      }, {
+        name: 'sessionid',
+        value: Math.random().toString(36).substring(2),
+        domain: new URL(url).hostname,
+        path: '/',
+      });
+      
+      // Set webdriver flag explicitly to false
+      await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(navigator, 'webdriver', {
+          get: () => false,
         });
-        console.log('Advanced request interception enabled.');
-    } catch (error) {
-        console.error('Failed to set up request interception:', error.message);
-        // Non-critical error, continue without interception
-    }
-}
+      });
 
-/**
- * Solves a captcha using 2Captcha service
- * @param {import('puppeteer').Page} page - Puppeteer page
- * @param {string} type - Type of captcha ('recaptcha', 'hcaptcha', 'turnstile')
- * @returns {Promise<boolean>} - Success flag
- */
-async function solveCaptcha(page, type = 'auto') {
-  if (!TwoCaptchaSolver || !CAPTCHA_API_KEY) {
-    console.warn('Captcha solving not available. Missing 2captcha-ts or API key.');
-    return false;
-  }
-
-  try {
-    console.log(`Attempting to solve ${type} captcha...`);
-    
-    // Initialize 2Captcha solver
-    const solver = new TwoCaptchaSolver(CAPTCHA_API_KEY);
-    
-    // Get the site key from the page
-    let siteKey;
-    
-    if (type === 'auto') {
-      // Try to determine the captcha type automatically
-      const recaptchaKey = await page.evaluate(() => {
-        const recaptchaEl = document.querySelector('.g-recaptcha');
-        return recaptchaEl ? recaptchaEl.getAttribute('data-sitekey') : null;
+      // Mimic real browser window history by adding a Google referrer
+      await page.evaluateOnNewDocument(() => {
+        window.history.pushState({}, '', 'https://www.google.com/search?q=stock+market+ipo');
+        window.history.pushState({}, '', window.location.href);
       });
       
-      const hcaptchaKey = await page.evaluate(() => {
-        const hcaptchaEl = document.querySelector('.h-captcha');
-        return hcaptchaEl ? hcaptchaEl.getAttribute('data-sitekey') : null;
-      });
-      
-      const turnstileKey = await page.evaluate(() => {
-        const turnstileEl = document.querySelector('.cf-turnstile');
-        return turnstileEl ? turnstileEl.getAttribute('data-sitekey') : null;
-      });
-      
-      if (recaptchaKey) {
-        type = 'recaptcha';
-        siteKey = recaptchaKey;
-      } else if (hcaptchaKey) {
-        type = 'hcaptcha';
-        siteKey = hcaptchaKey;
-      } else if (turnstileKey) {
-        type = 'turnstile';
-        siteKey = turnstileKey;
-      } else {
-        console.warn('No recognized captcha found on page');
-        return false;
-      }
-    } else {
-      // Get site key for specified captcha type
-      const selector = type === 'recaptcha' 
-        ? '.g-recaptcha' 
-        : (type === 'hcaptcha' ? '.h-captcha' : '.cf-turnstile');
-      
-      siteKey = await page.evaluate((sel) => {
-        const el = document.querySelector(sel);
-        return el ? el.getAttribute('data-sitekey') : null;
-      }, selector);
-    }
-    
-    if (!siteKey) {
-      console.warn(`No site key found for ${type} captcha`);
-      return false;
-    }
-    
-    console.log(`Found ${type} captcha with site key: ${siteKey}`);
-    
-    // Get the page URL
-    const pageUrl = page.url();
-    
-    // Solve the captcha
-    let solution;
-    if (type === 'recaptcha' || type === 'recaptchav2') {
-      solution = await solver.recaptcha(siteKey, pageUrl);
-    } else if (type === 'hcaptcha') {
-      solution = await solver.hcaptcha(siteKey, pageUrl);
-    } else if (type === 'turnstile') {
-      solution = await solver.turnstile(siteKey, pageUrl);
-    } else {
-      throw new Error(`Unsupported captcha type: ${type}`);
-    }
-    
-    if (!solution) {
-      throw new Error('Failed to get captcha solution');
-    }
-    
-    console.log('Captcha solved, applying solution...');
-    
-    // Apply the solution to the page
-    if (type === 'recaptcha' || type === 'recaptchav2') {
-      await page.evaluate((token) => {
-        window.grecaptcha.enterprise?.reset();
-        window.grecaptcha.enterprise?.execute();
+      // Get the public IP to verify connection if using proxy
+      if (useProxy) {
+        proxyIP = await getPublicIP(page);
         
-        // Try different ways to apply the token
-        try {
-          document.getElementById('g-recaptcha-response').innerHTML = token;
-        } catch (e) {
-          // If that fails, try to set it as a value
-          try {
-            document.getElementById('g-recaptcha-response').value = token;
-          } catch (e2) {
-            // If that fails, try to find it by name
-            try {
-              document.querySelector('[name="g-recaptcha-response"]').value = token;
-            } catch (e3) {
-              console.error('Failed to apply reCAPTCHA token:', e3);
-              return false;
-            }
+        // Skip if we've already used this IP in the same session
+        if (usedProxyIPs.has(proxyIP) && proxyIP !== 'IP detection failed') {
+          console.warn(`⚠️ Proxy IP ${proxyIP} was already used, trying again with new proxy`);
+          await browser.close();
+          cleanupTempUserDataDir(tempUserDataDir);
+          tempUserDataDir = null;
+          
+          // Get a different proxy on the next try
+          const currentProxy = proxy;
+          while (proxy === currentProxy) {
+            proxy = getRandomProxy();
           }
+          continue;
         }
-        return true;
-      }, solution);
-    } else if (type === 'hcaptcha') {
-      await page.evaluate((token) => {
-        try {
-          document.querySelector('textarea[name="h-captcha-response"]').innerHTML = token;
-        } catch (e) {
-          try {
-            document.querySelector('[name="h-captcha-response"]').value = token;
-          } catch (e2) {
-            console.error('Failed to apply hCaptcha token:', e2);
-            return false;
-          }
-        }
-        return true;
-      }, solution);
-    } else if (type === 'turnstile') {
-      await page.evaluate((token) => {
-        try {
-          document.querySelector('[name="cf-turnstile-response"]').innerHTML = token;
-        } catch (e) {
-          try {
-            document.querySelector('[name="cf-turnstile-response"]').value = token;
-          } catch (e2) {
-            console.error('Failed to apply Turnstile token:', e2);
-            return false;
-          }
-        }
-        return true;
-      }, solution);
-    }
-    
-    // Extra waiting for site to process the captcha
-    await randomDelay(1000, 3000);
-    
-    // Try to find and click the submit button if available
-    const buttonClicked = await page.evaluate(() => {
-      const submitBtn = Array.from(document.querySelectorAll('button, input[type="submit"]'))
-        .find(el => 
-          el.textContent?.toLowerCase().includes('submit') || 
-          el.textContent?.toLowerCase().includes('verify') ||
-          el.value?.toLowerCase().includes('submit') ||
-          el.value?.toLowerCase().includes('verify') ||
-          el.id?.toLowerCase().includes('submit') ||
-          el.name?.toLowerCase().includes('submit')
-        );
-      
-      if (submitBtn) {
-        submitBtn.click();
-        return true;
+        
+        console.log(`✅ Connected via proxy IP: ${proxyIP}`);
+        usedProxyIPs.add(proxyIP);
+      } else {
+        // For direct connections, just set a placeholder
+        proxyIP = 'direct-connection';
       }
-      return false;
-    });
-    
-    if (buttonClicked) {
-      console.log('Clicked submit button after captcha solve');
-    } else {
-      console.log('No submit button found after captcha solve');
-    }
-    
-    // Wait for potential navigation or page changes
-    console.log('Waiting after captcha solve...');
-    await randomDelay(10000, 10000);
-    
-    // Check if we're still on a challenge page
-    const stillChallenge = await page.evaluate(() => {
-      return document.title.includes('Cloudflare') || 
-             document.title.includes('Just a moment') ||
-             document.title.includes('Checking your browser') ||
-             document.querySelector('.g-recaptcha') !== null ||
-             document.querySelector('.h-captcha') !== null ||
-             document.querySelector('.cf-turnstile') !== null;
-    });
-    
-    if (!stillChallenge) {
-      console.log('Successfully passed challenge after captcha solve');
-    } else {
-      console.log('Still on challenge page after captcha solve');
-    }
-    
-    return !stillChallenge;
-  } catch (error) {
-    console.error('Error solving captcha:', error.message);
-    return false;
-  }
-}
-
-/**
- * Detects and solves captchas on a page
- * @param {import('puppeteer').Page} page - Puppeteer page
- * @returns {Promise<boolean>} - Success flag
- */
-async function handleCaptchas(page) {
-  try {
-    // Check if there's a captcha on the page
-    const hasCaptcha = await page.evaluate(() => {
-      return !!(
-        document.querySelector('.g-recaptcha') ||
-        document.querySelector('.h-captcha') ||
-        document.querySelector('.cf-turnstile') ||
-        document.querySelector('#captcha') ||
-        document.querySelector('[data-hcaptcha-widget-id]') ||
-        document.querySelector('[data-sitekey]') ||
-        document.querySelector('iframe[src*="captcha"]') ||
-        document.querySelector('iframe[src*="challenge"]') ||
-        document.querySelector('iframe[src*="turnstile"]')
-      );
-    });
-    
-    if (hasCaptcha) {
-      console.log('Captcha detected, attempting to solve...');
-      return await solveCaptcha(page, 'auto');
-    }
-    
-    return false;
-  } catch (error) {
-    console.error('Error handling captchas:', error.message);
-    return false;
-  }
-}
-
-/**
- * Handle Cloudflare challenges by waiting and potentially solving captchas
- * @param {import('puppeteer').Page} page - Puppeteer page
- * @returns {Promise<boolean>} - Success flag
- */
-async function handleCloudflareChallenge(page) {
-  try {
-    console.log('Handling potential Cloudflare challenge...');
-    
-    // Wait for Cloudflare challenge to load fully - use our own delay function
-    // instead of page.waitForTimeout which may not be available in all Puppeteer versions
-    await randomDelay(5000, 5000);
-    
-    // Check if we're on a Cloudflare challenge page
-    const isCloudflare = await page.evaluate(() => {
-      return document.title.includes('Cloudflare') || 
-             document.title.includes('Just a moment') ||
-             document.title.includes('Checking your browser') ||
-             document.title.includes('Attention Required') ||
-             document.body.textContent.includes('Cloudflare') ||
-             document.body.textContent.includes('checking your browser') ||
-             document.body.textContent.includes('Ray ID') ||
-             !!document.querySelector('#challenge-running') ||
-             !!document.querySelector('#cf-challenge-running');
-    });
-    
-    if (!isCloudflare) {
-      console.log('Not on a Cloudflare challenge page');
-      return false;
-    }
-    
-    console.log('Detected Cloudflare challenge page, waiting...');
-    
-    // First try waiting for automatic passage (15 seconds)
-    await randomDelay(15000, 15000);
-    
-    // Check if we're still on a challenge page
-    const stillChallenge = await page.evaluate(() => {
-      return document.title.includes('Cloudflare') || 
-             document.title.includes('Just a moment') ||
-             document.title.includes('Checking your browser');
-    });
-    
-    if (!stillChallenge) {
-      console.log('Cloudflare challenge passed automatically');
-      return true;
-    }
-    
-    // Try to solve any captchas
-    const captchaSolved = await handleCaptchas(page);
-    
-    if (captchaSolved) {
-      console.log('Captcha solved, waiting for final redirect...');
-      await randomDelay(5000, 5000);
-      return true;
-    }
-    
-    // Try clicking the "I'm human" verification when available
-    const clicked = await page.evaluate(() => {
-      const verifyButton = document.querySelector('input[type="button"][value*="Verify"]') ||
-                          document.querySelector('input[type="button"][value*="human"]') ||
-                          document.querySelector('button:not([disabled]):not([aria-disabled="true"]):not([style*="display: none"]):not([style*="visibility: hidden"])');
       
-      if (verifyButton) {
-        verifyButton.click();
-        return true;
-      }
-      return false;
-    });
-    
-    if (clicked) {
-      console.log('Clicked verification button, waiting...');
-      await randomDelay(10000, 10000);
-    }
-    
-    // If the Cloudflare page is still showing, try one more captcha solve attempt
-    const finalCheck = await page.evaluate(() => {
-      return document.title.includes('Cloudflare') || 
-             document.title.includes('Just a moment') ||
-             document.title.includes('Checking your browser');
-    });
-    
-    if (finalCheck) {
-      console.log('Still on Cloudflare challenge, trying one more captcha solve...');
-      await handleCaptchas(page);
-      await randomDelay(5000, 5000);
-    }
-    
-    // Final verification
-    const success = await page.evaluate(() => {
-      return !(document.title.includes('Cloudflare') || 
-              document.title.includes('Just a moment') ||
-              document.title.includes('Checking your browser'));
-    });
-    
-    return success;
-  } catch (error) {
-    console.error('Error handling Cloudflare challenge:', error.message);
-    return false;
-  }
-}
-
-/**
- * Main entry point for launching browser with progressive fallback strategy.
- * Tries multiple methods in sequence until successful access is achieved.
- * 
- * @param {string} initialUrl - The URL to navigate to and check access
- * @param {object} options - Browser launch options
- * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page}>}
- */
-async function launchBrowser(initialUrl, options = {}) {
-  const { 
-    timeout = 90000,
-    args = [],
-    headless = undefined,
-    useProxy = false,
-    tryCloudflareBypass = true,
-    solveCaptchas = true
-  } = options;
-  
-  // Determine headless mode from options or environment variables
-  let forcedHeadless = headless;
-  if (forcedHeadless === undefined) {
-    // Check environment variables
-    if (process.env.BROWSER_HEADLESS === 'true' || process.env.PUPPETEER_HEADLESS === 'true') {
-      forcedHeadless = 'new'; // Modern puppeteer uses 'new' for headless mode
-    } else if (process.env.BROWSER_HEADLESS === 'false' || process.env.PUPPETEER_HEADLESS === 'false') {
-      forcedHeadless = false;
-    } else {
-      forcedHeadless = 'new'; // Default to headless: 'new' if not specified
-    }
-  }
-  
-  console.log(`Starting browser launch sequence with initialUrl: ${initialUrl}`);
-  console.log(`Initial headless setting: ${forcedHeadless}`);
-  
-  // Array of launch methods in order of preference
-  const launchMethods = [
-    // Headless modes first
-    {
-      name: 'Regular Puppeteer (Headless)',
-      headless: 'new',
-      launchFn: launchRegularPuppeteer
-    },
-    {
-      name: 'Real Browser Mode (Headless)',
-      headless: 'new',
-      launchFn: launchRealBrowser
-    },
-    {
-      name: 'Stealth Mode (Headless)',
-      headless: 'new',
-      launchFn: launchStealthBrowser
-    },
-    // Then non-headless modes
-    {
-      name: 'Regular Puppeteer (Non-Headless)',
-      headless: false,
-      launchFn: launchRegularPuppeteer
-    },
-    {
-      name: 'Real Browser Mode (Non-Headless)',
-      headless: false,
-      launchFn: launchRealBrowser
-    },
-    {
-      name: 'Stealth Mode (Non-Headless)',
-      headless: false,
-      launchFn: launchStealthBrowser
-    }
-  ];
-  
-  // First try without proxy
-  console.log('Starting browser launch attempts without proxy...');
-  let browser, page, browserType, methodName;
-  let success = false;
-  
-  for (const method of launchMethods) {
-    if (success) break;
-    
-    try {
-      console.log(`Attempting ${method.name}...`);
-      
-      // Override headless setting if specified in options
-      // If forcedHeadless is explicitly set, use that, otherwise use the method's default
-      const effectiveHeadless = forcedHeadless !== undefined ? forcedHeadless : method.headless;
-      
-      console.log(`Using headless mode: ${effectiveHeadless === false ? 'false (non-headless)' : effectiveHeadless}`);
-      
-      const result = await method.launchFn({
-        headless: effectiveHeadless,
-        args: args,
+      // Navigate to the URL
+      console.log(`🌐 Navigating to ${url}`);
+      const response = await page.goto(url, { 
+        waitUntil: 'networkidle2',
         timeout: timeout
       });
       
-      browser = result.browser;
-      page = result.page;
-      browserType = result.browserType;
-      methodName = method.name;
+      // Wait for any JS challenges to resolve
+      await waitForJsChallenge(page, 30000);
       
-      // Add a random delay before navigation to appear more human-like
-      await randomDelay(1000, 3000);
-      
-      console.log(`Navigating to ${initialUrl} with ${method.name}`);
-      await page.goto(initialUrl, { 
-        waitUntil: 'networkidle2', 
-        timeout: timeout 
-      });
-      
-      await randomDelay(2000, 5000);
-      
-      // Check for Cloudflare or other protection
-      if (await isCloudflareBlocked(page)) {
-        console.warn(`${method.name} blocked by Cloudflare. ${tryCloudflareBypass ? 'Attempting bypass...' : 'Closing and trying next method...'}`);
+      // Add human-like behavior if enabled
+      if (humanBehavior) {
+        // Random delay to simulate page reading (1-3 seconds)
+        await new Promise(r => setTimeout(r, Math.floor(Math.random() * 2000) + 1000));
         
-        if (tryCloudflareBypass) {
-          // Try to bypass Cloudflare challenge
-          const bypassSuccess = await handleCloudflareChallenge(page);
-          
-          if (bypassSuccess) {
-            console.log(`Successfully bypassed Cloudflare challenge with ${method.name}`);
-            success = true;
-          } else {
-            console.warn(`Failed to bypass Cloudflare challenge with ${method.name}. Closing and trying next method...`);
-            await browser.close();
-            browser = null;
-            page = null;
-          }
-        } else {
-          await browser.close();
-          browser = null;
-          page = null;
-        }
-      } else {
-        console.log(`Successfully accessed ${initialUrl} with ${method.name}`);
-        success = true;
-      }
-      
-      if (success) {
-        // Try to detect and solve any captchas if they appear
-        if (solveCaptchas) {
-          await handleCaptchas(page);
-        }
+        // Perform random mouse movements
+        await performRandomMouseMovements(page);
         
-        await setupRequestInterception(page);
-        break;
+        // Scroll like a human would
+        await performHumanLikeScrolling(page);
       }
+
+      // Check for 403 status
+      if (response && response.status() === 403) {
+        console.warn(`⚠️ Received 403 Forbidden response on attempt ${retryCount + 1}`);
+        retryCount++;
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        continue;
+      }
+
+      // Check if page is accessible by testing for common block indicators
+      const pageContent = await page.content();
+      if (pageContent.includes('Access Denied') || 
+          pageContent.includes('403 Forbidden') || 
+          pageContent.includes('captcha') ||
+          pageContent.includes('Captcha') ||
+          pageContent.includes('DDOS') ||
+          pageContent.includes('DDoS') ||
+          pageContent.includes('robot') ||
+          pageContent.includes('Robot Check')) {
+        console.warn(`⚠️ Page shows access restrictions on attempt ${retryCount + 1}`);
+        retryCount++;
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        continue;
+      }
+
+      // If we got here, we succeeded
+      console.log(`✅ Successfully accessed ${url}${useProxy ? ` with proxy IP: ${proxyIP}` : ''}`);
+      success = true;
     } catch (error) {
-      console.error(`Error with ${method.name}:`, error.message);
-      // Continue to next method
+      console.error(`❌ Error on attempt ${retryCount + 1}:`, error.message);
+      retryCount++;
+      
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      
+      // Close browser on error
       if (browser) {
         try {
           await browser.close();
         } catch (closeError) {
-          console.error(`Error closing browser: ${closeError.message}`);
+          console.error(`❌ Error closing browser: ${closeError.message}`);
         }
         browser = null;
         page = null;
       }
-    }
-  }
-  
-  // If we succeeded without proxy, return the result
-  if (success && browser && page) {
-    return { 
-      browser, 
-      page,
-      browserType: browserType,
-      browserMethod: methodName
-    };
-  }
-  
-  // If we reach here, all methods failed without proxy
-  // Try again with proxy if useProxy is true or wasn't explicitly set to false
-  if (useProxy !== false) {
-    console.log('All methods failed without proxy. Retrying with proxy...');
-    const proxy = DEFAULT_PROXY;
-    
-    for (const method of launchMethods) {
-      try {
-        console.log(`Attempting ${method.name} with proxy...`);
-        
-        // Override headless setting if specified in options
-        const effectiveHeadless = forcedHeadless !== undefined ? forcedHeadless : method.headless;
-        
-        console.log(`Using headless mode with proxy: ${effectiveHeadless === false ? 'false (non-headless)' : effectiveHeadless}`);
-        
-        // Fix for proxy authentication - properly format auth string
-        const formattedProxy = {
-          server: proxy.server,
-          username: proxy.username,
-          password: proxy.password
-        };
-        
-        const result = await method.launchFn({
-          headless: effectiveHeadless,
-          args: args,
-          timeout: timeout,
-          proxy: formattedProxy
-        });
-        
-        browser = result.browser;
-        page = result.page;
-        browserType = result.browserType;
-        methodName = method.name;
-        
-        // Add a random delay before navigation
-        await randomDelay(1000, 3000);
-        
-        console.log(`Navigating to ${initialUrl} with ${method.name} and proxy`);
-        await page.goto(initialUrl, { 
-          waitUntil: 'networkidle2', 
-          timeout: timeout 
-        });
-        
-        await randomDelay(2000, 5000);
-        
-        // Check for Cloudflare or other protection
-        if (await isCloudflareBlocked(page)) {
-          console.warn(`${method.name} with proxy blocked by Cloudflare. ${tryCloudflareBypass ? 'Attempting bypass...' : 'Closing and trying next method...'}`);
-          
-          if (tryCloudflareBypass) {
-            // Try to bypass Cloudflare challenge
-            const bypassSuccess = await handleCloudflareChallenge(page);
-            
-            if (bypassSuccess) {
-              console.log(`Successfully bypassed Cloudflare challenge with ${method.name} and proxy`);
-              success = true;
-              break;
-            } else {
-              console.warn(`Failed to bypass Cloudflare challenge with ${method.name} and proxy. Closing and trying next method...`);
-              await browser.close();
-              browser = null;
-              page = null;
-            }
-          } else {
-            await browser.close();
-            browser = null;
-            page = null;
-          }
-        } else {
-          console.log(`Successfully accessed ${initialUrl} with ${method.name} and proxy`);
-          
-          // Try to detect and solve any captchas if they appear
-          if (solveCaptchas) {
-            await handleCaptchas(page);
-          }
-          
-          await setupRequestInterception(page);
-          
-          return { 
-            browser, 
-            page,
-            browserType: browserType,
-            browserMethod: `${method.name} with proxy`,
-            usingProxy: true
-          };
-        }
-      } catch (error) {
-        console.error(`Error with ${method.name} and proxy:`, error.message);
-        // Continue to next method
-        if (browser) {
-          try {
-            await browser.close();
-          } catch (closeError) {
-            console.error(`Error closing browser: ${closeError.message}`);
-          }
-          browser = null;
-          page = null;
-        }
+      
+      // Clean up temp directory on error
+      if (tempUserDataDir) {
+        cleanupTempUserDataDir(tempUserDataDir);
+        tempUserDataDir = null;
       }
     }
   }
-  
-  // If we succeeded with proxy in the loop above, return the result
-  if (success && browser && page) {
-    return { 
-      browser, 
-      page,
-      browserType: browserType,
-      browserMethod: `${methodName} with proxy`,
-      usingProxy: true
-    };
+
+  if (!success) {
+    // Clean up any remaining temp directory
+    if (tempUserDataDir) {
+      cleanupTempUserDataDir(tempUserDataDir);
+    }
+    throw new Error(`❌ Failed to access ${url} after ${maxRetries} attempts`);
   }
   
-  // If we reach here, all methods failed
-  throw new Error('All browser launch methods failed. Unable to access the target URL.');
+  // Add cleanup function to browser object
+  browser._cleanup = () => {
+    if (tempUserDataDir) {
+      cleanupTempUserDataDir(tempUserDataDir);
+    }
+  };
+
+  // Override browser.close() to also clean up the temp directory
+  const originalClose = browser.close.bind(browser);
+  browser.close = async () => {
+    const result = await originalClose();
+    if (tempUserDataDir) {
+      cleanupTempUserDataDir(tempUserDataDir);
+    }
+    return result;
+  };
+
+  return { browser, page, proxyIP };
 }
 
+/**
+ * Creates a browser session - legacy function name for backward compatibility
+ * @param {string} url - The URL to navigate to
+ * @param {object} options - Options for the browser session
+ * @returns {Promise<{browser: import('puppeteer').Browser, page: import('puppeteer').Page, proxyIP: string}>}
+ */
+async function createBrowserSession(url, options = {}) {
+  // For backward compatibility, the legacy function defaults to using a proxy
+  return launchBrowser(url, { ...options, useProxy: true });
+}
+
+// Export functions
 module.exports = { 
-  launchBrowser, 
-  randomDelay, 
-  isCloudflareBlocked,
-  launchRegularPuppeteer,
-  launchRealBrowser,
-  launchStealthBrowser,
-  handleCaptchas,
-  handleCloudflareChallenge,
-  solveCaptcha
+  launchBrowser,
+  createBrowserSession,
+  getPublicIP,
+  performHumanLikeScrolling,
+  performRandomMouseMovements,
+  waitForJsChallenge
 }; 

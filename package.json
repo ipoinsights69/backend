@@ -18,12 +18,7 @@
     "cron:list": "node scripts/cronManager.js list",
     "cron:start": "node scripts/cronManager.js start",
     "cron:status": "node scripts/cronManager.js status",
-    "cron:setup": "node scripts/setupDailyCron.js",
-    "cron:now": "node scripts/runCronNow.js",
-    "test:browser": "node tests/testBrowserMethods.js",
-    "test:cloudflare": "node tests/testCloudflarePages.js",
-    "test:cron": "node tests/testCronMode.js",
-    "test:cron-xvfb": "scripts/cron_browser_test.sh"
+    "cron:now": "node scripts/runCronNow.js"
   },
   "keywords": [
     "ipo",
@@ -50,8 +45,10 @@
     "node-cron": "^3.0.3",
     "puppeteer": "^24.6.1",
     "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.4.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "puppeteer-real-browser": "^1.4.2",
+    "random-useragent": "^0.5.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

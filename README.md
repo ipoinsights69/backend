@@ -5,7 +5,6 @@ A comprehensive solution for scraping, managing, and serving IPO (Initial Public
 ## Features
 
 - **IPO Data Scraping**: Automated scraping of IPO information from financial websites
-- **Admin Dashboard API**: Secure endpoints for managing data and system configuration
 - **Cron Job Management**: Schedule and manage automatic data updates
 - **RESTful API**: Well-documented endpoints for consuming IPO data
 - **Database Integration**: MongoDB storage with efficient indexing
@@ -17,7 +16,7 @@ A comprehensive solution for scraping, managing, and serving IPO (Initial Public
 - **Database**: MongoDB with Mongoose ODM
 - **Scraping**: Axios + Cheerio
 - **Scheduling**: Node-cron for scheduled tasks
-- **Security**: Helmet, CORS, Rate-limiting, API key authentication
+- **Security**: Helmet, CORS, Rate-limiting
 
 ## Installation
 
@@ -55,21 +54,6 @@ A comprehensive solution for scraping, managing, and serving IPO (Initial Public
 - `GET /api/ipos/status/:status` - Get IPOs by status
 - `GET /api/health` - Server health check
 
-### Admin Endpoints
-
-All admin endpoints require API key authentication with the `x-api-key` header.
-
-- `GET /api/admin/status` - Get system status
-- `GET /api/admin/logs/:filename` - Get specific log file
-- `POST /api/admin/scrape` - Trigger an IPO scraping job
-- `GET /api/admin/job/:id` - Get status of a specific job
-- `GET /api/admin/cron` - Get all cron jobs
-- `POST /api/admin/cron` - Create or update a cron job
-- `DELETE /api/admin/cron/:name` - Delete a cron job
-- `POST /api/admin/ipo` - Add or update an IPO
-- `DELETE /api/admin/ipo/:id` - Delete an IPO
-- `GET /api/admin/stats` - Get database statistics
-
 ## Scripting
 
 The project includes several utility scripts:
@@ -83,8 +67,6 @@ The project includes several utility scripts:
 ## Cron Jobs
 
 The system supports scheduled tasks using cron jobs. Default jobs are configured during server startup.
-
-To manually configure jobs, use the admin API endpoints:
 
 ```json
 {
