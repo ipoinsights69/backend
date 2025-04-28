@@ -102,7 +102,7 @@ const fetchIpoListings = async (year, force = false) => {
   const MAX_RETRIES = 3;
   const INITIAL_TIMEOUT = 60000; // 60 seconds
   const REFERRER_URL = 'https://www.chittorgarh.com/ipo/infonative-solutions-ipo/2200/';
-  const apiUrl = `https://webnodejs.chittorgarh.com/cloud/report/data-read/82/1/3/${year}/2024-25/0/0`;
+  const apiUrl = `https://webnodejs.chittorgarh.com/cloud/report/data-read/82/1/4/${year}/2025-26/0/all/`;
 
   try {
     console.log(`Attempting to launch browser for API: ${apiUrl}`);

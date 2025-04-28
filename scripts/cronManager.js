@@ -110,24 +110,44 @@ async function scrapeForYear(year, options = {}) {
   const {
     concurrency = 2,
     logFile = null,
-    jobId = 'manual-job'
+    jobId = 'manual-job',
+    uploadToMongo = false,
+    useThreads = false,
+    threadCount = 4
   } = options;
   
   await logMessage(`Starting scrape for year ${year}`, 'INFO', jobId);
+  await logMessage(`MongoDB upload is ${uploadToMongo ? 'enabled' : 'disabled'}`, 'INFO', jobId);
+  await logMessage(`Threaded processing is ${useThreads ? 'enabled' : 'disabled'}`, 'INFO', jobId);
+  if (useThreads) {
+    await logMessage(`Thread count: ${threadCount}`, 'INFO', jobId);
+  }
   
   // Optional logging to file
   if (logFile) {
     const logDir = path.dirname(logFile);
     await fs.mkdir(logDir, { recursive: true });
     await fs.appendFile(logFile, `\n[${new Date().toISOString()}] Starting scrape for year ${year}\n`);
+    await fs.appendFile(logFile, `[${new Date().toISOString()}] MongoDB upload is ${uploadToMongo ? 'enabled' : 'disabled'}\n`);
+    await fs.appendFile(logFile, `[${new Date().toISOString()}] Threaded processing is ${useThreads ? 'enabled' : 'disabled'}\n`);
+    if (useThreads) {
+      await fs.appendFile(logFile, `[${new Date().toISOString()}] Thread count: ${threadCount}\n`);
+    }
   }
   
   try {
     // Set the MAX_CONCURRENT_REQUESTS in the environment
     process.env.MAX_CONCURRENT_REQUESTS = concurrency.toString();
     
+    // Set MongoDB upload flag in environment
+    process.env.UPLOAD_TO_MONGODB = uploadToMongo ? 'true' : 'false';
+    
+    // Set threading options in environment
+    process.env.USE_THREADS = useThreads ? 'true' : 'false';
+    process.env.THREAD_COUNT = threadCount.toString();
+    
     // Scrape IPO data
-    await logMessage(`Scraping IPO data for year ${year} with concurrency ${concurrency}`, 'INFO', jobId);
+    await logMessage(`Scraping IPO data for year ${year} with ${useThreads ? `threading (${threadCount} threads)` : `concurrency (${concurrency} requests)`}`, 'INFO', jobId);
     await scrapeIposByYearRange(year, year);
     
     await logMessage(`Completed scrape for year ${year}`, 'INFO', jobId);
@@ -405,6 +425,96 @@ async function runJobNow(jobId) {
       success: false,
       error: error.message
     };
+  }
+}
+
+/**
+ * Execute a task with the given configuration
+ * @param {string} taskType - Type of task to execute
+ * @param {Object} options - Task-specific options
+ * @param {string} jobId - Job ID
+ * @returns {Promise<boolean>} - Success indicator
+ */
+async function executeTask(taskType, options, jobId) {
+  const logFile = path.join(CRON_LOG_DIR, `job-${jobId}-${new Date().toISOString().split('T')[0]}.log`);
+  
+  await logMessage(`Executing task: ${taskType} with options: ${JSON.stringify(options)}`, 'INFO', jobId);
+  
+  try {
+    // Set threading options in environment if specified
+    if (options.useThreads !== undefined) {
+      process.env.USE_THREADS = options.useThreads ? 'true' : 'false';
+      await logMessage(`Thread processing is ${options.useThreads ? 'enabled' : 'disabled'}`, 'INFO', jobId);
+    }
+    
+    if (options.threadCount !== undefined && options.threadCount > 0) {
+      process.env.THREAD_COUNT = options.threadCount.toString();
+      await logMessage(`Thread count set to ${options.threadCount}`, 'INFO', jobId);
+    }
+    
+    switch (taskType) {
+      case 'scrape-current-year':
+        const year = options.year || new Date().getFullYear();
+        await scrapeForYear(year, { 
+          concurrency: options.concurrency || 2, 
+          logFile,
+          jobId,
+          uploadToMongo: options.uploadToMongo || false,
+          useThreads: options.useThreads || false,
+          threadCount: options.threadCount || 4
+        });
+        return true;
+      case 'scrape-year-range':
+        const startYear = options.startYear || options.year || new Date().getFullYear();
+        const endYear = options.endYear || startYear;
+        
+        // Set MongoDB upload flag in environment if specified
+        if (options.uploadToMongo !== undefined) {
+          process.env.UPLOAD_TO_MONGODB = options.uploadToMongo ? 'true' : 'false';
+        }
+        
+        await logMessage(`Scraping year range: ${startYear}-${endYear}`, 'INFO', jobId);
+        await scrapeIposByYearRange(startYear, endYear);
+        return true;
+      // Add more task types as needed
+      default:
+        await logMessage(`Unknown task type: ${taskType}`, 'ERROR', jobId);
+        return false;
+    }
+  } catch (error) {
+    await logMessage(`Error executing task: ${error.message}`, 'ERROR', jobId);
+    return false;
+  }
+}
+
+/**
+ * Run a cron job
+ * @param {Object} job - Job configuration
+ * @param {boolean} [isManual=false] - Whether the job is being run manually
+ */
+async function runJob(job, isManual = false) {
+  // Skip disabled jobs unless run manually
+  if (!job.enabled && !isManual) {
+    await logMessage(`Skipping disabled job: ${job.id}`, 'INFO', job.id);
+    return false;
+  }
+  
+  await logMessage(`Running job: ${job.id} (${isManual ? 'manual trigger' : 'scheduled'})`, 'INFO', job.id);
+  
+  try {
+    // Execute the task based on task type
+    const success = await executeTask(job.task, job.options || {}, job.id);
+    
+    if (success) {
+      await logMessage(`Job ${job.id} completed successfully`, 'INFO', job.id);
+    } else {
+      await logMessage(`Job ${job.id} failed`, 'ERROR', job.id);
+    }
+    
+    return success;
+  } catch (error) {
+    await logMessage(`Error running job ${job.id}: ${error.message}`, 'ERROR', job.id);
+    return false;
   }
 }
 

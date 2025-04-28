@@ -952,75 +952,716 @@ async function fetchStructuredData(url) {
          result.about.summary = cleanText($(this).text());
      });
 
-    // Extract Subscription Status (Bidding Detail) specifically after span#subscriptionDiv
-    const subscriptionSpan = $('span#subscriptionDiv');
-    if (subscriptionSpan.length > 0) {
-        const subscriptionContainer = subscriptionSpan.next(); // Get the immediate next sibling
-        if (subscriptionContainer.length > 0 && subscriptionContainer.find('h2:contains("Subscription Status (Bidding Detail)")').length > 0) {
-            console.log("Processing Subscription Status (Bidding Detail) section...");
-            // Mark the subscription table if found
-            const subTableOverall = subscriptionContainer.find('.table-responsive').first().find('table');
-            if (subTableOverall?.length) {
-                processedTables.add(subTableOverall.get(0));
-            }
+    // Extract Subscription Status (Bidding Detail)
+    // First approach: Look for the table directly based on its contents
+    console.log("Attempting to find subscription status table using direct approach...");
+    let subscriptionFound = false;
+    
+    // Find all tables that might be subscription status tables
+    $('table.table').each(function() {
+        // Skip if we've already processed this table
+        if (processedTables.has(this)) return;
+        
+        // Check if this table has category column and subscription times column
+        const hasCategory = $(this).find('th:contains("Category")').length > 0;
+        const hasSubscription = $(this).find('th:contains("Subscription")').length > 0 || 
+                               $(this).find('th:contains("Times")').length > 0;
+        
+        if (hasCategory && hasSubscription) {
+            console.log("Found potential subscription status table by content");
+            const table = $(this);
+            processedTables.add(this);
+            
             try {
-                const subH2 = subscriptionContainer.find('h2:contains("Subscription Status (Bidding Detail)")').first();
-                result.subscriptionStatus.summary = cleanText(subH2?.next('p')?.text()); // Get first paragraph after h2
-
+                // Try to find the parent div or section containing this table
+                let parentContainer = table.closest('div');
+                let summaryText = '';
+                
+                // Look for a heading near this table
+                let heading = parentContainer.find('h2:contains("Subscription Status")');
+                if (heading.length === 0) {
+                    heading = table.closest('div').prevAll('h2:contains("Subscription Status")').first();
+                }
+                
+                // If we found a heading, try to get the summary paragraph
+                if (heading.length > 0) {
+                    const summaryPara = heading.next('p');
+                    if (summaryPara.length > 0) {
+                        summaryText = cleanText(summaryPara.text());
+                    }
+                }
+                
+                result.subscriptionStatus.summary = summaryText;
+                
+                // Process table headers
+                const headers = [];
+                table.find('thead th').each(function() {
+                    let headerText = cleanText($(this).text());
+                    // Standardize header names
+                    if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                    if (headerText.toLowerCase().includes('subscription') || headerText.toLowerCase().includes('times')) headerText = 'subscription_times';
+                    if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                    if (headerText.toLowerCase().includes('shares bid')) headerText = 'shares_bid_for';
+                    headers.push(sanitizeKey(headerText));
+                });
+                
+                // Process table rows
+                table.find('tbody tr').each(function() {
+                    const rowData = {};
+                    $(this).find('td').each(function(index) {
+                        const header = headers[index] || `col_${index}`;
+                        rowData[header] = cleanText($(this).text());
+                    });
+                    
+                    // Get the category from the first column
+                    const category = rowData.category?.trim();
+                    
+                    // Skip empty rows
+                    if (!category) return;
+                    
+                    console.log(`Processing row with category: ${category}`);
+                    
+                    // Process different categories
+                    let categoryKey = '';
+                    
+                    if (category.toLowerCase().includes('anchor')) {
+                      categoryKey = 'anchor_investors';
+                    } else if (category.toLowerCase().includes('qualified') || category.toLowerCase().includes('qib')) {
+                      categoryKey = 'qib';
+                    } else if (category.includes('bNII') || 
+                              (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above'))) {
+                      categoryKey = 'bnii';
+                    } else if (category.includes('sNII') || 
+                              (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below'))) {
+                      categoryKey = 'snii';
+                    } else if (category.toLowerCase().includes('non-institutional') || category.toLowerCase().includes('nii')) {
+                      categoryKey = 'nii';
+                    } else if (category.toLowerCase().includes('retail')) {
+                      categoryKey = 'retail';
+                    } else if (category.toLowerCase().includes('employee')) {
+                      categoryKey = 'employee';
+                    } else if (category.toLowerCase().includes('total')) {
+                      categoryKey = 'total';
+                    } else {
+                      // Fallback case
+                      categoryKey = sanitizeKey(category);
+                    }
+                    
+                    if (categoryKey) {
+                      result.overall_subscription[categoryKey] = rowData;
+                      console.log(`Added data for category ${categoryKey}`);
+                    }
+                  });
+            } catch (error) {
+                console.error("Error processing direct subscription table:", error);
+            }
+        }
+    });
+    
+    // Only proceed with previous methods if we didn't find anything with the direct approach
+    if (!subscriptionFound) {
+        // Extract Subscription Status (Bidding Detail) specifically after span#subscriptionDiv
+        const subscriptionSpan = $('span#subscriptionDiv');
+        if (subscriptionSpan.length > 0) {
+            const subscriptionContainer = subscriptionSpan.next(); // Get the immediate next sibling
+            if (subscriptionContainer.length > 0 && subscriptionContainer.find('h2:contains("Subscription Status")').length > 0) {
+                console.log("Processing Subscription Status (Bidding Detail) section...");
+                // Mark the subscription table if found
+                const subTableOverall = subscriptionContainer.find('.table-responsive').first().find('table');
                 if (subTableOverall?.length) {
-                    const subHeadersOverall = [];
-                    subTableOverall.find('thead th').each(function(){
-                        let headerText = cleanText($(this)?.text());
-                        // Standardize slightly
-                        if (headerText.toLowerCase().includes('category')) headerText = 'category';
-                        if (headerText.toLowerCase().includes('subscription (times)')) headerText = 'subscription_times';
-                        if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
-                        if (headerText.toLowerCase().includes('shares bid for')) headerText = 'shares_bid_for';
-                        if (headerText.toLowerCase().includes('total application')) headerText = 'total_application';
-                        subHeadersOverall.push(sanitizeKey(headerText));
-                     });
+                    processedTables.add(subTableOverall.get(0));
+                }
+                try {
+                    const subH2 = subscriptionContainer.find('h2:contains("Subscription Status")').first();
+                    result.subscriptionStatus.summary = cleanText(subH2?.next('p')?.text()); // Get first paragraph after h2
 
-                    subTableOverall.find('tbody tr').each(function(){
-                        const rowData = {};
-                        $(this).find('td').each(function(index){
-                            const header = subHeadersOverall[index] || `col_${index}`;
-                            let cellText = cleanText($(this)?.text());
-                            // Handle the NII* case - store note separately if needed, or just clean text
-                            if(header === 'category' && cellText.includes('NII')) {
-                                // For now, just clean it, note is captured below table
-                                cellText = cleanText(cellText.replace('*',''));
+                    if (subTableOverall?.length) {
+                        const subHeadersOverall = [];
+                        subTableOverall.find('thead th').each(function(){
+                            let headerText = cleanText($(this)?.text());
+                            // Standardize slightly
+                            if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                            if (headerText.toLowerCase().includes('subscription') || headerText.toLowerCase().includes('times')) headerText = 'subscription_times';
+                            if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                            if (headerText.toLowerCase().includes('shares bid for')) headerText = 'shares_bid_for';
+                            if (headerText.toLowerCase().includes('total application')) headerText = 'total_application';
+                            subHeadersOverall.push(sanitizeKey(headerText));
+                         });
+
+                        subTableOverall.find('tbody tr').each(function(){
+                            const rowData = {};
+                            $(this).find('td').each(function(index){
+                                const header = subHeadersOverall[index] || `col_${index}`;
+                                let cellText = cleanText($(this)?.text());
+                                // Handle the NII* case - store note separately if needed, or just clean text
+                                if(header === 'category' && cellText.includes('NII')) {
+                                    // For now, just clean it, note is captured below table
+                                    cellText = cleanText(cellText.replace('*',''));
+                                }
+                                rowData[header] = cellText;
+                            });
+                            const category = rowData.category?.trim();
+                            // Store under a key that correctly represents the category
+                            let key = sanitizeKey(category);
+                            
+                            // Special handling for NII subcategories (bNII and sNII)
+                            if (category && (category.toLowerCase().includes('bnii') || 
+                                (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above')))) {
+                                key = 'bnii'; // Big Non-Institutional Investors
+                                result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                                result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                                result.subscriptionStatus.overall.nii.subcategories.bnii = rowData;
+                            } else if (category && (category.toLowerCase().includes('snii') || 
+                                      (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below')))) {
+                                key = 'snii'; // Small Non-Institutional Investors
+                                result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                                result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                                result.subscriptionStatus.overall.nii.subcategories.snii = rowData;
+                            } else if (category && category.toLowerCase().includes('employee')) {
+                                key = 'employee'; // Employee category
+                                result.subscriptionStatus.overall.employee = rowData;
+                            } else if (key && key !== 'unknown') {
+                                result.subscriptionStatus.overall[key] = rowData;
                             }
-                            rowData[header] = cellText;
+                            
+                            // Always mark subscription status as available if we found any valid category
+                            if (key && key !== 'unknown') {
+                                sectionsAvailable.subscriptionStatus = true;
+                            }
                         });
-                        const key = sanitizeKey(rowData.category);
-                        if (key && key !== 'unknown') {
-                            result.subscriptionStatus.overall[key] = rowData;
+                    }
+
+                    // Total Application count (more flexible pattern matching)
+                    const totalAppRegex = /Total Application[s]?\s*:?\s*([\d,]+)/i;
+                    
+                    // First try normal structure
+                    const totalAppElement = subscriptionContainer.find('p:contains("Total Application")');
+                    const totalAppText = totalAppElement?.text();
+                    if (totalAppText) {
+                        // Extract just the number from "Total Application : 1,20,178"
+                        const match = totalAppText.match(totalAppRegex);
+                        if (match && match[1]) {
+                            result.subscriptionStatus.total_applications = match[1].trim();
+                        } else {
+                            result.subscriptionStatus.total_applications = cleanText(totalAppText?.replace(/.*:/, ''));
+                        }
+                        // Mark subscription status as available
+                        sectionsAvailable.subscriptionStatus = true;
+                    } else {
+                        // Try more broadly in the document
+                        const anyTotalApp = $('p:contains("Total Application")').text();
+                        if (anyTotalApp) {
+                            const match = anyTotalApp.match(totalAppRegex);
+                            if (match && match[1]) {
+                                result.subscriptionStatus.total_applications = match[1].trim();
+                            }
+                        }
+                    }
+
+                    // Additional notes paragraph
+                    const notesElement = totalAppElement?.next('p'); // Get the paragraph immediately after Total Application
+                    if (notesElement?.length > 0) {
+                        result.subscriptionStatus.notes = cleanText(notesElement.text());
+                    }
+                } catch (subError) {
+                    console.error("Error processing subscription section:", subError);
+                }
+            } else {
+                console.log("Subscription Status (Bidding Detail) section not found or doesn't match expected structure after span#subscriptionDiv.");
+            }
+        }
+        
+        // Handle alternative Subscription Status table structure (direct div with itemscope)
+        if (!sectionsAvailable.subscriptionStatus) {
+            // Try to find the alternate subscription table structure - more flexible selectors
+            const subscriptionDiv = $('div[itemscope][itemtype="http://schema.org/Table"]');
+            console.log("Checking for alternative subscription table structure...");
+            
+            if (subscriptionDiv.length > 0) {
+                console.log("Found alternative table structure, checking for Subscription Status heading...");
+                
+                // Check if any of these divs contain the subscription status header text
+                let targetDiv = null;
+                subscriptionDiv.each(function() {
+                    const heading = $(this).find('h2').text();
+                    if (heading && heading.toLowerCase().includes("subscription status")) {
+                        targetDiv = $(this);
+                        return false; // Break the each loop
+                    }
+                });
+                
+                if (targetDiv) {
+                    console.log("Processing alternative Subscription Status table structure...");
+                    try {
+                        // Get the heading and summary paragraph
+                        const subH2 = targetDiv.find('h2').first();
+                        const summaryParagraph = subH2.next('p');
+                        result.subscriptionStatus.summary = cleanText(summaryParagraph.text());
+                        
+                        // Find the table inside the div
+                        const subTable = targetDiv.find('.table-responsive table');
+                        
+                        if (subTable.length > 0) {
+                            // Mark this table as processed
+                            processedTables.add(subTable.get(0));
+                            
+                            // Extract table headers
+                            const headers = [];
+                            subTable.find('thead th').each(function() {
+                                let headerText = cleanText($(this).text());
+                                // Standardize header names
+                                if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                                if (headerText.toLowerCase().includes('subscription') || headerText.toLowerCase().includes('times')) headerText = 'subscription_times';
+                                if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                                if (headerText.toLowerCase().includes('shares bid')) headerText = 'shares_bid_for';
+                                headers.push(sanitizeKey(headerText));
+                            });
+                            
+                            // Process each row in the table
+                            subTable.find('tbody tr').each(function() {
+                                const rowData = {};
+                                $(this).find('td').each(function(index) {
+                                    const header = headers[index] || `col_${index}`;
+                                    rowData[header] = cleanText($(this).text());
+                                });
+                                
+                                // Get the category from the first column
+                                const category = rowData.category?.trim();
+                                
+                                // Skip empty rows
+                                if (!category) return;
+                                
+                                // Handle special subcategories of NII
+                                if (category.toLowerCase().includes('bnii') || 
+                                    (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above'))) {
+                                    // Big Non-Institutional Investors (bids above ₹10L)
+                                    result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                                    result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                                    result.subscriptionStatus.overall.nii.subcategories.bnii = rowData;
+                                } else if (category.toLowerCase().includes('snii') || 
+                                          (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below'))) {
+                                    // Small Non-Institutional Investors (bids below ₹10L)
+                                    result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                                    result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                                    result.subscriptionStatus.overall.nii.subcategories.snii = rowData;
+                                } else if (category.toLowerCase().includes('employee')) {
+                                    // Employee category
+                                    result.subscriptionStatus.overall.employee = rowData;
+                                } else {
+                                    // Regular categories (QIB, NII, Retail, Total)
+                                    const key = sanitizeKey(category);
+                                    if (key && key !== 'unknown') {
+                                        result.subscriptionStatus.overall[key] = rowData;
+                                    }
+                                }
+                            });
+                            
+                            // Extract total applications count using regex
+                            const totalAppRegex = /Total Application[s]?\s*:?\s*([\d,]+)/i;
+                            
+                            // First try in the parent div
+                            const totalAppText = targetDiv.find('p:contains("Total Application")').text();
+                            if (totalAppText) {
+                                const match = totalAppText.match(totalAppRegex);
+                                if (match && match[1]) {
+                                    result.subscriptionStatus.total_applications = match[1].trim();
+                                } else {
+                                    result.subscriptionStatus.total_applications = cleanText(totalAppText.replace(/.*:/, ''));
+                                }
+                            } else {
+                                // Try more broadly in the document
+                                const anyTotalApp = $('p:contains("Total Application")').text();
+                                if (anyTotalApp) {
+                                    const match = anyTotalApp.match(totalAppRegex);
+                                    if (match && match[1]) {
+                                        result.subscriptionStatus.total_applications = match[1].trim();
+                                    }
+                                }
+                            }
+                            
                             // Mark subscription status as available
                             sectionsAvailable.subscriptionStatus = true;
                         }
-                    });
+                    } catch (error) {
+                        console.error("Error processing alternative subscription table:", error);
+                    }
+                } else {
+                    console.log("Found itemscope tables but none with Subscription Status heading");
                 }
-
-                // Total Application count (specific paragraph structure)
-                const totalAppElement = subscriptionContainer.find('p:contains("Total Application")');
-                const totalAppText = totalAppElement?.text();
-                if (totalAppText) {
-                    result.subscriptionStatus.total_applications = cleanText(totalAppText?.replace(/.*:/, ''));
-                    // Mark subscription status as available
-                    sectionsAvailable.subscriptionStatus = true;
-                }
-
-                // Additional notes paragraph
-                const notesElement = totalAppElement?.next('p'); // Get the paragraph immediately after Total Application
-                if (notesElement?.length > 0) {
-                    result.subscriptionStatus.notes = cleanText(notesElement.text());
-                }
-            } catch (subError) {
-                console.error("Error processing subscription section:", subError);
+            } else {
+                console.log("No alternative subscription status tables found with itemscope");
             }
-        } else {
-            console.log("Subscription Status (Bidding Detail) section not found or doesn't match expected structure after span#subscriptionDiv.");
         }
+    }
+
+    // First fallback - specifically look for "Subscription (times)" header
+    if (!sectionsAvailable.subscriptionStatus) {
+        console.log("Using first fallback method - looking for 'Subscription (times)' header...");
+        
+        $('table').each(function() {
+            // Skip if already processed
+            if (processedTables.has(this)) return;
+            
+            const table = $(this);
+            
+            // Specifically check for "Subscription (times)" header
+            const hasSubscriptionTimesHeader = table.find('th:contains("Subscription (times)")').length > 0;
+            
+            if (hasSubscriptionTimesHeader) {
+                console.log("Found subscription table with 'Subscription (times)' header");
+                processedTables.add(this);
+                
+                try {
+                    // Find the parent container for summary and total applications
+                    const parentContainer = table.closest('div');
+                    
+                    // Get summary from nearby heading
+                    let summaryText = "";
+                    const nearbyHeading = parentContainer.find('h2:contains("Subscription")').first();
+                    if (nearbyHeading.length > 0) {
+                        const summaryPara = nearbyHeading.next('p');
+                        if (summaryPara.length > 0) {
+                            summaryText = cleanText(summaryPara.text());
+                        }
+                    }
+                    result.subscriptionStatus.summary = summaryText;
+                    
+                    // Process table headers
+                    const headers = [];
+                    table.find('thead th').each(function() {
+                        let headerText = cleanText($(this).text());
+                        // Standardize header names
+                        if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                        if (headerText.toLowerCase().includes('subscription')) headerText = 'subscription_times';
+                        if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                        if (headerText.toLowerCase().includes('shares bid')) headerText = 'shares_bid_for';
+                        headers.push(sanitizeKey(headerText));
+                    });
+                    
+                    // Process table rows
+                    table.find('tbody tr').each(function() {
+                        const rowData = {};
+                        $(this).find('td').each(function(index) {
+                            const header = headers[index] || `col_${index}`;
+                            rowData[header] = cleanText($(this).text());
+                        });
+                        
+                        // Get the category from the first column
+                        const category = rowData.category?.trim();
+                        
+                        // Skip empty rows
+                        if (!category) return;
+                        
+                        // Handle special subcategories of NII
+                        if (category.toLowerCase().includes('bnii') || 
+                            (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above'))) {
+                            // Big Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.bnii = rowData;
+                        } else if (category.toLowerCase().includes('snii') || 
+                                  (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below'))) {
+                            // Small Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.snii = rowData;
+                        } else if (category.toLowerCase().includes('employee')) {
+                            // Employee category
+                            result.subscriptionStatus.overall.employee = rowData;
+                        } else {
+                            // Regular categories (QIB, NII, Retail, Total)
+                            const key = sanitizeKey(category);
+                            if (key && key !== 'unknown') {
+                                result.subscriptionStatus.overall[key] = rowData;
+                            }
+                        }
+                        
+                        // Mark subscription status as available
+                        sectionsAvailable.subscriptionStatus = true;
+                    });
+                    
+                    // Look for total applications
+                    const totalAppRegex = /Total Application[s]?\s*:?\s*([\d,]+)/i;
+                    const totalAppElement = parentContainer.find('p:contains("Total Application")');
+                    if (totalAppElement.length > 0) {
+                        const totalAppText = totalAppElement.text();
+                        const match = totalAppText.match(totalAppRegex);
+                        if (match && match[1]) {
+                            result.subscriptionStatus.total_applications = match[1].trim();
+                        } else {
+                            result.subscriptionStatus.total_applications = cleanText(totalAppText.replace(/.*:/, ''));
+                        }
+                    }
+                } catch (error) {
+                    console.error("Error processing subscription table with 'Subscription (times)' header:", error);
+                }
+            }
+        });
+    }
+    
+    // Second fallback - look for tables with both "Category" and "Times" headers
+    if (!sectionsAvailable.subscriptionStatus) {
+        console.log("Using second fallback method - checking for tables with both Category and Times columns...");
+        
+        $('table').each(function() {
+            // Skip if already processed
+            if (processedTables.has(this)) return;
+            
+            const table = $(this);
+            let hasCategory = false;
+            let hasTimes = false;
+            
+            // Check headers
+            table.find('th').each(function() {
+                const headerText = $(this).text().toLowerCase();
+                if (headerText.includes('category')) hasCategory = true;
+                if (headerText.includes('times')) hasTimes = true;
+            });
+            
+            // If it has category and times columns, process it
+            if (hasCategory && hasTimes) {
+                console.log("Found table with Category and Times headers");
+                processedTables.add(this);
+                
+                try {
+                    // Process table headers
+                    const headers = [];
+                    table.find('thead th, tr:first-child th').each(function() {
+                        let headerText = cleanText($(this).text());
+                        // Standardize header names
+                        if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                        if (headerText.toLowerCase().includes('times')) headerText = 'subscription_times';
+                        if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                        if (headerText.toLowerCase().includes('shares bid')) headerText = 'shares_bid_for';
+                        headers.push(sanitizeKey(headerText));
+                    });
+                    
+                    // If no headers found in thead or first row th, use first row td as headers
+                    if (headers.length === 0) {
+                        table.find('tr:first-child td').each(function() {
+                            let headerText = cleanText($(this).text());
+                            if (headerText.toLowerCase().includes('category')) headerText = 'category';
+                            if (headerText.toLowerCase().includes('times')) headerText = 'subscription_times';
+                            if (headerText.toLowerCase().includes('shares offered')) headerText = 'shares_offered';
+                            if (headerText.toLowerCase().includes('shares bid')) headerText = 'shares_bid_for';
+                            headers.push(sanitizeKey(headerText));
+                        });
+                    }
+                    
+                    // Process table rows (skip first row if it was used for headers)
+                    const startRowIndex = (table.find('thead').length > 0) ? 0 : 1;
+                    
+                    table.find('tbody tr, tr').slice(startRowIndex).each(function() {
+                        const rowData = {};
+                        $(this).find('td').each(function(index) {
+                            const header = headers[index] || `col_${index}`;
+                            rowData[header] = cleanText($(this).text());
+                        });
+                        
+                        // Get the category from the first column
+                        const category = rowData.category?.trim();
+                        
+                        // Skip empty rows
+                        if (!category) return;
+                        
+                        // Handle special subcategories of NII
+                        if (category.toLowerCase().includes('bnii') || 
+                            (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above'))) {
+                            // Big Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.bnii = rowData;
+                        } else if (category.toLowerCase().includes('snii') || 
+                                  (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below'))) {
+                            // Small Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.snii = rowData;
+                        } else if (category.toLowerCase().includes('employee')) {
+                            // Employee category
+                            result.subscriptionStatus.overall.employee = rowData;
+                        } else {
+                            // Regular categories (QIB, NII, Retail, Total)
+                            const key = sanitizeKey(category);
+                            if (key && key !== 'unknown') {
+                                result.subscriptionStatus.overall[key] = rowData;
+                            }
+                        }
+                        
+                        // Mark subscription status as available
+                        sectionsAvailable.subscriptionStatus = true;
+                    });
+                } catch (error) {
+                    console.error("Error processing Category/Times table:", error);
+                }
+            }
+        });
+    }
+    
+    // Third fallback - look for tables with QIB, NII and Retail in content
+    if (!sectionsAvailable.subscriptionStatus) {
+        console.log("Using third fallback method - scanning tables for QIB/NII/Retail content...");
+        
+        $('table').each(function() {
+            // Skip if already processed
+            if (processedTables.has(this)) return;
+            
+            const table = $(this);
+            let hasQibRow = false;
+            let hasNiiRow = false;
+            let hasRetailRow = false;
+            
+            // Scan table content for QIB, NII and Retail rows
+            table.find('tr').each(function() {
+                const rowText = $(this).text().toLowerCase();
+                if (rowText.includes('qib')) hasQibRow = true;
+                if (rowText.includes('nii')) hasNiiRow = true;
+                if (rowText.includes('retail')) hasRetailRow = true;
+            });
+            
+            // If table has at least 2 of these categories, it's likely a subscription table
+            if ((hasQibRow && hasNiiRow) || (hasQibRow && hasRetailRow) || (hasNiiRow && hasRetailRow)) {
+                console.log("Found potential subscription table by QIB/NII/Retail content");
+                processedTables.add(this);
+                
+                try {
+                    const rows = [];
+                    const categoryIndices = [];
+                    
+                    // First, identify which column contains categories
+                    table.find('tr').each(function() {
+                        $(this).find('td').each(function(colIndex) {
+                            const cellText = $(this).text().toLowerCase();
+                            if (cellText === 'qib' || cellText === 'nii' || cellText === 'retail') {
+                                categoryIndices.push(colIndex);
+                            }
+                        });
+                    });
+                    
+                    // Get the most common column index for categories
+                    let categoryColumnIndex = 0; // default to first column
+                    if (categoryIndices.length > 0) {
+                        // Use the mode (most common value)
+                        const counts = {};
+                        let maxCount = 0;
+                        let mostFrequent = categoryIndices[0];
+                        
+                        for (const num of categoryIndices) {
+                            counts[num] = (counts[num] || 0) + 1;
+                            if (counts[num] > maxCount) {
+                                maxCount = counts[num];
+                                mostFrequent = num;
+                            }
+                        }
+                        
+                        categoryColumnIndex = mostFrequent;
+                    }
+                    
+                    // Now extract data assuming categoryColumnIndex contains categories
+                    table.find('tr').each(function() {
+                        const cells = $(this).find('td');
+                        if (cells.length <= categoryColumnIndex) return; // Skip rows that don't have enough columns
+                        
+                        const category = cleanText(cells.eq(categoryColumnIndex).text());
+                        if (!category) return; // Skip rows without a category
+                        
+                        // Try to identify which columns might contain subscription times and shares
+                        const rowData = {
+                            category: category
+                        };
+                        
+                        // Assume the column after category might be subscription times
+                        if (cells.length > categoryColumnIndex + 1) {
+                            const timesText = cleanText(cells.eq(categoryColumnIndex + 1).text());
+                            if (/^\d+(\.\d+)?x?$/.test(timesText.replace(/,/g, ''))) {
+                                rowData.subscription_times = timesText;
+                            }
+                        }
+                        
+                        // Assume subsequent columns might be shares offered and shares bid
+                        if (cells.length > categoryColumnIndex + 2) {
+                            rowData.shares_offered = cleanText(cells.eq(categoryColumnIndex + 2).text());
+                        }
+                        
+                        if (cells.length > categoryColumnIndex + 3) {
+                            rowData.shares_bid_for = cleanText(cells.eq(categoryColumnIndex + 3).text());
+                        }
+                        
+                        // Only process rows that have category and at least one other piece of data
+                        if (Object.keys(rowData).length > 1) {
+                            rows.push(rowData);
+                        }
+                    });
+                    
+                    // Process the extracted rows
+                    for (const rowData of rows) {
+                        const category = rowData.category.toLowerCase();
+                        
+                        // Handle special subcategories of NII
+                        if (category.includes('bnii') || (category.includes('nii') && category.includes('above'))) {
+                            // Big Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.bnii = rowData;
+                        } else if (category.includes('snii') || (category.includes('nii') && category.includes('below'))) {
+                            // Small Non-Institutional Investors
+                            result.subscriptionStatus.overall.nii = result.subscriptionStatus.overall.nii || {};
+                            result.subscriptionStatus.overall.nii.subcategories = result.subscriptionStatus.overall.nii.subcategories || {};
+                            result.subscriptionStatus.overall.nii.subcategories.snii = rowData;
+                        } else if (category.includes('employee')) {
+                            // Employee category
+                            result.subscriptionStatus.overall.employee = rowData;
+                        } else if (category.includes('qib')) {
+                            result.subscriptionStatus.overall.qib = rowData;
+                        } else if (category.includes('nii')) {
+                            result.subscriptionStatus.overall.nii = rowData;
+                        } else if (category.includes('retail')) {
+                            result.subscriptionStatus.overall.retail = rowData;
+                        } else if (category.includes('total')) {
+                            result.subscriptionStatus.overall.total = rowData;
+                        }
+                        
+                        // Mark subscription status as available
+                        if (Object.keys(result.subscriptionStatus.overall).length > 0) {
+                            sectionsAvailable.subscriptionStatus = true;
+                        }
+                    }
+                    
+                    // Look for total applications
+                    if (sectionsAvailable.subscriptionStatus) {
+                        const containerDiv = table.closest('div');
+                        const totalAppPara = containerDiv.find('p:contains("Total Application")');
+                        if (totalAppPara.length > 0) {
+                            const totalAppText = totalAppPara.text();
+                            const match = totalAppText.match(/Total Application[s]?\s*:?\s*([\d,]+)/i);
+                            if (match && match[1]) {
+                                result.subscriptionStatus.total_applications = match[1].trim();
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error("Error in third fallback subscription table processing:", error);
+                }
+            }
+        });
+    }
+    
+    // Final fallback for total applications if still not found
+    if (sectionsAvailable.subscriptionStatus && !result.subscriptionStatus.total_applications) {
+        console.log("Looking for Total Application text anywhere in the document...");
+        const totalAppRegex = /Total Application[s]?\s*:?\s*([\d,]+)/i;
+        
+        // Try a broader search for "Total Application" text anywhere in the document
+        $('p').each(function() {
+            const paraText = $(this).text();
+            if (paraText.toLowerCase().includes('total application')) {
+                const match = paraText.match(totalAppRegex);
+                if (match && match[1]) {
+                    result.subscriptionStatus.total_applications = match[1].trim();
+                    return false; // Break the loop once found
+                }
+            }
+        });
     }
 
     // Extract FAQs (often in an accordion structure)
@@ -1367,10 +2008,356 @@ async function fetchSpecificIpoDetails(page) {
   }
 }
 
+/**
+ * Fetches subscription history data from the detailed subscription page
+ * @param {string} ipoId - The ID of the IPO from the URL path
+ * @returns {Promise<object>} - Structured subscription history data
+ */
+async function fetchSubscriptionHistory(ipoId) {
+  let browser;
+  let page;
+  console.log(`Fetching subscription history for IPO ID: ${ipoId}`);
+  
+  try {
+    // Form the subscription page URL
+    const subscriptionUrl = `https://www.chittorgarh.com/ipo_subscription/${ipoId}/${ipoId}/`;
+    console.log(`🚀 Creating enhanced browser session for ${subscriptionUrl}`);
+    
+    // Use the browser helper with more reliable settings
+    const browserLaunchResult = await launchBrowser(subscriptionUrl, {
+      timeout: 120000,
+      args: [
+        '--disable-web-security',
+        '--disable-features=IsolateOrigins,site-per-process',
+        '--disable-site-isolation-trials',
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--disable-gpu'
+      ],
+      waitUntil: 'networkidle2'
+    });
+    
+    browser = browserLaunchResult.browser;
+    page = browserLaunchResult.page;
+    
+    // Add browser-like headers
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Connection': 'keep-alive',
+      'Cache-Control': 'max-age=0',
+      'Upgrade-Insecure-Requests': '1',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Sec-Fetch-Dest': 'document',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-Site': 'none',
+      'Sec-Fetch-User': '?1',
+      'DNT': '1'
+    });
+    
+    // Setup cookies for the domain
+    await page.setCookie({
+      name: 'visited',
+      value: 'true',
+      domain: '.chittorgarh.com',
+      path: '/',
+    }, {
+      name: 'sessionvisit',
+      value: Date.now().toString(),
+      domain: '.chittorgarh.com',
+      path: '/',
+    });
+    
+    // Wait for the page to load fully
+    try {
+      await page.waitForSelector('span#subscriptionDiv, div.accordion-body', { timeout: 60000 });
+      console.log("✅ Successfully accessed " + subscriptionUrl);
+      
+      // Force a small additional wait to ensure JavaScript runs
+      await page.waitForTimeout(2000);
+    } catch (timeoutError) {
+      console.log("⚠️ Timeout waiting for subscription elements. Will try to extract content anyway.");
+    }
+    
+    // Get the data directly from the page using browser JavaScript
+    const result = await page.evaluate(() => {
+      // Helper function to clean text
+      const cleanText = (text) => {
+        if (!text) return '';
+        return text.toString().trim()
+          .replace(/\s+/g, ' ')
+          .replace(/\u00A0/g, ' ')
+          .trim();
+      };
+      
+      // Initialize the result
+      const data = {
+        overall_subscription: {},
+        day_wise_subscription: [],
+        total_applications: '',
+        subscription_notes: []
+      };
+      
+      // Attempt to find total applications
+      let totalAppText = '';
+      document.querySelectorAll('p, div').forEach(el => {
+        if (el.textContent && el.textContent.includes('Total Application')) {
+          totalAppText = el.textContent;
+        }
+      });
+      
+      if (totalAppText) {
+        const match = totalAppText.match(/Total Application[s]?\s*:?\s*([\d,]+)/i);
+        if (match && match[1]) {
+          data.total_applications = match[1].trim();
+          console.log(`Found total applications: ${data.total_applications}`);
+        }
+      }
+      
+      // Find all tables in the document
+      const tables = document.querySelectorAll('table');
+      console.log(`Found ${tables.length} tables on page`);
+      
+      // Process each table to find subscription data
+      tables.forEach((table, tableIndex) => {
+        const tableText = table.textContent.toLowerCase();
+        
+        // Check if this is likely the overall subscription table
+        if (tableText.includes('category') && tableText.includes('subscription') && tableText.includes('times')) {
+          console.log(`Table ${tableIndex+1} appears to be a subscription table`);
+          
+          // Get the headers
+          const headers = [];
+          table.querySelectorAll('thead th').forEach(th => {
+            let headerText = cleanText(th.textContent.toLowerCase());
+            headers.push(headerText);
+          });
+          
+          // Process rows
+          table.querySelectorAll('tbody tr').forEach(tr => {
+            const rowData = {};
+            const cells = tr.querySelectorAll('td');
+            
+            // Get category name from first cell
+            let category = '';
+            if (cells[0]) {
+              category = cleanText(cells[0].textContent);
+              rowData.category = category;
+            }
+            
+            // Skip empty rows
+            if (!category) return;
+            
+            // Get other cell values
+            cells.forEach((cell, cellIndex) => {
+              if (cellIndex === 0) return; // Skip category name which we already got
+              
+              const header = headers[cellIndex];
+              if (!header) return;
+              
+              const value = cleanText(cell.textContent);
+              
+              if (header.includes('subscription') || header.includes('times')) {
+                rowData.subscription_times = value;
+              } else if (header.includes('shares') && header.includes('offered')) {
+                rowData.shares_offered = value;
+              } else if (header.includes('shares') && header.includes('bid')) {
+                rowData.shares_bid_for = value;
+              } else if (header.includes('amount')) {
+                rowData.total_amount = value;
+              }
+            });
+            
+            // Determine category key
+            let categoryKey = '';
+            
+            if (category.toLowerCase().includes('anchor')) {
+              categoryKey = 'anchor_investors';
+            } else if (category.toLowerCase().includes('qualified') || category.toLowerCase().includes('qib')) {
+              categoryKey = 'qib';
+            } else if (category.toLowerCase().includes('bnii') || 
+                      (category.toLowerCase().includes('nii') && category.toLowerCase().includes('above'))) {
+              categoryKey = 'bnii';
+            } else if (category.toLowerCase().includes('snii') || 
+                      (category.toLowerCase().includes('nii') && category.toLowerCase().includes('below'))) {
+              categoryKey = 'snii';
+            } else if (category.toLowerCase().includes('non-institutional') || category.toLowerCase().includes('nii')) {
+              categoryKey = 'nii';
+            } else if (category.toLowerCase().includes('retail')) {
+              categoryKey = 'retail';
+            } else if (category.toLowerCase().includes('employee')) {
+              categoryKey = 'employee';
+            } else if (category.toLowerCase().includes('total')) {
+              categoryKey = 'total';
+            } else {
+              // Fallback: convert category to key
+              categoryKey = category.toLowerCase()
+                .replace(/[^\w\s]/g, '')
+                .replace(/\s+/g, '_');
+            }
+            
+            if (categoryKey) {
+              data.overall_subscription[categoryKey] = rowData;
+              console.log(`Added data for ${categoryKey}`);
+            }
+          });
+        }
+        
+        // Check if this is the day-wise table
+        else if (tableText.includes('day') && (tableText.includes('date') || tableText.includes('qib') || tableText.includes('retail'))) {
+          console.log(`Table ${tableIndex+1} appears to be the day-wise table`);
+          
+          // Get headers
+          const headers = [];
+          table.querySelectorAll('thead th').forEach(th => {
+            let headerText = cleanText(th.textContent.toLowerCase());
+            headers.push(headerText);
+          });
+          
+          // Process rows
+          table.querySelectorAll('tbody tr').forEach(tr => {
+            const dayData = {};
+            tr.querySelectorAll('td').forEach((td, tdIndex) => {
+              const header = headers[tdIndex];
+              if (!header) return;
+              
+              const value = cleanText(td.textContent);
+              
+              // Process based on header
+              if (header.includes('date')) {
+                // Try to extract day number
+                const dayMatch = value.match(/day\s*(\d+)/i);
+                if (dayMatch && dayMatch[1]) {
+                  dayData.day_number = dayMatch[1];
+                }
+                
+                // Try to extract date
+                const dateMatch = value.match(/(\w+\s+\d+,\s+\d+)/i);
+                if (dateMatch && dateMatch[1]) {
+                  dayData.date = dateMatch[1];
+                } else {
+                  // Check for date in small tag
+                  const smallText = td.querySelector('small')?.textContent || '';
+                  if (smallText) {
+                    dayData.date = cleanText(smallText);
+                  }
+                }
+              } 
+              else if (header.includes('qib')) {
+                dayData.qib = value;
+              }
+              else if (header.includes('nii') && !header.includes('>') && !header.includes('<')) {
+                dayData.nii = value;
+              }
+              else if ((header.includes('nii') && header.includes('>')) || header.includes('bnii')) {
+                dayData.bnii = value;
+              }
+              else if ((header.includes('nii') && header.includes('<')) || header.includes('snii')) {
+                dayData.snii = value;
+              }
+              else if (header.includes('retail')) {
+                dayData.retail = value;
+              }
+              else if (header.includes('emp')) {
+                dayData.employee = value;
+              }
+              else if (header.includes('total')) {
+                dayData.total = value;
+              }
+            });
+            
+            // Add day data if it has meaningful content
+            if (Object.keys(dayData).length > 2) {
+              data.day_wise_subscription.push(dayData);
+            }
+          });
+        }
+      });
+      
+      // Try to find subscription notes
+      const noteElements = document.querySelectorAll('ul li');
+      noteElements.forEach(li => {
+        const text = li.textContent;
+        if (text && (text.includes('Note') || text.includes('Shares Offered') || text.includes('Total Amount'))) {
+          data.subscription_notes.push(cleanText(text));
+        }
+      });
+      
+      return data;
+    });
+    
+    // Log the result summary
+    console.log(`Subscription history data summary:`);
+    console.log(`- Overall subscription categories: ${Object.keys(result.overall_subscription).length}`);
+    console.log(`- Day-wise entries: ${result.day_wise_subscription.length}`);
+    console.log(`- Total applications: ${result.total_applications || 'Not found'}`);
+    console.log(`- Subscription notes: ${result.subscription_notes.length}`);
+    
+    return result;
+    
+  } catch (error) {
+    console.error(`Error fetching subscription history: ${error.message}`);
+    console.error(error.stack);
+    return { error: true, message: error.message };
+  } finally {
+    if (browser) {
+      try {
+        await browser.close();
+        console.log(`🧹 Removing temporary user data directory: ${browser._process?.spawnargs.find(arg => arg.includes('--user-data-dir='))?.replace('--user-data-dir=', '')}`);
+      } catch (closeError) {
+        console.error(`Error closing browser: ${closeError.message}`);
+      }
+    }
+  }
+}
+
+/**
+ * Main function to fetch complete IPO data including subscription history
+ * @param {string} url - The URL of the IPO detail page
+ * @returns {Promise<object>} - Complete IPO data
+ */
+async function fetchCompleteIpoData(url) {
+  // Extract IPO ID from the URL
+  const ipoIdMatch = url.match(/\/ipo\/.*?\/(\d+)\/$/);
+  let ipoId = null;
+  if (ipoIdMatch && ipoIdMatch[1]) {
+    ipoId = ipoIdMatch[1];
+    console.log(`Extracted IPO ID: ${ipoId}`);
+  } else {
+    console.log("Could not extract IPO ID from URL");
+  }
+  
+  // Fetch structured data from the main IPO page
+  const mainData = await fetchStructuredData(url);
+  
+  // Fetch subscription history if we have an IPO ID
+  if (ipoId) {
+    try {
+      const subscriptionHistory = await fetchSubscriptionHistory(ipoId);
+      
+      // Merge the subscription history into the main data
+      if (!mainData.error && !subscriptionHistory.error) {
+        mainData.subscriptionHistory = subscriptionHistory;
+      }
+    } catch (error) {
+      console.error(`Error fetching subscription history: ${error.message}`);
+      // Continue with main data even if subscription history fails
+    }
+  }
+  
+  return mainData;
+}
+
 module.exports = {
   fetchStructuredData,
   cleanText,
   sanitizeKey,
   fetchBasicDetails,
-  fetchSpecificIpoDetails
+  fetchSpecificIpoDetails,
+  fetchSubscriptionHistory,
+  fetchCompleteIpoData
 }; 

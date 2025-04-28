@@ -28,7 +28,7 @@ try {
   
   // Configure anonymize plugin with custom options
   const anonymizePlugin = AnonymizeUAPlugin({
-    stripHeadless: false,
+    stripHeadless: true,
     makeWindows: true,
     customFn: (ua) => ua.replace('HeadlessChrome', 'Chrome')
   });
@@ -565,7 +565,7 @@ async function launchBrowser(url, options = {}) {
       // Launch browser with puppeteer-extra if available, fallback to regular puppeteer
       if (puppeteerExtra) {
         browser = await puppeteerExtra.launch({
-          headless: false,
+          headless: true,
           args: launchArgs,
           ignoreHTTPSErrors: true,
           defaultViewport: { width: 1920, height: 1080 },
@@ -573,7 +573,7 @@ async function launchBrowser(url, options = {}) {
         });
       } else {
         browser = await puppeteer.launch({
-          headless: false,
+          headless: true,
           args: launchArgs,
           ignoreHTTPSErrors: true,
           defaultViewport: { width: 1920, height: 1080 },
