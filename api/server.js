@@ -60,6 +60,79 @@ const swaggerDocument = {
     }
   ],
   paths: {
+    '/ipos/homepage': {
+      get: {
+        summary: 'Get comprehensive data for homepage display',
+        description: 'Returns detailed data for the homepage including current IPOs, upcoming IPOs, recently listed IPOs, featured IPOs, top listing gains IPOs, latest news, and educational content',
+        responses: {
+          '200': {
+            description: 'Homepage data retrieved successfully',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    hero_section: {
+                      type: 'object',
+                      description: 'Hero section data including value proposition'
+                    },
+                    current_ipos: {
+                      type: 'array',
+                      description: 'List of currently open IPOs'
+                    },
+                    upcoming_ipos: {
+                      type: 'array',
+                      description: 'List of upcoming IPOs'
+                    },
+                    recent_ipos: {
+                      type: 'array',
+                      description: 'List of recently listed IPOs'
+                    },
+                    featured_ipos: {
+                      type: 'array',
+                      description: 'Featured IPOs with detailed information'
+                    },
+                    top_listing_gains: {
+                      type: 'object',
+                      description: 'IPOs with highest listing day gains, including all-time and current year (2025)',
+                      properties: {
+                        all_time: {
+                          type: 'array',
+                          description: 'All-time top-performing IPOs by listing gains'
+                        },
+                        current_year: {
+                          type: 'array',
+                          description: 'Current year (2025) top-performing IPOs by listing gains'
+                        }
+                      }
+                    },
+                    latest_news: {
+                      type: 'array',
+                      description: 'Latest IPO news and updates'
+                    },
+                    quick_links: {
+                      type: 'object',
+                      description: 'Quick links to important sections'
+                    },
+                    educational_snippets: {
+                      type: 'array',
+                      description: 'Educational content about IPO investing'
+                    },
+                    meta: {
+                      type: 'object',
+                      description: 'Metadata about the API response'
+                    }
+                  }
+                }
+              }
+            }
+          },
+          '500': {
+            description: 'Server error while fetching homepage data'
+          }
+        }
+      }
+    },
     '/ipos': {
       get: {
         summary: 'Get paginated list of IPOs with filtering and sorting options',

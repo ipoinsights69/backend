@@ -4,6 +4,13 @@ const { param, query } = require('express-validator');
 const ipoController = require('../controllers/ipoController');
 
 /**
+ * @route   GET /api/ipos/homepage
+ * @desc    Get comprehensive data for homepage display
+ * @access  Public
+ */
+router.get('/homepage', ipoController.getHomepageData);
+
+/**
  * @route   GET /api/ipos
  * @desc    Get paginated list of IPOs with filtering and sorting options
  * @access  Public
