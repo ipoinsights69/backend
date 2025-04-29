@@ -11,6 +11,68 @@ const ipoController = require('../controllers/ipoController');
 router.get('/homepage', ipoController.getHomepageData);
 
 /**
+ * @route   GET /api/ipos/upcoming-detailed
+ * @desc    Get detailed information about upcoming IPOs
+ * @access  Public
+ */
+router.get('/upcoming-detailed', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt()
+], ipoController.getUpcomingDetailed);
+
+/**
+ * @route   GET /api/ipos/open-detailed
+ * @desc    Get detailed information about open IPOs
+ * @access  Public
+ */
+router.get('/open-detailed', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt()
+], ipoController.getOpenDetailed);
+
+/**
+ * @route   GET /api/ipos/closed-detailed
+ * @desc    Get detailed information about closed IPOs
+ * @access  Public
+ */
+router.get('/closed-detailed', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt()
+], ipoController.getClosedDetailed);
+
+/**
+ * @route   GET /api/ipos/listed-detailed
+ * @desc    Get detailed information about listed IPOs
+ * @access  Public
+ */
+router.get('/listed-detailed', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt()
+], ipoController.getListedDetailed);
+
+/**
+ * @route   GET /api/ipos/top-performers
+ * @desc    Get detailed information about top performing IPOs
+ * @access  Public
+ */
+router.get('/top-performers', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt(),
+  query('year').optional().isInt().toInt()
+], ipoController.getTopPerformers);
+
+/**
+ * @route   GET /api/ipos/worst-performers
+ * @desc    Get detailed information about worst performing IPOs
+ * @access  Public
+ */
+router.get('/worst-performers', [
+  query('limit').optional().isInt({ min: 1, max: 100 }).toInt(),
+  query('page').optional().isInt({ min: 1 }).toInt(),
+  query('year').optional().isInt().toInt()
+], ipoController.getWorstPerformers);
+
+/**
  * @route   GET /api/ipos
  * @desc    Get paginated list of IPOs with filtering and sorting options
  * @access  Public

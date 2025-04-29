@@ -255,6 +255,46 @@ class JsonDataService {
   }
 
   /**
+   * Get IPOs sorted by performance metrics with pagination
+   * @param {Object} options - Query options including pagination
+   * @returns {Promise<Object>} - Sorted IPOs with pagination info
+   */
+  async getPerformers(options = {}) {
+    try {
+      const { ipos } = await this.getIpos();
+      
+      // Filter by performance score existence
+      let filteredIpos = ipos.filter(ipo => 
+        ipo.performance_score !== undefined && ipo.performance_score !== null
+      );
+      
+      // Filter by year if specified
+      if (options.year) {
+        filteredIpos = filteredIpos.filter(ipo => ipo.year === parseInt(options.year));
+      }
+      
+      // Sort by performance score
+      const sortOrder = options.type === 'worst' ? 1 : -1;
+      filteredIpos.sort((a, b) => sortOrder * (a.performance_score - b.performance_score));
+      
+      // Apply pagination
+      const page = parseInt(options.page) || 1;
+      const limit = Math.min(parseInt(options.limit) || 10, 100);
+      const skip = (page - 1) * limit;
+      
+      const paginatedIpos = filteredIpos.slice(skip, skip + limit);
+      
+      return {
+        ipos: paginatedIpos,
+        total: filteredIpos.length
+      };
+    } catch (error) {
+      console.error('Error in getPerformers:', error);
+      throw error;
+    }
+  }
+
+  /**
    * Get years with IPO data
    * @returns {Promise<Array>} - Available years
    */

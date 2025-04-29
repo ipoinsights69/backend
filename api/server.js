@@ -76,6 +76,60 @@ const swaggerDocument = {
                       type: 'object',
                       description: 'Hero section data including value proposition'
                     },
+                    current_year_summary: {
+                      type: 'object',
+                      description: 'Summary statistics for the current year including IPO counts, performance metrics, and top sectors',
+                      properties: {
+                        year: {
+                          type: 'integer',
+                          description: 'Current year'
+                        },
+                        total_ipos: {
+                          type: 'integer',
+                          description: 'Total number of IPOs in the current year'
+                        },
+                        open_ipos: {
+                          type: 'integer',
+                          description: 'Number of currently open IPOs'
+                        },
+                        upcoming_ipos: {
+                          type: 'integer',
+                          description: 'Number of upcoming IPOs'
+                        },
+                        listed_ipos: {
+                          type: 'integer',
+                          description: 'Number of listed IPOs'
+                        },
+                        closed_ipos: {
+                          type: 'integer',
+                          description: 'Number of closed IPOs'
+                        },
+                        total_raised_crore: {
+                          type: 'number',
+                          description: 'Total amount raised in crores'
+                        },
+                        avg_listing_gain: {
+                          type: 'string',
+                          description: 'Average listing gain formatted as a percentage'
+                        },
+                        successful_ipos: {
+                          type: 'integer',
+                          description: 'Number of IPOs with positive listing gains'
+                        },
+                        top_sectors: {
+                          type: 'array',
+                          description: 'Top sectors by number of IPOs'
+                        },
+                        highest_gain: {
+                          type: 'object',
+                          description: 'IPO with the highest listing gain'
+                        },
+                        lowest_gain: {
+                          type: 'object',
+                          description: 'IPO with the lowest listing gain'
+                        }
+                      }
+                    },
                     current_ipos: {
                       type: 'array',
                       description: 'List of currently open IPOs'
