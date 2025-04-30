@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const glob = require('glob');
+const { extractNumericPrice } = require('./ipoUtils');
 
 // Base directory for JSON data files
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
@@ -29,17 +30,45 @@ class JsonDataService {
           const yearIpos = JSON.parse(fileData);
           
           // Add computed fields similar to MongoDB model
-          yearIpos.forEach(ipo => {
+          for (const ipo of yearIpos) {
             // Set ipo_id if not set
             if (!ipo.ipo_id) {
               ipo.ipo_id = `${ipo.year}_${ipo.company_name.toLowerCase().replace(/\s+/g, '_')}`;
             }
             
+            // If issue_price is null or not present, try to get it from the detailed file
+            if ((!ipo.issue_price || ipo.issue_price === null) && query.fetchDetails) {
+              try {
+                const ipoId = ipo.ipo_id;
+                const fileName = ipoId.split('_').slice(1).join('_') + '.json';
+                const detailPath = path.join(DATA_DIR, year.toString(), fileName);
+                
+                console.log(`Trying to get details for ${ipoId} from ${detailPath}`);
+                
+                const detailData = await fs.readFile(detailPath, 'utf8');
+                const ipoDetail = JSON.parse(detailData);
+                
+                if (ipoDetail.basicDetails && ipoDetail.basicDetails.issuePrice) {
+                  const rawIssuePrice = ipoDetail.basicDetails.issuePrice;
+                  console.log(`Found issue price for ${ipoId}: ${rawIssuePrice}`);
+                  
+                  ipo.issue_price = extractNumericPrice(rawIssuePrice);
+                  console.log(`Formatted issue price for ${ipoId}: ${ipo.issue_price}`);
+                } else {
+                  console.log(`No issuePrice found in basicDetails for ${ipoId}`);
+                }
+              } catch (error) {
+                // Log errors for debugging
+                console.error(`Error getting detailed issue_price for ${ipo.ipo_id}: ${error.message}`);
+              }
+            }
+            
             // Extract numeric value from issue_price
             if (ipo.issue_price && !ipo.issue_price_numeric) {
-              const priceMatch = ipo.issue_price.match(/\d+(?:\.\d+)?/);
-              if (priceMatch) {
-                ipo.issue_price_numeric = parseFloat(priceMatch[0]);
+              ipo.issue_price_numeric = extractNumericPrice(ipo.issue_price);
+              // Convert to number if it's a single value
+              if (ipo.issue_price_numeric && !ipo.issue_price_numeric.includes('-')) {
+                ipo.issue_price_numeric = parseFloat(ipo.issue_price_numeric);
               }
             }
             
@@ -47,7 +76,7 @@ class JsonDataService {
             if (!ipo.status) {
               ipo.status = this.determineStatus(ipo);
             }
-          });
+          }
           
           allIpos = allIpos.concat(yearIpos);
         } catch (error) {
@@ -69,17 +98,35 @@ class JsonDataService {
         filteredIpos = filteredIpos.filter(ipo => ipo.status === query.status);
       }
       
-      // Filter by price range
+      // Filter by price range - handle both numeric and string price ranges
       if (query.minPrice !== null && query.minPrice !== undefined) {
-        filteredIpos = filteredIpos.filter(ipo => 
-          ipo.issue_price_numeric && ipo.issue_price_numeric >= parseFloat(query.minPrice)
-        );
+        filteredIpos = filteredIpos.filter(ipo => {
+          if (!ipo.issue_price_numeric) return false;
+          
+          // If issue_price_numeric is a string (range), extract the minimum value
+          if (typeof ipo.issue_price_numeric === 'string' && ipo.issue_price_numeric.includes('-')) {
+            const min = parseFloat(ipo.issue_price_numeric.split('-')[0]);
+            return !isNaN(min) && min >= parseFloat(query.minPrice);
+          }
+          
+          // Regular numeric comparison
+          return ipo.issue_price_numeric >= parseFloat(query.minPrice);
+        });
       }
       
       if (query.maxPrice !== null && query.maxPrice !== undefined) {
-        filteredIpos = filteredIpos.filter(ipo => 
-          ipo.issue_price_numeric && ipo.issue_price_numeric <= parseFloat(query.maxPrice)
-        );
+        filteredIpos = filteredIpos.filter(ipo => {
+          if (!ipo.issue_price_numeric) return false;
+          
+          // If issue_price_numeric is a string (range), extract the maximum value
+          if (typeof ipo.issue_price_numeric === 'string' && ipo.issue_price_numeric.includes('-')) {
+            const max = parseFloat(ipo.issue_price_numeric.split('-')[1]);
+            return !isNaN(max) && max <= parseFloat(query.maxPrice);
+          }
+          
+          // Regular numeric comparison
+          return ipo.issue_price_numeric <= parseFloat(query.maxPrice);
+        });
       }
       
       // Apply sorting
@@ -172,6 +219,12 @@ class JsonDataService {
       try {
         const detailData = await fs.readFile(filePath, 'utf8');
         const ipoDetail = JSON.parse(detailData);
+        
+        // Extract issue price from basicDetails if present
+        if (ipoDetail.basicDetails && ipoDetail.basicDetails.issuePrice) {
+          const rawIssuePrice = ipoDetail.basicDetails.issuePrice;
+          targetIpo.issue_price = extractNumericPrice(rawIssuePrice);
+        }
         
         // Merge basic and detailed information
         return {

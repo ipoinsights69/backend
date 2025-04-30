@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar'); // Make sure you have installed chokidar (npm install chokidar)
+const { extractNumericPrice } = require('./api/utils/ipoUtils');
 
 // --- Configuration ---
 const INPUT_DIR = './ipo_data'; // Folder containing your raw JSON files
@@ -140,8 +141,8 @@ function extractComprehensiveSummary(ipo, rawFilePathRelative) {
          _listingDateObj: null, // Temporary for sorting
 
          // Pricing & Issue Details
-         issue_price: ipo.basicDetails?.issuePrice || null, // String e.g., "₹111.00"
-         issue_price_numeric: ipo.issue_price_numeric || null, // Number e.g., 111
+         issue_price: ipo.basicDetails?.issuePrice || null, // String e.g., "₹111.00" or "₹304 to ₹321 per share"
+         issue_price_numeric: extractNumericPrice(ipo.basicDetails?.issuePrice) || null, // Number or string like "304-321"
          face_value: ipo.basicDetails?.faceValue || null,
          issue_size: ipo.basicDetails?.issueSize || null, // String e.g., "54,03,600 shares (aggregating up to ₹59.98 Cr)"
          issue_size_numeric: ipo.issue_size_numeric || null, // Number e.g., 54 (from issue_size_numeric)

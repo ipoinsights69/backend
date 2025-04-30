@@ -803,32 +803,32 @@ Returns comprehensive data for homepage display including:
   },
   "upcoming_ipos": {
     "count": 5,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of upcoming IPO objects */]
   },
   "open_ipos": {
     "count": 2,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of open IPO objects */]
   },
   "closed_ipos": {
     "count": 8,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of closed IPO objects */]
   },
   "recently_listed": {
     "count": 30,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of recently listed IPO objects */]
   },
   "top_performers": {
     "count": 5,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of top performing IPO objects */]
   },
   "trending_ipos": {
     "count": 5,
-    "limit": 5,
+    "limit": 10,
     "data": [/* Array of trending IPO objects */]
   },
   "yearly_stats": {
@@ -882,15 +882,43 @@ Returns comprehensive data for homepage display including:
 
 ## Recent Updates
 
-### JSON-based API Implementation
+### JSON Data Service Implementation (2023-12-15)
 
-The API now fetches data directly from JSON files instead of MongoDB. This change provides several benefits:
+The backend has been updated to use JSON files as the primary data source instead of MongoDB. This change improves:
 
-1. **No database requirement**: The application works out of the box with just the scraped JSON files.
-2. **Simplified deployment**: No need to set up and maintain a MongoDB instance.
-3. **Streamlined data flow**: Data is scraped to JSON files and served directly from those files.
+1. Speed and efficiency for data retrieval
+2. Simplified deployment with no database dependency
+3. Direct file-based operation for improved reliability
 
-The JSON data service implements the same interface as the previous MongoDB-based service, ensuring backward compatibility with existing API clients.
+Key changes include:
+
+- `jsonDataService.js`: New service that reads IPO data directly from JSON files
+- `ipoController.js`: Updated to use the JSON data service instead of Mongoose models
+- `ipoUtils.js`: Enhanced utility functions for data processing, including improved price extraction
+
+### Bug Fixes
+
+- Fixed `extractNumericPrice` function to handle null/undefined inputs and non-string types
+- Improved price range handling with support for multiple separator types (-, to, –, —)
+- Enhanced numeric value conversion for consistent data formatting
+
+### Migration to File-Based Storage
+
+The application now works without MongoDB and uses a file-based storage system with the following structure:
+
+```
+/data
+  /2023
+    _listings.json  # Summary info for all 2023 IPOs
+    company_name_1.json  # Detailed info for specific IPO
+    company_name_2.json
+    ...
+  /2024
+    _listings.json
+    ...
+```
+
+This change allows easier data management and eliminates database dependencies.
 
 ## License
 

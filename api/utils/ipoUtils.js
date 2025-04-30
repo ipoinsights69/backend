@@ -117,14 +117,35 @@ const calculateListingGains = (ipo) => {
 
 /**
  * Extract numeric value from price string
- * @param {String} priceString - Price string (e.g., "₹140")
- * @returns {Number|null} - Numeric value or null if extraction fails
+ * @param {String} priceString - Price string (e.g., "₹140" or "₹304 to ₹321 per share")
+ * @returns {Number|String|null} - Numeric value, range string like "304-321", or null if extraction fails
  */
 const extractNumericPrice = (priceString) => {
-  if (!priceString) return null;
-  
+  // Check if priceString is null, undefined, or not a string
+  if (!priceString || typeof priceString !== 'string') {
+    console.log(`Invalid priceString received: ${priceString} (type: ${typeof priceString})`);
+    return null;
+  }
+
+  // Check if it's already in a standard format like "304-321"
+  if (priceString.includes('-')) {
+    const parts = priceString.split('-');
+    if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+      return priceString;
+    }
+  }
+
+  // Handle price ranges with "to", "–", "—", "-" or similar separators
+  if (priceString.includes('to') || priceString.includes('–') || priceString.includes('—')) {
+    const matches = priceString.match(/\d+(?:\.\d+)?/g);
+    if (matches && matches.length >= 2) {
+      return `${matches[0]}-${matches[1]}`;
+    }
+  }
+
+  // Extract single price
   const match = priceString.match(/\d+(?:\.\d+)?/);
-  return match ? parseFloat(match[0]) : null;
+  return match ? match[0] : null;
 };
 
 /**
