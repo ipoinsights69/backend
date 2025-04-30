@@ -767,6 +767,119 @@ Get IPO statistics.
 Query Parameters:
 - `year` (integer): Filter by year (if omitted, returns statistics for all years)
 
+#### Homepage Data
+```
+GET /api/ipos/homepage
+```
+
+Returns comprehensive data for homepage display including:
+- Year summary (totals for all IPOs, open, upcoming, listed, closed and total raised)
+- Upcoming IPOs
+- Open IPOs (now accepting investments)
+- Closed IPOs (in allotment phase)
+- Recently Listed IPOs (now trading)
+- Top Performing IPOs (based on listing gains)
+- Trending IPOs (based on subscription ratios)
+- Detailed yearly statistics
+- Available years for filtering
+- Overall statistics
+
+#### Response Format
+```json
+{
+  "year_summary": {
+    "total_ipos": 45,
+    "all_ipos": 45,
+    "open_ipos": 2,
+    "now_accepting": 2,
+    "upcoming_ipos": 5,
+    "opening_soon": 5,
+    "listed_ipos": 30,
+    "now_trading": 30,
+    "closed_ipos": 8,
+    "allotment_phase": 8,
+    "total_raised_crore": 25000,
+    "total_raised_formatted": "₹25,000"
+  },
+  "upcoming_ipos": {
+    "count": 5,
+    "limit": 5,
+    "data": [/* Array of upcoming IPO objects */]
+  },
+  "open_ipos": {
+    "count": 2,
+    "limit": 5,
+    "data": [/* Array of open IPO objects */]
+  },
+  "closed_ipos": {
+    "count": 8,
+    "limit": 5,
+    "data": [/* Array of closed IPO objects */]
+  },
+  "recently_listed": {
+    "count": 30,
+    "limit": 5,
+    "data": [/* Array of recently listed IPO objects */]
+  },
+  "top_performers": {
+    "count": 5,
+    "limit": 5,
+    "data": [/* Array of top performing IPO objects */]
+  },
+  "trending_ipos": {
+    "count": 5,
+    "limit": 5,
+    "data": [/* Array of trending IPO objects */]
+  },
+  "yearly_stats": {
+    "year": 2024,
+    "total_ipos": 45,
+    "open_ipos": 2,
+    "upcoming_ipos": 5,
+    "listed_ipos": 30,
+    "closed_ipos": 8,
+    "total_raised_crore": 25000,
+    "avg_listing_gain": "12.5%",
+    "avg_listing_gain_numeric": 12.5,
+    "successful_ipos": 25,
+    "success_rate": "83.33%",
+    "success_rate_numeric": 83.33,
+    "oversubscribed_ipos": 35,
+    "oversubscription_rate": "77.78%",
+    "top_sectors": [
+      { "name": "Technology", "count": 12 },
+      { "name": "Finance", "count": 10 },
+      { "name": "Manufacturing", "count": 8 }
+    ],
+    "highest_gain": {
+      "company_name": "Example Tech Ltd",
+      "gain": 75.5,
+      "formatted_gain": "+75.50%"
+    },
+    "lowest_gain": {
+      "company_name": "Example Corp Ltd",
+      "gain": -10.2,
+      "formatted_gain": "-10.20%"
+    }
+  },
+  "years": [2020, 2021, 2022, 2023, 2024],
+  "stats": {
+    "total": 250,
+    "by_status": {
+      "upcoming": 12,
+      "open": 5,
+      "closed": 15,
+      "listed": 218
+    },
+    "by_listing_type": {
+      "NSE": 150,
+      "BSE": 100
+    }
+  },
+  "last_updated": "2024-07-16T12:00:00.000Z"
+}
+```
+
 ## Recent Updates
 
 ### JSON-based API Implementation

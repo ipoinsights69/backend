@@ -16,6 +16,8 @@ exports.getHomepageData = async (req, res) => {
     const upcomingLimit = 5;
     const openLimit = 5;
     const topPerformersLimit = 5;
+    const trendingLimit = 5;
+    const closedLimit = 5;
     
     // Get upcoming IPOs
     const upcomingData = await jsonDataService.getIpos({
@@ -38,11 +40,33 @@ exports.getHomepageData = async (req, res) => {
       sort: '-listing_date'
     });
     
+    // Get closed IPOs (in allotment phase)
+    const closedData = await jsonDataService.getIpos({
+      status: 'closed',
+      limit: closedLimit,
+      sort: '-closing_date'
+    });
+    
     // Get top performers
-    const performanceData = await jsonDataService.getPerformance({
+    const topPerformersData = await jsonDataService.getPerformance({
       type: 'best',
       limit: topPerformersLimit
     });
+    
+    // Get trending IPOs (highest subscription)
+    // Define trending as IPOs with highest subscription ratios
+    const { ipos: allIpos } = await jsonDataService.getIpos({ limit: 100 });
+    const trendingIpos = allIpos
+      .filter(ipo => ipo.subscription_status && ipo.subscription_status.overall)
+      .sort((a, b) => {
+        const subA = parseFloat(a.subscription_status.overall) || 0;
+        const subB = parseFloat(b.subscription_status.overall) || 0;
+        return subB - subA;
+      })
+      .slice(0, trendingLimit);
+    
+    // Generate current year summary
+    const yearSummary = await generateCurrentYearSummary();
     
     // Get years for filtering
     const years = await jsonDataService.getAvailableYears();
@@ -52,6 +76,20 @@ exports.getHomepageData = async (req, res) => {
     
     // Return combined data
     return res.status(200).json({
+      year_summary: {
+        total_ipos: yearSummary.total_ipos,
+        all_ipos: yearSummary.total_ipos,
+        open_ipos: yearSummary.open_ipos,
+        now_accepting: yearSummary.open_ipos,
+        upcoming_ipos: yearSummary.upcoming_ipos,
+        opening_soon: yearSummary.upcoming_ipos,
+        listed_ipos: yearSummary.listed_ipos,
+        now_trading: yearSummary.listed_ipos,
+        closed_ipos: yearSummary.closed_ipos,
+        allotment_phase: yearSummary.closed_ipos,
+        total_raised_crore: yearSummary.total_raised_crore,
+        total_raised_formatted: yearSummary.total_raised_formatted
+      },
       upcoming_ipos: {
         count: upcomingData.total,
         limit: upcomingLimit,
@@ -62,15 +100,44 @@ exports.getHomepageData = async (req, res) => {
         limit: openLimit,
         data: openData.ipos
       },
+      closed_ipos: {
+        count: closedData.total,
+        limit: closedLimit,
+        data: closedData.ipos
+      },
       recently_listed: {
         count: recentlyListedData.total,
         limit: 5,
         data: recentlyListedData.ipos
       },
       top_performers: {
-        count: performanceData.length,
+        count: topPerformersData.length,
         limit: topPerformersLimit,
-        data: performanceData
+        data: topPerformersData
+      },
+      trending_ipos: {
+        count: trendingIpos.length,
+        limit: trendingLimit,
+        data: trendingIpos
+      },
+      yearly_stats: {
+        year: yearSummary.year,
+        total_ipos: yearSummary.total_ipos,
+        open_ipos: yearSummary.open_ipos,
+        upcoming_ipos: yearSummary.upcoming_ipos,
+        listed_ipos: yearSummary.listed_ipos,
+        closed_ipos: yearSummary.closed_ipos,
+        total_raised_crore: yearSummary.total_raised_crore,
+        avg_listing_gain: yearSummary.avg_listing_gain,
+        avg_listing_gain_numeric: yearSummary.avg_listing_gain_numeric,
+        successful_ipos: yearSummary.successful_ipos,
+        success_rate: yearSummary.success_rate,
+        success_rate_numeric: yearSummary.success_rate_numeric,
+        oversubscribed_ipos: yearSummary.oversubscribed_ipos,
+        oversubscription_rate: yearSummary.oversubscription_rate,
+        top_sectors: yearSummary.top_sectors,
+        highest_gain: yearSummary.highest_gain,
+        lowest_gain: yearSummary.lowest_gain
       },
       years: years,
       stats: stats,
@@ -837,6 +904,9 @@ async function generateCurrentYearSummary() {
       }
     });
     
+    // Format currency values
+    const formattedTotalRaised = `₹${Math.round(totalRaised).toLocaleString('en-IN')}`;
+    
     return {
       year: currentYear,
       total_ipos: totalIpos,
@@ -845,11 +915,14 @@ async function generateCurrentYearSummary() {
       listed_ipos: listedIpos,
       closed_ipos: closedIpos,
       total_raised_crore: Math.round(totalRaised),
+      total_raised_formatted: formattedTotalRaised,
       avg_listing_gain: avgListingGain.toFixed(2) + "%",
       avg_listing_gain_numeric: parseFloat(avgListingGain.toFixed(2)),
       successful_ipos: successfulIpos,
       success_rate: listedIpos > 0 ? ((successfulIpos / listedIpos) * 100).toFixed(2) + "%" : "N/A",
+      success_rate_numeric: listedIpos > 0 ? parseFloat(((successfulIpos / listedIpos) * 100).toFixed(2)) : 0,
       oversubscribed_ipos: oversubscribedIpos,
+      oversubscription_rate: totalIpos > 0 ? ((oversubscribedIpos / totalIpos) * 100).toFixed(2) + "%" : "N/A",
       top_sectors: topSectors,
       highest_gain: highestGain,
       lowest_gain: lowestGain
@@ -858,6 +931,13 @@ async function generateCurrentYearSummary() {
     console.error('Error generating current year summary:', error);
     return {
       year: new Date().getFullYear(),
+      total_ipos: 0,
+      open_ipos: 0,
+      upcoming_ipos: 0,
+      listed_ipos: 0,
+      closed_ipos: 0,
+      total_raised_crore: 0,
+      total_raised_formatted: "₹0",
       error: 'Failed to generate summary'
     };
   }
