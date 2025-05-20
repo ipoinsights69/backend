@@ -1,0 +1,433 @@
+{
+  "pageTitle": "H.M. Electro Mech IPO Date, Price, GMP, Review, Details",
+  "ipoName": "H.M. Electro Mech",
+  "logo": "https://www.chittorgarh.net/images/ipo/hm_electro_mech_logo.png",
+  "pageHeading": "H.M. Electro Mech Limited IPO (H.M. Electro Mech IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 24, 2025 to January 28, 2025",
+    "ipoListingDate": "Fri, Jan 31, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹75.00",
+    "lotSize": "1,600 Shares",
+    "issueSize": "36,99,200 shares (aggregating up to ₹27.74 Cr)",
+    "freshIssue": "36,99,200 shares (aggregating up to ₹27.74 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "1,85,600 shares",
+      "maker_name": "Spread X Securities Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/411/"
+    },
+    "ipoOpenDate": "Fri, Jan 24, 2025",
+    "ipoCloseDate": "Tue, Jan 28, 2025",
+    "initiationOfRefunds": "Thu, Jan 30, 2025",
+    "creditOfSharesToDemat": "Thu, Jan 30, 2025",
+    "shareHoldingPreIssue": "1,00,00,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,00,00,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "97.47%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,36,99,200 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,36,99,200 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "71.15%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 28 2025",
+    "tentative_allotment": "Wed Jan 29 2025",
+    "initiation_of_refunds": "Thu Jan 30 2025",
+    "credit_of_shares_to_demat": "Thu Jan 30 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1600 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1600",
+        "amount": "120000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1600",
+        "amount": "120000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "3200",
+        "amount": "240000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/hm-electro-mech-ipo/1973/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the company are Dipak Padmakant Pandya Mahendra Ramabhai Patel Varsha Mahendra Patel and Mita Dipak Pandya.",
+    "holdings": {
+      "share_holding_pre_issue": "97.47%",
+      "share_holding_post_issue": "71.15%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2003, H.M. Electro Mech Limited is an infrastructure firm specialising in turnkey projects, including supply, installation, testing, and commissioning of pumping machinery and providing comprehensive operation and maintenance services.</p>\n<p>The company's core business includes electrification projects with Indian Railways, banks, and municipal corporations. It has also started EPC projects, which include laying cross-country pipelines and civil work for water supply projects such as water treatment plants, pump houses, diesel generators, panel rooms, instrumentation, and PLC-SCADA.</p>\n<p>H.M. Electro-Mech has collaborated with other companies for the civil work portion of these EPC projects. Additionally, the company sell products such as pumps, pipes, transformers, and motors.</p>\n<p>The company's clients include State Governments, Central Governments, Municipal corporations, the banking sector and educational institutes.</p>\n<p>The company operates nationwide, handling projects in Rajasthan, Maharashtra, Madhya Pradesh, Karnataka, Punjab, and Chandigarh.</p>\n<p>As of  September 30, 2024, the Company had 37 permanent employees and 107 on contracts.</p>\n<p><strong>Competitive Strength</strong></p>\n<ul>\n<li>Provides end-to-end solutions for projects, starting from conceptualization to maintenance</li>\n<li>Robust relationships with leading manufacturers and OEMs, facilitating competitive pricing and expedited delivery</li>\n<li>Prompt decision-making process ensures swift project progression and responsiveness to client needs.</li>\n<li>Experienced Management Team</li>\n<li>The team swiftly mobilizes resources for emergencies.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 079 40092538",
+    "email": "cs@hmelectromech.com",
+    "full_address": "H.M. Electro Mech Limited, 305 Ashram Avenue B/H, Kochrab Ashram Paldi, Ahmedabad- 380006",
+    "website": "https://www.hmelectromech.com/"
+  },
+  "registrarDetails": {
+    "name": "Cameo Corporate Services Limited",
+    "phone": "+91-44-28460390",
+    "email": "ipo@cameoindia.com",
+    "website": "https://ipo.cameoindia.com/"
+  },
+  "leadManagers": [
+    {
+      "name": "Beeline Capital Advisors Pvt Ltd",
+      "url": "/report/ipo-lead-manager-review/112/192/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/192/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 31 2025",
+    "bse_script_code": "544349",
+    "isin": "INE0DZD01015",
+    "final_issue_price": "75 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "75.00"
+      },
+      "open": {
+        "bse_sme": "81.00"
+      },
+      "low": {
+        "bse_sme": "76.95"
+      },
+      "high": {
+        "bse_sme": "81.00"
+      },
+      "last_trade": {
+        "bse_sme": "77.04"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the H.M. Electro Mech IPO?",
+      "answer": "<div itemprop=\"text\"><p>H.M. Electro Mech IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->3699200<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->27.74<!-- --> Crores. The issue is priced at <span>₹75 per share</span>. The minimum order quantity is <!-- -->1600<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 24, 2025</b>, and <b>closes on <!-- -->January 28, 2025</b>.</p><p>Cameo Corporate Services Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in H.M. Electro Mech IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->H.M. Electro Mech IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->H.M. Electro Mech IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->H.M. Electro Mech IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->H.M. Electro Mech IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When H.M. Electro Mech IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The H.M. Electro Mech IPO opens on January 24, 2025 and closes on January 28, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of H.M. Electro Mech IPO?",
+      "answer": "<div itemprop=\"text\"><p>H.M. Electro Mech IPO<!-- --> <b>lot size is <!-- -->1600</b>, and the <b>minimum amount required is <span>₹1,20,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for H.M. Electro Mech IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->H.M. Electro Mech IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is H.M. Electro Mech IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->H.M. Electro Mech IPO<!-- --> will be done on <!-- -->Wednesday, January 29, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, January 30, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/hm-electro-mech-ipo/1973/\" title=\"H.M. Electro Mech IPO Allotment Status\">H.M. Electro Mech IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is H.M. Electro Mech IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->H.M. Electro Mech IPO<!-- --> listing date is on <b>Friday, January 31, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/hm-electro-mech-ipo/1973/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "H.M. Electro Mech IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/375153/DRHP%20-%20HM_20240628192322.pdf"
+    },
+    {
+      "text": "H.M. Electro Mech IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/h-m-electro-mech-limited_91433.html"
+    },
+    {
+      "text": "Anchor Investors in H.M. Electro Mech IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/hmelectro_anchoralloctaionreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "H.M. Electro Mech IPO offers 3699200 shares. 702400 (18.99%) to QIB 528000 (14.27%) to NII 1230400 (33.26%) to RII and 1052800 (28.46%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1052800 (28.46%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "185600 (5.02%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "702400 (18.99%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "528000 (14.27%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1230400 (33.26%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "3699200 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "H.M. Electro Mech IPO raises Rs 7.90 crore from anchor investors. H.M. Electro Mech IPO Anchor bid date is January 23 2025. H.M. Electro Mech IPO Anchor Investors list",
+    "list_link": {
+      "text": "H.M. Electro Mech IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/hmelectro_anchoralloctaionreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 29 2025",
+      "shares_offered": "1052800",
+      "anchor_portion_size": "7.90"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "H.M. Electro Mech Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "85.99",
+          "72.15",
+          "64.08",
+          "44.34"
+        ],
+        [
+          "Revenue",
+          "45.43",
+          "117.3",
+          "101.67",
+          "62.03"
+        ],
+        [
+          "Profit After Tax",
+          "3.34",
+          "8.19",
+          "6.01",
+          "2.58"
+        ],
+        [
+          "Net Worth",
+          "35.42",
+          "32.27",
+          "24.08",
+          "18.07"
+        ],
+        [
+          "Reserves and Surplus",
+          "25.42",
+          "22.27",
+          "14.08",
+          "8.07"
+        ],
+        [
+          "Total Borrowing",
+          "7.33",
+          "12.25",
+          "6.4",
+          "0.18"
+        ]
+      ]
+    },
+    {
+      "heading": "H.M. Electro Mech IPO Details",
+      "sanitizedHeading": "hm_electro_mech",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "29.06%"
+        ],
+        [
+          "ROCE",
+          "33.28%"
+        ],
+        [
+          "Debt/Equity",
+          "0.38"
+        ],
+        [
+          "RoNW",
+          "25.37%"
+        ],
+        [
+          "PAT Margin",
+          "6.99"
+        ],
+        [
+          "Price to Book Value",
+          "2.32"
+        ]
+      ]
+    },
+    {
+      "heading": "H.M. Electro Mech IPO Details",
+      "sanitizedHeading": "hm_electro_mech",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "8.19",
+          "4.87"
+        ],
+        [
+          "P/E (x)",
+          "9.16",
+          "15.39"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:59:59.521Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/hm-electro-mech-ipo/1973/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "16.01"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "183.65"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "95.55"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "91.75"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "pageTitle": "Ken Enterprises IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Ken Enterprises",
+  "logo": "https://www.chittorgarh.net/images/ipo/ken-enterprises-ipo-logo.jpg",
+  "pageHeading": "Ken Enterprises Limited IPO (Ken Enterprises IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "February 5, 2025 to February 7, 2025",
+    "ipoListingDate": "Wed, Feb 12, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹94.00",
+    "lotSize": "1,200 Shares",
+    "issueSize": "88,99,200 shares (aggregating up to ₹83.65 Cr)",
+    "freshIssue": "61,99,200 shares (aggregating up to ₹58.27 Cr)",
+    "offerForSale": "27,00,000 shares of ₹10 (aggregating up to ₹25.38 Cr)",
+    "issueType": "Fixed Price IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "4,45,200 shares",
+      "maker_name": "Giriraj Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/245/"
+    },
+    "ipoOpenDate": "Wed, Feb 5, 2025",
+    "ipoCloseDate": "Fri, Feb 7, 2025",
+    "initiationOfRefunds": "Tue, Feb 11, 2025",
+    "creditOfSharesToDemat": "Tue, Feb 11, 2025",
+    "shareHoldingPreIssue": "1,83,66,280 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,83,66,280 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "81.21%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,45,65,480 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,45,65,480 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "49.72%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on February 7 2025",
+    "tentative_allotment": "Mon Feb 10 2025",
+    "initiation_of_refunds": "Tue Feb 11 2025",
+    "credit_of_shares_to_demat": "Tue Feb 11 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1200 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "112800"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "112800"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2400",
+        "amount": "225600"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/ken-enterprises-ipo/1977/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mr. Nikunj Hariprasad Bagdiyaand Mrs. Bina Hariprasad Bagdiya are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "81.21%",
+      "share_holding_post_issue": "49.72%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 1998, Ken Enterprises Limited is engaged in the business of textile manufacturing.</p>\n<p>The company manufactures fabrics for various purposes, including apparel, industrial, technical, shirtings, and home furnishings.</p>\n<p>The company is into manufacturing of greige fabrics. They utilize third-party manufacturing services for the production of greige fabric on a job-work basis, located in and around Ichalkaranji, Maharashtra, a key fabric weaving hub, to enhance their manufacturing capacity.</p>\n<p>The company’s business model focuses on quality and customer satisfaction, supplying regular and sustainable greige and finished fabrics on an order-to-order basis. The product range includes greige, dyed (supported by third parties), printed, and RFD/PFD fabrics.</p>\n<p>The company has two manufacturing units, both located in Shirol taluka near Ichalkaranji, covering a combined area of approximately 50,000 square feet and equipped with the necessary machinery.</p>\n<p><strong>Product Portfolio:</strong></p>\n<ul>\n<li>High Value Apparel Fabrics</li>\n<li>Voiles: for Ladies wear</li>\n<li>Light Canvas fabrics: For Shoe uppers, Bags, Cargo pants</li>\n<li>Organic and sustainable fabrics: For High-end apparel</li>\n<li>Bed Linen: For Home Textiles</li>\n<li>Shoe Canvases: For Shoes</li>\n</ul>\n<p>As of December 31, 2024, the company had 228 permanent employees.</p>\n<p><strong>Competitive Strengths:</strong></p>\n<ul>\n<li>Experienced Leadership Backed by a dedicated employee base</li>\n<li>Robust Financial Performance</li>\n<li>Asset light model</li>\n<li>Established Relationships with the clients</li>\n<li>Diverse product portfolio offering single point sourcing solution for customers</li>\n<li>In-house product development expertise</li>\n<li>Fast development and short delivery time</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "91-0230-2438538",
+    "email": "cs@kenindia.in",
+    "full_address": "Ken Enterprises Limited, 9/621, Industrial Estate, Near Kalyan Kendra",
+    "website": "http://www.kenindia.in/"
+  },
+  "registrarDetails": {
+    "name": "Skyline Financial Services Private Ltd",
+    "phone": "02228511022",
+    "email": "ipo@skylinerta.com",
+    "website": "https://www.skylinerta.com/ipo.php"
+  },
+  "leadManagers": [
+    {
+      "name": "Corporate Makers Capital Ltd.",
+      "url": "/report/ipo-lead-manager-review/112/440/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/440/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "February 12 2025",
+    "nse_symbol": "KEN",
+    "isin": "INE15DO01012",
+    "final_issue_price": "94 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "94.00"
+      },
+      "open": {
+        "nse_sme": "85.00"
+      },
+      "low": {
+        "nse_sme": "80.75"
+      },
+      "high": {
+        "nse_sme": "85.00"
+      },
+      "last_trade": {
+        "nse_sme": "80.75"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Ken Enterprises IPO?",
+      "answer": "<div itemprop=\"text\"><p>Ken Enterprises IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->8899200<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->83.65<!-- --> Crores. The issue is priced at <span>₹94 per share</span>. The minimum order quantity is <!-- -->1200<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->February 5, 2025</b>, and <b>closes on <!-- -->February 7, 2025</b>.</p><p>Skyline Financial Services Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Ken Enterprises IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Ken Enterprises IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Ken Enterprises IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Ken Enterprises IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Ken Enterprises IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Ken Enterprises IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Ken Enterprises IPO opens on February 5, 2025 and closes on February 7, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Ken Enterprises IPO?",
+      "answer": "<div itemprop=\"text\"><p>Ken Enterprises IPO<!-- --> <b>lot size is <!-- -->1200</b>, and the <b>minimum amount required is <span>₹1,12,800</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Ken Enterprises IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Ken Enterprises IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Ken Enterprises IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Ken Enterprises IPO<!-- --> will be done on <!-- -->Monday, February 10, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Tuesday, February 11, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/ken-enterprises-ipo/1977/\" title=\"Ken Enterprises IPO Allotment Status\">Ken Enterprises IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Ken Enterprises IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Ken Enterprises IPO<!-- --> listing date is on <b>Wednesday, February 12, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/ken-enterprises-ipo/1977/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Ken Enterprises IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_29092024014927_DP-KEL.pdf"
+    },
+    {
+      "text": "Ken Enterprises IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/feb-2025/ken_91709.html"
+    }
+  ],
+  "reservation": {
+    "summary": "Ken Enterprises IPO offers 8899201 shares. 4227000 (47.5%) to NII 4227000 (47.5%) to RII.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "-"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "445200 (5%)"
+      },
+      {
+        "investor_category": "Other Shares Offered",
+        "shares_offered": "4227000 (47.5%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "4227000 (47.5%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "8899201 (100%)"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Ken Enterprises Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Nov 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "266.3",
+          "242.15",
+          "195.16",
+          "187.26"
+        ],
+        [
+          "Revenue",
+          "332.85",
+          "409.13",
+          "375.23",
+          "360.32"
+        ],
+        [
+          "Profit After Tax",
+          "9.53",
+          "8.93",
+          "3.95",
+          "2.36"
+        ],
+        [
+          "Net Worth",
+          "54.38",
+          "44.85",
+          "35.93",
+          "31.98"
+        ],
+        [
+          "Reserves and Surplus",
+          "36.01",
+          "42.27",
+          "33.34",
+          "29.39"
+        ],
+        [
+          "Total Borrowing",
+          "43.14",
+          "47.84",
+          "49.45",
+          "41.01"
+        ]
+      ]
+    },
+    {
+      "heading": "Ken Enterprises IPO Details",
+      "sanitizedHeading": "ken_enterprises",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "19.90%"
+        ],
+        [
+          "ROCE",
+          "51.52%"
+        ],
+        [
+          "Debt/Equity",
+          "0.09"
+        ],
+        [
+          "RoNW",
+          "19.90%"
+        ],
+        [
+          "PAT Margin",
+          "2.22"
+        ],
+        [
+          "Price to Book Value",
+          "3.85"
+        ]
+      ]
+    },
+    {
+      "heading": "Ken Enterprises IPO Details",
+      "sanitizedHeading": "ken_enterprises",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "4.86",
+          "5.82"
+        ],
+        [
+          "P/E (x)",
+          "19.34",
+          "16.16"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:56:46.717Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/ken-enterprises-ipo/1977/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": ""
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "1.75"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "6.86"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "4.36"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

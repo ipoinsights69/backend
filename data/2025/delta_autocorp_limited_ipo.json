@@ -1,0 +1,429 @@
+{
+  "pageTitle": "Delta Autocorp IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Delta Autocorp",
+  "logo": "https://www.chittorgarh.net/images/ipo/delta-atocorp-ipo-logo.jpg",
+  "pageHeading": "Delta Autocorp Limited IPO (Delta Autocorp IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 7, 2025 to January 9, 2025",
+    "ipoListingDate": "Tue, Jan 14, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹130.00",
+    "lotSize": "1,000 Shares",
+    "issueSize": "42,00,000 shares (aggregating up to ₹54.60 Cr)",
+    "freshIssue": "38,88,000 shares (aggregating up to ₹50.54 Cr)",
+    "offerForSale": "3,12,000 shares of ₹10 (aggregating up to ₹4.06 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "2,94,000 shares",
+      "maker_name": "Giriraj Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/245/"
+    },
+    "ipoOpenDate": "Tue, Jan 7, 2025",
+    "ipoCloseDate": "Thu, Jan 9, 2025",
+    "initiationOfRefunds": "Mon, Jan 13, 2025",
+    "creditOfSharesToDemat": "Mon, Jan 13, 2025",
+    "shareHoldingPreIssue": "1,14,01,698 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,14,01,698 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "97.59%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,52,89,698 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,52,89,698 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 9 2025",
+    "tentative_allotment": "Fri Jan 10 2025",
+    "initiation_of_refunds": "Mon Jan 13 2025",
+    "credit_of_shares_to_demat": "Mon Jan 13 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "130000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "130000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "260000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/delta-autocorp-ipo/1955/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mr. Ankit Agarwal Mrs. Priyanka Agarwal and Mr. Sanwarmall Agarwalla are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "97.59%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2016, Delta Autocorp Limited is engaged in the business of manufacturing and selling of <strong>2-wheelers</strong> &amp; <strong>3-wheelers EVs</strong>.</p>\n<p>The Company operates under the brand name \"<strong>Deltic</strong>”. Initially concentrating on developing electric 3-wheelers prototypes, they marked a significant milestone in 2017 with the launch of their first E-Rickshaw, boasting an impressive mileage of over 150 Km.</p>\n<p>After analysing market trends and changing customer preferences, the company expanded its product range to electric 2W vehicles. In 2018, prototype development began, and in 2019, the company launched affordable, durable scooters for tier-2 and tier-3 towns.</p>\n<p>The company operates through a network of over 300 dealers across 25 states and Union Territories, focusing on B2B transactions. The goal is to become a global brand with cost-effective, practical products and excellent service.</p>\n<p><strong>Their Products:</strong></p>\n<ul>\n<li>Electric 2W scooters: Deltic Drixx, Deltic Trento</li>\n<li>Electric 3W rickshaws: Deltic Star, Deltic Vayu</li>\n<li>Electric 3W loaders</li>\n<li>Electric 3W garbage carts</li>\n<li>Spare parts and accessories for 2W and 3W vehicles: 3W Controller, 3W Motor</li>\n</ul>\n<p>The company focuses on in-house product innovation through its R&amp;D department in Uttar Pradesh, with 11 employees dedicated to designing electric vehicles based on customer needs and preferences.</p>\n<p>As of 31 October 2024, the company has 139 employees.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ul>\n<li>Experienced Promoters and Management Team</li>\n<li>Customer Centric Approach</li>\n<li>In house Research and Development of Products</li>\n<li>Cracking the distribution model</li>\n<li>Tapping into the mass premium segment</li>\n<li>Quality Standard Certifications &amp; Quality Tests</li>\n<li>Diversified product range</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 8448223541",
+    "email": "compliance@deltic.co",
+    "full_address": "Delta Autocorp Limited, Plot No 304 P, Pithakiarypost-Rupnarayanpur, Bardhaman",
+    "website": "http://www.deltic.co/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "deltaauto.smeipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "GYR Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/182/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/182/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "January 14 2025",
+    "nse_symbol": "DELTIC",
+    "isin": "INE0XRN01019",
+    "final_issue_price": "130 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "130.00"
+      },
+      "open": {
+        "nse_sme": "175.00"
+      },
+      "low": {
+        "nse_sme": "166.25"
+      },
+      "high": {
+        "nse_sme": "183.75"
+      },
+      "last_trade": {
+        "nse_sme": "167.25"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Delta Autocorp IPO?",
+      "answer": "<div itemprop=\"text\"><p>Delta Autocorp IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->4200000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->54.60<!-- --> Crores. The issue is priced at <span>₹130 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 7, 2025</b>, and <b>closes on <!-- -->January 9, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Delta Autocorp IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Delta Autocorp IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Delta Autocorp IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Delta Autocorp IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Delta Autocorp IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Delta Autocorp IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Delta Autocorp IPO opens on January 7, 2025 and closes on January 9, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Delta Autocorp IPO?",
+      "answer": "<div itemprop=\"text\"><p>Delta Autocorp IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,30,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Delta Autocorp IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Delta Autocorp IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Delta Autocorp IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Delta Autocorp IPO<!-- --> will be done on <!-- -->Friday, January 10, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, January 13, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/delta-autocorp-ipo/1955/\" title=\"Delta Autocorp IPO Allotment Status\">Delta Autocorp IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Delta Autocorp IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Delta Autocorp IPO<!-- --> listing date is on <b>Tuesday, January 14, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "5",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/delta-autocorp-ipo/1955/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Delta Autocorp IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4332_11102024230317.zip"
+    },
+    {
+      "text": "Delta Autocorp IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/delta-autocorp-limited_90439.html"
+    },
+    {
+      "text": "Anchor Investors in Delta Autocorp IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/deltaautotech_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Delta Autocorp IPO offers 4200000 shares. 781000 (18.6%) to QIB 587000 (13.98%) to NII 1368000 (32.57%) to RII and 1170000 (27.86%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1170000 (27.86%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "294000 (7%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "781000 (18.6%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "587000 (13.98%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1368000 (32.57%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "4200000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Delta Autocorp IPO raises Rs 15.21 crore from anchor investors. Delta Autocorp IPO Anchor bid date is January 6 2025. Delta Autocorp IPO Anchor Investors list",
+    "list_link": {
+      "text": "Delta Autocorp IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/deltaautotech_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 9 2025",
+      "shares_offered": "1170000",
+      "anchor_portion_size": "15.21"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Delta Autocorp Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Oct 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "4742.31",
+          "3461.35",
+          "2110.04",
+          "2031.61"
+        ],
+        [
+          "Revenue",
+          "4527.53",
+          "8116.73",
+          "8055.86",
+          "5753.41"
+        ],
+        [
+          "Profit After Tax",
+          "480.81",
+          "822",
+          "513.41",
+          "420.34"
+        ],
+        [
+          "Net Worth",
+          "2270.11",
+          "3031.91",
+          "1141.48",
+          "688.82"
+        ],
+        [
+          "Reserves and Surplus",
+          "1129.93",
+          "1758.47",
+          null,
+          null
+        ],
+        [
+          "Total Borrowing",
+          "1120.31",
+          "1003.3",
+          "413.6",
+          "733.57"
+        ]
+      ]
+    },
+    {
+      "heading": "Delta Autocorp IPO Details",
+      "sanitizedHeading": "delta_autocorp",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "23.69%"
+        ],
+        [
+          "ROCE",
+          "19.32%"
+        ],
+        [
+          "Debt/Equity",
+          "0.49"
+        ],
+        [
+          "RoNW",
+          "21.18%"
+        ],
+        [
+          "PAT Margin",
+          "10.64"
+        ],
+        [
+          "Price to Book Value",
+          "6.53"
+        ]
+      ]
+    },
+    {
+      "heading": "Delta Autocorp IPO Details",
+      "sanitizedHeading": "delta_autocorp",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "7.21",
+          "5.39"
+        ],
+        [
+          "P/E (x)",
+          "18.03",
+          "24.11"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:09:39.190Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/delta-autocorp-ipo/1955/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "178.64"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "624.28"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "314.33"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "342.1"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

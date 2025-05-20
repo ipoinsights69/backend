@@ -1,0 +1,423 @@
+{
+  "pageTitle": "Kenrik Industries IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Kenrik Industries",
+  "logo": "https://www.chittorgarh.net/images/ipo/kenrik-industries-logo.png",
+  "pageHeading": "Kenrik Industries Limited IPO (Kenrik Industries IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "April 29, 2025 to May 6, 2025",
+    "ipoListingDate": "Fri, May 9, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹25.00",
+    "lotSize": "6,000 Shares",
+    "issueSize": "34,98,000 shares (aggregating up to ₹8.75 Cr)",
+    "freshIssue": "34,98,000 shares (aggregating up to ₹8.75 Cr)",
+    "issueType": "Fixed Price IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "1,80,000 shares",
+      "maker_name": "Mnm Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/297/"
+    },
+    "ipoOpenDate": "Tue, Apr 29, 2025",
+    "ipoCloseDate": "Tue, May 6, 2025",
+    "initiationOfRefunds": "Thu, May 8, 2025",
+    "creditOfSharesToDemat": "Thu, May 8, 2025",
+    "shareHoldingPreIssue": "89,99,900 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "89,99,900 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "99.996%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,24,97,900 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,24,97,900 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "72.01%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on May 6 2025",
+    "tentative_allotment": "Wed May 7 2025",
+    "initiation_of_refunds": "Thu May 8 2025",
+    "credit_of_shares_to_demat": "Thu May 8 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 6000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "6000",
+        "amount": "150000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "6000",
+        "amount": "150000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "12000",
+        "amount": "300000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/kenrik-industries-ipo/2382/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Nitinkumar Dalpatbhai Shah Nihar Nitinbhai Shah Manisha Nitinkumar Shah Shah Nitin Dalpatlal (HUF) are the company promoters.",
+    "holdings": {
+      "share_holding_pre_issue": "99.996%",
+      "share_holding_post_issue": "72.01%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2017, Kenrik Industries Limited is engaged in the design and distribution of traditional Indian jewellery. The company’s product range features handmade gold jewellery studded with precious and semi-precious stones, including diamonds, rubies, and cubic zirconia.</p>\n<p>Kenrik Industries Limited offers an extensive portfolio that includes rings, earrings, armlets, pendants, nose rings, bracelets, chains, necklaces, bangles, watches, luxury items, and wedding jewellery. The products are crafted to meet specific customer requirements and are manufactured on a job-work basis at the company’s facility located in Ahmedabad, Gujarat.</p>\n<p>Kenrik Industries Limited currently operates under a Business-to-Business (B2B) model, catering to customers across high-end, mid-market, and value market segments. The company places strong emphasis on quality control, inventory management, and business development, ensuring all jewellery is certified by BIS Hallmark.</p>\n<p>As of July 31, 2024, Kenrik Industries Limited has a total of 9 employees across various departments.</p>"
+  },
+  "contactDetails": {
+    "phone": "+91-9687141430",
+    "email": "cs@kenrikindustries.net",
+    "full_address": "Kenrik Industries Limited, B-306 East Face Behind Maruti Suzuki Showroom, Nr. S P Ring Road Ambli Road Ambli, Daskroi",
+    "website": "http://www.kenrikindustries.net/"
+  },
+  "registrarDetails": {
+    "name": "Skyline Financial Services Private Ltd",
+    "phone": "02228511022",
+    "email": "ipo@skylinerta.com",
+    "website": "https://www.skylinerta.com/ipo.php"
+  },
+  "leadManagers": [
+    {
+      "name": "Turnaround Corporate Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/157/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/157/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "May 9 2025",
+    "bse_script_code": "544398",
+    "isin": "INE0AOG01018",
+    "final_issue_price": "25 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "25.00"
+      },
+      "open": {
+        "bse_sme": "25.01"
+      },
+      "low": {
+        "bse_sme": "25.01"
+      },
+      "high": {
+        "bse_sme": "26.26"
+      },
+      "last_trade": {
+        "bse_sme": "26.26"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Kenrik Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>Kenrik Industries IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->3498000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->8.75<!-- --> Crores. The issue is priced at <span>₹25 per share</span>. The minimum order quantity is <!-- -->6000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->April 29, 2025</b>, and <b>closes on <!-- -->May 6, 2025</b>.</p><p>Skyline Financial Services Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Kenrik Industries IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Kenrik Industries IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Kenrik Industries IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Kenrik Industries IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Kenrik Industries IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Kenrik Industries IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Kenrik Industries IPO opens on April 29, 2025 and closes on May 6, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Kenrik Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>Kenrik Industries IPO<!-- --> <b>lot size is <!-- -->6000</b>, and the <b>minimum amount required is <span>₹1,50,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Kenrik Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Kenrik Industries IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Kenrik Industries IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Kenrik Industries IPO<!-- --> will be done on <!-- -->Wednesday, May 7, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, May 8, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/kenrik-industries-ipo/2382/\" title=\"Kenrik Industries IPO Allotment Status\">Kenrik Industries IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Kenrik Industries IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Kenrik Industries IPO<!-- --> listing date is on <b>Friday, May 9, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "1"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/kenrik-industries-ipo/2382/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Kenrik Industries IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/324845/kenrik_draft_prospectus_final_20250214145714.pdf"
+    },
+    {
+      "text": "Kenrik Industries IPO RHP",
+      "url": "https://www.bsesme.com/download/324845/SME_IPO%20Open/Annexure01prospectuskenrikindustries_20250425001127.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Kenrik Industries IPO offers total 3498000 shares. Out of which 1656000 (47.34%) allocated to NII 1662000 (47.51%) allocated to RII.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "-"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "180000 (5.15%)"
+      },
+      {
+        "investor_category": "Other Shares Offered",
+        "shares_offered": "1656000 (47.34%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1662000 (47.51%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "3498000 (100%)"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Kenrik Industries Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Oct 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "15.98",
+          "15.8",
+          "15.59",
+          "12.47"
+        ],
+        [
+          "Revenue",
+          "42.19",
+          "70.97",
+          "52.04",
+          "32.69"
+        ],
+        [
+          "Profit After Tax",
+          "0.78",
+          "1.08",
+          "0.47",
+          "0.39"
+        ],
+        [
+          "Net Worth",
+          "13.37",
+          "12.59",
+          "11.5",
+          "11.03"
+        ],
+        [
+          "Total Borrowing",
+          "0.99",
+          "0.78",
+          "0.57",
+          "0.35"
+        ]
+      ]
+    },
+    {
+      "heading": "Kenrik Industries IPO Details",
+      "sanitizedHeading": "kenrik_industries",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "9.01%"
+        ],
+        [
+          "ROCE",
+          "10.85%"
+        ],
+        [
+          "Debt/Equity",
+          "0.06"
+        ],
+        [
+          "RoNW",
+          "8.62%"
+        ],
+        [
+          "PAT Margin",
+          "1.53"
+        ]
+      ]
+    },
+    {
+      "heading": "Kenrik Industries IPO Details",
+      "sanitizedHeading": "kenrik_industries",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "1.21",
+          "1.07"
+        ],
+        [
+          "P/E (x)",
+          "20.74",
+          "23.31"
+        ]
+      ]
+    },
+    {
+      "heading": "Kenrik Industries IPO Details",
+      "sanitizedHeading": "kenrik_industries",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "To meet Working Capital Requirements",
+          "65.63"
+        ],
+        [
+          "2",
+          "General Corporate Expenses",
+          "18"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:28:30.336Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/kenrik-industries-ipo/2382/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": ""
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "0.2"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "3.79"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "2"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

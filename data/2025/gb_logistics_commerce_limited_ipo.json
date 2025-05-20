@@ -1,0 +1,424 @@
+{
+  "pageTitle": "GB Logistics IPO Date, Price, GMP, Review, Details",
+  "ipoName": "GB Logistics Commerce",
+  "logo": "https://www.chittorgarh.net/images/ipo/gb-logistic-logo.jpeg",
+  "pageHeading": "GB Logistics Commerce Limited IPO (GB Logistics IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 24, 2025 to January 28, 2025",
+    "ipoListingDate": "Fri, Jan 31, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹102.00",
+    "lotSize": "1,200 Shares",
+    "issueSize": "24,57,600 shares (aggregating up to ₹25.07 Cr)",
+    "freshIssue": "24,57,600 shares (aggregating up to ₹25.07 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "1,23,600 shares",
+      "maker_name": "Svcm Securities Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/359/"
+    },
+    "ipoOpenDate": "Fri, Jan 24, 2025",
+    "ipoCloseDate": "Tue, Jan 28, 2025",
+    "initiationOfRefunds": "Thu, Jan 30, 2025",
+    "creditOfSharesToDemat": "Thu, Jan 30, 2025",
+    "shareHoldingPreIssue": "57,36,848 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "57,36,848 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "74.85%"
+      }
+    ],
+    "shareHoldingPostIssue": "81,94,448 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "81,94,448 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 28 2025",
+    "tentative_allotment": "Wed Jan 29 2025",
+    "initiation_of_refunds": "Thu Jan 30 2025",
+    "credit_of_shares_to_demat": "Thu Jan 30 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1200 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "122400"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "122400"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2400",
+        "amount": "244800"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/gb-logistics-ipo/1968/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Prashant Natwarlal Lakhani is the promoter of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "74.85%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2019, GB Logistics Commerce Limited is engaged in the business of Logistics.</p>\n<p>The company offers qualified drivers, a fleet of vehicles, and a charter network for flexibility, responsiveness, and high-capacity transportation.</p>\n<p>The company offers full truckload freight services to large and medium-sized enterprises, leveraging both its own and third-party transportation resources to efficiently manage logistics.</p>\n<p>The company operates in two Business Segments<strong> Logistics</strong>and <strong>Trading of Agricultural Commodities. </strong></p>\n<p>In Logistics the company offers Full Truck Load, special handling, godown-to-godown transportation, above-ground floor deliveries, and expertise in Out of Delivery Area (ODA) shipments to remote and challenging locations.</p>\n<p>In Trading of Agricultural Commodities<strong> </strong>the company focuses on logistics near agricultural commodities, capitalizing on incidental trading opportunities to generate additional revenue, and diversifying income while supporting the agricultural and logistics sectors.</p>\n<p>As of January 15, 2024, the company has 39 full-time employees.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ul>\n<li>Robust Fleet and Infrastructure</li>\n<li>Expertise and Experience</li>\n<li>Strategic Partnerships</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "9881078877",
+    "email": "info@gblogisticsindia.com",
+    "full_address": "GB Logistics Commerce Limited, B-3, Saptak Plaza, Shivaji Nagar Nagpur 440010",
+    "website": "https://gblogisticsindia.com/"
+  },
+  "registrarDetails": {
+    "name": "Maashitla Securities Private Limited",
+    "phone": "+91-11-45121795-96",
+    "email": "investor.ipo@maashitla.com",
+    "website": "https://maashitla.com/allotment-status/public-issues"
+  },
+  "leadManagers": [
+    {
+      "name": "SKI Capital Services Limited",
+      "url": "/report/ipo-lead-manager-review/112/427/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/427/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 31 2025",
+    "bse_script_code": "544348",
+    "isin": "INE0RWU01016",
+    "final_issue_price": "102 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "102.00"
+      },
+      "open": {
+        "bse_sme": "81.60"
+      },
+      "low": {
+        "bse_sme": "77.55"
+      },
+      "high": {
+        "bse_sme": "85.65"
+      },
+      "last_trade": {
+        "bse_sme": "81.75"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the GB Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>GB Logistics IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->2457600<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->25.07<!-- --> Crores. The issue is priced at <span>₹102 per share</span>. The minimum order quantity is <!-- -->1200<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 24, 2025</b>, and <b>closes on <!-- -->January 28, 2025</b>.</p><p>Maashitla Securities Private Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in GB Logistics IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->GB Logistics IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->GB Logistics IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->GB Logistics IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->GB Logistics IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When GB Logistics IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The GB Logistics IPO opens on January 24, 2025 and closes on January 28, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of GB Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>GB Logistics IPO<!-- --> <b>lot size is <!-- -->1200</b>, and the <b>minimum amount required is <span>₹1,22,400</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for GB Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->GB Logistics IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is GB Logistics IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->GB Logistics IPO<!-- --> will be done on <!-- -->Wednesday, January 29, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, January 30, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/gb-logistics-ipo/1968/\" title=\"GB Logistics IPO Allotment Status\">GB Logistics IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is GB Logistics IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->GB Logistics IPO<!-- --> listing date is on <b>Friday, January 31, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/gb-logistics-ipo/1968/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "GB Logistics IPO DRHP",
+      "url": "https://www.bsesme.com/download/349132/240308-DRHP-GLCL-Final_20240308004126.pdf"
+    },
+    {
+      "text": "GB Logistics IPO RHP",
+      "url": "https://www.bsesme.com/download/349132/SME_IPO%20Open/251601_RHP_GLGL__20250116185235.pdf"
+    },
+    {
+      "text": "Anchor Investors in GB Logistics IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/gb-logistics-anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "GB Logistics IPO offers 2457600 shares. 466800 (18.99%) to QIB 350400 (14.26%) to NII 817200 (33.25%) to RII and 699600 (28.47%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "699600 (28.47%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "123600 (5.03%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "466800 (18.99%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "350400 (14.26%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "817200 (33.25%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "2457600 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "GB Logistics IPO raises Rs 7.14 crore from anchor investors. GB Logistics IPO Anchor bid date is January 23 2025. GB Logistics IPO Anchor Investors list",
+    "list_link": {
+      "text": "GB Logistics IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/gb-logistics-anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "May 2 2025",
+      "shares_offered": "699600",
+      "anchor_portion_size": "7.14"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "GB Logistics Commerce Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "59.28",
+          "58.6",
+          null,
+          null
+        ],
+        [
+          "Revenue",
+          "50.85",
+          "115.63",
+          null,
+          null
+        ],
+        [
+          "Profit After Tax",
+          "2.53",
+          "4.86",
+          "0.77",
+          "0.96"
+        ],
+        [
+          "Net Worth",
+          "20.55",
+          "17.77",
+          "1.8",
+          "1.03"
+        ],
+        [
+          "Reserves and Surplus",
+          "14.81",
+          "12.04",
+          null,
+          null
+        ],
+        [
+          "Total Borrowing",
+          "20.07",
+          "15.72",
+          "4.92",
+          "1.18"
+        ]
+      ]
+    },
+    {
+      "heading": "GB Logistics IPO Details",
+      "sanitizedHeading": "gb_logistics",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "27.36%"
+        ],
+        [
+          "ROCE",
+          "14.51%"
+        ],
+        [
+          "Debt/Equity",
+          "0.88"
+        ],
+        [
+          "RoNW",
+          "27.36%"
+        ],
+        [
+          "Price to Book Value",
+          "3.29"
+        ]
+      ]
+    },
+    {
+      "heading": "GB Logistics IPO Details",
+      "sanitizedHeading": "gb_logistics",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "8.48",
+          "6.17"
+        ],
+        [
+          "P/E (x)",
+          "12.03",
+          "16.53"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:00:31.296Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/gb-logistics-ipo/1968/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "25.1"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "543.55"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "121.88"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "184.64"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

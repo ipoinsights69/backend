@@ -1,0 +1,406 @@
+{
+  "pageTitle": "Avax Apparels And Ornaments IPO Date, Price, GMP, Details",
+  "ipoName": "Avax Apparels And Ornaments",
+  "logo": "https://www.chittorgarh.net/images/ipo/avax_apperals_logo.jpeg",
+  "pageHeading": "Avax Apparels And Ornaments Limited IPO (Avax Apparels And Ornaments IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 7, 2025 to January 9, 2025",
+    "ipoListingDate": "Tue, Jan 14, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹70.00",
+    "lotSize": "2,000 Shares",
+    "issueSize": "2,74,000 shares (aggregating up to ₹1.92 Cr)",
+    "freshIssue": "2,74,000 shares (aggregating up to ₹1.92 Cr)",
+    "issueType": "Fixed Price IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "14,000 shares",
+      "maker_name": "SKI Capital Services Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/428/"
+    },
+    "ipoOpenDate": "Tue, Jan 7, 2025",
+    "ipoCloseDate": "Thu, Jan 9, 2025",
+    "initiationOfRefunds": "Mon, Jan 13, 2025",
+    "creditOfSharesToDemat": "Mon, Jan 13, 2025",
+    "shareHoldingPreIssue": "7,65,158 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "7,65,158 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "57.00%"
+      }
+    ],
+    "shareHoldingPostIssue": "10,39,158 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "10,39,158 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "41.97%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 9 2025",
+    "tentative_allotment": "Fri Jan 10 2025",
+    "initiation_of_refunds": "Mon Jan 13 2025",
+    "credit_of_shares_to_demat": "Mon Jan 13 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 2000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "2000",
+        "amount": "140000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "2000",
+        "amount": "140000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "4000",
+        "amount": "280000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/avax-apparels-and-ornaments-ipo/1862/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The Promoters of the company are Mr. Harinderpal Singh Sodhi and Mr. Harish Kumar",
+    "holdings": {
+      "share_holding_pre_issue": "57.00%",
+      "share_holding_post_issue": "41.97%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in June 2005, Avax Apparels And Ornaments Limited is involved in two separate lines of business:</p>\n<ul>\n<li><strong>Wholesale trading</strong></li>\n<li><strong>Online retail of silver ornaments</strong></li>\n</ul>\n<p>The company wholesales knitted fabric and sells silver ornaments online, including rings, ladies' payal, gents kada, plate sets, glass, bangles, bowls, chains, and other jewellery. It supplies all major cities across the country.</p>\n<p>The company has several key advantages in wholesale trading. It is geographically located in the hub of cloth manufacturing, which provides a significant advantage. In addition, the company benefits from the growing demand for these products and the strong business relationships maintained by the management, all of which contribute to the company's success in this segment.</p>\n<p><strong>Competitive Strengths</strong></p>\n<ul>\n<li>Locational advantage</li>\n<li>Good network and connections with the players in the Sector</li>\n<li>Excellent Customer Relations</li>\n<li>Experienced and professional Team</li>\n<li>Good Track record of the management</li>\n</ul>\n<p>As of September 2024, the company has 7 full term employees.</p>"
+  },
+  "contactDetails": {
+    "phone": "+011-44750642",
+    "email": "secretarial@avaxapparels.com",
+    "full_address": "Avax Apparels And Ornaments Limited, 611 6th Floor, Jaina Tower II Distt. Centre, Janakpuri West Delhi-110058",
+    "website": "https://avaxapparels.com/"
+  },
+  "registrarDetails": {
+    "name": "Skyline Financial Services Private Ltd",
+    "phone": "02228511022",
+    "email": "ipo@skylinerta.com",
+    "website": "https://www.skylinerta.com/ipo.php"
+  },
+  "leadManagers": [
+    {
+      "name": "SKI Capital Services Limited",
+      "url": "/report/ipo-lead-manager-review/112/427/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/427/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 14 2025",
+    "bse_script_code": "544337",
+    "isin": "INE0NQ401016",
+    "final_issue_price": "70 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "70.00"
+      },
+      "open": {
+        "bse_sme": "133.00"
+      },
+      "low": {
+        "bse_sme": "133.00"
+      },
+      "high": {
+        "bse_sme": "139.65"
+      },
+      "last_trade": {
+        "bse_sme": "139.65"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Avax Apparels And Ornaments IPO?",
+      "answer": "<div itemprop=\"text\"><p>Avax Apparels And Ornaments IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->274000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->1.92<!-- --> Crores. The issue is priced at <span>₹70 per share</span>. The minimum order quantity is <!-- -->2000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 7, 2025</b>, and <b>closes on <!-- -->January 9, 2025</b>.</p><p>Skyline Financial Services Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Avax Apparels And Ornaments IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Avax Apparels And Ornaments IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Avax Apparels And Ornaments IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Avax Apparels And Ornaments IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Avax Apparels And Ornaments IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Avax Apparels And Ornaments IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Avax Apparels And Ornaments IPO opens on January 7, 2025 and closes on January 9, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Avax Apparels And Ornaments IPO?",
+      "answer": "<div itemprop=\"text\"><p>Avax Apparels And Ornaments IPO<!-- --> <b>lot size is <!-- -->2000</b>, and the <b>minimum amount required is <span>₹1,40,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Avax Apparels And Ornaments IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Avax Apparels And Ornaments IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Avax Apparels And Ornaments IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Avax Apparels And Ornaments IPO<!-- --> will be done on <!-- -->Friday, January 10, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, January 13, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/avax-apparels-and-ornaments-ipo/1862/\" title=\"Avax Apparels And Ornaments IPO Allotment Status\">Avax Apparels And Ornaments IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Avax Apparels And Ornaments IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Avax Apparels And Ornaments IPO<!-- --> listing date is on <b>Tuesday, January 14, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/avax-apparels-and-ornaments-ipo/1862/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Avax Apparels And Ornaments IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/332568/AvaxApparelsandOrnamentsDRHP_20230822105417.pdf"
+    },
+    {
+      "text": "Avax Apparels And Ornaments IPO Addendum DRHP",
+      "url": "https://www.bsesme.com/download/332568/Combined_Addendum_cum_DRHP_20240805102324.pdf"
+    },
+    {
+      "text": "Avax Apparels And Ornaments IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/feb-2025/avax-apparels-and-ornaments-limited_91559.html"
+    }
+  ],
+  "reservation": {
+    "summary": "Avax Apparels And Ornaments IPO offers 274001 shares. 130000 (47.45%) to NII 130000 (47.45%) to RII.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "-"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "14000 (5.11%)"
+      },
+      {
+        "investor_category": "Other Shares Offered",
+        "shares_offered": "130000 (47.45%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "130000 (47.45%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "274001 (100%)"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Avax Apparels And Ornaments Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "1089.09",
+          "484.6",
+          "346.89",
+          "57.66"
+        ],
+        [
+          "Revenue",
+          "1500.93",
+          "2205.98",
+          "1470.21",
+          "28.87"
+        ],
+        [
+          "Profit After Tax",
+          "90.61",
+          "138.19",
+          "69.44",
+          "1.01"
+        ],
+        [
+          "Net Worth",
+          "405.3",
+          "314.68",
+          "176.49",
+          "1.65"
+        ],
+        [
+          "Total Borrowing",
+          "72.02",
+          "71.5",
+          null,
+          "30"
+        ]
+      ]
+    },
+    {
+      "heading": "Avax Apparels And Ornaments IPO Details",
+      "sanitizedHeading": "avax_apparels_and_ornaments",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "43.91%"
+        ],
+        [
+          "ROCE",
+          "61.68%"
+        ],
+        [
+          "RoNW",
+          "43.91%"
+        ],
+        [
+          "PAT Margin",
+          "6.26"
+        ],
+        [
+          "Price to Book Value",
+          "1.70"
+        ]
+      ]
+    },
+    {
+      "heading": "Avax Apparels And Ornaments IPO Details",
+      "sanitizedHeading": "avax_apparels_and_ornaments",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "18.06",
+          "17.44"
+        ],
+        [
+          "P/E (x)",
+          "3.88",
+          "4.01"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T19:07:20.659Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/avax-apparels-and-ornaments-ipo/1862/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": ""
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "140.46"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "372.35"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "260.42"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

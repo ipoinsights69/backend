@@ -10,7 +10,7 @@ build
 dist
 
 # Data files
-data/
+
 meta.json
 config/cron-config.json
 

@@ -1,0 +1,465 @@
+{
+  "pageTitle": "ATC Energies IPO Date, Price, GMP, Review, Details",
+  "ipoName": "ATC Energies System",
+  "logo": "https://www.chittorgarh.net/images/ipo/atc-group-ipo-logo.png",
+  "pageHeading": "ATC Energies System Limited IPO (ATC Energies IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "March 25, 2025 to March 27, 2025",
+    "ipoListingDate": "Wed, Apr 2, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹118.00",
+    "lotSize": "1,200 Shares",
+    "issueSize": "54,03,600 shares (aggregating up to ₹63.76 Cr)",
+    "freshIssue": "43,23,600 shares (aggregating up to ₹51.02 Cr)",
+    "offerForSale": "10,80,000 shares of ₹10 (aggregating up to ₹12.74 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "2,71,200 shares",
+      "maker_name": "Alacrity Securities Ltd.",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/205/"
+    },
+    "ipoOpenDate": "Tue, Mar 25, 2025",
+    "ipoCloseDate": "Thu, Mar 27, 2025",
+    "initiationOfRefunds": "Tue, Apr 1, 2025",
+    "creditOfSharesToDemat": "Tue, Apr 1, 2025",
+    "shareHoldingPreIssue": "1,60,65,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,60,65,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "99.57%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,03,88,600 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,03,88,600 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on March 27 2025",
+    "tentative_allotment": "Fri Mar 28 2025",
+    "initiation_of_refunds": "Tue Apr 1 2025",
+    "credit_of_shares_to_demat": "Tue Apr 1 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1200 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "141600"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "141600"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2400",
+        "amount": "283200"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/atc-energies-ipo/2210/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Sandeep Gangabishan Bajoria is the promoter of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "99.57%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2020, ATC Energies System Limited is a company that operates in the energy sector, focusing on providing energy solutions, products, and services.</p>\n<p>The company produces and supplies efficient, low-cost lithium and Li-ion batteries, offering integrated energy storage solutions for industries like banking, automobiles, and other end users.</p>\n<div>The company started by producing mini batteries for the banking industry and now manufactures batteries of all sizes, offering customized solutions for various industries and applications through in-house design and engineering.</div>\n<div></div>\n<div>The company’s registered office is in Mumbai, with factories in Vasai, Thane, and Noida. These factories house advanced equipment for battery assembly, including temperature chambers, welding systems, and testers.</div>\n<div></div>\n<div><strong>Products:</strong>v The company provides products for various industries:</div>\n<ul>\n<li>Banking: POS machines, ATMs</li>\n<li>Automobiles: Electric vehicles, two/three-wheelers</li>\n<li>Industrial UPS, Energy storage systems, and Weighing scales.</li>\n</ul>\n<div>As of February 28, 2025, the company had 81 employees out of which approximately 33% were women.</div>\n<div></div>\n<div><strong>Competitive Strengths:</strong></div>\n<ul>\n<li>Diversified product portfolio catering to various industries / end-use applications offering diverse solutions.</li>\n<li>Focus on quality and performance.</li>\n<li>Experienced Leadership and Workforce Team</li>\n<li>Stable financial performance</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 7208878270",
+    "email": "cs@atcgroup.co",
+    "full_address": "ATC Energies System Limited, Unit No. 3 Plot No. 33, New India Industrial Estate Mahal IN AR, Off MC Rd. Andheri East",
+    "website": "http://www.atcgroup.co/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "aesl.ipo@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "Indorient Financial Services Ltd",
+      "url": "/report/ipo-lead-manager-review/112/175/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/175/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "April 2 2025",
+    "nse_symbol": "ATCENERGY",
+    "isin": "INE0V0Q01019",
+    "final_issue_price": "118 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "118.00"
+      },
+      "open": {
+        "nse_sme": "107.00"
+      },
+      "low": {
+        "nse_sme": "101.65"
+      },
+      "high": {
+        "nse_sme": "107.00"
+      },
+      "last_trade": {
+        "nse_sme": "101.65"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the ATC Energies IPO?",
+      "answer": "<div itemprop=\"text\"><p>ATC Energies IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->5403600<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->63.76<!-- --> Crores. The issue is priced at <span>₹118 per share</span>. The minimum order quantity is <!-- -->1200<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->March 25, 2025</b>, and <b>closes on <!-- -->March 27, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in ATC Energies IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->ATC Energies IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->ATC Energies IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->ATC Energies IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->ATC Energies IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When ATC Energies IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The ATC Energies IPO opens on March 25, 2025 and closes on March 27, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of ATC Energies IPO?",
+      "answer": "<div itemprop=\"text\"><p>ATC Energies IPO<!-- --> <b>lot size is <!-- -->1200</b>, and the <b>minimum amount required is <span>₹1,41,600</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for ATC Energies IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->ATC Energies IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is ATC Energies IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->ATC Energies IPO<!-- --> will be done on <!-- -->Friday, March 28, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Tuesday, April 1, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/atc-energies-ipo/2210/\" title=\"ATC Energies IPO Allotment Status\">ATC Energies IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is ATC Energies IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->ATC Energies IPO<!-- --> listing date is on <b>Wednesday, April 2, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/atc-energies-ipo/2210/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "ATC Energies IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4763_06022025181441.zip"
+    },
+    {
+      "text": "ATC Energies IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/mar-2025/atc-energies-system-limited_92877.html"
+    },
+    {
+      "text": "Anchor Investors in ATC Energies IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/atc-energies-system-anchor-allocation.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "ATC Energies IPO offers total 5403600 shares. Out of which 616800 (11.41%) allocated to QIB 1796400 (33.24%) allocated to NII 1796400 (33.24%) allocated to RII and 922800 (17.08%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "922800 (17.08%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "271200 (5.02%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "616800 (11.41%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "1796400 (33.24%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1796400 (33.24%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "5403600 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "ATC Energies IPO raises Rs 10.89 crore from anchor investors. ATC Energies IPO Anchor bid date is March 24 2025. ATC Energies IPO Anchor Investors list",
+    "list_link": {
+      "text": "ATC Energies IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/atc-energies-system-anchor-allocation.pdf"
+    },
+    "details": {
+      "ipo_date": "June 25 2025",
+      "shares_offered": "922800",
+      "anchor_portion_size": "10.89"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "ATC Energies System Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "71.82",
+          "50",
+          "40.72",
+          "36.05"
+        ],
+        [
+          "Revenue",
+          "22.57",
+          "51.51",
+          "33.22",
+          "36.52"
+        ],
+        [
+          "Profit After Tax",
+          "5.77",
+          "10.89",
+          "7.76",
+          "11.86"
+        ],
+        [
+          "Net Worth",
+          "38.87",
+          "33.1",
+          "22.21",
+          "14.45"
+        ],
+        [
+          "Reserves and Surplus",
+          "22.81",
+          "17.04",
+          "19.66",
+          "11.9"
+        ],
+        [
+          "Total Borrowing",
+          "24.26",
+          "10.51",
+          "10.59",
+          "11.81"
+        ]
+      ]
+    },
+    {
+      "heading": "ATC Energies IPO Details",
+      "sanitizedHeading": "atc_energies",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "39.38%"
+        ],
+        [
+          "ROCE",
+          "42.66%"
+        ],
+        [
+          "Debt/Equity",
+          "0.32"
+        ],
+        [
+          "RoNW",
+          "39.38%"
+        ],
+        [
+          "PAT Margin",
+          "21.27"
+        ],
+        [
+          "Price to Book Value",
+          "5.73"
+        ]
+      ]
+    },
+    {
+      "heading": "ATC Energies IPO Details",
+      "sanitizedHeading": "atc_energies",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "6.78",
+          "5.66"
+        ],
+        [
+          "P/E (x)",
+          "17.4",
+          "20.84"
+        ]
+      ]
+    },
+    {
+      "heading": "ATC Energies IPO Details",
+      "sanitizedHeading": "atc_energies",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Repayment and/or pre-payment in full the borrowing availed by the Company with respect to purchase of the Noida factory",
+          "95.28"
+        ],
+        [
+          "2",
+          "Funding the capital expenditure requirements towards refurbishment civil and upgradation works at the Noida factory",
+          "67.22"
+        ],
+        [
+          "3",
+          "Funding the capital expenditure requirement towards IT upgradation at the Noida factory and Vasai factory and the registered office",
+          "74.69"
+        ],
+        [
+          "4",
+          "Funding working capital requirements of the Company",
+          "95"
+        ],
+        [
+          "5",
+          "General Corporate Purposes",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:33:25.222Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/atc-energies-ipo/2210/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "1.38"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "0.81"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "2.49"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "1.61"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

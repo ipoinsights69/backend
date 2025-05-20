@@ -1,0 +1,433 @@
+{
+  "pageTitle": "Landmark Immigration IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Landmark Immigration Consultants",
+  "logo": "https://www.chittorgarh.net/images/ipo/landmark-immigration-ipo-logo.jpg",
+  "pageHeading": "Landmark Immigration Consultants Limited IPO (Landmark Immigration IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 16, 2025 to January 20, 2025",
+    "ipoListingDate": "Thu, Jan 23, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹72.00",
+    "lotSize": "1,600 Shares",
+    "issueSize": "56,00,000 shares (aggregating up to ₹40.32 Cr)",
+    "freshIssue": "56,00,000 shares (aggregating up to ₹40.32 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "2,84,800 shares",
+      "maker_name": "Shreni Shares Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/346/"
+    },
+    "ipoOpenDate": "Thu, Jan 16, 2025",
+    "ipoCloseDate": "Mon, Jan 20, 2025",
+    "initiationOfRefunds": "Wed, Jan 22, 2025",
+    "creditOfSharesToDemat": "Wed, Jan 22, 2025",
+    "shareHoldingPreIssue": "1,50,10,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,50,10,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "97.92%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,06,10,000 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,06,10,000 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "71.31%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 20 2025",
+    "tentative_allotment": "Tue Jan 21 2025",
+    "initiation_of_refunds": "Wed Jan 22 2025",
+    "credit_of_shares_to_demat": "Wed Jan 22 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1600 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1600",
+        "amount": "115200"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1600",
+        "amount": "115200"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "3200",
+        "amount": "230400"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/landmark-immigration-ipo/1965/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mr. Jasmeet Singh Bhatia and Ms. Richa Arora are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "97.92%",
+      "share_holding_post_issue": "71.31%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2010, Landmark Immigration Consultants Limited is engaged in the business of Global Consultancy Services.</p>\n<p>The company offers Global Education Consultancy for students seeking to study abroad and Immigration Consultancy for visas, tourism, business, and permanent residency, primarily in Canada.</p>\n<p>The company offers global education and immigration consultancy through 9 fully equipped branches, partnering with over 30 Canadian institutions, with dedicated consultants and training facilities. Company has entered into 3 Franchise Agreements at Jammu, Jind, and Karnal.</p>\n<p><strong>Services:</strong></p>\n<ul>\n<li><strong>Global Education Consultancy Services:</strong> Education Consultancy, Education Loan Guidance, and Scholarships, Admission application Formalities, Training for Language Proficiency Tests, Study/Schooling Visa.</li>\n<li><strong>Immigration Consultancy Services:</strong> Tourist Visa/Business Visa, Permanent Residency Visa.</li>\n</ul>\n<p>As of September 30, 2024, the company has around 128 employees on a payroll basis.</p>\n<p><strong>Competitive Strengths:</strong></p>\n<ul>\n<li> One-Stop Solution for Visa Consultancy Services</li>\n<li>Certifications and appointments by reputed universities obtained by Promoter and Company</li>\n<li>Dedicated Team of Counsellors</li>\n<li>Experience of the Promoters and senior management team.</li>\n</ul>\n<p></p>"
+  },
+  "contactDetails": {
+    "phone": "+ 91 9041088824",
+    "email": "investors.landmarkimmigration@gmail.com",
+    "full_address": "Landmark Immigration Consultants Limited, SCO-95 97 2nd Floor, Sector 17 D, Chandigarh G.P.O.",
+    "website": "http://www.landmarkimmigration.com/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "landmark.ipo@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "Shreni Shares Limited",
+      "url": "/report/ipo-lead-manager-review/112/449/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/449/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 23 2025",
+    "bse_script_code": "544341",
+    "isin": "INE12QA01010",
+    "final_issue_price": "72 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "72.00"
+      },
+      "open": {
+        "bse_sme": "75.00"
+      },
+      "low": {
+        "bse_sme": "75.00"
+      },
+      "high": {
+        "bse_sme": "78.75"
+      },
+      "last_trade": {
+        "bse_sme": "75.07"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Landmark Immigration IPO?",
+      "answer": "<div itemprop=\"text\"><p>Landmark Immigration IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->5600000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->40.32<!-- --> Crores. The issue is priced at <span>₹72 per share</span>. The minimum order quantity is <!-- -->1600<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 16, 2025</b>, and <b>closes on <!-- -->January 20, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Landmark Immigration IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Landmark Immigration IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Landmark Immigration IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Landmark Immigration IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Landmark Immigration IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Landmark Immigration IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Landmark Immigration IPO opens on January 16, 2025 and closes on January 20, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Landmark Immigration IPO?",
+      "answer": "<div itemprop=\"text\"><p>Landmark Immigration IPO<!-- --> <b>lot size is <!-- -->1600</b>, and the <b>minimum amount required is <span>₹1,15,200</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Landmark Immigration IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Landmark Immigration IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Landmark Immigration IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Landmark Immigration IPO<!-- --> will be done on <!-- -->Tuesday, January 21, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Wednesday, January 22, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/landmark-immigration-ipo/1965/\" title=\"Landmark Immigration IPO Allotment Status\">Landmark Immigration IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Landmark Immigration IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Landmark Immigration IPO<!-- --> listing date is on <b>Thursday, January 23, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "5",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/landmark-immigration-ipo/1965/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Landmark Immigration IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/327379/DRHP_20240823000121.pdf"
+    },
+    {
+      "text": "Landmark Immigration IPO Addendum DRHP",
+      "url": "https://www.bsesme.com/download/327379/DRHPAddendum_Landmark_20250103171250.pdf"
+    },
+    {
+      "text": "Landmark Immigration IPO RHP",
+      "url": "https://www.bsesme.com/download/327379/SME_IPO%20Open/1.%20RHP_Landmark%20Immigration_20250111160117.pdf"
+    },
+    {
+      "text": "Anchor Investors in Landmark Immigration IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/landmark_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Landmark Immigration IPO offers 5600000 shares. 1236800 (22.09%) to QIB 1150400 (20.54%) to NII 2080000 (37.14%) to RII and 848000 (15.14%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "848000 (15.14%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "284800 (5.09%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "1236800 (22.09%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "1150400 (20.54%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2080000 (37.14%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "5600000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Landmark Immigration IPO raises Rs 6.11 crore from anchor investors. Landmark Immigration IPO Anchor bid date is January 15 2025. Landmark Immigration IPO Anchor Investors list",
+    "list_link": {
+      "text": "Landmark Immigration IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/landmark_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 19 2025",
+      "shares_offered": "848000",
+      "anchor_portion_size": "6.11"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Landmark Immigration Consultants Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "5216.36",
+          "4431.51",
+          "3625.3",
+          "3611.51"
+        ],
+        [
+          "Revenue",
+          "1924.81",
+          "3707.03",
+          "2162.62",
+          "1931.54"
+        ],
+        [
+          "Profit After Tax",
+          "540.12",
+          "1111.83",
+          "443.48",
+          "393.53"
+        ],
+        [
+          "Net Worth",
+          "4215.44",
+          "3675.31",
+          "2563.49",
+          "2120.01"
+        ],
+        [
+          "Reserves and Surplus",
+          "2714.44",
+          "2174.31",
+          "2562.49",
+          "2119.01"
+        ],
+        [
+          "Total Borrowing",
+          "198.81",
+          "73.69",
+          "250.62",
+          "527.34"
+        ]
+      ]
+    },
+    {
+      "heading": "Landmark Immigration IPO Details",
+      "sanitizedHeading": "landmark_immigration",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "35.64%"
+        ],
+        [
+          "Debt/Equity",
+          "0.02"
+        ],
+        [
+          "RoNW",
+          "30.25%"
+        ],
+        [
+          "PAT Margin",
+          "31.87"
+        ],
+        [
+          "Price to Book Value",
+          "2.94"
+        ]
+      ]
+    },
+    {
+      "heading": "Landmark Immigration IPO Details",
+      "sanitizedHeading": "landmark_immigration",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "7.41",
+          "5.24"
+        ],
+        [
+          "P/E (x)",
+          "9.72",
+          "13.74"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:04:08.080Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/landmark-immigration-ipo/1965/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "35.58"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "96.57"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "81.87"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "72.84"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "pageTitle": "Virtual Galaxy Infotech IPO Date, Price, GMP, Details",
+  "ipoName": "Virtual Galaxy Infotech",
+  "logo": "https://www.chittorgarh.net/images/ipo/virtual-galaxy-logo.png",
+  "pageHeading": "Virtual Galaxy Infotech Limited IPO (Virtual Galaxy Infotech IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "May 9, 2025 to May 14, 2025",
+    "ipoListingDate": "Mon, May 19, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹142.00",
+    "lotSize": "1,000 Shares",
+    "issueSize": "65,70,000 shares (aggregating up to ₹93.29 Cr)",
+    "freshIssue": "65,70,000 shares (aggregating up to ₹93.29 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "3,36,000 shares",
+      "maker_name": "Alacrity Securities Ltd.",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/205/"
+    },
+    "ipoOpenDate": "Fri, May 9, 2025",
+    "ipoCloseDate": "Wed, May 14, 2025",
+    "initiationOfRefunds": "Fri, May 16, 2025",
+    "creditOfSharesToDemat": "Fri, May 16, 2025",
+    "shareHoldingPreIssue": "1,82,98,635 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,82,98,635 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "87.95%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,48,68,635 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,48,68,635 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "64.72%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on May 14 2025",
+    "tentative_allotment": "Thu May 15 2025",
+    "initiation_of_refunds": "Fri May 16 2025",
+    "credit_of_shares_to_demat": "Fri May 16 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "142000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "142000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "284000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/virtual-galaxy-infotech-ipo/2339/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the Company are Avinash Narayanrao Shende and Sachin Purushottam Pande.",
+    "holdings": {
+      "share_holding_pre_issue": "87.95%",
+      "share_holding_post_issue": "64.72%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in September 1997, Virtual Galaxy Infotech Limited (VGIL) is an IT services and consulting firm based in Nagpur, Maharashtra, India.</p>\n<p>VGIL delivers innovative software products and services across multiple sectors, including Banking and finance, ERP, e-government, Web Services, Cloud Computing, Big Data, IoT, and System Integration.</p>\n<p>The company has successfully provided advanced technology solutions to more than 5,000 bank branches, manufacturing firms, and businesses.</p>\n<p>Their offerings focus on transaction automation, customer service delivery, compliance, and decision support.</p>\n<p>The company's flagship product, \"e-banker,\" is a comprehensive Core Banking Solution designed to address the dynamic techno-financial environment of banking institutions.</p>\n<p>The company has over 300 professionals dedicated to delivering high-quality software solutions for clients.</p>\n<p>VGIL's expertise extends to supporting diverse organizations, including bank branches, manufacturing setups, and business houses, ensuring reliable and efficient technology services that empower organizations to thrive in a fast-evolving digital landscape.</p>\n<p>The company holds several quality certifications, including ISO 9001:2015, ISO/IEC 27001:2013, ISO/IEC 20000-1:2018, and ISO/IEC 23001-7:2023.</p>\n<p>The company serves commercial banks, cooperative banks, NBFCs, SACCOs in the BFSI sector, and corporate clients in the sugar, solvex, textiles, fertiliser, seed, and education industries.</p>\n<p>The company serves clients in over 15 Indian states and has expanded internationally to Tanzania and Malawi.&nbsp;</p>\n<p>As of  December 31, 2024, the company had a total strength of 329 employees on its payroll.</p>\n<p><strong>Competitive Strength</strong></p>\n<ul>\n<li>Offer integrated software solutions for the banking and financial services sector.</li>\n<li>Diversified business across several verticals.</li>\n<li>Diversified revenue streams.</li>\n<li>Recurring and non-recurring, repeat revenues from long-standing customer relationships.</li>\n<li>Experienced promoters and senior management team with strong industry expertise and successful track record.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 9226531342",
+    "email": "investors@vgipl.in",
+    "full_address": "Virtual Galaxy Infotech Limited, 3 Central Excise Colony, Behind Mahatme Eye Bank, Chhatrapati Sq. Ring Road",
+    "website": "http://www.vgipl.com/"
+  },
+  "registrarDetails": {
+    "name": "Maashitla Securities Private Limited",
+    "phone": "+91-11-45121795-96",
+    "email": "ipo@maashitla.com",
+    "website": "https://maashitla.com/allotment-status/public-issues"
+  },
+  "leadManagers": [
+    {
+      "name": "Smart Horizon Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/172/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/172/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "May 19 2025",
+    "nse_symbol": "VGINFOTECH",
+    "isin": "INE0VRH01015",
+    "final_issue_price": "142 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "142.00"
+      },
+      "open": {
+        "nse_sme": "180.00"
+      },
+      "low": {
+        "nse_sme": "180.00"
+      },
+      "high": {
+        "nse_sme": "189.00"
+      },
+      "last_trade": {
+        "nse_sme": "189.00"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Virtual Galaxy Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Virtual Galaxy Infotech IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->6570000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->93.29<!-- --> Crores. The issue is priced at <span>₹142 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->May 9, 2025</b>, and <b>closes on <!-- -->May 14, 2025</b>.</p><p>Maashitla Securities Private Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Virtual Galaxy Infotech IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Virtual Galaxy Infotech IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Virtual Galaxy Infotech IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Virtual Galaxy Infotech IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Virtual Galaxy Infotech IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Virtual Galaxy Infotech IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Virtual Galaxy Infotech IPO opens on May 9, 2025 and closes on May 14, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Virtual Galaxy Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Virtual Galaxy Infotech IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,42,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Virtual Galaxy Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Virtual Galaxy Infotech IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Virtual Galaxy Infotech IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Virtual Galaxy Infotech IPO<!-- --> will be done on <!-- -->Thursday, May 15, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Friday, May 16, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/virtual-galaxy-infotech-ipo/2339/\" title=\"Virtual Galaxy Infotech IPO Allotment Status\">Virtual Galaxy Infotech IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Virtual Galaxy Infotech IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Virtual Galaxy Infotech IPO<!-- --> listing date is on <b>Monday, May 19, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/virtual-galaxy-infotech-ipo/2339/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Virtual Galaxy Infotech IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4960_06022025141118.zip"
+    },
+    {
+      "text": "Virtual Galaxy Infotech IPO RHP",
+      "url": "https://archives.nseindia.com/content/ipo/RHP_VGINFOTECH.zip"
+    },
+    {
+      "text": "Anchor Investors in Virtual Galaxy Infotech IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/virtual-galaxy-anchor-list.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Virtual Galaxy Infotech IPO offers total 6570000 shares. Out of which 3084000 (46.94%) allocated to QIB 950000 (14.46%) allocated to NII 2200000 (33.49%) allocated to RII and 1840000 (28.01%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1840000 (28.01%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "336000 (5.11%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "3084000 (46.94%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "950000 (14.46%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2200000 (33.49%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "6570000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Virtual Galaxy Infotech IPO raises Rs 26.13 crore from anchor investors. Virtual Galaxy Infotech IPO Anchor bid date is May 8 2025. Virtual Galaxy Infotech IPO Anchor Investors list",
+    "list_link": {
+      "text": "Virtual Galaxy Infotech IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/virtual-galaxy-anchor-list.pdf"
+    },
+    "details": {
+      "ipo_date": "August 13 2025",
+      "shares_offered": "1840000",
+      "anchor_portion_size": "26.13"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Virtual Galaxy Infotech Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "116.93",
+          "84.36",
+          "67.80"
+        ],
+        [
+          "Revenue",
+          "63.58",
+          "59.76",
+          "43.44"
+        ],
+        [
+          "Profit After Tax",
+          "16.54",
+          "0.72",
+          "0.40"
+        ],
+        [
+          "Net Worth",
+          "41.40",
+          "20.40",
+          "20.14"
+        ],
+        [
+          "Reserves and Surplus",
+          "30.40",
+          "9.40",
+          "9.14"
+        ],
+        [
+          "Total Borrowing",
+          "38.64",
+          "38.85",
+          "35.56"
+        ]
+      ]
+    },
+    {
+      "heading": "Virtual Galaxy Infotech IPO Details",
+      "sanitizedHeading": "virtual_galaxy_infotech",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "53.52%"
+        ],
+        [
+          "ROCE",
+          "31.68%"
+        ],
+        [
+          "Debt/Equity",
+          "0.93"
+        ],
+        [
+          "RoNW",
+          "39.95%"
+        ],
+        [
+          "PAT Margin",
+          "26.04"
+        ],
+        [
+          "Price to Book Value",
+          "5.66"
+        ]
+      ]
+    },
+    {
+      "heading": "Virtual Galaxy Infotech IPO Details",
+      "sanitizedHeading": "virtual_galaxy_infotech",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "9.04",
+          "6.65"
+        ],
+        [
+          "P/E (x)",
+          "15.71",
+          "21.35"
+        ]
+      ]
+    },
+    {
+      "heading": "Virtual Galaxy Infotech IPO Details",
+      "sanitizedHeading": "virtual_galaxy_infotech",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Capital expenditure towards setting up additional development facility in Nagpur Maharashtra;",
+          "342.68"
+        ],
+        [
+          "2",
+          "Repayment/ prepayment of certain borrowings availed by the Company",
+          "30.00"
+        ],
+        [
+          "3",
+          "Investment in procuring GPU server & storage system at Data Centre;",
+          "50.50"
+        ],
+        [
+          "4",
+          "Funding of expenditure related to enhancement maintenance and upgrading existing products through manpower hiring",
+          "189.00"
+        ],
+        [
+          "5",
+          "Funding for business development and marketing activities",
+          "140.60"
+        ],
+        [
+          "6",
+          "General corporate purposes",
+          null
+        ]
+      ]
+    },
+    {
+      "heading": "Virtual Galaxy Infotech IPO Details",
+      "sanitizedHeading": "virtual_galaxy_infotech",
+      "headers": [
+        "Period Ended",
+        "31 Dec 2024"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "146.03"
+        ],
+        [
+          "Revenue",
+          "101.37"
+        ],
+        [
+          "Profit After Tax",
+          "27.42"
+        ],
+        [
+          "Net Worth",
+          "85.86"
+        ],
+        [
+          "Reserves and Surplus",
+          "67.56"
+        ],
+        [
+          "Total Borrowing",
+          "33.13"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:26:39.701Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/virtual-galaxy-infotech-ipo/2339/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "129.72"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "590.27"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "134.03"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "231.45"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

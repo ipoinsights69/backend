@@ -1,0 +1,464 @@
+{
+  "pageTitle": "Desco Infratech IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Desco Infratech",
+  "logo": "https://www.chittorgarh.net/images/ipo/desco-infratech-logo.png",
+  "pageHeading": "Desco Infratech Limited IPO (Desco Infratech IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "March 24, 2025 to March 26, 2025",
+    "ipoListingDate": "Tue, Apr 1, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹150.00",
+    "lotSize": "1,000 Shares",
+    "issueSize": "20,50,000 shares (aggregating up to ₹30.75 Cr)",
+    "freshIssue": "20,50,000 shares (aggregating up to ₹30.75 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "1,07,000 shares",
+      "maker_name": "Rikhav Securities Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/337/"
+    },
+    "ipoOpenDate": "Mon, Mar 24, 2025",
+    "ipoCloseDate": "Wed, Mar 26, 2025",
+    "initiationOfRefunds": "Fri, Mar 28, 2025",
+    "creditOfSharesToDemat": "Fri, Mar 28, 2025",
+    "shareHoldingPreIssue": "56,26,008 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "56,26,008 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "79.29%"
+      }
+    ],
+    "shareHoldingPostIssue": "76,76,008 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "76,76,008 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "58.12%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on March 26 2025",
+    "tentative_allotment": "Thu Mar 27 2025",
+    "initiation_of_refunds": "Fri Mar 28 2025",
+    "credit_of_shares_to_demat": "Fri Mar 28 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "150000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "150000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "300000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/desco-infratech-ipo/2204/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the Company are Ms. Indiraben Pruthubhai Desai Mr. Pankaj Pruthu Desai Ms Hina Pankaj Desai Mr. Malhar P Desai and Mr Samarth Pankaj Desai",
+    "holdings": {
+      "share_holding_pre_issue": "79.29%",
+      "share_holding_post_issue": "58.12%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in January 2011, Desco Infratech Limited is an infrastructure company focused on Engineering, Planning, &amp; Construction, particularly in City Gas Distribution, Renewable Energy, Water, and Power sectors.</p>\n<p>The company operates across various sectors, including City Gas Distribution, Renewable Energy, Water, and Power.</p>\n<p>The company specializes in critical infrastructure projects, including city gas distribution (CGD), power transmission, water supply systems, and renewable energy solutions.</p>\n<p>The company specializes in developing and constructing pipelines, roads, bridges, and other critical structures, focusing strongly on City Gas Distribution (CGD), renewable energy, water management, and power infrastructure.</p>\n<p>The company has expanded its operations across over 55 cities in 14 states, laying over 4,000 kilometres of Medium-Density Polyethylene (MDPE) pipelines and delivering over 200,000 piped natural gas connections to residential, industrial, and commercial establishments.</p>\n<p>The company offers infrastructure services like designing and constructing water distribution networks, open wells, sump wells, and overhead tanks.</p>\n<p>As of December 31, 2024, the Company had 234 employees across various locations.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ol>\n<li>Extensive experience in city gas distribution and maintenance services.</li>\n<li>Experienced promoters and management team.</li>\n<li>Direct Relationship with Suppliers.</li>\n<li>SOPs are vital for city gas distribution contracting services.</li>\n<li>Adherence to Safety and Compliance Standards.</li>\n</ol>"
+  },
+  "contactDetails": {
+    "phone": "+91 7574 999 09",
+    "email": "investors@descoinfra.co.in",
+    "full_address": "Desco Infratech Limited, A-703 Swastik Universal, Next to Valentine Theatre Dumas Road, Umra",
+    "website": "https://www.descoinfra.co.in/"
+  },
+  "registrarDetails": {
+    "name": "Bigshare Services Pvt Ltd",
+    "phone": "+91-22-6263 8200",
+    "email": "ipo@bigshareonline.com",
+    "website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Smart Horizon Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/172/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/172/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "April 1 2025",
+    "bse_script_code": "544387",
+    "isin": "INE0TGG01014",
+    "final_issue_price": "150 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "150.00"
+      },
+      "open": {
+        "bse_sme": "160.00"
+      },
+      "low": {
+        "bse_sme": "160.00"
+      },
+      "high": {
+        "bse_sme": "168.00"
+      },
+      "last_trade": {
+        "bse_sme": "168.00"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Desco Infratech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Desco Infratech IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->2050000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->30.75<!-- --> Crores. The issue is priced at <span>₹150 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->March 24, 2025</b>, and <b>closes on <!-- -->March 26, 2025</b>.</p><p>Bigshare Services Pvt Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Desco Infratech IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Desco Infratech IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Desco Infratech IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Desco Infratech IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Desco Infratech IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Desco Infratech IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Desco Infratech IPO opens on March 24, 2025 and closes on March 26, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Desco Infratech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Desco Infratech IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,50,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Desco Infratech IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Desco Infratech IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Desco Infratech IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Desco Infratech IPO<!-- --> will be done on <!-- -->Thursday, March 27, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Friday, March 28, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/desco-infratech-ipo/2204/\" title=\"Desco Infratech IPO Allotment Status\">Desco Infratech IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Desco Infratech IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Desco Infratech IPO<!-- --> listing date is on <b>Tuesday, April 1, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/desco-infratech-ipo/2204/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Desco Infratech IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/321600/Desco%20Infratech%20Limited-%20DRHP_20240930234441.pdf"
+    },
+    {
+      "text": "Desco Infratech IPO RHP",
+      "url": "https://www.bsesme.com/download/321600/SME_IPO%20Open/1.%20Desco%20Infractech%20Limited%20RHP_17.03.2025_20250318205521.pdf"
+    },
+    {
+      "text": "Anchor Investors in Desco Infratech IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/desco-infratech-anchor-investor.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Desco Infratech IPO offers total 2050000 shares. Out of which 386000 (18.83%) allocated to QIB 294000 (14.34%) allocated to NII 686000 (33.46%) allocated to RII and 577000 (28.15%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "577000 (28.15%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "107000 (5.22%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "386000 (18.83%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "294000 (14.34%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "686000 (33.46%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "2050000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Desco Infratech IPO raises Rs 8.66 crore from anchor investors. Desco Infratech IPO Anchor bid date is March 21 2025. Desco Infratech IPO Anchor Investors list",
+    "list_link": {
+      "text": "Desco Infratech IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/desco-infratech-anchor-investor.pdf"
+    },
+    "details": {
+      "ipo_date": "June 25 2025",
+      "shares_offered": "577000",
+      "anchor_portion_size": "8.66"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Desco Infratech Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "36.12",
+          "23.8",
+          "20.65",
+          "11.73"
+        ],
+        [
+          "Revenue",
+          "22.75",
+          "29.49",
+          "29.28",
+          "19.92"
+        ],
+        [
+          "Profit After Tax",
+          "3.38",
+          "3.46",
+          "1.23",
+          "0.83"
+        ],
+        [
+          "Net Worth",
+          "22.67",
+          "11.99",
+          "5.04",
+          "3.85"
+        ],
+        [
+          "Reserves and Surplus",
+          "17.04",
+          "11.72",
+          "4.79",
+          "3.6"
+        ],
+        [
+          "Total Borrowing",
+          "6.82",
+          "4.06",
+          "5.81",
+          "3.09"
+        ]
+      ]
+    },
+    {
+      "heading": "Desco Infratech IPO Details",
+      "sanitizedHeading": "desco_infratech",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "40.61%"
+        ],
+        [
+          "ROCE",
+          "75.97%"
+        ],
+        [
+          "Debt/Equity",
+          "0.34"
+        ],
+        [
+          "RoNW",
+          "28.83%"
+        ],
+        [
+          "PAT Margin",
+          "11.76"
+        ],
+        [
+          "Price to Book Value",
+          "6.22"
+        ]
+      ]
+    },
+    {
+      "heading": "Desco Infratech IPO Details",
+      "sanitizedHeading": "desco_infratech",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "6.15",
+          "8.81"
+        ],
+        [
+          "P/E (x)",
+          "24.4",
+          "17.03"
+        ]
+      ]
+    },
+    {
+      "heading": "Desco Infratech IPO Details",
+      "sanitizedHeading": "desco_infratech",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Funding of capital expenditure requirements towards setting up of corporate office in Surat Gujarat.",
+          "10.43"
+        ],
+        [
+          "2",
+          "Funding of capital expenditure requirements towards purchase of machineries.",
+          "16.8"
+        ],
+        [
+          "3",
+          "Funding Working Capital Requirements of the Company.",
+          "180"
+        ],
+        [
+          "4",
+          "General Corporate Purposes.",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:33:54.807Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/desco-infratech-ipo/2204/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "28.76"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "233.26"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "50.62"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "83.75"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

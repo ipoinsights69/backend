@@ -1,0 +1,428 @@
+{
+  "pageTitle": "Chamunda Electrical IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Chamunda Electrical",
+  "logo": "https://www.chittorgarh.net/images/ipo/cepl-logo.jpg",
+  "pageHeading": "Chamunda Electrical Limited IPO (Chamunda Electrical IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "February 4, 2025 to February 6, 2025",
+    "ipoListingDate": "Tue, Feb 11, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹50.00",
+    "lotSize": "3,000 Shares",
+    "issueSize": "29,19,000 shares (aggregating up to ₹14.60 Cr)",
+    "freshIssue": "29,19,000 shares (aggregating up to ₹14.60 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "1,65,000 shares",
+      "maker_name": "Wiinance Financial Services Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/439/"
+    },
+    "ipoOpenDate": "Tue, Feb 4, 2025",
+    "ipoCloseDate": "Thu, Feb 6, 2025",
+    "initiationOfRefunds": "Mon, Feb 10, 2025",
+    "creditOfSharesToDemat": "Mon, Feb 10, 2025",
+    "shareHoldingPreIssue": "80,85,594 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "80,85,594 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "97.46%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,10,04,594 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,10,04,594 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on February 6 2025",
+    "tentative_allotment": "Fri Feb 7 2025",
+    "initiation_of_refunds": "Mon Feb 10 2025",
+    "credit_of_shares_to_demat": "Mon Feb 10 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 3000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "3000",
+        "amount": "150000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "3000",
+        "amount": "150000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "6000",
+        "amount": "300000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/chamunda-electrical-ipo/1976/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The Promoters of the company are Mr. Chiragkumar Natvarlal Patel Mr. Natvarbhai K Rathod and Mrs. Purnikaben C Patel.",
+    "holdings": {
+      "share_holding_pre_issue": "97.46%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Founded in June 2013, Chamunda Electricals Limited specializes in operating and maintaining up to 66 KV substations, testing and commissioning for up to 220 KV substations, and 1.5 MW solar power generation. The company's services include erecting EHV class equipment, structures, earthing, control cable works, and other associated tasks for up to 220 KV (D Class) substations.</p>\n<p>The company has a team of more than 600 engineers, supervisors and other supporting staff well-equipped to handle complex projects with a high degree of accuracy.</p>\n<p>The company's business can be divided into the following categories</p>\n<ol>\n<li>Operation, Maintenance, Testing &amp; Commissioning of Electrical Sub-stations</li>\n<li>Set up a solar power generation park</li>\n<li>Installation and commissioning of electrical equipment designed to operate at voltages typically up to 220 kV</li>\n</ol>\n<p>As on December 31, 2024, the company had 637 full-time employees.</p>\n<p><strong>Competitive Strength</strong></p>\n<ul>\n<li>Decade long years of industry experience with strong execution capabilities</li>\n<li>Strong Promoters and Board of Directors supported by an experienced senior management team</li>\n<li>Advanced Equipment &amp; Skilled Workforce for Precision</li>\n<li>Scalable Business Model with a strong work order book</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 99789 12471",
+    "email": "info@chamundaconst.com",
+    "full_address": "Chamunda Electrical Limited, Shop No.113114, Sakar Building Opp. Petrol Pump, Near Railway Fatak",
+    "website": "https://www.chamundaconst.com/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "cel.ipo@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "GYR Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/182/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/182/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "February 11 2025",
+    "nse_symbol": "CHAMUNDA",
+    "isin": "INE11HG01018",
+    "final_issue_price": "50 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "50.00"
+      },
+      "open": {
+        "nse_sme": "70.00"
+      },
+      "low": {
+        "nse_sme": "66.50"
+      },
+      "high": {
+        "nse_sme": "71.00"
+      },
+      "last_trade": {
+        "nse_sme": "66.50"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Chamunda Electrical IPO?",
+      "answer": "<div itemprop=\"text\"><p>Chamunda Electrical IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->2919000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->14.60<!-- --> Crores. The issue is priced at <span>₹50 per share</span>. The minimum order quantity is <!-- -->3000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->February 4, 2025</b>, and <b>closes on <!-- -->February 6, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Chamunda Electrical IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Chamunda Electrical IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Chamunda Electrical IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Chamunda Electrical IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Chamunda Electrical IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Chamunda Electrical IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Chamunda Electrical IPO opens on February 4, 2025 and closes on February 6, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Chamunda Electrical IPO?",
+      "answer": "<div itemprop=\"text\"><p>Chamunda Electrical IPO<!-- --> <b>lot size is <!-- -->3000</b>, and the <b>minimum amount required is <span>₹1,50,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Chamunda Electrical IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Chamunda Electrical IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Chamunda Electrical IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Chamunda Electrical IPO<!-- --> will be done on <!-- -->Friday, February 7, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, February 10, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/chamunda-electrical-ipo/1976/\" title=\"Chamunda Electrical IPO Allotment Status\">Chamunda Electrical IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Chamunda Electrical IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Chamunda Electrical IPO<!-- --> listing date is on <b>Tuesday, February 11, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/chamunda-electrical-ipo/1976/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Chamunda Electrical IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_26092024194141_DRHP_Chamunda_Electrical_Limited.pdf"
+    },
+    {
+      "text": "Chamunda Electrical IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/chamunda-electrical-limited_91418.html"
+    },
+    {
+      "text": "Anchor Investors in Chamunda Electrical IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/chamundaelectrical_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Chamunda Electrical IPO offers 2919000 shares. 552000 (18.91%) to QIB 414000 (14.18%) to NII 966000 (33.09%) to RII and 822000 (28.16%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "822000 (28.16%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "165000 (5.65%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "552000 (18.91%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "414000 (14.18%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "966000 (33.09%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "2919000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Chamunda Electrical IPO raises Rs 4.11 crore from anchor investors. Chamunda Electrical IPO Anchor bid date is February 3 2025. Chamunda Electrical IPO Anchor Investors list",
+    "list_link": {
+      "text": "Chamunda Electrical IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/chamundaelectrical_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "May 7 2025",
+      "shares_offered": "822000",
+      "anchor_portion_size": "4.11"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Chamunda Electrical Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Dec 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "18.06",
+          "12.13",
+          "8.71",
+          "8.74"
+        ],
+        [
+          "Revenue",
+          "18.43",
+          "20.07",
+          "14.01",
+          "11.32"
+        ],
+        [
+          "Profit After Tax",
+          "2.81",
+          "2.44",
+          "0.31",
+          "-0.51"
+        ],
+        [
+          "Net Worth",
+          "10.93",
+          "5.86",
+          "3.43",
+          "3.12"
+        ],
+        [
+          "Reserves and Surplus",
+          "2.84",
+          "3.86",
+          "1.43",
+          "1.12"
+        ],
+        [
+          "Total Borrowing",
+          "2.92",
+          "4.61",
+          "3.69",
+          "4.65"
+        ]
+      ]
+    },
+    {
+      "heading": "Chamunda Electrical IPO Details",
+      "sanitizedHeading": "chamunda_electrical",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "52.43%"
+        ],
+        [
+          "ROCE",
+          "36.82%"
+        ],
+        [
+          "Debt/Equity",
+          "0.78"
+        ],
+        [
+          "RoNW",
+          "41.54%"
+        ],
+        [
+          "PAT Margin",
+          "12.21"
+        ],
+        [
+          "Price to Book Value",
+          "10.59"
+        ]
+      ]
+    },
+    {
+      "heading": "Chamunda Electrical IPO Details",
+      "sanitizedHeading": "chamunda_electrical",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "3.01",
+          "3.41"
+        ],
+        [
+          "P/E (x)",
+          "16.59",
+          "14.66"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:57:16.082Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/chamunda-electrical-ipo/1976/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "155.85"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "1943.09"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "554.13"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "737.97"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

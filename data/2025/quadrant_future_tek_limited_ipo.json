@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Quadrant Future Tek IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Quadrant Future Tek",
+  "logo": "https://www.chittorgarh.net/images/ipo/qudrant_future_logo.jpeg",
+  "pageHeading": "Quadrant Future Tek Limited IPO (Quadrant Future Tek IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 7, 2025 to January 9, 2025",
+    "ipoListingDate": "Tue, Jan 14, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹290.00",
+    "lotSize": "50 Shares",
+    "issueSize": "1,00,00,000 shares (aggregating up to ₹290.00 Cr)",
+    "freshIssue": "1,00,00,000 shares (aggregating up to ₹290.00 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE, NSE",
+    "ipoOpenDate": "Tue, Jan 7, 2025",
+    "ipoCloseDate": "Thu, Jan 9, 2025",
+    "initiationOfRefunds": "Mon, Jan 13, 2025",
+    "creditOfSharesToDemat": "Mon, Jan 13, 2025",
+    "shareHoldingPreIssue": "3,00,00,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "3,00,00,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "93.33%"
+      }
+    ],
+    "shareHoldingPostIssue": "4,00,00,000 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "4,00,00,000 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "70%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 9 2025",
+    "tentative_allotment": "Fri Jan 10 2025",
+    "initiation_of_refunds": "Mon Jan 13 2025",
+    "credit_of_shares_to_demat": "Mon Jan 13 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 50 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "50",
+        "amount": "14500"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "13",
+        "shares": "650",
+        "amount": "188500"
+      },
+      "shni_min": {
+        "application": "S-HNI (Min)",
+        "lots": "14",
+        "shares": "700",
+        "amount": "203000"
+      },
+      "shni_max": {
+        "application": "S-HNI (Max)",
+        "lots": "68",
+        "shares": "3400",
+        "amount": "986000"
+      },
+      "bhni_min": {
+        "application": "B-HNI (Min)",
+        "lots": "69",
+        "shares": "3450",
+        "amount": "1000500"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/quadrant-future-tek-ipo/1954/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The Promoters of the Company are Mohit Vohra Amit Dhawan Amrit Singh Randhawa Rupinder Singh Vishesh Abrol and Vivek Abrol Aikjot Singh and Rajbir Singh Randhawa.",
+    "holdings": {
+      "share_holding_pre_issue": "93.33%",
+      "share_holding_post_issue": "70%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Quadrant Future Tek Limited, incorporated in September 2015, develops next-generation Train Control and Signaling Systems for the Indian Railways' <strong>KAVACH</strong> project, enhancing safety and reliability for passengers. The company also has a speciality cable manufacturing facility with an Electron Beam Irradiation Centre.</p>\n<p>The company has a facility in Village Basma, Tehsil Banur, Distt Mohali, for manufacturing, testing, and developing speciality cables and hardware for the Train Control &amp; Signalling Division.</p>\n<p>The company is technology-driven, with products that meet ISO, IRIS, and TS standards and follow strict Quality Management Systems for speciality cables.</p>\n<p>The company manufactures, tests, and develops speciality cables at its Village Basma, Tehsil Banur facility, District Mohali, Punjab.</p>\n<p>As of October 31, 2024, the company had 295 employees at its manufacturing facility, Railway Signalling &amp; Embedded System Design centre and corporate function.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ul>\n<li>The Company is engaged in the innovation and technological development of Automatic Train Protection Systems.</li>\n<li>Entered an exclusive Memorandum of Understanding with RailTel to pursue <strong>KAVACH</strong> opportunities in Indian Railways and other countries' railways.</li>\n<li>In-house design and product development capabilities powering our Rail Signalling Products &amp; Solutions.</li>\n<li>Advanced cable manufacturing technology that meets strict standards for Railways, Naval Defence, Renewable Energy, and Electric Vehicle sectors.</li>\n<li>Advanced manufacturing facilities with a diverse range of power and control cables with a focus on innovation and cost competitiveness.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 172 402 0228",
+    "email": "cs_qftl@quadrantfuturetek.com",
+    "full_address": "Quadrant Future Tek Limited, Village Basma, Tehsil, Banur",
+    "website": "https://www.quadrantfuturetek.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "quadrant.ipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Sundae Capital Advisors",
+      "url": "/report/ipo-lead-manager-review/112/186/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/186/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      },
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 14 2025",
+    "bse_script_code": "544336",
+    "nse_symbol": "QUADFUTURE",
+    "isin": "INE0LRY01011",
+    "final_issue_price": "290 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse": "290.00",
+        "nse": "290.00"
+      },
+      "open": {
+        "bse": "374.00",
+        "nse": "370.00"
+      },
+      "low": {
+        "bse": "367.00",
+        "nse": "362.10"
+      },
+      "high": {
+        "bse": "448.75",
+        "nse": "444.00"
+      },
+      "last_trade": {
+        "bse": "448.75",
+        "nse": "444.00"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Quadrant Future Tek IPO?",
+      "answer": "<div itemprop=\"text\"><p>Quadrant Future Tek IPO<!-- --> is a <b>main-board<!-- --> <!-- -->IPO<!-- --> of <!-- -->10000000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->290.00<!-- --> Crores. The issue is priced at <span>₹290 per share</span>. The minimum order quantity is <!-- -->50<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 7, 2025</b>, and <b>closes on <!-- -->January 9, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE, NSE<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Quadrant Future Tek IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Quadrant Future Tek IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Quadrant Future Tek IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Quadrant Future Tek IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Quadrant Future Tek IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Quadrant Future Tek IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Quadrant Future Tek IPO opens on January 7, 2025 and closes on January 9, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Quadrant Future Tek IPO?",
+      "answer": "<div itemprop=\"text\"><p>Quadrant Future Tek IPO<!-- --> <b>lot size is <!-- -->50</b>, and the <b>minimum amount required is <span>₹14,500</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Quadrant Future Tek IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Quadrant Future Tek IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Quadrant Future Tek IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Quadrant Future Tek IPO<!-- --> will be done on <!-- -->Friday, January 10, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, January 13, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/quadrant-future-tek-ipo/1954/\" title=\"Quadrant Future Tek IPO Allotment Status\">Quadrant Future Tek IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Quadrant Future Tek IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Quadrant Future Tek IPO<!-- --> listing date is on <b>Tuesday, January 14, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "11",
+        "neutral": "0",
+        "avoid": "1"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "1"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/quadrant-future-tek-ipo/1954/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Quadrant Future Tek IPO DRHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jun-2024/quadrant-future-tek-limited_84099.html"
+    },
+    {
+      "text": "Quadrant Future Tek IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/quadrant-future-tek-limited-prospectus_90708.html"
+    },
+    {
+      "text": "Anchor Investors in Quadrant Future Tek IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/quadrantfuturetek_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Quadrant Future Tek IPO offers 10000000 shares. 3000000 (30%) to QIB 1500000 (15%) to NII 1000000 (10%) to RII and 4500000 (45%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "4500000 (45%)",
+        "maximum_allottees": "NA"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "3000000 (30%)",
+        "maximum_allottees": "NA"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "1500000 (15%)"
+      },
+      {
+        "investor_category": "bNII > 10L",
+        "shares_offered": "1000000 (10%)",
+        "maximum_allottees": "1428"
+      },
+      {
+        "investor_category": "sNII < 10L",
+        "shares_offered": "500000 (5%)",
+        "maximum_allottees": "714"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1000000 (10%)",
+        "maximum_allottees": "20000"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "10000000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Quadrant Future Tek IPO raises Rs 130.50 crore from anchor investors. Quadrant Future Tek IPO Anchor bid date is January 6 2025. Quadrant Future Tek IPO Anchor Investors list",
+    "list_link": {
+      "text": "Quadrant Future Tek IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/quadrantfuturetek_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 9 2025",
+      "shares_offered": "4500000",
+      "anchor_portion_size": "130.50"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Quadrant Future Tek Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "149.66",
+          "142.82",
+          "118.82",
+          "112.77"
+        ],
+        [
+          "Revenue",
+          "65.14",
+          "151.82",
+          "152.95",
+          "104.29"
+        ],
+        [
+          "Profit After Tax",
+          "-12.11",
+          "14.71",
+          "13.9",
+          "1.94"
+        ],
+        [
+          "Net Worth",
+          "34.18",
+          "44.11",
+          "29.42",
+          "15.61"
+        ],
+        [
+          "Reserves and Surplus",
+          "4.18",
+          "34.11",
+          "19.42",
+          "5.61"
+        ],
+        [
+          "Total Borrowing",
+          "98.01",
+          "81.61",
+          "74",
+          "80.68"
+        ]
+      ]
+    },
+    {
+      "heading": "Quadrant Future Tek IPO Details",
+      "sanitizedHeading": "quadrant_future_tek",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "33.41%"
+        ],
+        [
+          "ROCE",
+          "26.12%"
+        ],
+        [
+          "Debt/Equity",
+          "1.86"
+        ],
+        [
+          "RoNW",
+          "33.41%"
+        ],
+        [
+          "PAT Margin",
+          "9.68"
+        ],
+        [
+          "Price to Book Value",
+          "19.73"
+        ]
+      ]
+    },
+    {
+      "heading": "Quadrant Future Tek IPO Details",
+      "sanitizedHeading": "quadrant_future_tek",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "4.90",
+          "-6.05"
+        ],
+        [
+          "P/E (x)",
+          "59.13",
+          "-47.91"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:10:10.186Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/quadrant-future-tek-ipo/1954/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "139.77"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "268.03"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "256.46"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "195.96"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

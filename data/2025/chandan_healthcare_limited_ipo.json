@@ -1,0 +1,465 @@
+{
+  "pageTitle": "Chandan Healthcare IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Chandan Healthcare",
+  "logo": "https://www.chittorgarh.net/images/ipo/chandan-health-logo.jpeg",
+  "pageHeading": "Chandan Healthcare Limited IPO (Chandan Healthcare IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "February 10, 2025 to February 12, 2025",
+    "ipoListingDate": "Mon, Feb 17, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹159.00",
+    "lotSize": "800 Shares",
+    "issueSize": "67,52,000 shares (aggregating up to ₹107.36 Cr)",
+    "freshIssue": "44,52,064 shares (aggregating up to ₹70.79 Cr)",
+    "offerForSale": "22,99,936 shares of ₹10 (aggregating up to ₹36.57 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "3,39,200 shares",
+      "maker_name": "R.K.Stock Holding Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/330/"
+    },
+    "ipoOpenDate": "Mon, Feb 10, 2025",
+    "ipoCloseDate": "Wed, Feb 12, 2025",
+    "initiationOfRefunds": "Fri, Feb 14, 2025",
+    "creditOfSharesToDemat": "Fri, Feb 14, 2025",
+    "shareHoldingPreIssue": "2,00,00,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "2,00,00,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "69.96%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,44,52,064 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,44,52,064 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "49.20%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on February 12 2025",
+    "tentative_allotment": "Thu Feb 13 2025",
+    "initiation_of_refunds": "Fri Feb 14 2025",
+    "credit_of_shares_to_demat": "Fri Feb 14 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 800 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "800",
+        "amount": "127200"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "800",
+        "amount": "127200"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "1600",
+        "amount": "254400"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/chandan-healthcare-ipo/1982/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The Company's Promoters are Amaranita Holdings (India) Private Limited Amar Singh Asmita Singh Alok Singh Shaleen Solanki Vijay Singh and Vinay Lamba.",
+    "holdings": {
+      "share_holding_pre_issue": "69.96%",
+      "share_holding_post_issue": "49.20%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in September 2003, Chandan Healthcare Limited runs diagnostic centres in North India with pathology and radiology testing services.</p>\n<p>As of December 31, 2024, the company operates one flagship laboratory, seven central laboratories, and twenty-six satellite centres, with over three hundred collection centres in more than 23 cities across Uttar Pradesh and over 19 in Uttarakhand.</p>\n<p>As of December 31, 2024, the company offers 1,496 tests across different specialities. The test menu includes</p>\n<ol>\n<li>481 routine pathology tests in basic biochemistry and haematology, plus 1,015 specialised tests like immunohistopathology and molecular pathology, and</li>\n<li>545 radiology tests, including x-rays, ultrasonography, CT, MRI, and specialised CT scans.</li>\n</ol>\n<p>The radiology facilities have eleven CT scanners and four MRI machines.</p>\n<p>As of December 31, 2024, the company employed 15 radiologists, 23 pathologists, and over 161 other qualified professionals.</p>\n<p><strong>Products and services:</strong></p>\n<p>The company primarily provides diagnostic services and ad hoc sales of consumables like X-ray films and reagents. Its subsidiary, Chandan Pharmacy Limited, operates medical stores offering a range of pharmaceutical products.</p>\n<ul>\n<li>Routine Pathology Tests</li>\n<li>Specialized Pathology Tests</li>\n<li>Radiology Tests</li>\n<li>Preventive and Wellness Services</li>\n<li>Home Collection Service</li>\n</ul>\n<p><strong>Competitive Strength:</strong></p>\n<ol>\n<li>Strong geographic presence in Uttarakhand, including 39 tier-two cities and towns.</li>\n<li>Integrated diagnostics provider offering pathology, radiology testing, and medical consultations.</li>\n<li>Track record of profitability and consistent financial performance.</li>\n<li>Dedicated management team with significant industry experience.</li>\n</ol>"
+  },
+  "contactDetails": {
+    "phone": "+91 8429024430",
+    "email": "secretarial@chandan.co.in",
+    "full_address": "Chandan Healthcare Limited, Biotech Park Sector G, Jankipuram, Kursi Road",
+    "website": "https://www.chandandiagnostic.com/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "chl.ipo@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "Unistone Capital Pvt Ltd",
+      "url": "/report/ipo-lead-manager-review/112/176/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/176/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "February 17 2025",
+    "nse_symbol": "CHANDAN",
+    "isin": "INE0B2N01016",
+    "final_issue_price": "159 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "159.00"
+      },
+      "open": {
+        "nse_sme": "165.10"
+      },
+      "low": {
+        "nse_sme": "165.10"
+      },
+      "high": {
+        "nse_sme": "173.35"
+      },
+      "last_trade": {
+        "nse_sme": "173.35"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Chandan Healthcare IPO?",
+      "answer": "<div itemprop=\"text\"><p>Chandan Healthcare IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->6752000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->107.36<!-- --> Crores. The issue is priced at <span>₹159 per share</span>. The minimum order quantity is <!-- -->800<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->February 10, 2025</b>, and <b>closes on <!-- -->February 12, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Chandan Healthcare IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Chandan Healthcare IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Chandan Healthcare IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Chandan Healthcare IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Chandan Healthcare IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Chandan Healthcare IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Chandan Healthcare IPO opens on February 10, 2025 and closes on February 12, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Chandan Healthcare IPO?",
+      "answer": "<div itemprop=\"text\"><p>Chandan Healthcare IPO<!-- --> <b>lot size is <!-- -->800</b>, and the <b>minimum amount required is <span>₹1,27,200</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Chandan Healthcare IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Chandan Healthcare IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Chandan Healthcare IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Chandan Healthcare IPO<!-- --> will be done on <!-- -->Thursday, February 13, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Friday, February 14, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/chandan-healthcare-ipo/1982/\" title=\"Chandan Healthcare IPO Allotment Status\">Chandan Healthcare IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Chandan Healthcare IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Chandan Healthcare IPO<!-- --> listing date is on <b>Monday, February 17, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/chandan-healthcare-ipo/1982/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Chandan Healthcare IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_29092024183445_DRHP.pdf"
+    },
+    {
+      "text": "Chandan Healthcare IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/feb-2025/chandan-healthcare-limited_92166.html"
+    },
+    {
+      "text": "Anchor Investors in Chandan Healthcare IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/chandan_healthcareanchoralloctionreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Chandan Healthcare IPO offers 6752000 shares. 1233600 (18.27%) to QIB 925600 (13.71%) to NII 2159200 (31.98%) to RII and 1848800 (27.38%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1848800 (27.38%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "339200 (5.02%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "1233600 (18.27%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "925600 (13.71%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2159200 (31.98%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "6752000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Chandan Healthcare IPO raises Rs 29.40 crore from anchor investors. Chandan Healthcare IPO Anchor bid date is February 7 2025. Chandan Healthcare IPO Anchor Investors list",
+    "list_link": {
+      "text": "Chandan Healthcare IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/chandan_healthcareanchoralloctionreport.pdf"
+    },
+    "details": {
+      "ipo_date": "May 13 2025",
+      "shares_offered": "1848800",
+      "anchor_portion_size": "29.40"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Chandan Healthcare IPO Details",
+      "sanitizedHeading": "chandan_healthcare",
+      "headers": [
+        "Application Category",
+        "Maximum Bidding Limits",
+        "Bidding at Cut-off Price Allowed"
+      ],
+      "rows": [
+        [
+          "Only RII",
+          "Up to Rs 2 Lakhs",
+          "Yes"
+        ],
+        [
+          "Only NII",
+          "Above Rs 2 Lakhs",
+          "No"
+        ],
+        [
+          "Only employee",
+          "Up to Rs 5 Lakhs",
+          "Yes"
+        ],
+        [
+          "Employee + RII/NII",
+          "Employee limit: Up to Rs 5 Lakhs (In certain cases employees are given discount if bidding amount is upto Rs. 2 lakhs) If applying as RII: Upto Rs. 2 lakhs If applying as NII: Above Rs. 2 lakhs",
+          "Yes for Employee and RII/NII"
+        ]
+      ]
+    },
+    {
+      "heading": "Chandan Healthcare Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Dec 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "170.06",
+          "128.86",
+          "97.83",
+          "81.23"
+        ],
+        [
+          "Revenue",
+          "167.99",
+          "177.96",
+          "137.03",
+          "119.92"
+        ],
+        [
+          "Profit After Tax",
+          "17.42",
+          "16.36",
+          "3.59",
+          "-1.09"
+        ],
+        [
+          "Net Worth",
+          null,
+          "41.09",
+          "27.3",
+          "23.93"
+        ],
+        [
+          "Reserves and Surplus",
+          "34.31",
+          "21.16",
+          "7.37",
+          "4"
+        ],
+        [
+          "Total Borrowing",
+          "51.92",
+          "42.01",
+          "21.36",
+          "16.58"
+        ]
+      ]
+    },
+    {
+      "heading": "Chandan Healthcare IPO Details",
+      "sanitizedHeading": "chandan_healthcare",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "47.50%"
+        ],
+        [
+          "ROCE",
+          "35.20%"
+        ],
+        [
+          "Debt/Equity",
+          "1.02"
+        ],
+        [
+          "RoNW",
+          "39.54%"
+        ],
+        [
+          "PAT Margin",
+          "9.26"
+        ],
+        [
+          "Price to Book Value",
+          "7.73"
+        ]
+      ]
+    },
+    {
+      "heading": "Chandan Healthcare IPO Details",
+      "sanitizedHeading": "chandan_healthcare",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "8.18",
+          "9.50"
+        ],
+        [
+          "P/E (x)",
+          "19.44",
+          "16.74"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:54:05.980Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/chandan-healthcare-ipo/1982/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "7.58"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "18.85"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "2.44"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "7.04"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

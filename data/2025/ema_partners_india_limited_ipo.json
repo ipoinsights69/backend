@@ -1,0 +1,417 @@
+{
+  "pageTitle": "EMA Partners IPO Date, Price, GMP, Review, Details",
+  "ipoName": "EMA Partners India",
+  "logo": "https://www.chittorgarh.net/images/ipo/ema-partners-ipo-logo.jpg",
+  "pageHeading": "EMA Partners India Limited IPO (EMA Partners IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 17, 2025 to January 21, 2025",
+    "ipoListingDate": "Fri, Jan 24, 2025",
+    "faceValue": "₹5 per share",
+    "issuePrice": "₹124.00",
+    "lotSize": "1,000 Shares",
+    "issueSize": "61,30,000 shares (aggregating up to ₹76.01 Cr)",
+    "freshIssue": "53,34,000 shares (aggregating up to ₹66.14 Cr)",
+    "offerForSale": "7,96,000 shares of ₹5 (aggregating up to ₹9.87 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "3,07,000 shares",
+      "maker_name": "Alacrity Securities Ltd.",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/205/"
+    },
+    "ipoOpenDate": "Fri, Jan 17, 2025",
+    "ipoCloseDate": "Tue, Jan 21, 2025",
+    "initiationOfRefunds": "Thu, Jan 23, 2025",
+    "creditOfSharesToDemat": "Thu, Jan 23, 2025",
+    "shareHoldingPreIssue": "1,79,12,426 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,79,12,426 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "86.14%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,32,46,426 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,32,46,426 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 21 2025",
+    "tentative_allotment": "Wed Jan 22 2025",
+    "initiation_of_refunds": "Thu Jan 23 2025",
+    "credit_of_shares_to_demat": "Thu Jan 23 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "124000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "124000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "248000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/ema-partners-ipo/1963/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mr. Krishnan Sudarshan and Mr. Subramanian Krishnaprakash are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "86.14%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2003, EMA Partners India Limited is an executive search firm offering specialized hiring solutions.</p>\n<p>The company provides various leadership hiring solutions to clients across various sectors, successfully recruiting business and functional leaders globally.</p>\n<p>The company offers two services:</p>\n<ul>\n<li><strong>Executive Search</strong></li>\n<li><strong>Leadership Advisory</strong></li>\n</ul>\n<p>The company Headquartered in Mumbai, the company expanded globally with subsidiaries in Singapore (2010), Dubai (EMA Partners, 2017), and Dubai (James Douglas, 2022) to access global talent.</p>\n<p>EMA Partners India oversees the company and its subsidiaries in India, Singapore, and Dubai, specializing in C-suite and board-level hiring. James Douglas focuses on mid-to-senior-level recruitment across industries. MyRCloud is an AI-driven platform for efficient entry and middle management hiring, streamlining recruitment processes.</p>\n<p><strong>Competitive Strengths</strong></p>\n<ul>\n<li>Experienced leadership and Management Team</li>\n<li>Long-standing and deep relationships with clients leading to recurring business</li>\n<li>Extensive functional knowledge and expertise across industry sectors.</li>\n<li>Robust technology tools, SaaS platform, and process in place to create operational efficiency.</li>\n</ul>\n<p>As of November 30, 2024, the company had 117 full-time employees.</p>"
+  },
+  "contactDetails": {
+    "phone": "+91 22 3500 8805",
+    "email": "mumbai@emapartners.in",
+    "full_address": "EMA Partners India Limited, 204 The Summit- Business Bay, Western Express Highway, Vile Parle (East)",
+    "website": "http://www.emapartners.in/"
+  },
+  "registrarDetails": {
+    "name": "Bigshare Services Pvt Ltd",
+    "phone": "+91-22-6263 8200",
+    "email": "ipo@bigshareonline.com",
+    "website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Indorient Financial Services Ltd",
+      "url": "/report/ipo-lead-manager-review/112/175/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/175/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "January 24 2025",
+    "nse_symbol": "EMAIN",
+    "isin": "INE0ZOL01023",
+    "final_issue_price": "124 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "124.00"
+      },
+      "open": {
+        "nse_sme": "156.50"
+      },
+      "low": {
+        "nse_sme": "148.70"
+      },
+      "high": {
+        "nse_sme": "158.80"
+      },
+      "last_trade": {
+        "nse_sme": "148.70"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the EMA Partners IPO?",
+      "answer": "<div itemprop=\"text\"><p>EMA Partners IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->6130000<!-- --> equity shares</b> of the face value of ₹<!-- -->5<!-- --> aggregating up to ₹<!-- -->76.01<!-- --> Crores. The issue is priced at <span>₹124 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 17, 2025</b>, and <b>closes on <!-- -->January 21, 2025</b>.</p><p>Bigshare Services Pvt Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in EMA Partners IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->EMA Partners IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->EMA Partners IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->EMA Partners IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->EMA Partners IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When EMA Partners IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The EMA Partners IPO opens on January 17, 2025 and closes on January 21, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of EMA Partners IPO?",
+      "answer": "<div itemprop=\"text\"><p>EMA Partners IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,24,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for EMA Partners IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->EMA Partners IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is EMA Partners IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->EMA Partners IPO<!-- --> will be done on <!-- -->Wednesday, January 22, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, January 23, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/ema-partners-ipo/1963/\" title=\"EMA Partners IPO Allotment Status\">EMA Partners IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is EMA Partners IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->EMA Partners IPO<!-- --> listing date is on <b>Friday, January 24, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/ema-partners-ipo/1963/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "EMA Partners IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4692_02122024191304.zip"
+    },
+    {
+      "text": "EMA Partners IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/ema-partners-india-limited_90818.html"
+    },
+    {
+      "text": "Anchor Investors in EMA Partners IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/emapartners_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "EMA Partners IPO offers 6130000 shares. 1164000 (18.99%) to QIB 874000 (14.26%) to NII 2039000 (33.26%) to RII and 1746000 (28.48%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1746000 (28.48%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "307000 (5.01%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "1164000 (18.99%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "874000 (14.26%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2039000 (33.26%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "6130000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "EMA Partners IPO raises Rs 21.65 crore from anchor investors. EMA Partners IPO Anchor bid date is January 16 2025. EMA Partners IPO Anchor Investors list",
+    "list_link": {
+      "text": "EMA Partners IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/emapartners_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 22 2025",
+      "shares_offered": "1746000",
+      "anchor_portion_size": "21.65"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "EMA Partners India Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Jul 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "7504.71",
+          "7659.05",
+          "5326.29",
+          "5850.27"
+        ],
+        [
+          "Revenue",
+          "2632.9",
+          "6883.45",
+          "5106.16",
+          "5786.52"
+        ],
+        [
+          "Profit After Tax",
+          "437.22",
+          "1427.3",
+          "307.07",
+          "1127.06"
+        ],
+        [
+          "Net Worth",
+          "5782.72",
+          "5373.95",
+          "3945.52",
+          "3888.45"
+        ],
+        [
+          "Reserves and Surplus",
+          "5806.16",
+          "5397.32",
+          "3992.52",
+          "3939.14"
+        ],
+        [
+          "Total Borrowing",
+          "723.5",
+          "758.02",
+          "55.97",
+          "389.55"
+        ]
+      ]
+    },
+    {
+      "heading": "EMA Partners IPO Details",
+      "sanitizedHeading": "ema_partners",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "RoNW",
+          "30.63%"
+        ],
+        [
+          "PAT Margin",
+          "20.74"
+        ],
+        [
+          "Price to Book Value",
+          "3.92"
+        ]
+      ]
+    },
+    {
+      "heading": "EMA Partners IPO Details",
+      "sanitizedHeading": "ema_partners",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "7.97",
+          "5.64"
+        ],
+        [
+          "P/E (x)",
+          "15.56",
+          "21.98"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:03:08.844Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/ema-partners-ipo/1963/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "147.69"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "444.08"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "167.35"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "221.06"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

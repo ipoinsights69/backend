@@ -1,0 +1,421 @@
+{
+  "pageTitle": "CapitalNumbers Infotech IPO Date, Price, GMP, Details",
+  "ipoName": "CapitalNumbers Infotech",
+  "logo": "https://www.chittorgarh.net/images/ipo/capitalnumbers-infotech-ipo-logo.jpg",
+  "pageHeading": "CapitalNumbers Infotech Limited IPO (CapitalNumbers Infotech IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 20, 2025 to January 22, 2025",
+    "ipoListingDate": "Mon, Jan 27, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹263.00",
+    "lotSize": "400 Shares",
+    "issueSize": "64,40,000 shares (aggregating up to ₹169.37 Cr)",
+    "freshIssue": "32,20,000 shares (aggregating up to ₹84.69 Cr)",
+    "offerForSale": "32,20,000 shares of ₹10 (aggregating up to ₹84.69 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "3,30,000 shares",
+      "maker_name": "Giriraj Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/245/"
+    },
+    "ipoOpenDate": "Mon, Jan 20, 2025",
+    "ipoCloseDate": "Wed, Jan 22, 2025",
+    "initiationOfRefunds": "Fri, Jan 24, 2025",
+    "creditOfSharesToDemat": "Fri, Jan 24, 2025",
+    "shareHoldingPreIssue": "2,12,06,990 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "2,12,06,990 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "99.99%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,44,26,990 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,44,26,990 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 22 2025",
+    "tentative_allotment": "Thu Jan 23 2025",
+    "initiation_of_refunds": "Fri Jan 24 2025",
+    "credit_of_shares_to_demat": "Fri Jan 24 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 400 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "400",
+        "amount": "105200"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "400",
+        "amount": "105200"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "800",
+        "amount": "210400"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/capitalnumbers-infotech-ipo/1966/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mukul Gupta Vipul Gupta and Herprit Gupta are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "99.99%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2012, CapitalNumbers Infotech Limited provides digital consulting and IT engineering services, offering complete software development solutions to businesses and startups globally.</p>\n<p>The company offers a range of services in technological advancement, including Digital Engineering, Data Analytics, AI/ML, Cloud Engineering, UI/UX Design, and advanced technologies like Blockchain and AR/VR.</p>\n<p><strong>Business Model:</strong></p>\n<ul>\n<li><strong>Project-Based Development:</strong> The company specializes in delivering tailored solutions to meet clients' defined goals through a project-based development approach.</li>\n<li><strong>Time &amp; Material (T&amp; M):</strong> The company follows a structured process: discovery, staffing, engineering, and release, ensuring tailored, scalable, and seamless solutions.</li>\n</ul>\n<p>The Company has a diverse customer base, serving over 1,000 clients worldwide. As of September 30, 2024, the company had over 250 active clients.</p>\n<p><strong>Services offers:</strong></p>\n<ul>\n<li><strong>Custom Software Development:</strong> The company offers bespoke software solutions, enterprise systems, and automation tools to optimize business operations, efficiency, and scalability.</li>\n<li><strong>Web Development:</strong> The company creates dynamic websites, customized e-commerce platforms, and user-friendly CMS solutions to enhance online experiences and management.</li>\n<li><strong>Mobile App Development:</strong> The company offers iOS/Android app development, cross-platform solutions, and ongoing maintenance to ensure optimal performance and user engagement.</li>\n<li><strong>Quality Assurance (QA):</strong> The company offers automated and manual testing to ensure reliable, high-quality software, identifying and addressing issues efficiently.</li>\n</ul>\n<p>As of September 30, 2024, the company has 447 employees.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ul>\n<li>Customer Satisfaction and revenues from Long-standing Customer relationships</li>\n<li>Scalable business model with multiple drivers of steady growth</li>\n<li>Experienced Promoter and Management Expertise</li>\n<li>Diversified business across several industrial verticals</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 84200 09140",
+    "email": "cs@capitalnumbers.com",
+    "full_address": "CapitalNumbers Infotech Limited, Mani Casadona IT Building 8th Floor 8E4, East Tower Plot 2 F/4 Action Area I 2F, Newtown",
+    "website": "https://www.capitalnumbers.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "capitalnumbers.smeipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "GYR Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/182/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/182/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 27 2025",
+    "bse_script_code": "544343",
+    "isin": "INE0WXM01011",
+    "final_issue_price": "263 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "263.00"
+      },
+      "open": {
+        "bse_sme": "274.00"
+      },
+      "low": {
+        "bse_sme": "260.30"
+      },
+      "high": {
+        "bse_sme": "274.00"
+      },
+      "last_trade": {
+        "bse_sme": "261.35"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the CapitalNumbers Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>CapitalNumbers Infotech IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->6440000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->169.37<!-- --> Crores. The issue is priced at <span>₹263 per share</span>. The minimum order quantity is <!-- -->400<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 20, 2025</b>, and <b>closes on <!-- -->January 22, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in CapitalNumbers Infotech IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->CapitalNumbers Infotech IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->CapitalNumbers Infotech IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->CapitalNumbers Infotech IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->CapitalNumbers Infotech IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When CapitalNumbers Infotech IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The CapitalNumbers Infotech IPO opens on January 20, 2025 and closes on January 22, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of CapitalNumbers Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>CapitalNumbers Infotech IPO<!-- --> <b>lot size is <!-- -->400</b>, and the <b>minimum amount required is <span>₹1,05,200</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for CapitalNumbers Infotech IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->CapitalNumbers Infotech IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is CapitalNumbers Infotech IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->CapitalNumbers Infotech IPO<!-- --> will be done on <!-- -->Thursday, January 23, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Friday, January 24, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/capitalnumbers-infotech-ipo/1966/\" title=\"CapitalNumbers Infotech IPO Allotment Status\">CapitalNumbers Infotech IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is CapitalNumbers Infotech IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->CapitalNumbers Infotech IPO<!-- --> listing date is on <b>Monday, January 27, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "5",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/capitalnumbers-infotech-ipo/1966/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "CapitalNumbers Infotech IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/336721/CN_DRHP_Final_27_06_2024_BSE_SME_20240708151314.pdf"
+    },
+    {
+      "text": "CapitalNumbers Infotech IPO RHP",
+      "url": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_CAPITAL%20NUMBERS_160120251043.zip"
+    },
+    {
+      "text": "Anchor Investors in CapitalNumbers Infotech IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/capitalnumbers-infotech-anchor-list.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "CapitalNumbers Infotech IPO offers 6440000 shares. 1222000 (18.98%) to QIB 916800 (14.24%) to NII 2138800 (33.21%) to RII and 1832400 (28.45%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1832400 (28.45%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "330000 (5.12%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "1222000 (18.98%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "916800 (14.24%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2138800 (33.21%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "6440000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "CapitalNumbers Infotech IPO raises Rs 48.19 crore from anchor investors. CapitalNumbers Infotech IPO Anchor bid date is January 17 2025. CapitalNumbers Infotech IPO Anchor Investors list",
+    "list_link": {
+      "text": "CapitalNumbers Infotech IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/capitalnumbers-infotech-anchor-list.pdf"
+    },
+    "details": {
+      "ipo_date": "April 23 2025",
+      "shares_offered": "1832400",
+      "anchor_portion_size": "48.19"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "CapitalNumbers Infotech Private Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "8995.96",
+          "7290.57",
+          "6895.91",
+          "4872.2"
+        ],
+        [
+          "Revenue",
+          "5164.14",
+          "10038.8",
+          "9298.1",
+          "6963.23"
+        ],
+        [
+          "Profit After Tax",
+          "1367.04",
+          "2598.88",
+          "1735.28",
+          "1583.82"
+        ],
+        [
+          "Net Worth",
+          "8114",
+          "6744.95",
+          "5996.12",
+          "4251.23"
+        ],
+        [
+          "Reserves and Surplus",
+          "5993.3",
+          "4624.25",
+          "5985.28",
+          "4240.39"
+        ],
+        [
+          "Total Borrowing",
+          null,
+          null,
+          "107.13",
+          "116.18"
+        ]
+      ]
+    },
+    {
+      "heading": "CapitalNumbers Infotech IPO Details",
+      "sanitizedHeading": "capitalnumbers_infotech",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROCE",
+          "51.90%"
+        ],
+        [
+          "RoNW",
+          "38.62%"
+        ],
+        [
+          "PAT Margin",
+          "26.47"
+        ],
+        [
+          "Price to Book Value",
+          "8.29"
+        ]
+      ]
+    },
+    {
+      "heading": "CapitalNumbers Infotech IPO Details",
+      "sanitizedHeading": "capitalnumbers_infotech",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "12.25",
+          "11.19"
+        ],
+        [
+          "P/E (x)",
+          "21.46",
+          "23.5"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:02:37.948Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/capitalnumbers-infotech-ipo/1966/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "122.19"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "297.32"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "71.99"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "134.62"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

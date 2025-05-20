@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Rapid Fleet IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Rapid Fleet Management Services",
+  "logo": "https://www.chittorgarh.net/images/ipo/rapid-fleet-ipo-logo.png",
+  "pageHeading": "Rapid Fleet Management Services Limited IPO (Rapid Fleet IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "March 21, 2025 to March 25, 2025",
+    "ipoListingDate": "Fri, Mar 28, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹192.00",
+    "lotSize": "600 Shares",
+    "issueSize": "22,84,800 shares (aggregating up to ₹43.87 Cr)",
+    "freshIssue": "22,84,800 shares (aggregating up to ₹43.87 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "4,21,800 shares",
+      "maker_name": "MLB Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/417/"
+    },
+    "ipoOpenDate": "Fri, Mar 21, 2025",
+    "ipoCloseDate": "Tue, Mar 25, 2025",
+    "initiationOfRefunds": "Thu, Mar 27, 2025",
+    "creditOfSharesToDemat": "Thu, Mar 27, 2025",
+    "shareHoldingPreIssue": "51,50,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "51,50,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "97.50%"
+      }
+    ],
+    "shareHoldingPostIssue": "74,34,800 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "74,34,800 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "67.54%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on March 25 2025",
+    "tentative_allotment": "Wed Mar 26 2025",
+    "initiation_of_refunds": "Thu Mar 27 2025",
+    "credit_of_shares_to_demat": "Thu Mar 27 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 600 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "600",
+        "amount": "115200"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "600",
+        "amount": "115200"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "1200",
+        "amount": "230400"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/rapid-fleet-ipo/2188/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Mr. Anand Poddar and Ms. Shruti Poddar are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "97.50%",
+      "share_holding_post_issue": "67.54%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2006, Rapid Fleet Management Services Limited is specializes in providing comprehensive logistics and road transportation services tailored to both B2B and B2C clients.</p>\n<p>The company has expanded its operations significantly, currently managing a fleet of over 200 vehicles. They serve a diverse range of industries, including FMCG, automobile, and electronics sectors.</p>\n\n<div>\n<p>The company developed its own mobile app to streamline business processes, ensuring 24/7 operations. It focuses on client compliance through e-bidding, portal RFQs, e-POD, invoicing, and customer TMS management.</p>\n<p><strong>Services:</strong></p>\n<ul>\n<li><strong>Full or Partial Load: </strong>The company offers Full and Partial Load services, ensuring efficient, cost-effective transport of goods and raw materials. It supports seamless logistics, timely deliveries, and flexible solutions for diverse cargo needs.</li>\n<li><strong>Exim Services:</strong> The company provides comprehensive Exim services, handling efficient customs clearance, optimized logistics, and cross-border transactions. It specializes in inland transport, connecting ports, production facilities, and ensuring timely delivery of goods.</li>\n<li><strong>Renewable Transportation Services:</strong> The company has expanded into the renewable energy logistics sector, specializing in transporting Wind Turbine Generators (WTG). It invested in extendable telescopic trailers to efficiently move large wind turbine blades.</li>\n</ul>\n<p>As of August 14, 2024, the company has 68 employees on payroll.</p>\n<p><strong>Competitive Strengths:</strong></p>\n<ul>\n<li>Implementation of an integrated TMS - Digitify Book</li>\n<li>In house Vehicle Fleet and its Safety for smooth operations and delivery</li>\n<li>PAN India Transport</li>\n<li>Pride in catering to an esteemed clientele</li>\n<li>Dynamic Approach to Market Fluctuations</li>\n<li>Not compromising Quality Services</li>\n</ul></div>"
+  },
+  "contactDetails": {
+    "phone": "044-25210132",
+    "email": "info@rapidtransportsystems.in",
+    "full_address": "Rapid Fleet Management Services Limited, New No. 9, Old No. 5, Coral Merchant Street",
+    "website": "http://www.rapidfleet.in/"
+  },
+  "registrarDetails": {
+    "name": "Bigshare Services Pvt Ltd",
+    "phone": "+91-22-6263 8200",
+    "email": "ipo@bigshareonline.com",
+    "website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Gretex Corporate Services Limited",
+      "url": "/report/ipo-lead-manager-review/112/123/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/123/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "March 28 2025",
+    "nse_symbol": "RAPIDFLEET",
+    "isin": "INE0QX901013",
+    "final_issue_price": "192 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "192.00"
+      },
+      "open": {
+        "nse_sme": "195.00"
+      },
+      "low": {
+        "nse_sme": "195.00"
+      },
+      "high": {
+        "nse_sme": "203.75"
+      },
+      "last_trade": {
+        "nse_sme": "200.90"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Rapid Fleet IPO?",
+      "answer": "<div itemprop=\"text\"><p>Rapid Fleet IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->2284800<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->43.87<!-- --> Crores. The issue is priced at <span>₹192 per share</span>. The minimum order quantity is <!-- -->600<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->March 21, 2025</b>, and <b>closes on <!-- -->March 25, 2025</b>.</p><p>Bigshare Services Pvt Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Rapid Fleet IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Rapid Fleet IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Rapid Fleet IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Rapid Fleet IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Rapid Fleet IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Rapid Fleet IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Rapid Fleet IPO opens on March 21, 2025 and closes on March 25, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Rapid Fleet IPO?",
+      "answer": "<div itemprop=\"text\"><p>Rapid Fleet IPO<!-- --> <b>lot size is <!-- -->600</b>, and the <b>minimum amount required is <span>₹1,15,200</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Rapid Fleet IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Rapid Fleet IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Rapid Fleet IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Rapid Fleet IPO<!-- --> will be done on <!-- -->Wednesday, March 26, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, March 27, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/rapid-fleet-ipo/2188/\" title=\"Rapid Fleet IPO Allotment Status\">Rapid Fleet IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Rapid Fleet IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Rapid Fleet IPO<!-- --> listing date is on <b>Friday, March 28, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "1"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/rapid-fleet-ipo/2188/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Rapid Fleet IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4464_20012025163252.zip"
+    },
+    {
+      "text": "Rapid Fleet IPO RHP",
+      "url": "https://archives.nseindia.com/content/ipo/RHP_RAPIDFLEET.zip"
+    },
+    {
+      "text": "Anchor Investors in Rapid Fleet IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/rapid-fleet-anchor-investor.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Rapid Fleet IPO offers total 2284800 shares. Out of which 372600 (16.31%) allocated to QIB 279600 (12.24%) allocated to NII 652200 (28.55%) allocated to RII and 558600 (24.45%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "558600 (24.45%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "421800 (18.46%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "372600 (16.31%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "279600 (12.24%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "652200 (28.55%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "2284800 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Rapid Fleet IPO raises Rs 10.73 crore from anchor investors. Rapid Fleet IPO Anchor bid date is March 20 2025. Rapid Fleet IPO Anchor Investors list",
+    "list_link": {
+      "text": "Rapid Fleet IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/rapid-fleet-anchor-investor.pdf"
+    },
+    "details": {
+      "ipo_date": "June 24 2025",
+      "shares_offered": "558600",
+      "anchor_portion_size": "10.73"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Rapid Fleet Management Services Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "101.3",
+          "70.66",
+          "71.81",
+          "75.37"
+        ],
+        [
+          "Revenue",
+          "87.39",
+          "116.32",
+          "106.03",
+          "114.02"
+        ],
+        [
+          "Profit After Tax",
+          "7.01",
+          "8.07",
+          "4.71",
+          "3.4"
+        ],
+        [
+          "Net Worth",
+          "28.89",
+          "20.15",
+          "12.08",
+          "7.41"
+        ],
+        [
+          "Reserves and Surplus",
+          "23.74",
+          "20.05",
+          "11.98",
+          "7.31"
+        ],
+        [
+          "Total Borrowing",
+          "34.07",
+          "14.93",
+          "15.79",
+          "27.43"
+        ]
+      ]
+    },
+    {
+      "heading": "Rapid Fleet IPO Details",
+      "sanitizedHeading": "rapid_fleet",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "50.09%"
+        ],
+        [
+          "ROCE",
+          "43.11%"
+        ],
+        [
+          "Debt/Equity",
+          "0.74"
+        ],
+        [
+          "RoNW",
+          "40.06%"
+        ],
+        [
+          "PAT Margin",
+          "6.98"
+        ],
+        [
+          "Price to Book Value",
+          "4.76"
+        ]
+      ]
+    },
+    {
+      "heading": "Rapid Fleet IPO Details",
+      "sanitizedHeading": "rapid_fleet",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "15.67",
+          "10.86"
+        ],
+        [
+          "P/E (x)",
+          "12.25",
+          "17.68"
+        ]
+      ]
+    },
+    {
+      "heading": "Rapid Fleet IPO Details",
+      "sanitizedHeading": "rapid_fleet",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Purchase of Vehicles (Goods carriages)",
+          "130"
+        ],
+        [
+          "2",
+          "Working Capital Requirements",
+          "191.2"
+        ],
+        [
+          "3",
+          "General Corporate Purposes",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:34:51.872Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/rapid-fleet-ipo/2188/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "1.07"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "4.38"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "0.81"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "1.65"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

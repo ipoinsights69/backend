@@ -1,0 +1,409 @@
+{
+  "pageTitle": "HP Telecom India IPO Date, Price, GMP, Review, Details",
+  "ipoName": "HP Telecom India",
+  "logo": "https://www.chittorgarh.net/images/ipo/hpti_logo.png",
+  "pageHeading": "HP Telecom India Limited IPO (HP Telecom India IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "February 20, 2025 to February 24, 2025",
+    "ipoListingDate": "Fri, Feb 28, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹108.00",
+    "lotSize": "1,200 Shares",
+    "issueSize": "31,69,200 shares (aggregating up to ₹34.23 Cr)",
+    "freshIssue": "31,69,200 shares (aggregating up to ₹34.23 Cr)",
+    "issueType": "Fixed Price IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "1,59,600 shares",
+      "maker_name": "Aftertrade Broking Pvt Ltd",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/335/"
+    },
+    "ipoOpenDate": "Thu, Feb 20, 2025",
+    "ipoCloseDate": "Mon, Feb 24, 2025",
+    "initiationOfRefunds": "Thu, Feb 27, 2025",
+    "creditOfSharesToDemat": "Thu, Feb 27, 2025",
+    "shareHoldingPreIssue": "87,45,510 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "87,45,510 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "99.99%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,19,14,710 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,19,14,710 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "73.40%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on February 24 2025",
+    "tentative_allotment": "Tue Feb 25 2025",
+    "initiation_of_refunds": "Thu Feb 27 2025",
+    "credit_of_shares_to_demat": "Thu Feb 27 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1200 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "129600"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "129600"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2400",
+        "amount": "259200"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/hp-telecom-india-ipo/1994/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the company are Vijay Lalsingh Yadav Seemabahen Vijay Yadav and Bharatlal Lalsingh Singh.",
+    "holdings": {
+      "share_holding_pre_issue": "99.99%",
+      "share_holding_post_issue": "73.40%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Founded in March 2011, HP Telecom India Limited initially concentrated on distributing mobile phones and accessories. The company secured exclusive distribution rights for Sony LED TVs, Mobiles, and other brands in Gujarat during the fiscal year 2014-15. It also expanded its product portfolio to include LCD/LED home theatres, air conditioners, and other appliances.</p>\n<p>Currently, HP Telecom is the exclusive distributor of Apple products in Madhya Pradesh, Chhattisgarh, select cities in Uttar Pradesh, and major urban centres in Gujarat. The company offer a range of Apple devices, including the iPhone, iPad, Mac, and Apple Watch, catering to tech-savvy consumers in these regions</p>\n<p>As of September 30, 2024, the company had 7 permanent employees and 84 employees on a contractual basis.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ol>\n<li>Exclusive Distribution Rights</li>\n<li>Strong Brand Reputation</li>\n<li>Experienced and Visionary Leadership</li>\n<li>Robust network and relationships with suppliers</li>\n<li>Financial Stability and Resources.</li>\n</ol>"
+  },
+  "contactDetails": {
+    "phone": "+91 9825309977",
+    "email": "compliancehptl@gmail.com",
+    "full_address": "HP Telecom India Limited, Plot No – 97 01st Floor Om Square, Near Ishwar Farm BRTS, Canal Road Bhatar Althan",
+    "website": "https://www.hvciipl.com/"
+  },
+  "registrarDetails": {
+    "name": "Bigshare Services Pvt Ltd",
+    "phone": "+91-22-6263 8200",
+    "email": "ipo@bigshareonline.com",
+    "website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Interactive Financial Services Ltd",
+      "url": "/report/ipo-lead-manager-review/112/188/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/188/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "February 28 2025",
+    "nse_symbol": "HPTL",
+    "isin": "INE0VA601019",
+    "final_issue_price": "108 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "108.00"
+      },
+      "open": {
+        "nse_sme": "115.05"
+      },
+      "low": {
+        "nse_sme": "111.05"
+      },
+      "high": {
+        "nse_sme": "118.00"
+      },
+      "last_trade": {
+        "nse_sme": "115.05"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the HP Telecom India IPO?",
+      "answer": "<div itemprop=\"text\"><p>HP Telecom India IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->3169200<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->34.23<!-- --> Crores. The issue is priced at <span>₹108 per share</span>. The minimum order quantity is <!-- -->1200<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->February 20, 2025</b>, and <b>closes on <!-- -->February 24, 2025</b>.</p><p>Bigshare Services Pvt Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in HP Telecom India IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->HP Telecom India IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->HP Telecom India IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->HP Telecom India IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->HP Telecom India IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When HP Telecom India IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The HP Telecom India IPO opens on February 20, 2025 and closes on February 24, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of HP Telecom India IPO?",
+      "answer": "<div itemprop=\"text\"><p>HP Telecom India IPO<!-- --> <b>lot size is <!-- -->1200</b>, and the <b>minimum amount required is <span>₹1,29,600</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for HP Telecom India IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->HP Telecom India IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is HP Telecom India IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->HP Telecom India IPO<!-- --> will be done on <!-- -->Tuesday, February 25, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, February 27, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/hp-telecom-india-ipo/1994/\" title=\"HP Telecom India IPO Allotment Status\">HP Telecom India IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is HP Telecom India IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->HP Telecom India IPO<!-- --> listing date is on <b>Friday, February 28, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/hp-telecom-india-ipo/1994/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "HP Telecom India IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/HPTelecomIndiaLimited_DP.pdf"
+    },
+    {
+      "text": "HP Telecom India IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/feb-2025/hp-telecom-india-limited_91821.html"
+    }
+  ],
+  "reservation": {
+    "summary": "HP Telecom India IPO offers 3169201 shares. 1504800 (47.48%) to NII 1504800 (47.48%) to RII.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "-"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "159600 (5.04%)"
+      },
+      {
+        "investor_category": "Other Shares Offered",
+        "shares_offered": "1504800 (47.48%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1504800 (47.48%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "3169201 (100%)"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "HP Telecom India Limited Financial Information (Restated Standalone)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "258.97",
+          "281.48",
+          "93.55",
+          "46.06"
+        ],
+        [
+          "Revenue",
+          "594.19",
+          "1079.77",
+          "638.47",
+          "292.55"
+        ],
+        [
+          "Profit After Tax",
+          "5.24",
+          "8.6",
+          "6.35",
+          "2.13"
+        ],
+        [
+          "Net Worth",
+          "34.35",
+          "29.11",
+          "20.51",
+          "15.46"
+        ],
+        [
+          "Reserves and Surplus",
+          "25.61",
+          "20.37",
+          "14.68",
+          "9.63"
+        ],
+        [
+          "Total Borrowing",
+          "105.14",
+          "100.15",
+          "59.29",
+          "24.5"
+        ]
+      ]
+    },
+    {
+      "heading": "HP Telecom India IPO Details",
+      "sanitizedHeading": "hp_telecom_india",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "29.56%"
+        ],
+        [
+          "ROCE",
+          "66.62%"
+        ],
+        [
+          "RoNW",
+          "29.56%"
+        ],
+        [
+          "PAT Margin",
+          "0.81"
+        ],
+        [
+          "Price to Book Value",
+          "3.24"
+        ]
+      ]
+    },
+    {
+      "heading": "HP Telecom India IPO Details",
+      "sanitizedHeading": "hp_telecom_india",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "9.84",
+          "8.79"
+        ],
+        [
+          "P/E (x)",
+          "10.98",
+          "12.28"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:48:24.371Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/hp-telecom-india-ipo/1994/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": ""
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "1.97"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "1.85"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "1.91"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

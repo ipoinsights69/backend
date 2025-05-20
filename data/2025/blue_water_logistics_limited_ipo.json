@@ -1,0 +1,378 @@
+{
+  "pageTitle": "Blue Water Logistics IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Blue Water Logistics",
+  "logo": "https://www.chittorgarh.net/images/ipo/bwl-logo.png",
+  "pageHeading": "Blue Water Logistics Limited IPO (Blue Water Logistics IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "May 27, 2025 to May 29, 2025",
+    "ipoListingDate": "Tue, Jun 3, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹132 to ₹135 per share",
+    "lotSize": "1,000 Shares",
+    "issueSize": "30,00,000 shares (aggregating up to ₹40.50 Cr)",
+    "freshIssue": "30,00,000 shares (aggregating up to ₹40.50 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "1,56,000 shares",
+      "maker_name": "Shreni Shares Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/346/"
+    },
+    "ipoOpenDate": "Tue, May 27, 2025",
+    "ipoCloseDate": "Thu, May 29, 2025",
+    "initiationOfRefunds": "Mon, Jun 2, 2025",
+    "creditOfSharesToDemat": "Mon, Jun 2, 2025",
+    "shareHoldingPreIssue": "80,00,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "80,00,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "95.62%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,10,00,000 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,10,00,000 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "69.55%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on May 29 2025",
+    "tentative_allotment": "Fri May 30 2025",
+    "initiation_of_refunds": "Mon Jun 2 2025",
+    "credit_of_shares_to_demat": "Mon Jun 2 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "135000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "135000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "270000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/blue-water-logistics-ipo/2123/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the company are Mr. Laxmi Narayan Mishra Mr. Lalit Panda Ms. Madhusmita Mohanty and Ms. Supriya Mishra.",
+    "holdings": {
+      "share_holding_pre_issue": "95.62%",
+      "share_holding_post_issue": "69.55%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in April 2010, Blue Water Logistics Ltd provides logistics and supply chain solutions. The company's primary services include freight forwarding, custom clearance and transportation handling services.</p>\n<p>The company provides comprehensive project logistics, supply chain management (SCM), and warehousing across air, sea, and land transport, focusing on tailored solutions for client needs, including cargo pick-up, customs clearance, and delivery, offering a complete suite of logistics services.</p>\n<p>The company has five branches in Chennai, Delhi, Jaipur, Visakhapatnam, and Thane.</p>\n<p>The company serves customers in confectionery, chemicals, crockery, natural stones, textiles, electronics, and fitness equipment.</p>\n<p>As of March 31, 2025, the company has 25 commercial vehicles for various transportation needs.</p>\n<p>The company provides services in Telangana, Gujarat, Maharashtra, Rajasthan, Andhra Pradesh, Tamil Nadu, Delhi, Punjab, Karnataka, Uttar Pradesh, Madhya Pradesh, Odisha, and abroad in Africa, Singapore, and the UAE.&nbsp;</p>\n<p>As of March 31, 2025, the Company has 83 employees in various departments.</p>\n<p><strong>Competitive Strength</strong></p>\n<ul>\n<li>Well established relationship with clients.</li>\n<li>Leveraging the experience of the Promoters and Directors.</li>\n<li>Wide customer portfolio across different industry verticals.</li>\n<li>Wide range of logistics services.</li>\n<li>Domestic and Global Network coverage.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 8341101774",
+    "email": "investors@bwl.co.in",
+    "full_address": "Blue Water Logistics Limited, H. No. 8-2-270/B/1/2 Block-3 4th Floor, Uptown Banjara Road No. 3, Banjara Hills",
+    "website": "https://bwl.co.in/"
+  },
+  "registrarDetails": {
+    "name": "Maashitla Securities Private Limited",
+    "phone": "+91-11-45121795-96",
+    "email": "investor.ipo@maashitla.com",
+    "website": "https://maashitla.com/allotment-status/public-issues"
+  },
+  "leadManagers": [
+    {
+      "name": "Smart Horizon Capital Advisors Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/172/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/172/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the Blue Water Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>Blue Water Logistics IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->3000000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->40.50<!-- --> Crores. The issue is priced at <span>₹132 to ₹135 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->May 27, 2025</b>, and <b>closes on <!-- -->May 29, 2025</b>.</p><p>Maashitla Securities Private Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Blue Water Logistics IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Blue Water Logistics IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Blue Water Logistics IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Blue Water Logistics IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Blue Water Logistics IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Blue Water Logistics IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Blue Water Logistics IPO opens on May 27, 2025 and closes on May 29, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Blue Water Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>Blue Water Logistics IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,35,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Blue Water Logistics IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Blue Water Logistics IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Blue Water Logistics IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Blue Water Logistics IPO<!-- --> will be done on <!-- -->Friday, May 30, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, June 2, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/blue-water-logistics-ipo/2123/\" title=\"Blue Water Logistics IPO Allotment Status\">Blue Water Logistics IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Blue Water Logistics IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Blue Water Logistics IPO<!-- --> listing date is not yet announced. The <b>tentative date of <!-- -->Blue Water Logistics IPO<!-- --> listing is <!-- -->Tuesday, June 3, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/blue-water-logistics-ipo/2123/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Blue Water Logistics IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/aartic_22012025193333_BWL_DRHP.pdf"
+    },
+    {
+      "text": "Blue Water Logistics IPO RHP",
+      "url": "https://bwl.co.in/wp-content/uploads/2025/05/Blue-Water_RHP_17.05.2025.pdf"
+    }
+  ],
+  "reservation": {
+    "allocation": [
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "Not more than 50% of the Net Issue"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "Not less than 35% of the Net Issue"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "Not less than 15% of the Net Isssue"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Blue Water Logistics Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Mar 2025",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "76.34",
+          "42.12",
+          "29.28",
+          "38.80"
+        ],
+        [
+          "Revenue",
+          "196.29",
+          "138.74",
+          "98.07",
+          "84.72"
+        ],
+        [
+          "Profit After Tax",
+          "10.67",
+          "5.94",
+          "1.54",
+          "1.04"
+        ],
+        [
+          "Net Worth",
+          "20.15",
+          "9.48",
+          "3.54",
+          "0.00"
+        ],
+        [
+          "Reserves and Surplus",
+          "12.15",
+          "7.48",
+          "1.54",
+          "0.00"
+        ],
+        [
+          "Total Borrowing",
+          "36.73",
+          "17.22",
+          "18.81",
+          "0.00"
+        ]
+      ]
+    },
+    {
+      "heading": "Blue Water Logistics IPO Details",
+      "sanitizedHeading": "blue_water_logistics",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "72.02%"
+        ],
+        [
+          "ROCE",
+          "0.30"
+        ],
+        [
+          "Debt/Equity",
+          "1.82"
+        ],
+        [
+          "RoNW",
+          "52.95%"
+        ],
+        [
+          "PAT Margin",
+          "5.44"
+        ],
+        [
+          "Price to Book Value",
+          "11.39"
+        ]
+      ]
+    },
+    {
+      "heading": "Blue Water Logistics IPO Details",
+      "sanitizedHeading": "blue_water_logistics",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "13.34",
+          "9.70"
+        ],
+        [
+          "P/E (x)",
+          "10.12",
+          "13.92"
+        ]
+      ]
+    },
+    {
+      "heading": "Blue Water Logistics IPO Details",
+      "sanitizedHeading": "blue_water_logistics",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Funding of capital expenditure requirements by purchase of Vehicles and its body building",
+          "105.17"
+        ],
+        [
+          "2",
+          "Funding working capital requirements of the Company",
+          "200.00"
+        ],
+        [
+          "3",
+          "General corporate purposes",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": false,
+      "listingDayTrading": false,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:40:53.850Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/blue-water-logistics-ipo/2123/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {},
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

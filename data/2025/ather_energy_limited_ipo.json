@@ -1,0 +1,495 @@
+{
+  "pageTitle": "Ather Energy IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Ather Energy",
+  "logo": "https://www.chittorgarh.net/images/ipo/ather-energy-logo.png",
+  "pageHeading": "Ather Energy Limited IPO (Ather Energy IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "April 28, 2025 to April 30, 2025",
+    "ipoListingDate": "Tue, May 6, 2025",
+    "faceValue": "₹1 per share",
+    "issuePrice": "₹321.00",
+    "lotSize": "46 Shares",
+    "issueSize": "9,28,67,945 shares (aggregating up to ₹2,981.06 Cr)",
+    "freshIssue": "8,18,16,199 shares (aggregating up to ₹2,626.30 Cr)",
+    "offerForSale": "1,10,51,746 shares of ₹1 (aggregating up to ₹354.76 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE, NSE",
+    "ipoOpenDate": "Mon, Apr 28, 2025",
+    "ipoCloseDate": "Wed, Apr 30, 2025",
+    "initiationOfRefunds": "Mon, May 5, 2025",
+    "creditOfSharesToDemat": "Mon, May 5, 2025",
+    "shareHoldingPreIssue": "29,06,43,469 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "29,06,43,469 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "54.61%"
+      }
+    ],
+    "shareHoldingPostIssue": "37,24,59,668 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "37,24,59,668 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "42.09%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on April 30 2025",
+    "tentative_allotment": "Fri May 2 2025",
+    "initiation_of_refunds": "Mon May 5 2025",
+    "credit_of_shares_to_demat": "Mon May 5 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 46 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "46",
+        "amount": "14766"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "13",
+        "shares": "598",
+        "amount": "191958"
+      },
+      "shni_min": {
+        "application": "S-HNI (Min)",
+        "lots": "14",
+        "shares": "644",
+        "amount": "206724"
+      },
+      "shni_max": {
+        "application": "S-HNI (Max)",
+        "lots": "67",
+        "shares": "3082",
+        "amount": "989322"
+      },
+      "bhni_min": {
+        "application": "B-HNI (Min)",
+        "lots": "68",
+        "shares": "3128",
+        "amount": "1004088"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/ather-energy-ipo/2357/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Tarun Sanjay Mehta Swapnil Babanlal Jain and HMCL are the company promoters.",
+    "holdings": {
+      "share_holding_pre_issue": "54.61%",
+      "share_holding_post_issue": "42.09%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Ather Energy Limited, incorporated in 2013, is an Indian electric two-wheeler (E2W) company engaged in the design, development, and in-house assembly of electric scooters, battery packs, charging infrastructure, and supporting software systems. The company operates as a vertically integrated EV manufacturer with a focus on product and technology development.</p>\n<p>The company sold 107,983 E2Ws and 109,577 E2Ws in the nine months ended December 31, 2024 and Fiscal Year 2024, respectively.</p>\n<p>As of December 31, 2024, we had 265 experience centres and 233 service centres in India, five experience centres and four service centres in Nepal, and ten experience centres and one service centre in Sri Lanka.</p>\n<p>The company's product ecosystem includes Ather Grid, a public fast-charging network for two-wheelers, and Atherstack, a proprietary software platform with 64 connected features as of July 2024.</p>\n<p>Manufacturing is carried out at the Hosur Factory in Tamil Nadu, which had an annual installed capacity of 420,000 electric vehicles and 379,800 battery packs as of March 2024.</p>\n<p>As of February 28, 2025, globally, the company had 303 registered trademarks, 201 registered designs and 45 registered patents, in addition to pending applications for 102 trademarks, 12 designs and 303 patents.</p>\n<p>Ather’s strategy is built on four pillars: Vertically integrated design and engineering, A software-defined product ecosystem, Premium market positioning and Capital-efficient operations.</p>\n<p>As of March 31, 2024, Ather Energy employed 2,454 people, including 1,458 on-roll employees and 996 off-roll staff.</p>"
+  },
+  "contactDetails": {
+    "phone": "+91 80 6646 5750",
+    "email": "cs@atherenergy.com",
+    "full_address": "Ather Energy Limited, 3 rd Floor Tower D, IBC Knowledge Park, #4/1 Bannerghatta Main Road",
+    "website": "http://www.atherenergy.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "atherenergy.ipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Axis Capital Limited",
+      "url": "/report/ipo-lead-manager-review/112/113/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/113/"
+    },
+    {
+      "name": "Hsbc Securities & Capital Markets Pvt Ltd",
+      "url": "/report/ipo-lead-manager-review/112/69/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/69/"
+    },
+    {
+      "name": "Jm Financial Limited",
+      "url": "/report/ipo-lead-manager-review/112/18/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/18/"
+    },
+    {
+      "name": "Nomura Financial Advisory And Securities",
+      "url": "/report/ipo-lead-manager-review/112/72/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/72/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      },
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "May 6 2025",
+    "bse_script_code": "544397",
+    "nse_symbol": "ATHERENERG",
+    "isin": "INE0LEZ01016",
+    "final_issue_price": "321 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse": "321.00",
+        "nse": "321.00"
+      },
+      "open": {
+        "bse": "326.05",
+        "nse": "328.00"
+      },
+      "low": {
+        "bse": "300.00",
+        "nse": "299.10"
+      },
+      "high": {
+        "bse": "332.90",
+        "nse": "333.00"
+      },
+      "last_trade": {
+        "bse": "302.50",
+        "nse": "302.30"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Ather Energy IPO?",
+      "answer": "<div itemprop=\"text\"><p>Ather Energy IPO<!-- --> is a <b>main-board<!-- --> <!-- -->IPO<!-- --> of <!-- -->92867945<!-- --> equity shares</b> of the face value of ₹<!-- -->1<!-- --> aggregating up to ₹<!-- -->2,981.06<!-- --> Crores. The issue is priced at <span>₹321 per share</span>. The minimum order quantity is <!-- -->46<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->April 28, 2025</b>, and <b>closes on <!-- -->April 30, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE, NSE<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Ather Energy IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Ather Energy IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Ather Energy IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Ather Energy IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Ather Energy IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Ather Energy IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Ather Energy IPO opens on April 28, 2025 and closes on April 30, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Ather Energy IPO?",
+      "answer": "<div itemprop=\"text\"><p>Ather Energy IPO<!-- --> <b>lot size is <!-- -->46</b>, and the <b>minimum amount required is <span>₹14,766</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Ather Energy IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Ather Energy IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Ather Energy IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Ather Energy IPO<!-- --> will be done on <!-- -->Friday, May 2, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Monday, May 5, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/ather-energy-ipo/2357/\" title=\"Ather Energy IPO Allotment Status\">Ather Energy IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Ather Energy IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Ather Energy IPO<!-- --> listing date is on <b>Tuesday, May 6, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "9",
+        "neutral": "4",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/ather-energy-ipo/2357/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Ather Energy IPO DRHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2024/ather-energy-limited_86582.html"
+    },
+    {
+      "text": "Ather Energy IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/apr-2025/ather-energy-limited-rhp_93554.html"
+    },
+    {
+      "text": "Anchor Investors in Ather Energy IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/atherenergy-anchor-allocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Ather Energy IPO offers total 134613503 shares. Out of which 69575960 (51.69%) allocated to QIB 13915173 (10.34%) allocated to NII 9276794 (6.89%) allocated to RII 100000 (0.07%) allocated to employees and 41745576 (31.01%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "41745576 (31.01%)",
+        "maximum_allottees": "NA"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "69575960 (51.69%)",
+        "maximum_allottees": "NA"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "13915173 (10.34%)"
+      },
+      {
+        "investor_category": "bNII > 10L",
+        "shares_offered": "9276794 (6.89%)",
+        "maximum_allottees": "14404"
+      },
+      {
+        "investor_category": "sNII < 10L",
+        "shares_offered": "4638379 (3.45%)",
+        "maximum_allottees": "7202"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "9276794 (6.89%)",
+        "maximum_allottees": "201669"
+      },
+      {
+        "investor_category": "Employee Shares Offered",
+        "shares_offered": "100000 (0.07%)",
+        "maximum_allottees": "NA"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "134613503 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Ather Energy IPO raises Rs 1340.03 crore from anchor investors. Ather Energy IPO Anchor bid date is April 25 2025. Ather Energy IPO Anchor Investors list",
+    "list_link": {
+      "text": "Ather Energy IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/atherenergy-anchor-allocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "July 30 2025",
+      "shares_offered": "41745576",
+      "anchor_portion_size": "1340.03"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Ather Energy Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Dec 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "2172.00",
+          "1913.50",
+          "1976.80",
+          "818.60"
+        ],
+        [
+          "Revenue",
+          "1617.40",
+          "1789.10",
+          "1801.80",
+          "413.80"
+        ],
+        [
+          "Profit After Tax",
+          "-577.90",
+          "-1059.70",
+          "-864.50",
+          "-344.10"
+        ],
+        [
+          "Net Worth",
+          "108.00",
+          "545.90",
+          "613.70",
+          "224.90"
+        ],
+        [
+          "Reserves and Surplus",
+          "104.10",
+          "545.10",
+          "613.10",
+          "224.20"
+        ],
+        [
+          "Total Borrowing",
+          "521.60",
+          "314.90",
+          "485.20",
+          "298.40"
+        ]
+      ]
+    },
+    {
+      "heading": "Ather Energy IPO Details",
+      "sanitizedHeading": "ather_energy",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "RoNW",
+          "-194%"
+        ]
+      ]
+    },
+    {
+      "heading": "Ather Energy IPO Details",
+      "sanitizedHeading": "ather_energy",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "-47.00",
+          null
+        ]
+      ]
+    },
+    {
+      "heading": "Ather Energy IPO Details",
+      "sanitizedHeading": "ather_energy",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Capital expenditure to be incurred by the Company for establishment of an E2W factory in Maharashtra India.",
+          "9272"
+        ],
+        [
+          "2",
+          "Repayment/ pre-payment in full or part of certain borrowings availed by the Company.",
+          "400"
+        ],
+        [
+          "3",
+          "Investment in research and development.",
+          "7500"
+        ],
+        [
+          "4",
+          "Expenditure towards marketing initiatives.",
+          "3000"
+        ],
+        [
+          "5",
+          "General corporate purposes.",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:29:29.619Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/ather-energy-ipo/2357/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "1.76"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "0.69"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "1.89"
+      },
+      "employee": {
+        "category": "Employee Reservations",
+        "subscription_times": "5.43"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "1.5"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

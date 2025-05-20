@@ -1,0 +1,433 @@
+{
+  "pageTitle": "Parmeshwar Metal IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Parmeshwar Metal",
+  "logo": "https://www.chittorgarh.net/images/ipo/parmeshwer_logo.png",
+  "pageHeading": "Parmeshwar Metal Limited IPO (Parmeshwar Metal IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 2, 2025 to January 6, 2025",
+    "ipoListingDate": "Thu, Jan 9, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹61.00",
+    "lotSize": "2,000 Shares",
+    "issueSize": "40,56,000 shares (aggregating up to ₹24.74 Cr)",
+    "freshIssue": "40,56,000 shares (aggregating up to ₹24.74 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "2,06,000 shares",
+      "maker_name": "Spread X Securities Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/411/"
+    },
+    "ipoOpenDate": "Thu, Jan 2, 2025",
+    "ipoCloseDate": "Mon, Jan 6, 2025",
+    "initiationOfRefunds": "Wed, Jan 8, 2025",
+    "creditOfSharesToDemat": "Wed, Jan 8, 2025",
+    "shareHoldingPreIssue": "1,12,50,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,12,50,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "96.33%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,53,06,000 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,53,06,000 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "70.81%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 6 2025",
+    "tentative_allotment": "Tue Jan 7 2025",
+    "initiation_of_refunds": "Wed Jan 8 2025",
+    "credit_of_shares_to_demat": "Wed Jan 8 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 2000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "2000",
+        "amount": "122000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "2000",
+        "amount": "122000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "4000",
+        "amount": "244000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/parmeshwar-metal-ipo/1953/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The Promoters of the company are Mr Shantilal Kailashchandra Shah Mr Suchitkumar Maheshbhai Patel Mr Piyush Giriraj Shah Mr Radheshayam Jankilal Shah Mr Parth Maheshbhai Patel Mr Pratik Radheshyam Shah and Mrs Kailashben Radheshyam Shah.",
+    "holdings": {
+      "share_holding_pre_issue": "96.33%",
+      "share_holding_post_issue": "70.81%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in August 2016, Parmeshwar Metal Limited manufactures copper wire and rods by recycling copper scrap. The company's manufacturing unit is situated in Dehgam, Gujarat.</p>\n<p>The company is an ISO 9001:2015 certified business offering a product portfolio of 1.6 mm, 8 mm, and 12.5 mm copper wire rods, each tailored to meet customer specifications.</p>\n<p>The company's products are used in various industries such as power cables, building wires, transformers, the automotive industry, household cables as well as bare and enamelled wires.</p>\n<p>As of December 31, 2023 the company employees a total 89 Employees.</p>\n<p><strong>Competitive Strength</strong></p>\n<ol>\n<li>Experienced Promoter and Management Team</li>\n<li>Strong relationship with customers</li>\n<li>Customized Product Offering</li>\n<li>Strong and diversified supplier base for sourcing raw materials</li>\n</ol>"
+  },
+  "contactDetails": {
+    "phone": "+91 6357076561",
+    "email": "cs@parmeshwarmetal.com",
+    "full_address": "Parmeshwar Metal Limited, Office at Survey No. 130 P &amp; 131, State Highway No. 69 Sampa Lavad Road, Village Suja Na Muvada Post-Sampa Dehgam",
+    "website": "https://www.parmeshwarmetal.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "parmeshwar.smeipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Beeline Capital Advisors Pvt Ltd",
+      "url": "/report/ipo-lead-manager-review/112/192/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/192/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 9 2025",
+    "bse_script_code": "544330",
+    "isin": "INE0QQJ01021",
+    "final_issue_price": "61 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse_sme": "61.00"
+      },
+      "open": {
+        "bse_sme": "84.50"
+      },
+      "low": {
+        "bse_sme": "81.05"
+      },
+      "high": {
+        "bse_sme": "88.72"
+      },
+      "last_trade": {
+        "bse_sme": "88.72"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Parmeshwar Metal IPO?",
+      "answer": "<div itemprop=\"text\"><p>Parmeshwar Metal IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->4056000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->24.74<!-- --> Crores. The issue is priced at <span>₹61 per share</span>. The minimum order quantity is <!-- -->2000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 2, 2025</b>, and <b>closes on <!-- -->January 6, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Parmeshwar Metal IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Parmeshwar Metal IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Parmeshwar Metal IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Parmeshwar Metal IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Parmeshwar Metal IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Parmeshwar Metal IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Parmeshwar Metal IPO opens on January 2, 2025 and closes on January 6, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Parmeshwar Metal IPO?",
+      "answer": "<div itemprop=\"text\"><p>Parmeshwar Metal IPO<!-- --> <b>lot size is <!-- -->2000</b>, and the <b>minimum amount required is <span>₹1,22,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Parmeshwar Metal IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Parmeshwar Metal IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Parmeshwar Metal IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Parmeshwar Metal IPO<!-- --> will be done on <!-- -->Tuesday, January 7, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Wednesday, January 8, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/parmeshwar-metal-ipo/1953/\" title=\"Parmeshwar Metal IPO Allotment Status\">Parmeshwar Metal IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Parmeshwar Metal IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Parmeshwar Metal IPO<!-- --> listing date is on <b>Thursday, January 9, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/parmeshwar-metal-ipo/1953/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Parmeshwar Metal IPO DRHP",
+      "url": "https://www.bsesme.com/download/363659/Parmeshwar_Metal_DRHP_20240630175532.pdf"
+    },
+    {
+      "text": "Parmeshwar Metal IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/parmeshwar-metal-limited_90420.html"
+    },
+    {
+      "text": "Anchor Investors in Parmeshwar Metal IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/parmeshwarmetal-anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Parmeshwar Metal IPO offers 4056000 shares. 770000 (18.98%) to QIB 578000 (14.25%) to NII 1348000 (33.23%) to RII and 1154000 (28.45%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1154000 (28.45%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "206000 (5.08%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "770000 (18.98%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "578000 (14.25%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "1348000 (33.23%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "4056000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Parmeshwar Metal IPO raises Rs 7.04 crore from anchor investors. Parmeshwar Metal IPO Anchor bid date is January 1 2025. Parmeshwar Metal IPO Anchor Investors list",
+    "list_link": {
+      "text": "Parmeshwar Metal IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/parmeshwarmetal-anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 6 2025",
+      "shares_offered": "1154000",
+      "anchor_portion_size": "7.04"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Parmeshwar Metal Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Oct 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "6732.67",
+          "7010.27",
+          "5412.42",
+          "4112.89"
+        ],
+        [
+          "Revenue",
+          "75730.83",
+          "110246.35",
+          "97270.61",
+          "90227.47"
+        ],
+        [
+          "Profit After Tax",
+          "570.29",
+          "721.93",
+          "889.53",
+          "685.16"
+        ],
+        [
+          "Net Worth",
+          "4291.13",
+          "3720.83",
+          "2998.9",
+          "2109.37"
+        ],
+        [
+          "Reserves and Surplus",
+          "3166.13",
+          "2970.83",
+          "2248.9",
+          "1359.37"
+        ],
+        [
+          "Total Borrowing",
+          "1468.99",
+          "2188.86",
+          "1660.02",
+          "1383.71"
+        ]
+      ]
+    },
+    {
+      "heading": "Parmeshwar Metal IPO Details",
+      "sanitizedHeading": "parmeshwar_metal",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "21.49%"
+        ],
+        [
+          "ROCE",
+          "17.51%"
+        ],
+        [
+          "Debt/Equity",
+          "0.59"
+        ],
+        [
+          "RoNW",
+          "19.40%"
+        ],
+        [
+          "PAT Margin",
+          "0.66"
+        ],
+        [
+          "Price to Book Value",
+          "1.84"
+        ]
+      ]
+    },
+    {
+      "heading": "Parmeshwar Metal IPO Details",
+      "sanitizedHeading": "parmeshwar_metal",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "6.42",
+          "6.39"
+        ],
+        [
+          "P/E (x)",
+          "9.51",
+          "9.55"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:12:10.534Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/parmeshwar-metal-ipo/1953/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "177.32"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "1202.83"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "597.09"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "607.07"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "pageTitle": "Unified Data- Tech IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Unified Data- Tech Solutions",
+  "logo": "https://www.chittorgarh.net/images/ipo/unified-tech-ipo-logo.jpg",
+  "pageHeading": "Unified Data- Tech Solutions Limited IPO (Unified Data- Tech IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "May 22, 2025 to May 26, 2025",
+    "ipoListingDate": "Thu, May 29, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹260 to ₹273 per share",
+    "lotSize": "400 Shares",
+    "issueSize": "52,92,000 shares (aggregating up to ₹144.47 Cr)",
+    "offerForSale": "52,92,000 shares of ₹10 (aggregating up to ₹144.47 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE SME",
+    "marketMakerPortion": {
+      "text": "2,67,600 shares",
+      "maker_name": "Hem Finlease Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/250/"
+    },
+    "ipoOpenDate": "Thu, May 22, 2025",
+    "ipoCloseDate": "Mon, May 26, 2025",
+    "initiationOfRefunds": "Wed, May 28, 2025",
+    "creditOfSharesToDemat": "Wed, May 28, 2025",
+    "shareHoldingPreIssue": "2,00,90,100 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "2,00,90,100 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "86.73%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,00,90,100 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,00,90,100 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "60.39%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on May 26 2025",
+    "tentative_allotment": "Tue May 27 2025",
+    "initiation_of_refunds": "Wed May 28 2025",
+    "credit_of_shares_to_demat": "Wed May 28 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 400 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "400",
+        "amount": "109200"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "400",
+        "amount": "109200"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "800",
+        "amount": "218400"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/unified-data-tech-ipo/2141/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Hiren Rajendra Mehta Rajendra Kantilal Mehta and Harshaben Mehta are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "86.73%",
+      "share_holding_post_issue": "60.39%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2010, Unified Data-Tech Solutions Private Limited (UDTechs) is a Mumbai-based IT service provider specializing in delivering innovative and customized technology solutions.</p>\n<p>The company offers IT solutions, including data centers, virtualization, cybersecurity, and networking, serving industries like banking, finance, and IT. It works with clients to provide secure, cost-effective, high-performance solutions and support.</p>\n<p>The company procures products and services for data centers, virtualization, cybersecurity, and secure application delivery. It is an authorized partner of OEMs, offering IT products, services, maintenance, and subscriptions.</p>\n<p>The company has expanded its presence with branches in Pune and Ahmedabad, serving over 1,000 clients across India.</p>\n<p><strong>Services:</strong></p>\n<ul>\n<li><strong>Technology Advisory Services:</strong> The company provides expert guidance to design custom IT infrastructure solutions, aligning with business goals. It offers architecture consultancy to ensure efficient, scalable, and cost-effective growth and performance optimization technologies.</li>\n<li><strong>System Integration:</strong>The company specializes in IT system integration, managing complex projects to deliver efficient, secure, and fully operational IT environments.</li>\n<li><strong>Expert Technical Services:</strong> The company offers specialized technical services for system migrations, upgrades, and re-engineering, ensuring smooth transitions for businesses undergoing digital transformation.</li>\n</ul>\n<p>As on n March 31, 2025, the Company had employed 38 employees.</p>\n<p><strong>Competitive Strengths:</strong></p>\n<ul>\n<li>Robust Client Relationships and Diverse Clientele</li>\n<li>Extensive and Reliable Delivery Network</li>\n<li>Proven Track Record of Financial Success</li>\n<li>Established relationships with suppliers</li>\n<li>Seasoned Leadership and Skilled Workforce</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91-22-40726000",
+    "email": "cs@udtechs.com",
+    "full_address": "Unified Data- Tech Solutions Limited, 701 7th Floor, Chintamani Avenue, Village Dindoshi Off Western Express Highway",
+    "website": "http://www.udtechs.com/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "udts.ipo@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "Hem Securities Limited",
+      "url": "/report/ipo-lead-manager-review/112/76/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/76/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the Unified Data- Tech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Unified Data- Tech IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->5292000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->144.47<!-- --> Crores. The issue is priced at <span>₹260 to ₹273 per share</span>. The minimum order quantity is <!-- -->400<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->May 22, 2025</b>, and <b>closes on <!-- -->May 26, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Unified Data- Tech IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Unified Data- Tech IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Unified Data- Tech IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Unified Data- Tech IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Unified Data- Tech IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Unified Data- Tech IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Unified Data- Tech IPO opens on May 22, 2025 and closes on May 26, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Unified Data- Tech IPO?",
+      "answer": "<div itemprop=\"text\"><p>Unified Data- Tech IPO<!-- --> <b>lot size is <!-- -->400</b>, and the <b>minimum amount required is <span>₹1,09,200</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Unified Data- Tech IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Unified Data- Tech IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Unified Data- Tech IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Unified Data- Tech IPO<!-- --> will be done on <!-- -->Tuesday, May 27, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Wednesday, May 28, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/unified-data-tech-ipo/2141/\" title=\"Unified Data- Tech IPO Allotment Status\">Unified Data- Tech IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Unified Data- Tech IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Unified Data- Tech IPO<!-- --> listing date is not yet announced. The <b>tentative date of <!-- -->Unified Data- Tech IPO<!-- --> listing is <!-- -->Thursday, May 29, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/unified-data-tech-ipo/2141/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Unified Data- Tech IPO DRHP",
+      "url": "https://www.bseindia.com/corporates/download/388787/UNIFIED%20DATA-%20TECH%20SOLUTIONS%20LIMITED_20241210170944.pdf"
+    },
+    {
+      "text": "Unified Data- Tech IPO RHP",
+      "url": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_200520251518.zip"
+    }
+  ],
+  "reservation": {
+    "allocation": [
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "Not more than 50% of the Net Offer"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "Not less than 35% of the Net Offer"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "Not less than 15% of the Net Offer"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Unified Data- Tech Solutions Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "28 Feb 2025",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "128.71",
+          "78.42",
+          "64.30",
+          "36.14"
+        ],
+        [
+          "Revenue",
+          "203.66",
+          "266.80",
+          "112.81",
+          "95.50"
+        ],
+        [
+          "Profit After Tax",
+          "31.68",
+          "25.13",
+          "10.40",
+          "9.71"
+        ],
+        [
+          "Net Worth",
+          "95.73",
+          "64.04",
+          "38.92",
+          "28.52"
+        ],
+        [
+          "Reserves and Surplus",
+          "75.64",
+          "63.99",
+          "38.87",
+          "28.47"
+        ],
+        [
+          "Total Borrowing",
+          "0.00",
+          "0.00",
+          "0.00",
+          "0.00"
+        ]
+      ]
+    },
+    {
+      "heading": "Unified Data- Tech IPO Details",
+      "sanitizedHeading": "unified_data-_tech",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "48.81%"
+        ],
+        [
+          "ROCE",
+          "52.55%"
+        ],
+        [
+          "RoNW",
+          "39.23%"
+        ],
+        [
+          "PAT Margin",
+          "9.65"
+        ],
+        [
+          "Price to Book Value",
+          "8.56"
+        ]
+      ]
+    },
+    {
+      "heading": "Unified Data- Tech IPO Details",
+      "sanitizedHeading": "unified_data-_tech",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "12.51",
+          "17.20"
+        ],
+        [
+          "P/E (x)",
+          "21.83",
+          "15.87"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": false,
+      "listingDayTrading": false,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:41:49.510Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/unified-data-tech-ipo/2141/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {},
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

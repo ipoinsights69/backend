@@ -1,0 +1,325 @@
+{
+  "pageTitle": "Capital Infra Trust Invit Date, Price, GMP, Details",
+  "ipoName": "Capital Infra Trust InvIT (Capital Infra Trust Invit) Detail",
+  "logo": "https://www.chittorgarh.net/images/ipo/capital_infra_logo.jpeg",
+  "pageHeading": "Capital Infra Trust InvIT (Capital Infra Trust Invit) Detail",
+  "basicDetails": {
+    "ipoDate": "January 7, 2025 to January 9, 2025",
+    "ipoListingDate": "Fri, Jan 17, 2025",
+    "faceValue": "₹99 per share",
+    "issuePrice": "₹99.00",
+    "lotSize": "150 Shares",
+    "issueSize": "15,78,00,000 shares (aggregating up to ₹1,578.00 Cr)",
+    "freshIssue": "10,77,00,000 shares (aggregating up to ₹1,077.00 Cr)",
+    "offerForSale": "5,01,00,000 shares of ₹99 (aggregating up to ₹501.00 Cr)",
+    "issueType": "Bookbuilding InvIT",
+    "listingAt": "BSE, NSE",
+    "ipoOpenDate": "Tue, Jan 7, 2025",
+    "ipoCloseDate": "Thu, Jan 9, 2025",
+    "initiationOfRefunds": "Thu, Jan 16, 2025",
+    "creditOfSharesToDemat": "Thu, Jan 16, 2025"
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 9 2025",
+    "tentative_allotment": "Tue Jan 14 2025",
+    "initiation_of_refunds": "Thu Jan 16 2025",
+    "credit_of_shares_to_demat": "Thu Jan 16 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 150 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "150",
+        "amount": "15000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "13",
+        "shares": "1950",
+        "amount": "195000"
+      },
+      "shni_min": {
+        "application": "S-HNI (Min)",
+        "lots": "14",
+        "shares": "2100",
+        "amount": "210000"
+      },
+      "shni_max": {
+        "application": "S-HNI (Max)",
+        "lots": "66",
+        "shares": "9900",
+        "amount": "990000"
+      },
+      "bhni_min": {
+        "application": "B-HNI (Min)",
+        "lots": "67",
+        "shares": "10050",
+        "amount": "1005000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/capital-infra-trust-invit/1957/"
+    }
+  },
+  "about": {
+    "details": "<p>Established in September 2023, Capital Infra Trust is an infrastructure investment trust sponsored by Gawar Construction Limited. The InvIT was established to engage in activities and make investments as an infrastructure investment trust, as allowed under the SEBI InvIT Regulations.</p>\n<p>The sponsoring company specializes in constructing road and highway projects across 19 states in India for various government bodies, including the NHAI, MoRTH, MMRDA, and CPWD.</p>\n<p>As of December 2024, the sponsor company's portfolio of 26 road projects on a hybrid annuity mode (“HAM”)with NHAI, of which 11 are completed projects, including the five acquired assets which Sadbhav Infrastructure Project Limited erstwhile owned, and 15 under-construction projects.</p>\n<div>The Trust received a rating of ‘Provisional CRISIL AAA/Stable (Assigned)’ from CRISIL Ratings Limited for the Trust NCD(s) and proposed long-term bank loan facility on November 11, 2024.</div>"
+  },
+  "contactDetails": {
+    "phone": "+0124 4920139",
+    "email": "compliance@capitalinfratrust.com",
+    "full_address": "Capital Infra Trust, Unit No. 1401-1403 14th Floor, Tower B SAS Tower, Medicity Sector-38",
+    "website": "https://www.capitalinfratrust.com/"
+  },
+  "registrarDetails": {
+    "name": "Kfin Technologies Limited",
+    "phone": "04067162222 04079611000",
+    "email": "nationalinfra.units@kfintech.com",
+    "website": "https://kosmic.kfintech.com/ipostatus/"
+  },
+  "leadManagers": [
+    {
+      "name": "SBI Capital Markets Limited",
+      "url": "/report/ipo-lead-manager-review/112/21/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/21/"
+    },
+    {
+      "name": "Hdfc Bank Limited",
+      "url": "/report/ipo-lead-manager-review/112/82/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/82/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      },
+      {
+        "text": "Pre-Open Session - BSE",
+        "url": "https://www.bseindia.com/eqstreamer/StockTickerSplPreOpen.html"
+      }
+    ],
+    "ipo_date": "January 17 2025",
+    "bse_script_code": "544338",
+    "nse_symbol": "CAPINVIT",
+    "isin": "INE0Z8Z23013",
+    "final_issue_price": "99 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "bse": "99.00",
+        "nse": "99.00"
+      },
+      "open": {
+        "bse": "99.00",
+        "nse": "99.00"
+      },
+      "low": {
+        "bse": "98.57",
+        "nse": "98.00"
+      },
+      "high": {
+        "bse": "99.49",
+        "nse": "99.20"
+      },
+      "last_trade": {
+        "bse": "99.01",
+        "nse": "99.02"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Capital Infra Trust Invit?",
+      "answer": "<div itemprop=\"text\"><p>Capital Infra Trust Invit<!-- --> is a <b>main-board<!-- --> <!-- -->InvIT<!-- --> of <!-- -->157800000<!-- --> equity shares</b> of the face value of ₹<!-- -->99<!-- --> aggregating up to ₹<!-- -->1,578.00<!-- --> Crores. The issue is priced at <span>₹99 per share</span>. The minimum order quantity is <!-- -->150<!-- -->.</p><p>The <!-- -->InvIT<!-- --> <b>opens on <!-- -->January 7, 2025</b>, and <b>closes on <!-- -->January 9, 2025</b>.</p><p>Kfin Technologies Limited<!-- --> is the registrar for the <!-- -->InvIT<!-- -->. The shares are proposed to be listed on <!-- -->BSE, NSE<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Capital Infra Trust Invit through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Capital Infra Trust Invit<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Capital Infra Trust Invit<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Capital Infra Trust Invit<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Capital Infra Trust Invit<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Capital Infra Trust Invit will open?",
+      "answer": "<div itemprop=\"text\"><p>The Capital Infra Trust Invit opens on January 7, 2025 and closes on January 9, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Capital Infra Trust Invit?",
+      "answer": "<div itemprop=\"text\"><p>Capital Infra Trust Invit<!-- --> <b>lot size is <!-- -->150</b>, and the <b>minimum amount required is <span>₹15,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Capital Infra Trust Invit?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Capital Infra Trust Invit<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Capital Infra Trust Invit allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Capital Infra Trust Invit<!-- --> will be done on <!-- -->Tuesday, January 14, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Thursday, January 16, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/capital-infra-trust-invit/1957/\" title=\"Capital Infra Trust Invit Allotment Status\">Capital Infra Trust Invit<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Capital Infra Trust Invit listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Capital Infra Trust Invit<!-- --> listing date is on <b>Friday, January 17, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "3",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/capital-infra-trust-invit/1957/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Capital Infra Trust Invit RHP",
+      "url": "https://nsearchives.nseindia.com/content/ipo/RHP_CAPINVIT.zip"
+    },
+    {
+      "text": "Anchor Investors in Capital Infra Trust Invit",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/capitalinfratrust_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "allocation": [
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "Not more than 75% of the Offer"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "Not less than 25% of the Offer"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Capital Infra Trust Invit raises Rs 710.10 crore from anchor investors. Capital Infra Trust Invit Anchor bid date is January 6 2025. Capital Infra Trust Invit Anchor Investors list",
+    "list_link": {
+      "text": "Capital Infra Trust Invit Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/capitalinfratrust_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 13 2025",
+      "shares_offered": "71010000",
+      "anchor_portion_size": "710.10"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Capital Infra Trust Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "4905.26",
+          "4724.07",
+          "4283.33",
+          "2502.8"
+        ],
+        [
+          "Revenue",
+          "792.27",
+          "1543.51",
+          "2518.92",
+          "1981.42"
+        ],
+        [
+          "Profit After Tax",
+          "115.43",
+          "125.77",
+          "497.19",
+          "125.56"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": false,
+      "financials": true,
+      "promoterHolding": false,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:09:06.980Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/capital-infra-trust-invit/1957/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "0.93"
+      },
+      "others": {
+        "category": "Others",
+        "subscription_times": "5.08"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "2.8"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

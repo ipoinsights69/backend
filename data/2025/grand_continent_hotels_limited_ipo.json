@@ -1,0 +1,486 @@
+{
+  "pageTitle": "Grand Continent Hotels IPO Date, Price, GMP, Details",
+  "ipoName": "Grand Continent Hotels",
+  "logo": "https://www.chittorgarh.net/images/ipo/grand-continent-logo.jpeg",
+  "pageHeading": "Grand Continent Hotels Limited IPO (Grand Continent Hotels IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "March 20, 2025 to March 24, 2025",
+    "ipoListingDate": "Thu, Mar 27, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹113.00",
+    "lotSize": "1,200 Shares",
+    "issueSize": "65,89,200 shares (aggregating up to ₹74.46 Cr)",
+    "freshIssue": "62,60,400 shares (aggregating up to ₹70.74 Cr)",
+    "offerForSale": "3,28,800 shares of ₹10 (aggregating up to ₹3.72 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "3,30,000 shares",
+      "maker_name": "Alacrity Securities Ltd.",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/205/"
+    },
+    "ipoOpenDate": "Thu, Mar 20, 2025",
+    "ipoCloseDate": "Mon, Mar 24, 2025",
+    "initiationOfRefunds": "Wed, Mar 26, 2025",
+    "creditOfSharesToDemat": "Wed, Mar 26, 2025",
+    "shareHoldingPreIssue": "1,86,59,003 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "1,86,59,003 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "75.02%"
+      }
+    ],
+    "shareHoldingPostIssue": "2,49,19,403 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "2,49,19,403 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on March 24 2025",
+    "tentative_allotment": "Tue Mar 25 2025",
+    "initiation_of_refunds": "Wed Mar 26 2025",
+    "credit_of_shares_to_demat": "Wed Mar 26 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1200 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "135600"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1200",
+        "amount": "135600"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2400",
+        "amount": "271200"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/grand-continent-hotels-ipo/2187/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "The promoters of the company are Mr. Ramesh Siva and Mrs.Vidya Ramesh.",
+    "holdings": {
+      "share_holding_pre_issue": "75.02%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Founded in 2011, Grand Continent Hotels Limited is a hotel chain in India. The company caters to the mid-market segment, operating 19 properties across six major Indian cities, offering over 900 rooms.</p>\n<p>Each hotel is strategically located in prime urban areas, designed to meet the diverse needs of both business and leisure travelers.</p>\n<p>Grand Continent Hotels elevates customer experience by providing straightforward service interactions, user-friendly infrastructure, and a commitment to delivering value for money. They prioritize sustained service levels, availability, and regularly benchmark and update their services to meet evolving guest expectations.</p>\n<p>As of September 30, 2024, the company and JV Partner Entities operate 16 hotels with 753 keys across Karnataka (Bengaluru/Mysuru), Tamil Nadu (Hosur), Goa (Anjuna/Morjim), Andhra Pradesh (Tirupati), and Telangana (Secunderabad).</p>\n<p>The company serves Indian middle-class guests and business travelers with differentiated, comfortable services and value-for-money propositions.</p>\n<p>Each Grand Continent Hotels property is equipped with modern amenities and services, including:</p>\n<ul>\n<li><strong>Well-furnished rooms</strong> with comfortable bedding, air conditioning, and workspaces</li>\n<li><strong>On-site dining options</strong> serving a variety of cuisines</li>\n<li><strong>Conference and banquet facilities</strong> for business meetings and events</li>\n<li>24/7 front desk and customer support.</li>\n<li>Complimentary Wi-Fi and business services.</li>\n<li>Easy accessibility to transport hubs and commercial areas.</li>\n</ul>\n<p>As of September 30 2024, the company had 538 employees in various departments.</p>\n<p><strong>Competitive Strength</strong></p>\n<ul>\n<li>Premium hospitality offerings in the mid-priced segment.</li>\n<li>Strategically located properties at prime areas.</li>\n<li>Proven track record of adding value through active asset management.</li>\n<li>Professional and experienced management team.</li>\n<li>Well-positioned to benefit from strong industry tailwinds.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "080 4165 6491",
+    "email": "cs@grandcontinenthotels.com",
+    "full_address": "Grand Continent Hotels Limited, S No. 245/1A/1B Venpursham Village, Veeralapakkam Thiruporur Chengalpattu, Mamallapuram Tirukalikundram",
+    "website": "https://grandcontinenthotels.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "grandcontinent.ipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Indorient Financial Services Ltd",
+      "url": "/report/ipo-lead-manager-review/112/175/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/175/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "March 27 2025",
+    "nse_symbol": "GCHOTELS",
+    "isin": "INE12E301017",
+    "final_issue_price": "113 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "113.00"
+      },
+      "open": {
+        "nse_sme": "112.90"
+      },
+      "low": {
+        "nse_sme": "107.25"
+      },
+      "high": {
+        "nse_sme": "112.90"
+      },
+      "last_trade": {
+        "nse_sme": "107.25"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Grand Continent Hotels IPO?",
+      "answer": "<div itemprop=\"text\"><p>Grand Continent Hotels IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->6589200<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->74.46<!-- --> Crores. The issue is priced at <span>₹113 per share</span>. The minimum order quantity is <!-- -->1200<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->March 20, 2025</b>, and <b>closes on <!-- -->March 24, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Grand Continent Hotels IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Grand Continent Hotels IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Grand Continent Hotels IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Grand Continent Hotels IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Grand Continent Hotels IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Grand Continent Hotels IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Grand Continent Hotels IPO opens on March 20, 2025 and closes on March 24, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Grand Continent Hotels IPO?",
+      "answer": "<div itemprop=\"text\"><p>Grand Continent Hotels IPO<!-- --> <b>lot size is <!-- -->1200</b>, and the <b>minimum amount required is <span>₹1,35,600</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Grand Continent Hotels IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Grand Continent Hotels IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Grand Continent Hotels IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Grand Continent Hotels IPO<!-- --> will be done on <!-- -->Tuesday, March 25, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Wednesday, March 26, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/grand-continent-hotels-ipo/2187/\" title=\"Grand Continent Hotels IPO Allotment Status\">Grand Continent Hotels IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Grand Continent Hotels IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Grand Continent Hotels IPO<!-- --> listing date is on <b>Thursday, March 27, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/grand-continent-hotels-ipo/2187/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Grand Continent Hotels IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_22112024122757_DRHP_GCH_211124.pdf"
+    },
+    {
+      "text": "Grand Continent Hotels IPO RHP",
+      "url": "https://archives.nseindia.com/content/ipo/RHP_GCHOTELS.zip"
+    },
+    {
+      "text": "Anchor Investors in Grand Continent Hotels IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/grand-continent-hotels-anchor-list.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Grand Continent Hotels IPO offers total 6589200 shares. Out of which 1249200 (18.96%) allocated to QIB 937200 (14.22%) allocated to NII 2187600 (33.2%) allocated to RII and 1873200 (28.43%) allocated to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "1873200 (28.43%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "330000 (5.01%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "1249200 (18.96%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "937200 (14.22%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "2187600 (33.2%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "6589200 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Grand Continent Hotels IPO raises Rs 21.17 crore from anchor investors. Grand Continent Hotels IPO Anchor bid date is March 19 2025. Grand Continent Hotels IPO Anchor Investors list",
+    "list_link": {
+      "text": "Grand Continent Hotels IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/grand-continent-hotels-anchor-list.pdf"
+    },
+    "details": {
+      "ipo_date": "June 23 2025",
+      "shares_offered": "1873200",
+      "anchor_portion_size": "21.17"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Grand Continent Hotels IPO Details",
+      "sanitizedHeading": "grand_continent_hotels",
+      "headers": [
+        "Application Category",
+        "Maximum Bidding Limits",
+        "Bidding at Cut-off Price Allowed"
+      ],
+      "rows": [
+        [
+          "Only RII",
+          "Up to Rs 2 Lakhs",
+          "Yes"
+        ],
+        [
+          "Only NII",
+          "Above Rs 2 Lakhs",
+          "No"
+        ],
+        [
+          "Only employee",
+          "Up to Rs 5 Lakhs",
+          "Yes"
+        ],
+        [
+          "Employee + RII/NII",
+          "Employee limit: Up to Rs 5 Lakhs (In certain cases employees are given discount if bidding amount is upto Rs. 2 lakhs) If applying as RII: Upto Rs. 2 lakhs If applying as NII: Above Rs. 2 lakhs",
+          "Yes for Employee and RII/NII"
+        ]
+      ]
+    },
+    {
+      "heading": "Grand Continent Hotels Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Sep 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "97.94",
+          "73.91",
+          "42.26",
+          "34.37"
+        ],
+        [
+          "Revenue",
+          "31.86",
+          "31.53",
+          "17.05",
+          "6.03"
+        ],
+        [
+          "Profit After Tax",
+          "6.81",
+          "4.12",
+          "1.05",
+          "-0.79"
+        ],
+        [
+          "Net Worth",
+          "40.18",
+          "29.99",
+          "0.59",
+          "-1.63"
+        ],
+        [
+          "Reserves and Surplus",
+          "22.36",
+          "26",
+          "-0.42",
+          "-2.64"
+        ],
+        [
+          "Total Borrowing",
+          "40.22",
+          "34.96",
+          "37.07",
+          "34.72"
+        ]
+      ]
+    },
+    {
+      "heading": "Grand Continent Hotels IPO Details",
+      "sanitizedHeading": "grand_continent_hotels",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "25%"
+        ],
+        [
+          "ROCE",
+          "17%"
+        ],
+        [
+          "Debt/Equity",
+          "1.13"
+        ],
+        [
+          "RoNW",
+          "26.67%"
+        ],
+        [
+          "PAT Margin",
+          "13.05"
+        ],
+        [
+          "Price to Book Value",
+          "1.50"
+        ]
+      ]
+    },
+    {
+      "heading": "Grand Continent Hotels IPO Details",
+      "sanitizedHeading": "grand_continent_hotels",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "2.21",
+          "5.47"
+        ],
+        [
+          "P/E (x)",
+          "51.24",
+          "20.67"
+        ]
+      ]
+    },
+    {
+      "heading": "Grand Continent Hotels IPO Details",
+      "sanitizedHeading": "grand_continent_hotels",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Repayment and/or prepayment in full or in part of certain outstanding borrowings availed by the Company",
+          "340.81"
+        ],
+        [
+          "2",
+          "Expansion of the Hotel properties in India",
+          "167.92"
+        ],
+        [
+          "3",
+          "General Corporate Purpose",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T18:35:24.653Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/grand-continent-hotels-ipo/2187/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "2.93"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "1.39"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "1.32"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "1.79"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

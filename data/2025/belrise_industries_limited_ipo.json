@@ -1,0 +1,390 @@
+{
+  "pageTitle": "Belrise Industries IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Belrise Industries",
+  "logo": "https://www.chittorgarh.net/images/ipo/belrise-industries-logo.png",
+  "pageHeading": "Belrise Industries Limited IPO (Belrise Industries IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "May 21, 2025 to May 23, 2025",
+    "ipoListingDate": "Wed, May 28, 2025",
+    "faceValue": "₹5 per share",
+    "issuePrice": "₹85 to ₹90 per share",
+    "lotSize": "166 Shares",
+    "issueSize": "23,88,88,888 shares (aggregating up to ₹2,150.00 Cr)",
+    "freshIssue": "23,88,88,888 shares (aggregating up to ₹2,150.00 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "BSE, NSE",
+    "ipoOpenDate": "Wed, May 21, 2025",
+    "ipoCloseDate": "Fri, May 23, 2025",
+    "initiationOfRefunds": "Tue, May 27, 2025",
+    "creditOfSharesToDemat": "Tue, May 27, 2025",
+    "shareHoldingPreIssue": "65,09,90,304 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "65,09,90,304 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "99.81%"
+      }
+    ],
+    "shareHoldingPostIssue": "88,98,79,192 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "88,98,79,192 shares"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on May 23 2025",
+    "tentative_allotment": "Mon May 26 2025",
+    "initiation_of_refunds": "Tue May 27 2025",
+    "credit_of_shares_to_demat": "Tue May 27 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 166 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "166",
+        "amount": "14940"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "13",
+        "shares": "2158",
+        "amount": "194220"
+      },
+      "shni_min": {
+        "application": "S-HNI (Min)",
+        "lots": "14",
+        "shares": "2324",
+        "amount": "209160"
+      },
+      "shni_max": {
+        "application": "S-HNI (Max)",
+        "lots": "66",
+        "shares": "10956",
+        "amount": "986040"
+      },
+      "bhni_min": {
+        "application": "B-HNI (Min)",
+        "lots": "67",
+        "shares": "11122",
+        "amount": "1000980"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/belrise-industries-ipo/2083/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Shrikant Shankar Badve Supriya Shrikant Badve and Sumedh Shrikant Badve are the company promoters.",
+    "holdings": {
+      "share_holding_pre_issue": "99.81%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 1988, Belrise Industries Limited manufactures Automotive Sheet Metal and casting parts, Polymer components, Suspension, and mirror systems specifically for Two-Wheel, Three-Wheel, and Four-Wheel Passenger and Commercial vehicles.</p>\n<p>The company is an automotive component manufacturing company in India offering a diverse range of safety critical systems.</p>\n<p>Belrise Industries is a manufacturing company in India that offers a diverse range of safety-critical systems and other engineering solutions for two-wheelers, three-wheelers, four-wheelers, commercial vehicles, and agri-vehicles.</p>\n<p>The company's product portfolio includes metal chassis systems, polymer components, suspension systems, body-in-white components, and exhaust systems.</p>\n<p>The company's customers include Bajaj, Honda, Hero, Jaguar Land Rover, Royal Enfield, VE Commercial Vehicles, Tata Motors, and Mahindra.</p>\n<p>As of June 30, 2024, the company services a total of 27 OEMs globally. The company have established 15 manufacturing facilities across nine cities in eight states, as of June 30, 2024.</p>\n<p><strong>Competitive Strength:</strong></p>\n<ul>\n<li>Distinguished market leader in the high-growth field of precision sheet metal pressing and fabrication within a large and growing automotive component industry.</li>\n<li>\n<div>enabled, innovation-driven development and process engineering capabilities.</div>\n</li>\n<li>\n<div>Vertically integrated manufacturing facilities offering a diverse range of products.</div>\n</li>\n<li>\n<div>Longstanding customer relationships are developed through years of collaboration and value addition.</div>\n</li>\n<li>\n<div>Largely EV- agnostic product portfolio, strategically positioned to scale in tandem with burgeoning electric vehicle market in India.</div>\n</li>\n<li>Experienced promoters and management team.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+910240 255120",
+    "email": "complianceofficer@belriseindustries.com",
+    "full_address": "Belrise Industries Limited, Plot No D-39, MIDC, Area Waluj",
+    "website": "http://www.belriseindustries.com/"
+  },
+  "registrarDetails": {
+    "name": "Link Intime India Private Ltd",
+    "phone": "+91-22-4918 6270",
+    "email": "belriseindustries.ipo@linkintime.co.in",
+    "website": "https://linkintime.co.in/Initial_Offer/public-issues.html"
+  },
+  "leadManagers": [
+    {
+      "name": "Axis Capital Limited",
+      "url": "/report/ipo-lead-manager-review/112/113/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/113/"
+    },
+    {
+      "name": "Hsbc Securities & Capital Markets Pvt Ltd",
+      "url": "/report/ipo-lead-manager-review/112/69/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/69/"
+    },
+    {
+      "name": "Jefferies India Private Limited",
+      "url": "/report/ipo-lead-manager-review/112/112/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/112/"
+    },
+    {
+      "name": "SBI Capital Markets Limited",
+      "url": "/report/ipo-lead-manager-review/112/21/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/21/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the Belrise Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>Belrise Industries IPO<!-- --> is a <b>main-board<!-- --> <!-- -->IPO<!-- --> of <!-- -->238888888<!-- --> equity shares</b> of the face value of ₹<!-- -->5<!-- --> aggregating up to ₹<!-- -->2,150.00<!-- --> Crores. The issue is priced at <span>₹85 to ₹90 per share</span>. The minimum order quantity is <!-- -->166<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->May 21, 2025</b>, and <b>closes on <!-- -->May 23, 2025</b>.</p><p>Link Intime India Private Ltd<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->BSE, NSE<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Belrise Industries IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Belrise Industries IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Belrise Industries IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Belrise Industries IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Belrise Industries IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Belrise Industries IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Belrise Industries IPO opens on May 21, 2025 and closes on May 23, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Belrise Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>Belrise Industries IPO<!-- --> <b>lot size is <!-- -->166</b>, and the <b>minimum amount required is <span>₹14,940</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Belrise Industries IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Belrise Industries IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Belrise Industries IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Belrise Industries IPO<!-- --> will be done on <!-- -->Monday, May 26, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Tuesday, May 27, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/belrise-industries-ipo/2083/\" title=\"Belrise Industries IPO Allotment Status\">Belrise Industries IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Belrise Industries IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Belrise Industries IPO<!-- --> listing date is not yet announced. The <b>tentative date of <!-- -->Belrise Industries IPO<!-- --> listing is <!-- -->Wednesday, May 28, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "5",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "1"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/belrise-industries-ipo/2083/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Belrise Industries IPO DRHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/nov-2024/belrise-industries-limited_88690.html"
+    },
+    {
+      "text": "Belrise Industries IPO RHP",
+      "url": "https://listing.bseindia.com/Download/8888888/PreAnchor/RHP_20250516171041.pdf"
+    },
+    {
+      "text": "Anchor Investors in Belrise Industries IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/belriseindustries_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "allocation": [
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "Not more than 50% of the Issue"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "Not less than 35% of the Issue"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "Not less than 15% of the Issue"
+      }
+    ]
+  },
+  "additionalTables": [
+    {
+      "heading": "Belrise Industries Limited Financial Information (Restated Consolidated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "31 Dec 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "6587.69",
+          "6041.65",
+          "5679.15",
+          "5196.07"
+        ],
+        [
+          "Revenue",
+          "6064.76",
+          "7555.67",
+          "6620.78",
+          "5410.68"
+        ],
+        [
+          "Profit After Tax",
+          "245.47",
+          "352.70",
+          "356.70",
+          "307.24"
+        ],
+        [
+          "Net Worth",
+          "2577.55",
+          "2331.92",
+          "2038.20",
+          "1734.45"
+        ],
+        [
+          "Reserves and Surplus",
+          "2252.24",
+          "2014.43",
+          "2024.16",
+          "1715.31"
+        ],
+        [
+          "Total Borrowing",
+          "2599.80",
+          "2440.98",
+          "2271.40",
+          "2597.96"
+        ]
+      ]
+    },
+    {
+      "heading": "Belrise Industries IPO Details",
+      "sanitizedHeading": "belrise_industries",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROCE",
+          "14.83%"
+        ],
+        [
+          "Debt/Equity",
+          "0.97"
+        ],
+        [
+          "RoNW",
+          "13.33%"
+        ],
+        [
+          "PAT Margin",
+          "4.36"
+        ],
+        [
+          "Price to Book Value",
+          "2.50"
+        ]
+      ]
+    },
+    {
+      "heading": "Belrise Industries IPO Details",
+      "sanitizedHeading": "belrise_industries",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "5.42",
+          "3.68"
+        ],
+        [
+          "P/E (x)",
+          "16.61",
+          "24.47"
+        ]
+      ]
+    },
+    {
+      "heading": "Belrise Industries IPO Details",
+      "sanitizedHeading": "belrise_industries",
+      "headers": [
+        "S.No.",
+        "Objects of the Issue",
+        "Expected Amount (in Millions)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Repayment/pre-payment in full or in part of certain outstanding borrowings availed by the Company; and",
+          "16181.27"
+        ],
+        [
+          "2",
+          "General corporate purposes",
+          null
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": false,
+      "listingDayTrading": false,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": false
+    },
+    "scrapedAt": "2025-05-20T18:42:18.727Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/belrise-industries-ipo/2083/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {},
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}

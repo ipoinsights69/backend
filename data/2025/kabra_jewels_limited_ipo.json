@@ -1,0 +1,433 @@
+{
+  "pageTitle": "Kabra Jewels IPO Date, Price, GMP, Review, Details",
+  "ipoName": "Kabra Jewels",
+  "logo": "https://www.chittorgarh.net/images/ipo/kk-jewels-ipo-logo.jpg",
+  "pageHeading": "Kabra Jewels Limited IPO (Kabra Jewels IPO) Detail",
+  "basicDetails": {
+    "ipoDate": "January 15, 2025 to January 17, 2025",
+    "ipoListingDate": "Wed, Jan 22, 2025",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹128.00",
+    "lotSize": "1,000 Shares",
+    "issueSize": "31,25,000 shares (aggregating up to ₹40.00 Cr)",
+    "freshIssue": "31,25,000 shares (aggregating up to ₹40.00 Cr)",
+    "issueType": "Bookbuilding IPO",
+    "listingAt": "NSE SME",
+    "marketMakerPortion": {
+      "text": "2,90,000 shares",
+      "maker_name": "Giriraj Stock Broking Private Limited",
+      "maker_url": "https://www.google.com/report/ipo-market-maker-vs-listing-gain/127/245/"
+    },
+    "ipoOpenDate": "Wed, Jan 15, 2025",
+    "ipoCloseDate": "Fri, Jan 17, 2025",
+    "initiationOfRefunds": "Tue, Jan 21, 2025",
+    "creditOfSharesToDemat": "Tue, Jan 21, 2025",
+    "shareHoldingPreIssue": "73,60,000 shares",
+    "shareHoldingPreIssueAll": [
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "73,60,000 shares"
+      },
+      {
+        "label": "Share Holding Pre Issue",
+        "value": "89.12%"
+      }
+    ],
+    "shareHoldingPostIssue": "1,04,85,000 shares",
+    "shareHoldingPostIssueAll": [
+      {
+        "label": "Share Holding Post Issue",
+        "value": "1,04,85,000 shares"
+      },
+      {
+        "label": "Share Holding Post Issue",
+        "value": "62.55%"
+      }
+    ]
+  },
+  "tentativeDetails": {
+    "ipo_date": "5 PM on January 17 2025",
+    "tentative_allotment": "Mon Jan 20 2025",
+    "initiation_of_refunds": "Tue Jan 21 2025",
+    "credit_of_shares_to_demat": "Tue Jan 21 2025"
+  },
+  "lotSize": {
+    "summary": "Investors can bid for a minimum of 1000 shares and in multiples thereof. The following table depicts the minimum and maximum investment by Retail Investors and HNI in terms of shares and amount.",
+    "applications": {
+      "retail_min": {
+        "application": "Retail (Min)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "128000"
+      },
+      "retail_max": {
+        "application": "Retail (Max)",
+        "lots": "1",
+        "shares": "1000",
+        "amount": "128000"
+      },
+      "hni_min": {
+        "application": "HNI (Min)",
+        "lots": "2",
+        "shares": "2000",
+        "amount": "256000"
+      },
+      "lot_size": {
+        "application": "Lot Size Calculator"
+      }
+    },
+    "calculator_link": {
+      "text": "Lot Size Calculator",
+      "url": "/ipo-hni-funding-cost-calculator/kabra-jewels-ipo/1962/"
+    }
+  },
+  "promoterHolding": {
+    "promoters": "Kailash Kabra and Jyothi Kailash Kabra are the promoters of the company.",
+    "holdings": {
+      "share_holding_pre_issue": "89.12%",
+      "share_holding_post_issue": "62.55%"
+    },
+    "note": "The value will be calculated using Equity Dilution = Share Holding Pre Issue - Share Holding Post Issue"
+  },
+  "about": {
+    "details": "<p>Incorporated in 2010, Kabra Jewels Limited is engaged in the retail jewelry business, offers a diverse collection of gold, diamond, and silver ornaments.</p>\n<p>The company designs, manufactures, and sells a wide range of gold, studded, and other jewelry products across various price, ranging from jewelry for special occasions, such as weddings, which is their highest-selling product category, to daily-wear jewelry.</p>\n<p>The company operates 6 showrooms in Ahmedabad under the brands KK Jewels Bridal, KK Jewels Diamond, KK Jewels Silver, KK Jewels Gold, KK Jewels - Atarashi, and KK Jewels - Silver Studio, along with 3 offices and 1 exhibition center.</p>\n<p><strong>Business Model:</strong></p>\n<ul>\n<li><strong>Model 1:</strong> Where the company procures goods directly from vendors (General Designs) like Chains, Rings, Pendants, Earrings.</li>\n<li><strong>Model 2:</strong> Where the company customizes jewelry based on their in-house specialized designs or customer orders. They select vendors or karigars based on their expertise for the jewelry to be manufactured like Necklace, Mang tikka, earrings, Bracelet.</li>\n</ul>\n<p><strong>Products:</strong> Rings, Earrings, Pendants, Nose, Bracelets, Chains, Necklaces and Bangles.</p>\n<p>As on November 30, 2024, the company has employed 121 employees.</p>\n<p><strong>Competitve Strength:</strong></p>\n<ul>\n<li>Established brand</li>\n<li>Quality of the products</li>\n<li>Experienced promoters with established track record of operations</li>\n<li>Well established relationship with the artisans</li>\n<li>Design and Innovation in the product range</li>\n<li>Experienced management team and a motivated &amp; efficient work force.</li>\n</ul>"
+  },
+  "contactDetails": {
+    "phone": "+91 93288 71207",
+    "email": "cs.kkjewels@gmail.com",
+    "full_address": "Kabra Jewels Limited, Shop no.6 Ground Floor, Iscon Center Besides Tanishq, Shivranjani Cross Road Satellite",
+    "website": "https://kkjewels.org/"
+  },
+  "registrarDetails": {
+    "name": "Cameo Corporate Services Limited",
+    "phone": "+91-44-28460390",
+    "email": "ipo@cameoindia.com",
+    "website": "https://ipo.cameoindia.com/"
+  },
+  "leadManagers": [
+    {
+      "name": "Marwadi Chandarana Intermediaries Brokers Pvt. Ltd.",
+      "url": "/report/ipo-lead-manager-review/112/435/",
+      "performance_link": "/report/ipo-lead-manager-vs-listing-gain/99/all/435/"
+    }
+  ],
+  "leadManagerReports": [
+    {
+      "text": "IPO Lead Manager Performance Summary",
+      "url": "/report/ipo_lead_manager_performance_tracker/19/"
+    },
+    {
+      "text": "IPO Lead Manager Performance Tracker",
+      "url": "/report/ipo-lead-manager-vs-listing-gain/99/all/"
+    }
+  ],
+  "listingDetails": {
+    "pre_open_links": [
+      {
+        "text": "Pre-Open Session - NSE",
+        "url": "https://www.nseindia.com/market-data/new-stock-exchange-listings-today"
+      }
+    ],
+    "ipo_date": "January 22 2025",
+    "nse_symbol": "KKJEWELS",
+    "isin": "INE0XOW01017",
+    "final_issue_price": "128 per share"
+  },
+  "listingDayTrading": {
+    "data": {
+      "final_issue_price": {
+        "nse_sme": "128.00"
+      },
+      "open": {
+        "nse_sme": "243.20"
+      },
+      "low": {
+        "nse_sme": "243.20"
+      },
+      "high": {
+        "nse_sme": "255.35"
+      },
+      "last_trade": {
+        "nse_sme": "255.35"
+      }
+    },
+    "performance_link": {
+      "text": "Check IPO Performance…",
+      "url": "/ipo/ipo_perf_tracker.asp"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What is the Kabra Jewels IPO?",
+      "answer": "<div itemprop=\"text\"><p>Kabra Jewels IPO<!-- --> is a <b>SME<!-- --> <!-- -->IPO<!-- --> of <!-- -->3125000<!-- --> equity shares</b> of the face value of ₹<!-- -->10<!-- --> aggregating up to ₹<!-- -->40.00<!-- --> Crores. The issue is priced at <span>₹128 per share</span>. The minimum order quantity is <!-- -->1000<!-- -->.</p><p>The <!-- -->IPO<!-- --> <b>opens on <!-- -->January 15, 2025</b>, and <b>closes on <!-- -->January 17, 2025</b>.</p><p>Cameo Corporate Services Limited<!-- --> is the registrar for the <!-- -->IPO<!-- -->. The shares are proposed to be listed on <!-- -->NSE SME<!-- -->.</p></div>"
+    },
+    {
+      "question": "How to apply in Kabra Jewels IPO through Zerodha?",
+      "answer": "<div itemprop=\"text\"><p>Zerodha customers can apply online in <!-- -->Kabra Jewels IPO<!-- --> using UPI as a payment gateway. Zerodha customers can apply in <!-- -->Kabra Jewels IPO<!-- --> by login into Zerodha Console (back office) and submitting an IPO application form.</p><p><strong>Steps to apply in <!-- -->Kabra Jewels IPO<!-- --> through Zerodha</strong></p><ol><li>Visit the Zerodha website and login to Console.</li><li>Go to Portfolio and click the IPOs link.</li><li>Go to the '<!-- -->Kabra Jewels IPO<!-- -->' row and click the 'Bid' button.</li><li>Enter your UPI ID, Quantity, and Price.</li><li>Submit IPO application form.</li><li>Visit the UPI App (net banking or BHIM) to approve the mandate.</li></ol><p>Visit <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Application Process Review\">Zerodha IPO Application Process Review</a> for more detail.</p></div>"
+    },
+    {
+      "question": "When Kabra Jewels IPO will open?",
+      "answer": "<div itemprop=\"text\"><p>The Kabra Jewels IPO opens on January 15, 2025 and closes on January 17, 2025.</p></div>"
+    },
+    {
+      "question": "What is the lot size of Kabra Jewels IPO?",
+      "answer": "<div itemprop=\"text\"><p>Kabra Jewels IPO<!-- --> <b>lot size is <!-- -->1000</b>, and the <b>minimum amount required is <span>₹1,28,000</span></b>.</p></div>"
+    },
+    {
+      "question": "How to apply for Kabra Jewels IPO?",
+      "answer": "<div itemprop=\"text\"><p>You can apply in <!-- -->Kabra Jewels IPO<!-- --> online using either <a href=\"/article/upi-payment-option-ipo-application-explained/382/\">UPI</a> or ASBA as a payment method. ASBA IPO application is available in the net banking of your bank account. UPI IPO application is offered by brokers who don't offer banking services. Read more detail about applying IPO online through <a href=\"/broker/zerodha/ipo/18/\" title=\"Zerodha IPO Review\"><b>Zerodha</b></a>, <a href=\"/broker/upstox/ipo/33/\" title=\"Upstox IPO Review\">Upstox</a>, <a href=\"/broker/5paisa/ipo/4/\" title=\"5Paisa IPO Review\">5Paisa</a>, <a href=\"/broker/edelweiss_broking/ipo/34/\" title=\"Nuvama IPO Review\">Nuvama</a>, <a href=\"/broker/hdfc-securities/ipo/6/\" title=\"HDFC Bank IPO Review\">HDFC Bank</a>, and <a href=\"/broker/sbi-capital/ipo/19/\" title=\"SBI Capital IPO Review\">SBI Bank</a>.</p></div>"
+    },
+    {
+      "question": "When is Kabra Jewels IPO allotment?",
+      "answer": "<div itemprop=\"text\"><p>The finalization of Basis of Allotment for <!-- -->Kabra Jewels IPO<!-- --> will be done on <!-- -->Monday, January 20, 2025<!-- -->, and the allotted shares will be credited to your demat account by <!-- -->Tuesday, January 21, 2025<!-- -->. Check the <a href=\"/ipo_allotment_status/kabra-jewels-ipo/1962/\" title=\"Kabra Jewels IPO Allotment Status\">Kabra Jewels IPO<!-- --> allotment status</a>.</p></div>"
+    },
+    {
+      "question": "When is Kabra Jewels IPO listing date?",
+      "answer": "<div itemprop=\"text\"><p>The <!-- -->Kabra Jewels IPO<!-- --> listing date is on <b>Wednesday, January 22, 2025</b>.</p></div>"
+    }
+  ],
+  "recommendationSummary": {
+    "recommendations": {
+      "brokersbrokers": {
+        "subscribe": "1",
+        "neutral": "0",
+        "avoid": "0"
+      },
+      "membersmembers": {
+        "subscribe": "0",
+        "neutral": "0",
+        "avoid": "0"
+      }
+    },
+    "links": [
+      {
+        "text": "Read All Reviews",
+        "url": "/ipo-recommendation/kabra-jewels-ipo/1962/"
+      },
+      {
+        "text": "Post Your Review",
+        "url": "#"
+      },
+      {
+        "text": "Manage Reviews",
+        "url": "#"
+      }
+    ]
+  },
+  "prospectusLinks": [
+    {
+      "text": "Kabra Jewels IPO DRHP",
+      "url": "https://nsearchives.nseindia.com/emerge/corporates/content/AD_IPO_4645_26122024183641.zip"
+    },
+    {
+      "text": "Kabra Jewels IPO RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/jan-2025/kabra-jewels-limited_91435.html"
+    },
+    {
+      "text": "Anchor Investors in Kabra Jewels IPO",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/kabra_jewels_anchorallocationreport.pdf"
+    }
+  ],
+  "reservation": {
+    "summary": "Kabra Jewels IPO offers 3125000 shares. 567000 (18.14%) to QIB 426000 (13.63%) to NII 993000 (31.78%) to RII and 849000 (27.17%) to Anchor investors.",
+    "allocation": [
+      {
+        "investor_category": "Anchor Investor Shares Offered",
+        "shares_offered": "849000 (27.17%)"
+      },
+      {
+        "investor_category": "Market Maker Shares Offered",
+        "shares_offered": "290000 (9.28%)"
+      },
+      {
+        "investor_category": "QIB Shares Offered",
+        "shares_offered": "567000 (18.14%)"
+      },
+      {
+        "investor_category": "NII (HNI) Shares Offered",
+        "shares_offered": "426000 (13.63%)"
+      },
+      {
+        "investor_category": "Retail Shares Offered",
+        "shares_offered": "993000 (31.78%)"
+      },
+      {
+        "investor_category": "Total Shares Offered",
+        "shares_offered": "3125000 (100%)"
+      }
+    ]
+  },
+  "anchorInvestors": {
+    "summary": "Kabra Jewels IPO raises Rs 10.87 crore from anchor investors. Kabra Jewels IPO Anchor bid date is January 14 2025. Kabra Jewels IPO Anchor Investors list",
+    "list_link": {
+      "text": "Kabra Jewels IPO Anchor Investors list",
+      "url": "https://www.chittorgarh.net/reports/anchor-investor/kabra_jewels_anchorallocationreport.pdf"
+    },
+    "details": {
+      "ipo_date": "April 20 2025",
+      "shares_offered": "849000",
+      "anchor_portion_size": "10.87"
+    }
+  },
+  "additionalTables": [
+    {
+      "heading": "Kabra Jewels Limited Financial Information (Restated)",
+      "sanitizedHeading": "financials",
+      "headers": [
+        "Period Ended",
+        "30 Nov 2024",
+        "31 Mar 2024",
+        "31 Mar 2023",
+        "31 Mar 2022"
+      ],
+      "rows": [
+        [
+          "Assets",
+          "16942.59",
+          "14056.17",
+          "11307.33",
+          "7401.16"
+        ],
+        [
+          "Revenue",
+          "12548.47",
+          "16424.32",
+          "12234.02",
+          "11212.54"
+        ],
+        [
+          "Profit After Tax",
+          "880.89",
+          "939.64",
+          "440.58",
+          "540.46"
+        ],
+        [
+          "Net Worth",
+          "3986.78",
+          "3105.88",
+          "2166.24",
+          "1725.66"
+        ],
+        [
+          "Reserves and Surplus",
+          "3250.78",
+          "3059.88",
+          "2120.24",
+          "1679.66"
+        ],
+        [
+          "Total Borrowing",
+          "10307.08",
+          "8996.84",
+          "6982.62",
+          "4730.26"
+        ]
+      ]
+    },
+    {
+      "heading": "Kabra Jewels IPO Details",
+      "sanitizedHeading": "kabra_jewels",
+      "headers": [
+        "KPI",
+        "Values"
+      ],
+      "rows": [
+        [
+          "ROE",
+          "30.25%"
+        ],
+        [
+          "ROCE",
+          "18.23%"
+        ],
+        [
+          "Debt/Equity",
+          "2.90"
+        ],
+        [
+          "RoNW",
+          "30.25%"
+        ],
+        [
+          "PAT Margin",
+          "5.73"
+        ],
+        [
+          "Price to Book Value",
+          "3.03"
+        ]
+      ]
+    },
+    {
+      "heading": "Kabra Jewels IPO Details",
+      "sanitizedHeading": "kabra_jewels",
+      "headers": [
+        null,
+        "Pre IPO",
+        "Post IPO"
+      ],
+      "rows": [
+        [
+          "EPS (Rs)",
+          "12.77",
+          "12.60"
+        ],
+        [
+          "P/E (x)",
+          "10.03",
+          "10.16"
+        ]
+      ]
+    }
+  ],
+  "_metadata": {
+    "sectionsAvailable": {
+      "basicDetails": true,
+      "tentativeSchedule": true,
+      "lotSize": true,
+      "timeline": false,
+      "kpi": true,
+      "financials": true,
+      "promoterHolding": true,
+      "objectives": false,
+      "about": true,
+      "subscriptionStatus": false,
+      "contactDetails": true,
+      "registrarDetails": true,
+      "leadManagers": true,
+      "listingDetails": true,
+      "listingDayTrading": true,
+      "faqs": true,
+      "recommendationSummary": true,
+      "prospectusLinks": true,
+      "reservation": true,
+      "anchorInvestors": true
+    },
+    "scrapedAt": "2025-05-20T19:05:15.396Z",
+    "sourceUrl": "https://www.chittorgarh.com/ipo/kabra-jewels-ipo/1962/"
+  },
+  "subscriptionHistory": {
+    "overall_subscription": {
+      "qib": {
+        "category": "Qualified Institutional",
+        "subscription_times": "154.53"
+      },
+      "non_institutional": {
+        "category": "Non Institutional",
+        "subscription_times": "556.9"
+      },
+      "retail": {
+        "category": "Retail Individual",
+        "subscription_times": "384.9"
+      },
+      "total": {
+        "category": "Total Subscription",
+        "subscription_times": "356.02"
+      }
+    },
+    "day_wise_subscription": [],
+    "total_applications": "",
+    "subscription_notes": []
+  }
+}
