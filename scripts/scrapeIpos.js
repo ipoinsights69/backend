@@ -1,9 +1,8 @@
 const path = require('path');
+const fs = require('fs').promises;
 const { fetchIpoListings } = require('../scraper/ipoListingScraper');
-const { fetchStructuredData, fetchCompleteIpoData } = require('../scraper/ipoDetailScraper');
-const { saveToJson, sanitizeFilename, extractIpoId, ensureDirectoryExists } = require('../utils/helpers');
-const { uploadIpoListings, uploadIpoDetail, uploadIpoDetails } = require('../utils/mongoDbHelper');
-const { processInThreads } = require('../utils/threadManager');
+const { fetchCompleteIpoData } = require('../scraper/ipoDetailScraper');
+const { saveToJson, sanitizeFilename, ensureDirectoryExists } = require('../utils/helpers');
 require('dotenv').config();
 
 // Base directory for data storage
@@ -11,22 +10,12 @@ const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '..', 'data');
 
 // Configure throttling
 const DELAY_BETWEEN_REQUESTS = parseInt(process.env.DELAY_BETWEEN_REQUESTS || '1000', 10);
-const MAX_CONCURRENT_REQUESTS = parseInt(process.env.MAX_CONCURRENT_REQUESTS || '10', 10);
-
-// Enable/disable MongoDB upload
-const UPLOAD_TO_MONGODB = process.env.UPLOAD_TO_MONGODB !== 'false';
-
-// Enable/disable threaded processing
-const USE_THREADS = process.env.USE_THREADS !== 'false';
-
-// Set thread count
-const THREAD_COUNT = parseInt(process.env.THREAD_COUNT || '4', 10);
 
 // Delay function to prevent rate limiting
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 /**
- * Processes a single IPO, fetching details and saving to file and MongoDB
+ * Process a single IPO, fetching details and saving to file
  * @param {Object} ipo - Basic IPO information with detail_url
  * @param {string} year - Year for organization
  * @returns {Promise<Object>} - Processed IPO data
@@ -43,9 +32,9 @@ async function processIpo(ipo, year) {
       ? ipo.detail_url 
       : `https://www.chittorgarh.com${ipo.detail_url}`;
 
-    console.log(`Processing IPO: ${ipo.company_name} (${fullUrl})`);
+    console.log(`Processing IPO: ${ipo.company_name}`);
     
-    // Use the new comprehensive data fetching function
+    // Use the comprehensive data fetching function
     const ipoData = await fetchCompleteIpoData(fullUrl);
     
     if (ipoData._error) {
@@ -61,19 +50,8 @@ async function processIpo(ipo, year) {
     await saveToJson(yearDir, fileName, ipoData);
     console.log(`Saved ${ipo.company_name} data to ${path.join(yearDir, fileName)}`);
 
-    // Upload to MongoDB if enabled
-    if (UPLOAD_TO_MONGODB) {
-      try {
-        const metadata = {
-          company_name: ipo.company_name,
-          year: year
-        };
-        await uploadIpoDetail(ipoData, metadata);
-        console.log(`Uploaded ${ipo.company_name} data to MongoDB`);
-      } catch (mongoError) {
-        console.error(`MongoDB upload error for ${ipo.company_name}:`, mongoError.message);
-      }
-    }
+    // Add a delay after each request to avoid rate limiting
+    await delay(DELAY_BETWEEN_REQUESTS);
 
     return ipoData;
   } catch (error) {
@@ -83,103 +61,109 @@ async function processIpo(ipo, year) {
 }
 
 /**
- * Processes a batch of IPOs with concurrency control
- * @param {Array} ipos - Array of IPO listings
- * @param {string} year - Year for organization
+ * Checks if detailed data for an IPO already exists
+ * @param {Object} ipo - IPO listing data
+ * @param {string} year - Year directory
+ * @returns {Promise<boolean>} - True if data exists, false otherwise
  */
-async function processBatch(ipos, year) {
-  // Filter out IPOs without valid detail URLs
-  const validIpos = ipos.filter(ipo => ipo && ipo.detail_url);
+async function ipoDetailExists(ipo, year) {
+  if (!ipo || !ipo.company_name) return false;
   
-  console.log(`Processing ${validIpos.length} IPOs for year ${year}`);
+  const yearDir = path.join(DATA_DIR, year.toString());
+  const companyName = sanitizeFilename(ipo.company_name);
+  const fileName = `${companyName}.json`;
+  const filePath = path.join(yearDir, fileName);
   
-  // If threaded processing is enabled, use threads
-  if (USE_THREADS) {
-    console.log(`Using threaded processing with up to ${THREAD_COUNT} threads`);
-    
-    try {
-      // Define worker script path for IPO detail processing
-      const workerScriptPath = path.join(__dirname, '..', 'workers', 'ipoDetailWorker.js');
-      
-      // Set up options for threaded processing
-      const threadOptions = {
-        maxThreads: THREAD_COUNT,
-        workerData: {
-          year: year,
-          dataDir: DATA_DIR,
-          uploadToMongo: UPLOAD_TO_MONGODB,
-          delay: DELAY_BETWEEN_REQUESTS
-        },
-        onProgress: (progress) => {
-          if (progress.processed % 5 === 0 || progress.processed === progress.total) {
-            console.log(`Thread ${progress.threadId}: Processed ${progress.processed}/${progress.total} IPOs (${progress.percentage}%)`);
-          }
-        }
-      };
-      
-      // Process IPOs using worker threads
-      const results = await processInThreads(validIpos, workerScriptPath, threadOptions);
-      
-      // Log summary
-      const successful = results.filter(r => r && r.success).length;
-      const failed = results.filter(r => r && !r.success).length;
-      
-      console.log(`\nThreaded processing completed for year ${year}:`);
-      console.log(`- Total IPOs: ${validIpos.length}`);
-      console.log(`- Successfully processed: ${successful}`);
-      console.log(`- Failed: ${failed}`);
-      
-      return results;
-    } catch (error) {
-      console.error('Error during threaded processing:', error);
-      console.log('Falling back to serial processing...');
-      
-      // Fall back to traditional processing
-      return processWithConcurrency(validIpos, year);
-    }
-  } else {
-    // Use the traditional concurrent processing approach
-    return processWithConcurrency(validIpos, year);
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch (error) {
+    return false;
   }
 }
 
 /**
- * Process IPOs using the traditional concurrency approach (Promise-based)
- * @param {Array} ipos - Array of IPO listings
- * @param {string} year - Year for organization
+ * Main function to scrape IPOs for a given year
+ * Only scrapes new IPOs and always scrapes the latest 7
+ * @param {number} year - Year to scrape
  */
-async function processWithConcurrency(ipos, year) {
-  const results = [];
-  const pendingIpos = [...ipos];
+async function scrapeNewIpos(year) {
+  console.log(`\n--- Processing Year: ${year} ---`);
   
-  console.log(`Processing ${pendingIpos.length} IPOs for year ${year} with max ${MAX_CONCURRENT_REQUESTS} concurrent requests`);
-  
-  // Process in batches with controlled concurrency
-  const activePromises = new Set();
-  
-  while (pendingIpos.length > 0 || activePromises.size > 0) {
-    // Fill up to max concurrent requests
-    while (pendingIpos.length > 0 && activePromises.size < MAX_CONCURRENT_REQUESTS) {
-      const ipo = pendingIpos.shift();
-      const promise = (async () => {
-        const result = await processIpo(ipo, year);
-        if (result) results.push(result);
-        activePromises.delete(promise);
-        
-        // Add delay between requests
-        await delay(DELAY_BETWEEN_REQUESTS);
-      })();
-      
-      activePromises.add(promise);
+  try {
+    // Ensure data directory exists
+    await ensureDirectoryExists(DATA_DIR);
+    const yearDir = path.join(DATA_DIR, year.toString());
+    await ensureDirectoryExists(yearDir);
+    
+    // Fetch IPO listings for the year
+    console.log(`Fetching IPO listings for year ${year}`);
+    const ipoListings = await fetchIpoListings(year);
+    
+    if (!ipoListings || ipoListings.length === 0) {
+      console.log(`No IPO listings found for year ${year}`);
+      return true;
     }
     
-    // Wait for at least one promise to complete
-    if (activePromises.size > 0) {
-      await Promise.race(activePromises);
+    console.log(`Found ${ipoListings.length} IPO listings for year ${year}`);
+    
+    // Save listings summary to file
+    const listingsPath = path.join(yearDir, '_listings.json');
+    await saveToJson(yearDir, '_listings.json', ipoListings);
+    console.log(`Saved listings summary for year ${year}`);
+    
+    // Identify which IPOs need to be scraped
+    const iposToScrape = [];
+    const latestIpos = ipoListings.slice(0, 7); // Get the latest 7 IPOs
+    
+    // Always scrape the latest 7 IPOs
+    console.log(`\nWill always scrape the latest 7 IPOs:`);
+    for (const ipo of latestIpos) {
+      const exists = await ipoDetailExists(ipo, year);
+      console.log(`- ${ipo.company_name}${exists ? ' (already exists, will update)' : ' (new)'}`);
+      iposToScrape.push(ipo);
     }
+    
+    // Check the remaining IPOs and only add those that don't exist
+    const remainingIpos = ipoListings.slice(7);
+    const missingIpos = [];
+    
+    for (const ipo of remainingIpos) {
+      const exists = await ipoDetailExists(ipo, year);
+      if (!exists) {
+        missingIpos.push(ipo);
+      }
+    }
+    
+    if (missingIpos.length > 0) {
+      console.log(`\nFound ${missingIpos.length} missing IPOs that need to be scraped:`);
+      missingIpos.forEach(ipo => console.log(`- ${ipo.company_name}`));
+      iposToScrape.push(...missingIpos);
+    } else {
+      console.log('\nNo missing IPOs found beyond the latest 7.');
+    }
+    
+    // Process all IPOs that need to be scraped sequentially
+    console.log(`\nTotal IPOs to scrape: ${iposToScrape.length} out of ${ipoListings.length}`);
+    
+    if (iposToScrape.length === 0) {
+      console.log('All IPO data is already up to date!');
+      return true;
+    }
+    
+    console.log('\nStarting sequential processing of IPOs...');
+    for (let i = 0; i < iposToScrape.length; i++) {
+      const ipo = iposToScrape[i];
+      console.log(`\nProcessing IPO ${i+1}/${iposToScrape.length}: ${ipo.company_name}`);
+      await processIpo(ipo, year.toString());
+    }
+    
+    console.log(`\nCompleted processing ${iposToScrape.length} IPOs for year ${year}`);
+    return true;
+  } catch (error) {
+    console.error(`Error processing year ${year}:`, error);
+    return false;
   }
-  
-  return results;
 }
 
 /**
@@ -188,73 +172,13 @@ async function processWithConcurrency(ipos, year) {
  * @param {number} endYear - End year (inclusive)
  */
 async function scrapeIposByYearRange(startYear, endYear) {
-  console.log(`Starting IPO scraping for years ${startYear}-${endYear}`);
-  console.log(`MongoDB upload is ${UPLOAD_TO_MONGODB ? 'enabled' : 'disabled'}`);
-  console.log(`Threaded processing is ${USE_THREADS ? 'enabled' : 'disabled'}`);
+  console.log(`Starting optimized IPO scraping for years ${startYear}-${endYear}`);
+  console.log('Only scraping new/missing IPOs and the latest 7');
   
   try {
-    // Ensure data directory exists
-    await ensureDirectoryExists(DATA_DIR);
-    
-    // Process years using threads if multi-year range and threads are enabled
-    if (USE_THREADS && endYear > startYear) {
-      console.log('Using threads for multi-year processing');
-      
-      // Create array of years to process
-      const years = Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
-      
-      // Define worker script path for year processing
-      const workerScriptPath = path.join(__dirname, '..', 'workers', 'ipoListingWorker.js');
-      
-      // Process years in parallel using threads
-      const yearResults = await processInThreads(years, workerScriptPath, {
-        maxThreads: Math.min(years.length, THREAD_COUNT),
-        workerData: {
-          dataDir: DATA_DIR,
-          uploadToMongo: UPLOAD_TO_MONGODB,
-          force: false
-        }
-      });
-      
-      // Process IPO details for each year's listings
-      for (const yearResult of yearResults) {
-        if (yearResult.success && yearResult.listings && yearResult.listings.length > 0) {
-          console.log(`\nProcessing details for ${yearResult.count} IPOs from year ${yearResult.year}`);
-          await processBatch(yearResult.listings, yearResult.year.toString());
-        }
-      }
-    } else {
-      // Process each year sequentially (better for single year requests)
-      for (let year = startYear; year <= endYear; year++) {
-        console.log(`\n--- Processing Year: ${year} ---`);
-        
-        // Fetch IPO listings for the year
-        const ipoListings = await fetchIpoListings(year);
-        
-        if (!ipoListings || ipoListings.length === 0) {
-          console.log(`No IPO listings found for year ${year}`);
-          continue;
-        }
-        
-        console.log(`Found ${ipoListings.length} IPO listings for year ${year}`);
-        
-        // Save listings summary to file
-        const listingsDir = path.join(DATA_DIR, year.toString());
-        await saveToJson(listingsDir, '_listings.json', ipoListings);
-        
-        // Upload listings to MongoDB if enabled
-        if (UPLOAD_TO_MONGODB) {
-          try {
-            await uploadIpoListings(ipoListings, year.toString());
-            console.log(`Uploaded IPO listings for year ${year} to MongoDB`);
-          } catch (mongoError) {
-            console.error(`MongoDB upload error for year ${year} listings:`, mongoError.message);
-          }
-        }
-        
-        // Process all IPOs for this year
-        await processBatch(ipoListings, year.toString());
-      }
+    // Process each year sequentially
+    for (let year = startYear; year <= endYear; year++) {
+      await scrapeNewIpos(year);
     }
     
     console.log('\nIPO scraping completed successfully!');
@@ -265,111 +189,8 @@ async function scrapeIposByYearRange(startYear, endYear) {
   }
 }
 
-// Parse command line arguments in a more robust way
-function parseArgs(args) {
-  const options = {
-    year: new Date().getFullYear(),
-    startYear: null,
-    endYear: null,
-    threads: MAX_CONCURRENT_REQUESTS,
-    overwrite: false,
-    uploadToMongo: UPLOAD_TO_MONGODB,
-    useThreads: USE_THREADS,
-    threadCount: THREAD_COUNT
-  };
-  
-  for (let i = 0; i < args.length; i++) {
-    const arg = args[i];
-    
-    if (arg === '--year' && i + 1 < args.length) {
-      const year = parseInt(args[++i], 10);
-      if (!isNaN(year)) {
-        options.year = year;
-        // Set start and end year to the same value if not explicitly set
-        if (options.startYear === null) options.startYear = year;
-        if (options.endYear === null) options.endYear = year;
-      }
-    }
-    else if (arg === '--start-year' && i + 1 < args.length) {
-      const year = parseInt(args[++i], 10);
-      if (!isNaN(year)) options.startYear = year;
-    }
-    else if (arg === '--end-year' && i + 1 < args.length) {
-      const year = parseInt(args[++i], 10);
-      if (!isNaN(year)) options.endYear = year;
-    }
-    else if (arg === '--threads' && i + 1 < args.length) {
-      const threads = parseInt(args[++i], 10);
-      if (!isNaN(threads) && threads > 0) {
-        options.threads = threads;
-        process.env.MAX_CONCURRENT_REQUESTS = threads.toString();
-      }
-    }
-    else if (arg === '--thread-count' && i + 1 < args.length) {
-      const threadCount = parseInt(args[++i], 10);
-      if (!isNaN(threadCount) && threadCount > 0) {
-        options.threadCount = threadCount;
-        process.env.THREAD_COUNT = threadCount.toString();
-      }
-    }
-    else if (arg === '--overwrite') {
-      options.overwrite = true;
-    }
-    else if (arg === '--no-mongo') {
-      options.uploadToMongo = false;
-      process.env.UPLOAD_TO_MONGODB = 'false';
-    }
-    else if (arg === '--mongo') {
-      options.uploadToMongo = true;
-      process.env.UPLOAD_TO_MONGODB = 'true';
-    }
-    else if (arg === '--use-threads') {
-      options.useThreads = true;
-      process.env.USE_THREADS = 'true';
-    }
-    else if (arg === '--no-threads') {
-      options.useThreads = false;
-      process.env.USE_THREADS = 'false';
-    }
-    // Legacy positional argument support (deprecated)
-    else if (i === 0 && !arg.startsWith('--')) {
-      const year = parseInt(arg, 10);
-      if (!isNaN(year)) {
-        options.year = year;
-        options.startYear = year;
-        options.endYear = year;
-        console.warn('WARNING: Using positional arguments is deprecated. Please use --year, --start-year, and --end-year instead.');
-      }
-    }
-  }
-  
-  // If start-year or end-year was not explicitly set, use the year value
-  if (options.startYear === null) options.startYear = options.year;
-  if (options.endYear === null) options.endYear = options.year;
-  
-  return options;
-}
-
-// Handle direct execution
-if (require.main === module) {
-  const args = process.argv.slice(2);
-  const options = parseArgs(args);
-  
-  console.log('Starting IPO scraper with options:', options);
-  
-  scrapeIposByYearRange(options.startYear, options.endYear)
-    .then(() => {
-      console.log('Scraping process completed.');
-      process.exit(0);
-    })
-    .catch((error) => {
-      console.error('Fatal error:', error);
-      process.exit(1);
-    });
-}
-
+// Export functions for use in other modules
 module.exports = {
   scrapeIposByYearRange,
-  processIpo,
-  parseArgs
+  scrapeNewIpos
 }; 

@@ -12,13 +12,19 @@ module.exports = {
     {
       name: 'ipo-scraper',
       script: 'index.js',
-      args: 'scrape-current --use-threads --thread-count 1',
-      cron_restart: '0 0 * * *', // Restart at midnight every day
+      args: 'scrape-current',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        USE_THREADS: 'true',
-        THREAD_COUNT: '1',
-        UPLOAD_TO_MONGODB: 'false'
+        DATA_DIR: './data',
+        DELAY_BETWEEN_REQUESTS: '1000',
+        MAX_CONCURRENT_REQUESTS: '3',
+        CRON_LOG_DIR: './logs',
+        CONFIG_DIR: './config',
+        API_PORT: '5000'
       }
     }
   ]

@@ -110,45 +110,26 @@ async function scrapeForYear(year, options = {}) {
   const {
     concurrency = 2,
     logFile = null,
-    jobId = 'manual-job',
-    uploadToMongo = false,
-    useThreads = false,
-    threadCount = 4
+    jobId = 'manual-job'
   } = options;
   
-  await logMessage(`Starting scrape for year ${year}`, 'INFO', jobId);
-  await logMessage(`MongoDB upload is ${uploadToMongo ? 'enabled' : 'disabled'}`, 'INFO', jobId);
-  await logMessage(`Threaded processing is ${useThreads ? 'enabled' : 'disabled'}`, 'INFO', jobId);
-  if (useThreads) {
-    await logMessage(`Thread count: ${threadCount}`, 'INFO', jobId);
-  }
+  await logMessage(`Starting optimized scrape for year ${year}`, 'INFO', jobId);
   
   // Optional logging to file
   if (logFile) {
     const logDir = path.dirname(logFile);
     await fs.mkdir(logDir, { recursive: true });
     await fs.appendFile(logFile, `\n[${new Date().toISOString()}] Starting scrape for year ${year}\n`);
-    await fs.appendFile(logFile, `[${new Date().toISOString()}] MongoDB upload is ${uploadToMongo ? 'enabled' : 'disabled'}\n`);
-    await fs.appendFile(logFile, `[${new Date().toISOString()}] Threaded processing is ${useThreads ? 'enabled' : 'disabled'}\n`);
-    if (useThreads) {
-      await fs.appendFile(logFile, `[${new Date().toISOString()}] Thread count: ${threadCount}\n`);
-    }
   }
   
   try {
     // Set the MAX_CONCURRENT_REQUESTS in the environment
     process.env.MAX_CONCURRENT_REQUESTS = concurrency.toString();
     
-    // Set MongoDB upload flag in environment
-    process.env.UPLOAD_TO_MONGODB = uploadToMongo ? 'true' : 'false';
-    
-    // Set threading options in environment
-    process.env.USE_THREADS = useThreads ? 'true' : 'false';
-    process.env.THREAD_COUNT = threadCount.toString();
-    
     // Scrape IPO data
-    await logMessage(`Scraping IPO data for year ${year} with ${useThreads ? `threading (${threadCount} threads)` : `concurrency (${concurrency} requests)`}`, 'INFO', jobId);
-    await scrapeIposByYearRange(year, year);
+    await logMessage(`Scraping IPO data for year ${year} with optimized approach`, 'INFO', jobId);
+    const { scrapeNewIpos } = require('./scrapeIpos');
+    await scrapeNewIpos(year);
     
     await logMessage(`Completed scrape for year ${year}`, 'INFO', jobId);
     if (logFile) {
@@ -459,7 +440,6 @@ async function executeTask(taskType, options, jobId) {
           concurrency: options.concurrency || 2, 
           logFile,
           jobId,
-          uploadToMongo: options.uploadToMongo || false,
           useThreads: options.useThreads || false,
           threadCount: options.threadCount || 4
         });
@@ -467,11 +447,6 @@ async function executeTask(taskType, options, jobId) {
       case 'scrape-year-range':
         const startYear = options.startYear || options.year || new Date().getFullYear();
         const endYear = options.endYear || startYear;
-        
-        // Set MongoDB upload flag in environment if specified
-        if (options.uploadToMongo !== undefined) {
-          process.env.UPLOAD_TO_MONGODB = options.uploadToMongo ? 'true' : 'false';
-        }
         
         await logMessage(`Scraping year range: ${startYear}-${endYear}`, 'INFO', jobId);
         await scrapeIposByYearRange(startYear, endYear);
